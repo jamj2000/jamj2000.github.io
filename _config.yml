@@ -1,30 +1,53 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+# Site settings
+title: jamj2000
+email: jamj2000@gmail.com
+url: http://jamj2000.github.io
+description: "Open Source Projects of José Antonio Muñoz Jiménez, aka jamj2000. He works as teacher in vocational training in computer science in Andalusia, Spain."
+skills: Open Source Projects
+aboutA: "José Antonio Muñoz Jiménez, aka jamj2000. Teacher in vocational training in computer science in Andalusia, Spain."
+aboutB: "This site holds works I created in my spare time as a hobby. It aims to serve myself as repository of my 'experiments' in very different programming languages mainly in c++, PHP, CSS, javascript, R and others. I'm not a programmer so don't blame me for them. Though I hope these works are handy for you. Greetings."
+keywords: "José Antonio Muñoz Jiménez, Muñoz Jiménez José Antonio, José Antonio,Muñoz Jiménez, jamj2000, jamj, fp-resultados, projects, software projects, source code, c++, php, css, bash, js, r, programming languages"
 
-# Setup
-title:               jamj2000
-tagline:             Personal Page
-url:                 http://getpoole.com
-paginate:            1
-baseurl:             ""
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
+# Contact form: comment the line below if you want to stick with the default PHP contact form
+contact: static
 
-# About/contact
-author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
 
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: 573100 #ac7023 
+  primary-rgb: "172,112,35" #"128,179,255"
+  secondary: 2f8a2f #2c3e50
+  secondary-dark: 1a4a1a #233140 
+  tertiary: ac7023
+
+
+# Footer settings
+footer:
+  copyright: José Antonio Muñoz Jiménez
+  location: Location
+  social: Around the Web
+  credits: Credits
+  
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: github
+    url: http://github.com/jamj2000
+  - title: linkedin
+    url: https://es.linkedin.com/pub/josé-antonio-muñoz-jiménez/4a/b57/782
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Puente Genil, 14500
+  - line: Andalusia, Spain
+
+
+# Credits content
+credits: 'Made with <a href="http://jekyllrb.com/">Jekyll</a> for <a href="https://github.com/">Github</a>. The design is modified from the beautiful <a href="https://github.com/jeromelachaud/freelancer-theme">Freelancer Theme</a> made by <a href="http://jeromelachaud.net/">Jerome Lachaud</a>.</p>'
+ 
+  
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+
