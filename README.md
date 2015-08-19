@@ -1,7 +1,6 @@
 ![avatar](https://avatars2.githubusercontent.com/u/2934084?v=3&s=460)
 
-# jamj2000 - Open Source Projects
-# [SITE](http://jamj2000.github.io)
+# [SITE - jamj2000 - Open Source Projects](http://jamj2000.github.io)
 Site in order to comment **SOME** (not all) of my own works in very different programming languages hosted in several **GITHUB REPOSITORIES**.
 **My GITHUB repositories are:**
 
