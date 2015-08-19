@@ -10,7 +10,8 @@ Web app for rating of learning outcomes in Vocational Training (in Spain). It wa
 
 #### [REPOSITORY](https://github.com/jamj2000/fp-resultados.git)
 >first release: June 2015
-latest update: August 2015
+
+>latest update: August 2015
 
 
 ## DNI
@@ -19,7 +20,8 @@ La aplicación también calcula los 2 dígitos de control de una cuenta bancaria
 
 #### [REPOSITORY](https://github.com/jamj2000/dni.git)
 >first release: May 2013
-latest update: June 2015 
+
+>latest update: June 2015 
 
 
 
@@ -29,7 +31,8 @@ La aplicación es algo antigua y la mayoría de flujos de TV están obsoletos. D
 
 #### [REPOSITORY](https://github.com/jamj2000/iTV.git)
 >first release: December 2012
-latest update: May 2013
+
+>latest update: May 2013
 
 
 ## EjemploR
@@ -38,5 +41,6 @@ It's based in tutorial "Creating R packages in Windows" located in [gastonsanche
 
 #### [REPOSITORY](https://github.com/jamj2000/ejemploR.git)
 >first release: June 2015
-latest update: June 2015
+
+>latest update: June 2015
 
