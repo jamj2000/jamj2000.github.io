@@ -5,7 +5,7 @@ url: http://jamj2000.github.io
 description: "Open Source Projects of José Antonio Muñoz Jiménez, aka jamj2000. He works as teacher in vocational training in computer science in Andalusia, Spain."
 skills: Open Source Projects
 aboutA: "José Antonio Muñoz Jiménez, aka jamj2000. Teacher in vocational training in computer science in Andalusia, Spain."
-aboutB: "This site holds works I created in my spare time as a hobby. It aims to serve myself as repository of my 'experiments' in very different programming languages mainly in c++, PHP, CSS, javascript, R and others. I'm not a programmer so don't blame me for them. Though I hope these works are handy for you. Greetings."
+aboutB: "This site holds works I created in my spare time as a hobby. It aims to serve myself as repository of my 'experiments' in very different programming languages mainly in C++, PHP, CSS, Javascript, R and others. I'm not a professional programmer so don't blame me for them. Though I hope these works are handy for you. Greetings."
 keywords: "José Antonio Muñoz Jiménez, Muñoz Jiménez José Antonio, José Antonio,Muñoz Jiménez, jamj2000, jamj, fp-resultados, projects, software projects, source code, c++, php, css, bash, js, r, programming languages"
 
 
@@ -15,10 +15,12 @@ contact: static
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
-  primary-rgb: "24,188,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
+  articletext: 4e4e4e          # Color de texto gris
+  primary: 221300              # Marrón
+  primary-rgb: "172,112,35"    # Marrón claro
+  secondary: 2f8a2f            # Verde
+  secondary-dark: 1a4a1a       # Verde oscuro
+  tertiary: ac7023             # Marrón claro
 
 
 # Footer settings

@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }} - {{ site.skills }}{% else %}{{ site.title }} - {{ site.skills }}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
@@ -21,4 +21,34 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/img/fav/favicon.ico">          <!-- 16x16 -->
+    <link rel="shortcut icon" href="/img/fav/favicon.png">          <!-- 32x32 -->
+    <link rel="apple-touch-icon-precomposed" href="/img/fav/apple-touch-icon-precomposed.png">                          <!-- 57x57   (precomposed) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/fav/apple-touch-icon-72x72-precomposed.png">      <!-- 72x72   (precomposed) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/fav/apple-touch-icon-114x114-precomposed.png">  <!-- 114x114 (precomposed) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/fav/apple-touch-icon-144x144-precomposed.png">  <!-- 144x144 (precomposed) -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/fav/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/fav/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/fav/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/fav/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/fav/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/fav/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/fav/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/fav/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/img/fav/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/fav/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/img/fav/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/img/fav/favicon-16x16.png" sizes="16x16">
+    <meta name="msapplication-TileColor" content="#{{ site.color.primary }}">
+    <meta name="msapplication-TileImage" content="/img/fav/mstile-144x144.png">
+
+
+
 </head>
+
+
+
