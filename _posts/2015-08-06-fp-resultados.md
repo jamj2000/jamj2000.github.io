@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Web app for evaluating goals in vocational training (in Spain)
+title: Web app for rating of learning outcomes in Vocational Training (in Spain)
 link: https://github.com/jamj2000/fp-resultados
 link-alt: GitHub repository
 img: fp-resultados.png
@@ -13,6 +13,7 @@ article: yes
 ---
 
 #### Author: José Antonio Muñoz Jiménez
+
 
 ## Description
 The app allow rating of learning outcomes. This application is aimed to vocational training in Spain.
