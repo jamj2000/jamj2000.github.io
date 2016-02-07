@@ -229,9 +229,66 @@ pwd
 
 # Comandos (II)
 ---
+## Gestión de usuarios 
 ## Gestión de archivos
-## Gestión de usuarios
 ## Gestión de procesos
+
+
+## Gestión de usuarios
+
+
+### Entrada al sistema
+- Entorno de texto ... mediante __login__
+- Entorno gráfico ... mediante __Display Manager__
+
+
+### Display Managers
+- Utilizados antes de cargar el escritorio
+- Función equivalente a login para entorno gráfico
+- Numerosos Display Managers
+ - GDM  (para GNOME)
+ - SSDM (para KDE. Antes usaba KDM)
+ - LightDM
+ - y muchos más
+
+
+### Salida del sistema
+```sh
+exit
+logout
+```
+
+
+### Alta de usuario
+```sh
+adduser nombre_usuario
+```
+
+### Baja de usuario
+```sh
+deluser nombre_usuario --remove-home
+```
+
+
+### Cambiar contraseña
+```sh
+passwd
+passwd nombre_usuario
+```
+
+
+### Cambiar a otro usuario
+```sh
+su
+su nombre_usuario
+```
+
+
+### Elevación de privilegios
+```sh
+sudo comando
+sudo -s
+```
 
 
 ## Gestión de archivos
@@ -270,13 +327,13 @@ file nombre_archivo
 ```sh
 cd directorio_destino
 ```
-- Ruta absoluta
+- __Ruta absoluta__
  - Se inicia en el directorio raíz
- - SIEMPRE comienza por /
+ - __SIEMPRE comienza por /__
  - Es independiente del directorio actual
-- Ruta relativa
+- __Ruta relativa__
  - Se inicia en el directorio actual
- - NUNCA comienza por /
+ - __NUNCA comienza por /__
  - Depende del directorio actual
 
 
@@ -343,6 +400,10 @@ Listado largo de todo el contenido
 ```sh
 ls -la
 ```
+Listado recursivo
+```sh
+ls -R
+```
 
 
 ### Ver contenido de archivos de texto
@@ -372,7 +433,7 @@ rm  -R  directorio1  directorio2 ...
 ```
 
 
-### Cambiar nombre a archivos o directorios
+### Cambiar nombre de archivos o directorios
 Cambiar el nombre
 ```sh
 mv  nombre_antiguo  nombre_nuevo 
@@ -383,57 +444,12 @@ mv  nombre_antiguo  directorio_existente
 ```
 
 
-## Gestión de usuarios
+### Listado largo 
+
+![ls -l](./assets/img/ls.jpg)
 
 
-### Entrada al sistema
-- Entorno de texto ... mediante __login__
-- Entorno gráfico ... mediante __Display Manager__
-
-
-### Display Managers
-- Utilizados antes de cargar el escritorio
-- Función equivalente a login para entorno gráfico
-- Numerosos Display Managers
- - GDM  (para GNOME)
- - SSDM (para KDE. Antes usaba KDM)
- - LightDM
- - y muchos más
-
-
-### Salida del sistema
-```sh
-exit
-logout
-```
-
-
-### Alta de usuario
-```sh
-adduser nombre_usuario
-```
-
-### Baja de usuario
-```sh
-deluser nombre_usuario --remove-home
-```
-
-
-### Cambio de usuario
-```sh
-su
-su nombre_usuario
-```
-
-
-### Elevación de privilegios
-```sh
-sudo comando
-sudo -s
-```
-
-
-### Propietario
+### Cambiar propietario
 Comando chown
 ```sh
 chown    usuario:grupo  archivo
@@ -443,12 +459,22 @@ chown -R usuario:grupo  directorio
 
 
 ### Permisos
+
+![ls -l](./assets/img/linux-permisos-tipos.png)
+
+
+### Cambiar permisos
 Comando chmod
 ```sh
 chmod    644 archivo
 chmod -R 755 directorio
 ```
 [Página en Wikipedia](https://es.wikipedia.org/wiki/Chmod)
+
+
+### Permisos
+
+![ls -l](./assets/img/linux-permisos.png)
 
 
 ### Permisos
@@ -463,6 +489,27 @@ __`4`__|__`100`__|__`r--`__
 __`5`__|__`101`__|__`r-x`__ 
 __`6`__|__`110`__|__`rw-`__ 
 __`7`__|__`111`__|__`rwx`__ 
+
+
+### Añadir o quitar permisos
+
+![ls -l](./assets/img/permisos-ugoa.png)
+
+
+### Añadir o quitar permisos
+Ejemplos
+```sh
+chmod   g+w  archivo_o_directorio
+chmod  ug+w  archivo_o_directorio
+chmod ugo+x  archivo_o_directorio
+chmod   a+x  archivo_o_directorio
+chmod    +x  archivo_o_directorio
+```
+
+
+## Permisos especiales
+
+![ls -l](./assets/img/linux-permisos-especiales.png)
 
 
 ## Gestión de procesos
@@ -490,8 +537,8 @@ __comando >> archivo__
 
 Ejemplos
 ```sh
-ls /home/usuario > listado
-
+ls /home/usuario >  listado
+ls /home/usuario >> listado
 ```
 
 
@@ -499,8 +546,21 @@ ls /home/usuario > listado
 __comando &__
 
 Ejemplos
+```sh
+ping  8.8.8.8  &
+```
+equivalente a 
+```sh
+ping 8.8.8.8
+```
+pulsar Ctrl+Z para detener y
+```sh
+bg 1
+```
+para continuar ejecución en segundo plano
 
 
+### 
 ```sh
 ps
 top

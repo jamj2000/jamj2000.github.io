@@ -38,20 +38,51 @@ united
 
 1. __Nombra 3 distribuciones derivadas de RedHat.__
 
-1. 
+1. __En una máquina virtual realiza la instalación de Lubuntu para un entorno doméstico.__ Crea una partición separada para el directorio /home.
+
+1. __En una máquina virtual realiza la instalación de Fedora para un entorno doméstico.__ Crea una partición separada para el directorio /home.
+
+1. __En una máquina virtual realiza la instalación de Debian para un entorno empresarial.__ Crea una partición separada para el directorio /var.
+
 
 #### Actividades de ampliación
+
+1. __En una máquina virtual realiza la instalación de openSuSE para un entorno doméstico.__ Crea una partición separada para el directorio /home.
+
+1. __En una máquina virtual realiza la instalación de Linux Mint para un entorno doméstico.__ Crea una partición separada para el directorio /home.
+
+
+
 
 
 # Sistemas de archivos
 
+1. __En una máquina virtual ejecuta los siguientes comandos para ver información acerca de las particiones.__
+```sh
+fdisk -l
+blkid
+df
+```
+
 
 
 #### Actividades de ampliación
 
 
+
+
+
 # Interfaces de usuario 
-1. Busca información en Internet. 
+1. __Obten una captura de pantalla (en internet o en tu equipo) para cada uno de los siguientes escritorios: __
+ - GNOME
+ - KDE (Plasma)
+ - Unity
+ - XFCE
+ - LXDE
+ - Enlightenment
+ - Cinnamon
+
+1. 
 
 
 #### Actividades de ampliación
@@ -60,7 +91,9 @@ united
 
 ## Permisos
 1. __Accede a la página http://file-permissions.ninja. Pon los máximos permisos.__
-Escribe cuál es la representación
+![file-permissions.ninja.png](./assets/img/file-permissions.ninja.png)
+
+ Escribe cuál es la representación
  - numérica
  - binaria
  - simbólica
@@ -115,7 +148,61 @@ Escribe cuál es la representación
 
  .
  
+## Procesos
 
+1. Ejecuta el siguiente comando y pulsa Ctrl+C para finalizarlo
+```sh
+ping  8.8.8.8
+```
+ .
+ 
+1. Ejecuta el siguiente comando (en segundo plano o background) y pulsa Ctrl+C para finalizarlo
+```sh
+ping  8.8.8.8 &
+```
+¿se puede finalizar el proceso?
+
+ .
+ 
+1. Para finalizar adecuadamente sigue estos pasos. Escribe 
+```sh
+fg 1
+```
+para traerlo a primer plano (foreground) y luego pulsa Ctrl+C
+ 
+ .
+ 
+1. Vuelve a ejecutar
+```sh
+ping  8.8.8.8
+```
+pulsa Ctrl+Z para detener el proceso 
+
+ .
+ 
+1. El proceso está detenido, pero no finalizado. Ejecuta
+```sh
+jobs
+```
+para ver las tareas activas. 
+ 
+ .
+ 
+1. Para que el proceso continue funcionando en segundo plano (background) ejecuta
+```sh
+bg 1
+```
+ .
+ 
+1. Para finalizarlo, lo pasamos a primer plano (foreground)
+```sh
+fg 1
+```
+y pulsamos Ctrl+C
+
+ .
+ 
+ 
 #### Actividades de ampliación
 
 1. __Ejecuta los siguientes comandos e indica qué ejecutables tienen el bit SETUID.__
