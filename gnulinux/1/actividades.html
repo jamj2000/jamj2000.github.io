@@ -20,20 +20,155 @@ united
 -->
 
 
-<xmp theme="slate" style="display:none;">
-# Markdown text goes in here
+<xmp theme="united" style="display:none;">
 
-## Capitulo 1
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-et dolore magna aliqua. 
+![GNU/Linux](./assets/img/gnu-linux.jpg)
 
-## Chapter 2
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+
+
+# Introducción
+
+1. __¿Quién inició el proyecto GNU?__
+
+1. __¿Quién inició el núcleo o kernel de Linux?__
+
+1. __Nombra 3 distribuciones derivadas de Debian.__
+
+1. __Nombra 3 distribuciones derivadas de RedHat.__
+
+1. 
+
+#### Actividades de ampliación
+
+
+# Sistemas de archivos
+
+
+
+#### Actividades de ampliación
+
+
+# Interfaces de usuario 
+1. Busca información en Internet. 
+
+
+#### Actividades de ampliación
+
+# Comandos 
+
+## Permisos
+1. __Accede a la página http://file-permissions.ninja. Pon los máximos permisos.__
+Escribe cuál es la representación
+ - numérica
+ - binaria
+ - simbólica
+ 
+ .
+ 
+1. __Activa el SETUID bit.__
+Escribe cuál es la representación
+ - numérica
+ - binaria
+ - simbólica
+
+ .
+ 
+1. __Activa el SETGID bit.__
+Escribe cuál es la representación
+ - numérica
+ - binaria
+ - simbólica
+
+ .
+ 
+1. __Activa el STICKY bit.__
+ Escribe cuál es la representación
+ - numérica
+ - binaria
+ - simbólica
+
+ .
+ 
+1. __Desactiva el bit EXECUTE del propietario.__
+Escribe cuál es la representación
+ - numérica
+ - binaria
+ - simbólica
+
+ .
+ 
+1. __Desactiva el bit EXECUTE del grupo.__
+Escribe cuál es la representación
+ - numérica
+ - binaria
+ - simbólica
+
+ .
+ 
+1. __Desactiva el bit EXECUTE del resto de usuarios.__
+Escribe cuál es la representación
+ - numérica
+ - binaria
+ - simbólica
+
+ .
+ 
+
+#### Actividades de ampliación
+
+1. __Ejecuta los siguientes comandos e indica qué ejecutables tienen el bit SETUID.__
+```sh
+ls -lR directorio | tr -s ' ' | cut -d ' ' -f 1,9- | grep ^...s......   
+```
+Para los siguientes directorios:
+ - /bin
+ - /usr/bin
+ - /sbin
+ - /usr/sbin
+
+ .
+ 
+1. __Ejecuta los siguientes comandos e indica qué ejecutables tienen el bit SETGID.__
+```sh
+ls -lR directorio | tr -s ' ' | cut -d ' ' -f 1,9- | grep ^...s......   
+```
+Para los siguientes directorios:
+ - /bin 
+ - /usr/bin 
+ - /sbin 
+ - /usr/sbin 
+
+ .
+ 
+1. __Ejecuta los siguientes comandos e indica qué ejecutables tienen el bit STICKY.__
+```sh
+ls -lR directorio | tr -s ' ' | cut -d ' ' -f 1,9- | grep ^.........t   
+```
+Para los siguientes directorios:
+ - /bin
+ - /usr/bin
+ - /sbin
+ - /usr/sbin
+
+ .
+
+1. __Ejecuta los siguientes comandos e indica qué archivos o directorios tienen el bit STICKY.__
+```sh
+ls -lR directorio | tr -s ' ' | cut -d ' ' -f 1,9- | grep ^.........t   
+```
+Para los siguientes directorios:
+ - /tmp
+
+ .
+
+1. 
+
+1. 
+	
+
+
 </xmp>
 
 <script src="http://jamj2000.github.io/strapdown/strapdown.js"></script>
