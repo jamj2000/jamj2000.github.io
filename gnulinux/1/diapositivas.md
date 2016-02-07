@@ -26,7 +26,7 @@ element: class="fragment" data-fragment-index="1"
 
 
 
-# Introducción
+# Intro
 ---
 ## Proyecto GNU 
 ## Kernel Linux
