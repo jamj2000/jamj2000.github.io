@@ -17,21 +17,20 @@ element: class="fragment" data-fragment-index="1"
 
 # Índice
 --- 
-## Introducción 
-## Sistemas de archivos
-## Interfaces de usuario
-## Comandos
+#### Historia 
+#### Distribuciones
+#### Sistemas de archivos
+#### Interfaces de usuario
+#### Comandos
 
 <!--- Note: Nota a pie de página. -->
 
 
 
-# Intro
+# Historia
 ---
-## Proyecto GNU 
-## Kernel Linux
-## Distribuciones
-## Instalación
+#### Proyecto GNU 
+#### Kernel Linux
 
 
 ## Proyecto GNU
@@ -64,36 +63,30 @@ Richard Stallman
 Linus Torvalds
 
 
-## Distribuciones
 
-- Dos grandes ramas:
- - Basadas en Debian. Paquetes .deb
- - Basadas en RedHat. Paquetes .rpm
-
-
-## Distribuciones
-
-[Evolución](http://futurist.se/gldt/wp-content/uploads/12.10/gldt1210.svg)
+# Distros
+---
+#### Evolución 
+#### Listado
 
 
-## Distribuciones
+## Evolución
 
-![Listado de distros](./assets/img/linux-distro-logos.jpg)
+[Distribuciones](http://futurist.se/gldt/wp-content/uploads/12.10/gldt1210.svg)
+
+
+## Listado
+
+![distros](./assets/img/linux-distro-logos.jpg)
 
 [distrowatch.com](http://distrowatch.com)
-
-
-## Instalación
-Pasos importantes en una instalación:
-- Particionado (con instalación de GRUB)
-- Creación de usuario
 
 
 
 # Sistemas de archivos
 ---
-## Formatos 
-## Árbol de directorios
+#### Formatos 
+#### Árbol de directorios
 
 
 ## Formatos
@@ -107,25 +100,24 @@ Pasos importantes en una instalación:
 
 
 ## Árbol de directorios
-
 ![distros](./assets/img/linux-filesystem.png)
 
 
 
 # Interfaces
 ---
-## De texto
-## Gráficas
+#### De texto
+#### Gráficas
 
 
 ## Interfaz de texto
-
+- Mediante terminal de texto
 - Dos tipos:
  - Terminales virtuales clásicos <!-- .element: class="fragment" data-fragment-index="1" -->
  - Pseudoterminales              <!-- .element: class="fragment" data-fragment-index="2" -->
 
 
-## Terminales virtuales clásicos 
+### Terminales virtuales clásicos 
 - Más antiguos
 - Normalmente 6 terminales disponibles
 - Denominados tty1, tty2, tty3, tty4, tty5 y tty6
@@ -133,7 +125,7 @@ Pasos importantes en una instalación:
 - Ctrl+Alt+F7 es el entorno gráfico
 
 
-## Pseudoterminales
+### Pseudoterminales
 - Más modernos
 - Pueden crearse muchos pseudoterminales
 - Denominados pts/0, pts/1, pts/2, ...
@@ -142,7 +134,7 @@ Pasos importantes en una instalación:
 
 ## Interfaz gráfica
 - Mediante X-Window (servidor gráfico)
-- Muchos tipos de escritorios
+- Muchos escritorios
  - GNOME
  - KDE (Plasma)
  - Unity
@@ -154,11 +146,13 @@ Pasos importantes en una instalación:
 
 
 
-# Comandos (I)
+# Comandos
 ---
-## Conceptos
-## Uso de ayuda
-## Comandos básicos
+#### Conceptos
+#### Uso de ayuda
+#### Gestión de archivos
+#### Gestión de usuarios y permisos
+#### Gestión de procesos
 
 
 ## Conceptos
@@ -168,27 +162,6 @@ Pasos importantes en una instalación:
 - ... y pocos comandos internos<!-- .element: class="fragment" data-fragment-index="4" -->
 
 
-## Conceptos
-- Comandos externos principalmente en: 
- - /bin
- - /usr/bin
- - /sbin
- - /usr/sbin
-- Comandos internos  ¿Dónde?
- - Dentro de /bin/bash
-
-
-## Uso de ayuda
-Para comandos externos, __páginas de manual__
-```sh
-man```
-Para comandos internos, __páginas de ayuda__
-```sh
-help
-```
-
-
-## Uso de ayuda
 Formato de un comando
 ```
 comando  [opciones]  [argumentos]
@@ -211,8 +184,17 @@ nombre_archivo  nombre_directorio  subcomando  ...
 ```
 
 
-## Comandos básicos
-¿Quién soy?
+## Uso de ayuda
+- Páginas de manual, para comandos externos
+```sh
+man```
+- Páginas de ayuda, para comandos internos 
+```sh
+help
+```
+
+
+¿Quién soy?  
 ```sh
 whoami
 ```
@@ -226,28 +208,13 @@ pwd
 ```
 
 
-
-# Comandos (II)
----
 ## Gestión de archivos
-## Gestión de usuarios
-## Gestión de procesos
-
-
-## Gestión de archivos
-
-
 ### Directorios vs Archivos
-Directorios
+- Directorios especiales
 ```sh 
-.   ..   ~   /   /home/usuario
+.   ..   ~   / 
 ```
-Archivos 
- - Archivos regulares
- - Archivos especiales
-
-
-### Archivos regulares 
+- Tipos de archivos 
 ```sh 
 file nombre_archivo 
 ```
@@ -256,14 +223,6 @@ file nombre_archivo
  - Imágenes (jpg, png, ...)
  - Comprimidos (zip, tar.gz, tgz, ...)
  - . . .
-
-
-### Archivos especiales
-- Enlaces simbólicos
-- Dispositos de caracteres
-- Dispositivos de bloques
-- Tubería con nombre
-- Socket con nombre
 
 
 ### Desplazarnos por el sistema 
@@ -280,7 +239,6 @@ cd directorio_destino
  - Depende del directorio actual
 
 
-### Desplazarnos por el sistema 
 Estoy en /home/usuario
 ```sh
 pwd
@@ -300,7 +258,6 @@ pwd
 ```
 
 
-### Desplazarnos por el sistema 
 Atajo: Voy directo a mi directorio personal
 ```sh
 cd ~
@@ -347,7 +304,7 @@ ls -la
 
 ### Ver contenido de archivos de texto
 ```sh
-cat  nombre_archivo
+cat nombre_archivo
 more nombre_archivo
 less nombre_archivo
 nano nombre_archivo
@@ -366,141 +323,35 @@ mkdir directorio1 directorio2 ...
 
 
 ### Eliminar archivos y directorios (vacíos o no)
+Eliminar archivos
 ```sh
-rm      archivo1     archivo2 ...
-rm  -R  directorio1  directorio2 ...
+rm archivo1 archivo2 ...
+```
+Eliminar directorios
+```sh
+rm -R directorio1 directorio2 ...
 ```
 
 
 ### Cambiar nombre a archivos o directorios
-Cambiar el nombre
+Cambio de nombre
 ```sh
 mv  nombre_antiguo  nombre_nuevo 
 ```
-O mover de sitio
+También sirve para mover de sitio
 ```sh
 mv  nombre_antiguo  directorio_existente 
 ```
 
 
-## Gestión de usuarios
-
-
-### Entrada al sistema
-- Entorno de texto ... mediante __login__
-- Entorno gráfico ... mediante __Display Manager__
-
-
-### Display Managers
-- Utilizados antes de cargar el escritorio
-- Función equivalente a login para entorno gráfico
-- Numerosos Display Managers
- - GDM  (para GNOME)
- - SSDM (para KDE. Antes usaba KDM)
- - LightDM
- - y muchos más
-
-
-### Salida del sistema
+## Gestión de usuarios y permisos
 ```sh
-exit
-logout
+chmod 
+chown
 ```
-
-
-### Alta de usuario
-```sh
-adduser nombre_usuario
-```
-
-### Baja de usuario
-```sh
-deluser nombre_usuario --remove-home
-```
-
-
-### Cambio de usuario
-```sh
-su
-su nombre_usuario
-```
-
-
-### Elevación de privilegios
-```sh
-sudo comando
-sudo -s
-```
-
-
-### Propietario
-Comando chown
-```sh
-chown    usuario:grupo  archivo
-chown -R usuario:grupo  directorio
-
-```
-
-
-### Permisos
-Comando chmod
-```sh
-chmod    644 archivo
-chmod -R 755 directorio
-```
-[Página en Wikipedia](https://es.wikipedia.org/wiki/Chmod)
-
-
-### Permisos
-
-Número | Binario | Permisos
-------:|:-------:|---------
-__`0`__|__`000`__|__`---`__ 
-`1`    |`001`    |`--x` 
-`2`    |`010`    |`-w-` 
-`3`    |`011`    |`-wx` 
-__`4`__|__`100`__|__`r--`__ 
-__`5`__|__`101`__|__`r-x`__ 
-__`6`__|__`110`__|__`rw-`__ 
-__`7`__|__`111`__|__`rwx`__ 
 
 
 ## Gestión de procesos
-
-
-### Tuberias
-__comando1 | comando2__
-
-Ejemplos
-```sh
-cat /etc/passwd | cut -d : -f 1,5,7
-cat /etc/passwd | cut -d : -f 1,5,7 | sort 
-cat /etc/passwd | cut -d : -f 1,5,7 | sort | less
-cat /etc/passwd | cut -d : -f 1,5,7 | grep /bin/.*sh 
-ls -l       | tr -s ' ' | cut -d ' ' -f 1,9- 
-ls -lR /tmp | tr -s ' ' | cut -d ' ' -f 1,9- | grep ^d
-ls -lR /bin | tr -s ' ' | cut -d ' ' -f 1,9- | grep ^...s......
-``` 
-
-
-### Redirecciones
-__comando >  archivo__
-
-__comando >> archivo__
-
-Ejemplos
-```sh
-ls /home/usuario > listado
-
-```
-
-
-### Segundo plano
-__comando &__
-
-Ejemplos
-
-
 ```sh
 ps
 top
@@ -509,12 +360,3 @@ fg
 bg
 kill
 ```
-
-
-### Prueba
-1. uno
-  1. dada
-  1. dad
-2. dentro uno
-3. dentro uno
-
