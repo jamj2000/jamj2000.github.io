@@ -51,10 +51,10 @@ united
 1. __En una máquina virtual realiza la instalación de Fedora para un entorno doméstico.__ Crea una partición separada para el directorio /home.
 <hr>
 1. __En una máquina virtual realiza la instalación de Debian para un entorno empresarial.__ Crea una partición separada para el directorio /var.
+<hr>
 
-<pre>
-</pre>
-#### Actividades de ampliación
+
+### Actividades de ampliación
 
 1. __En una máquina virtual realiza la instalación de openSuSE para un entorno doméstico.__ Crea una partición separada para el directorio /home.
 <hr>
@@ -74,8 +74,8 @@ blkid
 df
 ```
 
-<pre></pre>
-#### Actividades de ampliación
+
+### Actividades de ampliación
 
 <pre>
 
@@ -95,9 +95,8 @@ df
 1.   dadadfa 
 <hr>
 
-<pre>
-</pre>
-#### Actividades de ampliación
+
+### Actividades de ampliación
 
 <pre>
 
@@ -105,17 +104,94 @@ df
 </pre>
 # <a name="comandos"></a> [Comandos](#indice)
 
-<pre></pre>
+
+## Conceptos
+
+1. __Indica 20 comandos externos.__ ¿Para qué sirven?
+<hr>
+
+1. __Indica 10 comandos internos.__ ¿Para qué sirven?
+<hr>
+
+1. __Consulta la página de manual del comando ls.__ ¿Cuál es la opción para hacer un listado en orden inverso?
+<hr>
+
+1. __Consulta la ayuda del comando echo.__ ¿Cuál es la opción para mostrar un mensaje sin salto de línea final?
+<hr>
+
+
 ## Comandos basicos
 
+Teniendo en cuenta el siguiente árbol de directorios y que __nuestro directorio actual es /home/usuario__ 
+
+![arbol](assets/img/linux-filesystem.png)
+
+1. __Ejecuta comando para ver el directorio actual__
+<hr>
+
+1. __Si no estamos en el directorio /home/usuario, ¿qué comandos podemos usar para situarnos en él?__
+<hr>
+
+1. __(Actividad resuelta) Indicar ruta absoluta para listar contenido de directorio /bin.__
+```sh
+ls  /bin
+```
+<hr>
+
+1. __(Actividad resuelta) Indicar ruta relativa para listar contenido de directorio /bin.__
+```sh
+ls  ../../bin
+```
+<hr>
+
+1. __Indicar ruta absoluta para listar contenido de directorio /usr/bin.__
+<hr>
+
+1. __Indicar ruta absoluta para listar contenido de directorio /usr/sbin.__
+<hr>
+
+1. __Indicar ruta relativa para listar contenido de directorio /usr/bin.__
+<hr>
+
+1. __Indicar ruta relativa para listar contenido de directorio /usr/sbin.__
+<hr>
+
+1. __Indicar ruta absoluta para listar contenido de directorio /home/usuario/Descargas.__
+<hr>
+
+1. __Indicar ruta relativa para listar contenido de directorio /home/usuario/Descargas.__
+<hr>
+
+1. __Indicar ruta relativa para listar contenido de directorio /home/usuario/Descargas/Apuntes.__
+<hr>
+
+1. __Indicar ruta relativa para listar contenido de directorio /home/usuario/Descargas/Apuntes/ISO.__
+<hr>
+
+1. __Indicar ruta relativa para listar contenido de directorio /usr/share/doc.__
+<hr>
 
 
-<pre></pre>
+
 ## Usuarios
 
 
-<pre></pre>
-## Archivos - Permisos
+
+## Archivos
+
+1. __¿Qué archivos del directorio /bin son ejecutables binarios (ELF - Executable and Linkable Format)?__ 
+Ejecuta la orden
+```sh
+file /bin/* | grep ELF
+```
+<hr>
+
+1. __¿Qué archivos del directorio /bin son ejecutables de script?__ 
+Ejecuta la orden
+```sh
+file /bin/* | grep script
+```
+<hr>
 
 1. __Accede a la página http://file-permissions.ninja. Pon los máximos permisos.__
 ![file-permissions.ninja.png](./assets/img/file-permissions.ninja.png)
@@ -167,7 +243,7 @@ Escribe cuál es la representación
  - binaria
  - simbólica
 
-<pre></pre>
+
 ## Procesos
 
 1. __Ejecuta el siguiente comando y pulsa Ctrl+C para finalizarlo__
@@ -214,11 +290,11 @@ bg 1
 ```sh
 fg 1
 ```
-y pulsamos Ctrl+C
+y pulsamos __Ctrl+C para finalizar el proceso__
+<hr>
 
-<pre>
-</pre>
-#### Actividades de ampliación
+
+### Actividades de ampliación
 
 1. __Ejecuta los siguientes comandos e indica qué ejecutables tienen el bit SETUID.__
 ```sh
@@ -261,9 +337,7 @@ Para los siguientes directorios:
  - /tmp
 <hr>
 
-1. DADASDF 
 
-1.  ADFDAF
 	
 
 
