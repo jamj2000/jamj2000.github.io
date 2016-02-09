@@ -652,7 +652,6 @@ Pasar a primer plano (foreground)
 fg numero-tarea
 ```
 
-
 ### Listado procesos 
 Listado
 ```sh
