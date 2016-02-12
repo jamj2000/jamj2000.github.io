@@ -24,7 +24,7 @@ united
 
 <a name="indice"></a>
 
-![GNU/Linux](assets/img/gnu-linux.jpg)
+![GNU/Linux](assets/img/gnulinux.png)
 
 #### [Introducción](#introduccion)
 #### [Sistemas de archivos](#sistemas_archivos)
@@ -128,6 +128,19 @@ df
 
 </pre>
 # <a name="interfaces"></a> [Interfaces de usuario](#indice) 
+
+1. __Inicia sesión en cada terminal virtual (tty1, tty2, tty3, tty4, tty5, tty6).__ Recuerda que has de pulsar la combinación de teclas __Ctrl+Alt+F1 ... Ctrl+Alt+F6__ para acceder a cada terminal virtual. Para volver al terminal gráfico pulsa Ctrl+Alt+F7. __Ejecuta el comando `who` en uno de los terminales y muestra la salida que obtienes.__ 
+<hr>
+
+1. __Cierra la sesión que iniciaste en cada uno de los terminales virtuales (tty1, tty2, tty3, tty4, tty5, tty6).__ Recuerda que has de pulsar la combinación de teclas __Ctrl+Alt+F1 ... Ctrl+Alt+F6__ para acceder a cada terminal virtual. Para volver al terminal gráfico pulsa Ctrl+Alt+F7. __Ejecuta el comando `who` en uno de los terminales y muestra la salida que obtienes.__ 
+<hr>
+
+1. __En el entorno gráfico (Ctrl+Alt+F7) inicia 3 ventanas de terminal. Ejecuta el comando `who` en una de las ventanas de terminal (pseudoterminales) y muestra la salida que obtienes.__ 
+<hr>
+
+1. __¿Cuál es la diferencia entre un terminal virtual y un pseudoterminal?__
+<hr>
+
 1. __Obten una captura de pantalla (en internet o en tu equipo) para cada uno de los siguientes escritorios: __
  - GNOME
  - KDE (Plasma)
@@ -181,6 +194,11 @@ df
 <hr>
 
 
+
+### Actividades de ampliación
+
+
+
 ## Comandos basicos
 
 Teniendo en cuenta el siguiente árbol de directorios y que __nuestro directorio actual es /home/usuario__ 
@@ -232,21 +250,113 @@ ls  ../../bin
 1. __Indicar ruta relativa para listar contenido de directorio /usr/share/doc.__
 <hr>
 
+1. __Instala el paquete `xaos`.__ Una vez instalado, pulsa `Alt+F2` y escribe `xaos`. Pulsa `Intro` para lanzar la aplicación.
+<hr>
+
+1. __Pulsa `Alt+F4` para cerrar la ventana de `xaos`.__
+<hr>
+
+1. __Instala los siguientes paquetes:__
+ - vlc (reproductor de vídeo)
+ - ubuntu-restricted-extras (codecs privativos -mp3, flash, ...-)
+ - unrar rar p7zip-full unace unzip (programas de compresión más comunes)
+
+ ```sh
+ apt-get  install  vlc  ubuntu-restricted-extras  unrar  rar  p7zip-full  unace  unzip
+ ```
+ Puede ser que algunos paquetes los tengas ya instalados.
+<hr>
+
+1. __Comprueba si tienes instalado VirtualBox.__ Si no lo tienes instalado, busca el nombre exacto del paquete e instálalo.
+```sh
+apt-cache search virtualbox
+apt-get install virtualbox
+```
+<hr>
+
+1. __Instala el paquete `gdebi`.__ Busca información acerca de para qué sirve este paquete.
+<hr>
+
+1. La aplicación `Master PDF` es una aplicación de la empresa _Code Industry_ para la edición de archivos PDF. __Descarga el paquete .deb adecuado a tu S.O. (32 o 64 bits) desde la web oficial y realiza la instalación con gdebi.__
+
+ ![gdebi gráfico](assets/img/gdebi.png)
+<hr>
+
+1. __Muestra el valor de la variable de entorno $PATH.__ Ejecuta `echo $PATH`.
+<hr>
+
+1. __Muestra el valor de la variable de entorno $HOME.__ 
+<hr>
+
+1. __Muestra el valor de la variable de entorno $USER.__ 
+<hr>
+
+1. __Muestra el valor de la variable de entorno $SHELL.__ 
+<hr>
+
+1. __Muestra el valor de la variable de entorno $PS1.__ 
+<hr>
+
+1. __Muestra el valor de la variable de entorno $PS2.__ 
+<hr>
+
+1. __Muestra el valor de todas las variables de entorno.__ Ejecuta `env`.
+<hr>
+
+1. __Muestra el valor de todas las variables de entorno relacionadas con PWD.__ Ejecuta `env | grep PWD`.
+<hr>
+
+1. __Muestra el valor de todas las variables de entorno relacionadas con LANG.__ Ejecuta `env | grep LANG`.
+<hr>
+
+1. __¿Para qué sirve la variable de entorno $PATH?__
+<hr>
+
+1. __¿Para qué sirve la variable de entorno $PS1?__
+<hr>
+
+1. __Visita la página [bashrcgenerator -PS1 Generator-](http://bashrcgenerator.com/) y diseña un prompt PS1 igual al mostrado en la imagen.__ 
+ ![PS1](assets/img/ps1-color0.png)
+<hr>
+
+1. __Copia el código obtenido en el ejercicio anterior `export PS1=" ... "` en un terminal de texto y ejecútalo.__ Haz un captura donde se muestre como queda el indicador de sistema o prompt.
+<hr>
+
+
+### Actividades de ampliación
+
+1. __Para que los cambios realizados en la variable de entorno $PS1 se guarden debemos editar el archivo ~/.bashrc. __ Haz una copia de este archivo (`cp   ~/.bashrc   ~/.bashrc.orig`) y modifícalo de la siguiente forma.
+ ![PS1](assets/img/ps1-color.png)
+
+ En las siguientes sesiones de terminal que inicies debería aparecer el nuevo prompt o indicador. 
+<hr>
+
+1. __Si queremos que todos los usuarios nuevos que demos de alta tengan el nuevo prompt debemos modificar los archivos `/etc/profile` y/o `/etc/bash.bashrc` o similar (dependiendo de la distro utilizada).__ Busca información acerca de como hacerlo. Si deseas realizar cambios, recuerda hacer dos cosas previamente:
+ - Utiliza una máquina virtual
+ - Saca copia de seguridad de los archivos originales (P. ej. `cp  /etc/profile  /etc/profile.orig`)
+<hr>
+
+1. __Pásate por la página [Después de Instalar Ubuntu Vivid Vervet (15.04)](http://glatelier.org/2015/04/23/despues-de-instalar-ubuntu-vivid-vervet-15-04/) y realiza los cambios que estimes oportunos. Recuerda realizar todos los cambios en una máquina virtual.__
+<hr>
+
+1. __¿Para qué sirve el comando `apt-get upgrade`?__
+<hr>
+
+1. __¿Qué son los repositorios PPA?. ¿Qué función tienen?__
+<hr>
 
 ## Usuarios
 
-1. __Inicia sesión en cada terminal virtual (tty1, tty2, tty3, tty4, tty5, tty6).__ Recuerda que has de pulsar la combinación de teclas __Ctrl+Alt+F1 ... Ctrl+Alt+F6__ para acceder a cada terminal virtual. Para volver al terminal gráfico pulsa Ctrl+Alt+F7. __Ejecuta el comando `who` en uno de los terminales y muestra la salida que obtienes.__ 
+
+
+
+### Actividades de ampliación
+
+1. __Edita el archivo /etc/shadow.__ Edita la línea `root:!: ...`. Elimina el carácter `!` del segundo campo. Debe quedar así `root:: ...`. Los puntos suspensivos representan el resto de campos que debes dejar tal cual estaban. Pulsa `Ctrl+Alt+F1` e inicia sesión como usuario `root`. ¿Qué sucede?. Cierra la sesión.
 <hr>
 
-1. __Cierra la sesión que iniciaste en cada uno de los terminales virtuales (tty1, tty2, tty3, tty4, tty5, tty6).__ Recuerda que has de pulsar la combinación de teclas __Ctrl+Alt+F1 ... Ctrl+Alt+F6__ para acceder a cada terminal virtual. Para volver al terminal gráfico pulsa Ctrl+Alt+F7. __Ejecuta el comando `who` en uno de los terminales y muestra la salida que obtienes.__ 
+1. __Vuelve a editar el archivo /etc/shadow.__ Deja la línea `root:: ...` como estaba, es decir, vuelve a poner `!` en el segundo campo. Debe quedar así `root:!: ...`. Los puntos suspensivos representan el resto de campos que debes dejar tal cual estaban. Pulsa `Ctrl+Alt+F1` e inicia sesión como usuario `root`. ¿Qué sucede?. 
 <hr>
-
-1. __En el entorno gráfico (Ctrl+Alt+F7) inicia 3 ventanas de terminal. Ejecuta el comando `who` en una de las ventanas de terminal (pseudoterminales) y muestra la salida que obtienes.__ 
-<hr>
-
-1. __¿Cuál es la diferencia entre un terminal virtual y un pseudoterminal?__
-<hr>
-
 
 
 ## Archivos
@@ -314,6 +424,10 @@ Escribe cuál es la representación
  - numérica
  - binaria
  - simbólica
+
+
+
+### Actividades de ampliación
 
 
 ## Procesos
@@ -409,6 +523,8 @@ Para los siguientes directorios:
  - /tmp
 <hr>
 
+
+### Actividades de ampliación
 
 	
 

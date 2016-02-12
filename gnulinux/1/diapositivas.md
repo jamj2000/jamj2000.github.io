@@ -10,7 +10,7 @@ element: class="fragment" data-fragment-index="1"
 
 # GNU/Linux
 ---
-![GNU/Linux](assets/img/gnu-linux.jpg)
+![GNU/Linux](assets/img/gnulinux.png)
 ### Administración de equipos
 <small> IES Luis Vélez de Guevara </small>
 
@@ -200,8 +200,8 @@ who
  - /usr/bin
  - /sbin
  - /usr/sbin
-- Comandos internos  ¿Dónde?
- - Dentro de /bin/bash
+- Comandos internos  ¿Dónde?<!-- .element: class="fragment" data-fragment-index="1" -->
+ - Dentro de /bin/bash <!-- .element: class="fragment" data-fragment-index="2" -->
 
 
 ### Algunos comandos externos 
@@ -493,6 +493,43 @@ reset
 ```
 
 
+### Reiniciar o apagar
+Reiniciar
+```sh
+reboot
+shutdown  -r  now
+```
+Apagar
+```sh
+halt
+shutdown  -h  now
+```
+
+
+### Repositorios
+
+Son sitios en Internet desde los cuales pueden descargarse paquetes.
+
+En Debian y derivadas el listado de estos repositorios se guarda en:
+```sh
+/etc/apt/sources.list
+/etc/apt/sources.list.d/*
+```
+
+
+### Actualizar lista de paquetes
+
+Cada vez que añadimos o quitamos repositorios debemos actualizar la lista de paquetes disponibles.
+
+```sh
+apt-get update 
+```
+
+También es aconsejable actualizar la lista de paquetes de vez cuando.
+
+Esto permite descargar una lista de paquetes actualizada aún cuando los repositorios sean los mismos. 
+
+
 ### Instalar y desinstalar paquetes .deb
 Buscar paquetes relacionados
 ```sh
@@ -512,16 +549,21 @@ apt-get  remove  paquete
 ```
 
 
-### Reiniciar o apagar
-Reiniciar
+### Variables de entorno
+Permiten almacenar datos referidos a una sesión.
+
+Variables importantes
 ```sh
-reboot
-shutdown  -r  now
+$PATH     # Indica los directorios donde se buscarán los archivos ejecutables o binarios
+$USER     # Nombre de usuario
+$HOME     # Carpeta personal de usuario
+$SHELL    # Interprete de comandos utilizado
+$PS1      # Indicador o prompt principal
+$PS2      # Indicador o prompt secundario
 ```
-Apagar
+Todas las variables
 ```sh
-halt
-shutdown  -h  now
+env
 ```
 
 
@@ -587,8 +629,12 @@ sudo  -s
 
 ### Archivos importantes
 ```sh
+/etc/profile
 /etc/passwd
 /etc/shadow
+```
+```sh
+~/.bashrc
 ```
 
 
@@ -665,6 +711,17 @@ file  nombre_archivo
 ![Archivos especiales 3](assets/img/captura-tipo-archivos3.png)
 
 
+### Crear archivos y directorios vacíos
+Crear archivos
+```sh
+touch  archivo1  archivo2 ...
+```
+Crear directorios
+```sh
+mkdir  directorio1  directorio2 ...
+```
+
+
 ### Crear y eliminar enlaces simbólicos
 Crear enlace simbólico
 ```sh
@@ -679,17 +736,6 @@ Ejemplo
 ln  -s  /usr/share/doc   docs   # Crear enlace docs a /usr/share/doc
 rm  docs                        # Borrar enlace docs
 ``` 
-
-
-### Crear archivos y directorios vacíos
-Crear archivos
-```sh
-touch  archivo1  archivo2 ...
-```
-Crear directorios
-```sh
-mkdir  directorio1  directorio2 ...
-```
 
 
 ### Copiar archivos y directorios
@@ -743,6 +789,70 @@ Comando chown
 ```sh
 chown      usuario:grupo  archivo
 chown  -R  usuario:grupo  directorio
+```
+
+
+### Tarballs
+
+![tarball](assets/img/tarball.png)
+
+
+### Comprimir/descomprimir archivos
+
+- En GNU/Linux el formato .tar.gz o .tgz es el estándar.
+- También se utiliza el formato .tar.bz2 o .tbz2.
+- Este tipo de archivo se conoce como __tarball__
+- Mucho del código fuente se distribuye de esta forma.
+- Para comprimir/descomprimir se utilizan los comandos tar y gzip
+- ... o tar y bzip2.
+
+
+### Opciones frecuentes del comando tar
+
+```sh
+z   # invoca a gzip para comprimir/descomprimir 
+j   # invoca a bzip2 para comprimir/descomprimir 
+c   # crea contenedor 
+t   # lista contenido de contenedor
+x   # extrae contenido de contenedor
+v   # modo verbose o detallado
+f   # modo file o archivo (obligatorio)
+```
+
+
+### Comprimir una carpeta y su contenido
+```sh
+tar  zcvf  archivo.tar.gz   carpeta
+tar  jcvf  archivo.tar.bz2  carpeta
+```
+También
+```sh
+tar  zcvf  archivo.tgz   carpeta
+tar  jcvf  archivo.tbz2  carpeta
+```
+
+
+### Listar contenido de un tarball
+```sh
+tar  ztvf  archivo.tar.gz 
+tar  jtvf  archivo.tar.bz2
+```
+También
+```sh
+tar  ztvf  archivo.tgz 
+tar  jtvf  archivo.tbz2 
+```
+
+
+### Extraer contenido de un tarball
+```sh
+tar  zxvf  archivo.tar.gz 
+tar  jxvf  archivo.tar.bz2
+```
+También
+```sh
+tar  zxvf  archivo.tgz 
+tar  jxvf  archivo.tbz2 
 ```
 
 
@@ -857,6 +967,7 @@ fuser  -mk  /mnt
 ```
 
 ps `fuser -m  /dev/sdb1 2>1 | tr -s ' '`
+
 
 
 # Comandos (V)
