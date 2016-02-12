@@ -34,7 +34,7 @@ element: class="fragment" data-fragment-index="1"
 ## Instalación
 
 
-## Proyecto GNU
+### Proyecto GNU
 - Sistema operativo de tipo Unix.
 - Acrónimo recursivo de "GNU's Not Unix"
 - Iniciado en 1983 por Richard Stallman.
@@ -42,14 +42,14 @@ element: class="fragment" data-fragment-index="1"
 - Propio núcleo llamado GNU Hurd.
 
 
-## Proyecto GNU
+### Proyecto GNU
 
 ![Richard Stallman](assets/img/RichardStallman.jpg)
 
 Richard Stallman
 
 
-## Núcleo Linux
+### Núcleo Linux
 - Concebido por Linus Torvalds en 1991.
 - Desarrollado por colaboradores de todo el mundo.
 - Distribuido bajo licencia GPL (de GNU Public License).
@@ -57,33 +57,41 @@ Richard Stallman
 - Escrito en el lenguaje de programación C.
 
 
-## Núcleo Linux
+### Núcleo Linux
 
 ![Linus Torvalds](assets/img/LinusTorvalds.jpg)
 
 Linus Torvalds
 
 
-## Distribuciones
+### Distribuciones
 
 - Dos grandes ramas:
  - Basadas en Debian. Paquetes .deb
  - Basadas en RedHat. Paquetes .rpm
 
 
-## Distribuciones
+### Distribuciones
 
 [Evolución](http://futurist.se/gldt/wp-content/uploads/12.10/gldt1210.svg)
 
 
-## Distribuciones
+### Distribuciones
 
 ![Listado de distros](assets/img/linux-distro-logos.jpg)
 
 [distrowatch.com](http://distrowatch.com)
 
 
-## Instalación
+### Licencias
+- Licencias propietarias
+- Licencias "libres"
+ - Documentación:  CC 
+ - Bibliotecas o librerias: LGPL
+ - Codigo fuente: GPL, Apache, BSD, MIT, ...
+
+
+### Instalación
 Pasos importantes en una instalación:
 - Particionado (con instalación de GRUB)
 - Creación de usuario
@@ -96,7 +104,7 @@ Pasos importantes en una instalación:
 ## Árbol de directorios
 
 
-## Formatos
+### Formatos
 - ext2, ext3, ext4  <!-- .element: class="fragment" data-fragment-index="1" -->
 - swap              <!-- .element: class="fragment" data-fragment-index="2" -->
 - reiser, btrfs, xfs<!-- .element: class="fragment" data-fragment-index="3" -->
@@ -106,9 +114,17 @@ Pasos importantes en una instalación:
 - ... y muchos otros<!-- .element: class="fragment" data-fragment-index="7" -->
 
 
-## Árbol de directorios
+### Árbol de directorios
 
 ![arbol](assets/img/linux-filesystem.png)
+
+
+### Árbol de directorios
+```sh
+tree
+tree  directorio
+tree  directorio  |  less
+```
 
 
 
@@ -118,14 +134,16 @@ Pasos importantes en una instalación:
 ## Gráficas
 
 
-## Interfaz de texto
-
-- Dos tipos:
- - Terminales virtuales clásicos <!-- .element: class="fragment" data-fragment-index="1" -->
- - Pseudoterminales              <!-- .element: class="fragment" data-fragment-index="2" -->
+## Interfaces de texto
 
 
-## Terminales virtuales clásicos 
+### Interfaz de texto
+
+- Terminales virtuales clásicos <!-- .element: class="fragment" data-fragment-index="1" -->
+- Pseudoterminales              <!-- .element: class="fragment" data-fragment-index="2" -->
+
+
+### Terminales virtuales clásicos 
 - Más antiguos
 - Normalmente 6 terminales disponibles
 - Denominados __tty1, tty2, tty3, tty4, tty5 y tty6__
@@ -133,21 +151,24 @@ Pasos importantes en una instalación:
 - Ctrl+Alt+F7 es el entorno gráfico
 
 
-## Pseudoterminales
+### Pseudoterminales
 - Más modernos
 - Pueden crearse muchos pseudoterminales
 - Denominados __pts/0, pts/1, pts/2, ...__
 - Acceso desde aplicación gráfica o red
 
 
-## Sesiones de terminal abiertas
+### Sesiones de terminal abiertas
 ¿Quién está en el sistema y en que terminales?
 ```sh
 who
 ```
 
 
-## Interfaz gráfica
+## Interfaces gráficas
+
+
+### Interfaz gráfica
 - Mediante X-Window (servidor gráfico)
 - Muchos tipos de escritorios
  - GNOME
@@ -472,6 +493,25 @@ reset
 ```
 
 
+### Instalar y desinstalar paquetes .deb
+Buscar paquetes relacionados
+```sh
+apt-cache  search  paquete 
+```
+Mostrar datos de un paquete
+```sh
+apt-cache  show  paquete 
+```
+Instalar
+```sh
+apt-get  install  paquete
+```
+Desinstalar paquete
+```sh
+apt-get  remove  paquete
+```
+
+
 ### Reiniciar o apagar
 Reiniciar
 ```sh
@@ -703,7 +743,6 @@ Comando chown
 ```sh
 chown      usuario:grupo  archivo
 chown  -R  usuario:grupo  directorio
-
 ```
 
 
@@ -817,6 +856,7 @@ o
 fuser  -mk  /mnt
 ```
 
+ps `fuser -m  /dev/sdb1 2>1 | tr -s ' '`
 
 
 # Comandos (V)
@@ -894,16 +934,25 @@ fg  numero_tarea
 ```
 
 
-### Procesos 
-Listado
+### Listar procesos 
 ```sh
 top
 ps
 ps  auxf
+pstree
 ps  auxf  |  less
+pstree    |  less
+pidof  lxterminal
+pidof  gnome-terminal
+pidof  firefox
 ```
-Matar un proceso
+
+
+### Matar procesos
 ```sh
-kill  PID
+kill      PID
+kill  -9  PID
+killall   firefox
+xkill
 ```
 
