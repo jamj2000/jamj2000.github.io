@@ -40,6 +40,7 @@ element: class="fragment" data-fragment-index="1"
 - Iniciado en 1983 por Richard Stallman.
 - Auspiciado por la Free Software Foundation.
 - Propio núcleo llamado GNU Hurd.
+- Elaboración de la licencia GPL (General Public License)
 
 
 ### Proyecto GNU
@@ -64,11 +65,36 @@ Richard Stallman
 Linus Torvalds
 
 
+### Software libre
+
+- Libertad 0: __Usar__ el programa, con cualquier propósito. <!-- .element: class="fragment" data-fragment-index="1" -->
+- Libertad 1: __Estudiar__ cómo funciona el programa y modificarlo, adaptándolo a las propias necesidades. <!-- .element: class="fragment" data-fragment-index="2" -->
+- Libertad 2: __Distribuir__ copias del programa, con lo cual se puede ayudar a otros usuarios. <!-- .element: class="fragment" data-fragment-index="3" -->
+- Libertad 3: __Mejorar__ el programa y hacer públicas esas mejoras a los demás, de modo que toda la comunidad se beneficie. <!-- .element: class="fragment" data-fragment-index="4" -->
+
+Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y modificar software sin su código fuente es muy poco viable. <!-- .element: class="fragment" data-fragment-index="5" -->
+
+[Software libre](https://es.wikipedia.org/wiki/Software_libre)
+
+
+### Licencias
+- Licencias propietarias 
+ - EULA (End User License Agreement)
+- Licencias libres
+ - GPL, Apache, Mozilla, BSD, MIT, ... - __Código fuente__
+ - LGPL (Lesser GPL) - __Bibliotecas o librerías__
+ - AGPL (Affero GPL) - __Software de servicios de red__
+ - FDL, CC - __Documentación__
+- Dominio público
+
+[Listado de licencias](http://www.gnu.org/licenses/license-list.es.html)
+
+
 ### Distribuciones
 
 - Dos grandes ramas:
- - Basadas en Debian. Paquetes .deb
- - Basadas en RedHat. Paquetes .rpm
+ - Basadas en __Debian__. Paquetes __.deb__
+ - Basadas en __RedHat__. Paquetes __.rpm__
 
 
 ### Distribuciones
@@ -83,18 +109,10 @@ Linus Torvalds
 [distrowatch.com](http://distrowatch.com)
 
 
-### Licencias
-- Licencias propietarias
-- Licencias "libres"
- - Documentación:  CC 
- - Bibliotecas o librerias: LGPL
- - Codigo fuente: GPL, Apache, BSD, MIT, ...
-
-
 ### Instalación
 Pasos importantes en una instalación:
-- Particionado (con instalación de GRUB)
 - Creación de usuario
+- Particionado (e instalación de GRUB)
 
 
 
@@ -147,7 +165,7 @@ tree  directorio  |  less
 - Más antiguos
 - Normalmente 6 terminales disponibles
 - Denominados __tty1, tty2, tty3, tty4, tty5 y tty6__
-- Acceso mediante Ctrl+Alt+F1, Ctrl+Alt+F2, ..., Ctrl+Alt+F6
+- Acceso mediante Ctrl+Alt+F1, ... , Ctrl+Alt+F6
 - Ctrl+Alt+F7 es el entorno gráfico
 
 
@@ -412,6 +430,10 @@ Voy al directorio raíz
 ```sh
 cd  /
 ```
+Atajo: vuelvo al directorio anterior
+```sh
+cd  -
+```
 Atajo: Voy directo a mi directorio personal
 ```sh
 cd  ~
@@ -419,10 +441,6 @@ cd  ~
 Atajo: Lo mismo, pero más sencillo
 ```sh
 cd 
-```
-Atajo: vuelvo al directorio anterior
-```sh
-cd  -
 ```
 
 
@@ -457,6 +475,27 @@ ls  -la
 Listado recursivo
 ```sh
 ls  -R
+```
+
+
+### Comodines
+```sh
+?      # equivale a un sólo caracter
+*      # equivale a varios caracteres (0-n)
+[abcd] # equivale a cualquiera de los caracteres entre corchetes
+```
+
+
+### Ejemplos
+
+```sh
+ls  ?????    # archivos con nombre de 5 caracteres
+ls  *        # archivos con cualquier nombre
+ls  a*       # archivos que empiezan por letra 'a' 
+ls  a*o      # archivos que empiezan por letra 'a' y acaban con 'o'
+ls  a????    # archivos que empiezan por letra 'a' y tienen 5 letras
+ls  [aA]*    # archivos que empiezan por letra 'a' o letra 'A'
+ls  [aeiou]* # archivos que empiezan por vocal minúscula
 ```
 
 
@@ -508,9 +547,9 @@ shutdown  -h  now
 
 ### Repositorios
 
-Son sitios en Internet desde los cuales pueden descargarse paquetes.
+- Son sitios en Internet desde los cuales pueden descargarse paquetes.
+- En Debian y derivadas el listado de estos repositorios se guarda en:
 
-En Debian y derivadas el listado de estos repositorios se guarda en:
 ```sh
 /etc/apt/sources.list
 /etc/apt/sources.list.d/*
@@ -519,15 +558,14 @@ En Debian y derivadas el listado de estos repositorios se guarda en:
 
 ### Actualizar lista de paquetes
 
-Cada vez que añadimos o quitamos repositorios debemos actualizar la lista de paquetes disponibles.
+- Cada vez que añadimos o quitamos repositorios debemos actualizar la lista de paquetes disponibles.
 
 ```sh
 apt-get update 
 ```
 
-También es aconsejable actualizar la lista de paquetes de vez cuando.
-
-Esto permite descargar una lista de paquetes actualizada aún cuando los repositorios sean los mismos. 
+- También es aconsejable actualizar la lista de paquetes de vez cuando.
+- Esto permite descargar una lista de paquetes actualizada aún cuando los repositorios sean los mismos. 
 
 
 ### Instalar y desinstalar paquetes .deb
@@ -629,12 +667,13 @@ sudo  -s
 
 ### Archivos importantes
 ```sh
-/etc/profile
-/etc/passwd
-/etc/shadow
+/etc/profile   # configuración shell por defecto
+~/.bashrc      # configuración shell de usuario
 ```
 ```sh
-~/.bashrc
+/etc/passwd    # archivo de usuarios
+/etc/group     # archivo de grupos
+/etc/shadow    # archivo de contraseñas
 ```
 
 
@@ -666,9 +705,8 @@ s   socket con nombre (socket)
 
 ### Directorios vs Archivos
 
-__Los directorios contienen archivos y directorios__
-
-__Los archivos contienen datos__
+- __Los directorios contienen archivos y directorios__
+- __Los archivos contienen datos__
 
 
 ### Directorios "especiales"
@@ -779,19 +817,6 @@ mv  nombre_antiguo  directorio_existente
 ```
 
 
-### Listado largo 
-
-![ls -l](assets/img/ls.jpg)
-
-
-### Cambiar propietario
-Comando chown
-```sh
-chown      usuario:grupo  archivo
-chown  -R  usuario:grupo  directorio
-```
-
-
 ### Tarballs
 
 ![tarball](assets/img/tarball.png)
@@ -856,6 +881,55 @@ tar  jxvf  archivo.tbz2
 ```
 
 
+### Comprimir por separado
+```sh
+gzip   archivo1   archivo2 ...  # Comprime archivos por separado
+bzip2  archivo1   archivo2 ...  # Comprime archivos por separado
+```
+```sh
+gzip   *  # Comprime todos los archivos por separado
+bzip2  *  # Comprime todos los archivos por separado
+```
+- NOTA: No se aplica a los directorios y su contenido. Para este cometido usar comando `tar`.
+
+
+### Descomprimir
+```sh
+gunzip   archivo1   archivo2 ...  # Descomprime archivos por separado
+bunzip2  archivo1   archivo2 ...  # Descomprime archivos por separado
+```
+```sh
+gunzip  *  # Comprime todos los archivos por separado
+bunzip2 *  # Comprime todos los archivos por separado
+```
+
+- NOTA: No se aplica a los directorios y su contenido. Para este cometido usar comando `tar`.
+
+
+### Sincronizar 2 carpetas
+
+```sh
+rsync  -av              carpeta_origen/    carpeta_destino/
+``` 
+
+```sh
+rsync  -av   --delete   carpeta_origen/    carpeta_destino/
+``` 
+
+
+### Listado largo 
+
+![ls -l](assets/img/ls.jpg)
+
+
+### Cambiar propietario
+Comando chown
+```sh
+chown      usuario:grupo  archivo
+chown  -R  usuario:grupo  directorio
+```
+
+
 ### Permisos
 
 ![ls -l](assets/img/linux-permisos-tipos.png)
@@ -902,6 +976,54 @@ chmod  ug+w  archivo_o_directorio
 chmod ugo+x  archivo_o_directorio
 chmod   a+x  archivo_o_directorio
 chmod    +x  archivo_o_directorio
+```
+
+
+### Permisos por defecto
+
+- Para un archivo los permisos por defecto son
+```sh
+666   -rw-rw-rw-
+```
+- Para un directorio los permisos por defecto son
+```sh
+777   drwxrwxrwx
+```
+
+
+### Máscara de permisos
+
+- Dichos permisos por defecto pueden modificarse con el comando __`umask`__.
+- Cada usuario tiene su máscara. 
+- Se puede fijar la máscara por defecto para todos los usuarios en el archivo `/etc/profile` o para cada usuario en el archivo `/home/usuario/.bashrc`
+- Podemos ver nuestra máscara ejecutando
+```sh
+umask
+0022
+```
+
+
+### Permisos reales de un archivo
+
+- Se calculan restando la máscara a los permisos por defecto para archivos
+
+```
+  666   Permisos por defecto para archivos 
+- 022   Valor umask
+-----
+  644   Permisos reales (666-022 = 644) (rw-r--r--)
+```
+
+
+### Permisos reales de un directorio
+
+- Se calculan restando la máscara a los permisos por defecto para directorios
+
+```
+  777   Permisos por defecto para directorios
+- 022   Valor umask
+-----
+  755   Permisos reales (777-022 = 755) (rwxr-xr-x)
 ```
 
 
@@ -952,12 +1074,11 @@ umount  /dev/sdb1
 
 
 ### Cerrar archivos abiertos
-__CONSEJO:__ Usar __fuser__ para cerrar archivos abiertos.
 
 - Si tenemos abierto algún archivo de un dispositivo que está montado, no podremos desmontar.
 - Primero deberemos cerrar todos los archivos abiertos.
+- __CONSEJO:__ Usar __fuser__ para cerrar archivos abiertos.
 
-Ejemplo
 ```sh
 fuser  -mk  /dev/sdb1
 ```
@@ -965,8 +1086,6 @@ o
 ```sh
 fuser  -mk  /mnt
 ```
-
-ps `fuser -m  /dev/sdb1 2>1 | tr -s ' '`
 
 
 
@@ -980,7 +1099,7 @@ __comando1 | comando2__
 
 Ejemplos
 ```sh
-cat /etc/passwd | sort
+cat /etc/passwd | sort | wc -l
 cat /etc/passwd | sort | less
 cat /etc/passwd | cut -d : -f 1,5,7
 cat /etc/passwd | cut -d : -f 1,5,7 | sort 
