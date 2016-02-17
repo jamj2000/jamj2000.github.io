@@ -499,6 +499,34 @@ ls  [aeiou]* # archivos que empiezan por vocal minúscula
 ```
 
 
+### Alias
+
+- Podemos crear nuevos comandos a partir de los existentes, mediante el uso del comando __`alias`__
+
+ Ejemplos:
+ ```sh
+ alias la='ls -a'
+ alias ll='ls -al'
+ alias ls='ls --color=auto'
+ ```
+
+- Hemos creado 3 comandos nuevos (alias): `la`, `ll` y `ls`.
+- Este último sobreescribe el original.
+
+
+### Deshacer un alias
+
+- Podemos ver los alias que tenemos mediante
+```sh
+alias
+```
+
+- Para deshacer un alias
+```sh
+unalias  nombre_alias
+```
+
+
 ### Ver contenido de archivos de texto
 ```sh
 cat   nombre_archivo
@@ -1032,6 +1060,20 @@ umask
 ![ls -l](assets/img/linux-permisos-especiales.png)
 
 
+### Buscar archivos
+
+```sh
+find .        -name "?????"
+find .        -name "*.iso"
+find .        -name "*.ova"
+find /usr/lib -name "lib*.a"
+find .        -size 0
+find .        -size -600c    # bytes
+find .        -size +600M    # MB
+find .        -size +601M    -size -700M   -ls
+```
+
+
 ### Montar un sistema de archivos
 ```sh
 mount  -t  tipo   dispositivo_o_partición    punto_de_montaje
@@ -1075,9 +1117,10 @@ umount  /dev/sdb1
 
 ### Cerrar archivos abiertos
 
-- Si tenemos abierto algún archivo de un dispositivo que está montado, no podremos desmontar.
+- Si tenemos algún archivo abierto en un dispositivo que está montado, no podremos desmontar.
+- Una aplicación que se haya cerrado incorrectamente puede dejar archivos abiertos.
 - Primero deberemos cerrar todos los archivos abiertos.
-- __CONSEJO:__ Usar __fuser__ para cerrar archivos abiertos.
+- Puede usarse el comando __fuser__ para cerrar archivos abiertos.
 
 ```sh
 fuser  -mk  /dev/sdb1
