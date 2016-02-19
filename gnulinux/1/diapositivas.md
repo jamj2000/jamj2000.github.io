@@ -30,8 +30,9 @@ element: class="fragment" data-fragment-index="1"
 ---
 ## Proyecto GNU 
 ## Kernel Linux
+## Licencias de software
 ## Distribuciones
-## Instalación
+
 
 
 ### Proyecto GNU
