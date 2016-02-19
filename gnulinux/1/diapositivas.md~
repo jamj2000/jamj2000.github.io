@@ -65,18 +65,6 @@ Richard Stallman
 Linus Torvalds
 
 
-### Software libre
-
-- Libertad 0: __Usar__ el programa, con cualquier propósito. <!-- .element: class="fragment" data-fragment-index="1" -->
-- Libertad 1: __Estudiar__ cómo funciona el programa y modificarlo, adaptándolo a las propias necesidades. <!-- .element: class="fragment" data-fragment-index="2" -->
-- Libertad 2: __Distribuir__ copias del programa, con lo cual se puede ayudar a otros usuarios. <!-- .element: class="fragment" data-fragment-index="3" -->
-- Libertad 3: __Mejorar__ el programa y hacer públicas esas mejoras a los demás, de modo que toda la comunidad se beneficie. <!-- .element: class="fragment" data-fragment-index="4" -->
-
-Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y modificar software sin su código fuente es muy poco viable. <!-- .element: class="fragment" data-fragment-index="5" -->
-
-[Software libre](https://es.wikipedia.org/wiki/Software_libre)
-
-
 ### Licencia de software
 
 - contrato entre: 
@@ -92,6 +80,25 @@ Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y mo
      - no reinstalación del programa en equipos distintos al que se instaló originalmente
 
 
+### Software libre
+
+- Libertad 0: __Usar__ el programa, con cualquier propósito. <!-- .element: class="fragment" data-fragment-index="1" -->
+- Libertad 1: __Estudiar__ cómo funciona el programa y modificarlo, adaptándolo a las propias necesidades. <!-- .element: class="fragment" data-fragment-index="2" -->
+- Libertad 2: __Distribuir__ copias del programa, con lo cual se puede ayudar a otros usuarios. <!-- .element: class="fragment" data-fragment-index="3" -->
+- Libertad 3: __Mejorar__ el programa y hacer públicas esas mejoras a los demás, de modo que toda la comunidad se beneficie. <!-- .element: class="fragment" data-fragment-index="4" -->
+
+Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y modificar software sin su código fuente es muy poco viable. <!-- .element: class="fragment" data-fragment-index="5" -->
+
+[Software libre](https://es.wikipedia.org/wiki/Software_libre)
+
+
+### Copyleft
+
+Copyleft utiliza la ley de copyright para lograr lo opuesto de su propósito usual: 
+- en lugar de imponer restricciones, otorga derechos
+- de tal manera garantiza que los derechos no puedan ser posteriormente quitados o restringidos
+
+
 ### Tipos de licencias
 - Licencias propietarias 
  - EULA (End User License Agreement)
@@ -103,13 +110,6 @@ Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y mo
 - Dominio público
 
 [Listado de licencias](http://www.gnu.org/licenses/license-list.es.html)
-
-
-### Copyleft
-
-Copyleft utiliza la ley de copyright para lograr lo opuesto de su propósito usual: 
-- en lugar de imponer restricciones, otorga derechos
-- de tal manera garantiza que los derechos no puedan ser posteriormente quitados o restringidos
 
 
 ### Distribuciones

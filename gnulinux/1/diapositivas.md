@@ -70,6 +70,10 @@ Linus Torvalds
 - contrato entre: 
   - __licenciante__ (autor/titular de los derechos de explotación/distribuidor) y 
   - __licenciatario__ (usuario consumidor /usuario profesional o empresa) 
+
+
+### Licencia de software
+
 - con cláusulas acerca de los términos y condiciones establecidas:
   - cesión de derechos al usuario final sobre una o varias copias del programa informático
   - límites en la responsabilidad por fallos por parte del licenciante
@@ -94,9 +98,9 @@ Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y mo
 
 ### Copyleft
 
-Copyleft utiliza la ley de copyright para lograr lo opuesto de su propósito usual: 
-- en lugar de imponer restricciones, otorga derechos
-- de tal manera garantiza que los derechos no puedan ser posteriormente quitados o restringidos
+- Utiliza la ley de copyright para lograr lo opuesto de su propósito usual: 
+  - en lugar de imponer restricciones, otorga derechos
+  - de tal manera garantiza que los derechos no puedan ser posteriormente quitados o restringidos
 
 
 ### Tipos de licencias
