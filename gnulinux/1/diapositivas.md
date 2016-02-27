@@ -12,7 +12,16 @@ element: class="fragment" data-fragment-index="1"
 ---
 ![GNU/Linux](assets/img/gnulinux.png)
 ### Administración de equipos
-<small> IES Luis Vélez de Guevara </small>
+<small> 2016 - IES Luis Vélez de Guevara - Écija - Spain </small>
+
+
+# Licencia
+
+[![cc-by-sa](assets/img/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
+La versión más actualizada de este documento se encuentra en
+
+[jamj2000.github.io](http://jamj2000.github.io/gnulinux/1/diapositivas)
 
 
 # Índice
@@ -32,7 +41,6 @@ element: class="fragment" data-fragment-index="1"
 ## Kernel Linux
 ## Licencias de software
 ## Distribuciones
-
 
 
 ### Proyecto GNU
@@ -97,31 +105,36 @@ Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y mo
 [Software libre](https://es.wikipedia.org/wiki/Software_libre)
 
 
+![copyleft](assets/img/copyleft.png) 
 ### Copyleft
 
 - Utiliza la ley de copyright para lograr lo opuesto de su propósito usual: 
-  - en lugar de imponer restricciones, otorga derechos
-  - de tal manera garantiza que los derechos no puedan ser posteriormente quitados o restringidos
+  - en lugar de imponer restricciones al usuario, le otorga derechos
+  - __garantiza que los derechos no puedan ser posteriormente quitados o restringidos__
 
 
 ### Tipos de licencias
 - Licencias propietarias 
  - EULA (End User License Agreement)
 - Licencias libres
- - GPL, Apache, Mozilla, BSD, MIT, ... - __Código fuente__
+ - __GPL__, Apache, Mozilla, BSD, MIT, ... - __Código fuente__
  - LGPL (Lesser GPL) - __Bibliotecas o librerías__
  - AGPL (Affero GPL) - __Software de servicios de red__
- - FDL, CC - __Documentación__
+ - FDL, __CC__ - __Documentación__
 - Dominio público
 
 [Listado de licencias](http://www.gnu.org/licenses/license-list.es.html)
 
 
 ### Distribuciones
+Dos grandes ramas
+- Debian
+- RedHat
 
-- Dos grandes ramas:
- - Basadas en __Debian__. Paquetes __.deb__
- - Basadas en __RedHat__. Paquetes __.rpm__
+
+### Paquetes
+
+![paquetes](assets/img/paquetes.jpg)
 
 
 ### Distribuciones
@@ -136,7 +149,37 @@ Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y mo
 [distrowatch.com](http://distrowatch.com)
 
 
-### Instalación
+### Linux y los supercomputadores
+[top500.org](http://top500.org)
+
+![Listado de supercomputadores](assets/img/top500-0.png)
+
+
+### Familia de S.O. de los supercomputadores
+[top500.org](http://top500.org)
+
+![Supercomputadores - Familia S.O. ](assets/img/top500-1.png)
+
+
+### Familia de S.O. de los supercomputadores
+[top500.org](http://top500.org)
+
+![Supercomputadores - Familia S.O. - Listado ](assets/img/top500-1-1.png)
+
+
+### S.O. de los supercomputadores
+[top500.org](http://top500.org)
+
+![Supercomputadores - S.O. ](assets/img/top500-2.png)
+
+
+### S.O. de los supercomputadores
+[top500.org](http://top500.org)
+
+![Supercomputadores - S.O. - Listado ](assets/img/top500-2-1.png)
+
+
+### Instalación de GNU/Linux
 Pasos importantes en una instalación:
 - Creación de usuario
 - Particionado (e instalación de GRUB)
@@ -201,6 +244,13 @@ tree  directorio  |  less
 - Pueden crearse muchos pseudoterminales
 - Denominados __pts/0, pts/1, pts/2, ...__
 - Acceso desde aplicación gráfica o red
+
+
+### Ctrl+Shift+C  
+Para copiar
+<hr>
+### Ctrl+Shift+V 
+Para pegar
 
 
 ### Sesiones de terminal abiertas
@@ -372,6 +422,7 @@ whoami
 Más información
 ```sh
 id
+id   nombre_usuario
 ```
 ¿Dónde estoy?
 ```sh
@@ -465,7 +516,7 @@ Atajo: Voy directo a mi directorio personal
 ```sh
 cd  ~
 ```
-Atajo: Lo mismo, pero más sencillo
+Atajo: Voy directo a mi directorio personal
 ```sh
 cd 
 ```
@@ -797,11 +848,7 @@ file  nombre_archivo
 
 ### Tipos de archivos especiales 
 
-![Archivos especiales 1](assets/img/captura-tipo-archivos1.png)
-
-![Archivos especiales 2](assets/img/captura-tipo-archivos2.png)
-
-![Archivos especiales 3](assets/img/captura-tipo-archivos3.png)
+![Archivos especiales 1](assets/img/captura-tipo-archivos.png)
 
 
 ### Crear archivos y directorios vacíos
