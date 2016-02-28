@@ -1134,15 +1134,6 @@ chown  -R  usuario:grupo  directorio
 ![ls -l](assets/linux-permisos-tipos.png)
 
 
-### Cambiar permisos
-Comando __chmod__
-```sh
-chmod      644  archivo
-chmod  -R  755  directorio
-```
-[Página en Wikipedia](https://es.wikipedia.org/wiki/Chmod)
-
-
 ### Permisos
 
 ![ls -l](assets/linux-permisos.png)
@@ -1150,16 +1141,40 @@ chmod  -R  755  directorio
 
 ### Permisos
 
-Número | Binario | Permisos
-------:|:-------:|---------
-__`0`__|__`000`__|__`---`__ 
-`1`    |`001`    |`--x` 
-`2`    |`010`    |`-w-` 
-`3`    |`011`    |`-wx` 
-__`4`__|__`100`__|__`r--`__ 
-__`5`__|__`101`__|__`r-x`__ 
-__`6`__|__`110`__|__`rw-`__ 
-__`7`__|__`111`__|__`rwx`__ 
+Número | Binario | Permisos|Usado en
+------:|:-------:|---------|------------
+__`0`__|__`000`__|__`---`__|directorios y archivos
+`1`    |`001`    |`--x`    |
+`2`    |`010`    |`-w-`    |
+`3`    |`011`    |`-wx`    |
+__`4`__|__`100`__|__`r--`__|archivos
+__`5`__|__`101`__|__`r-x`__|directorios y 'binarios'
+__`6`__|__`110`__|__`rw-`__|archivos
+__`7`__|__`111`__|__`rwx`__|directorios y 'binarios'
+
+
+### Ejemplos típicos
+```sh
+drwxr-xr-x 169 root root   12288 feb 27 23:17 /etc
+-rw-r--r--   1 root root    2800 feb 27 20:23 /etc/passwd
+-rw-r--r--   1 root root    1172 feb 27 20:23 /etc/group
+-rw-r-----   1 root shadow  1629 feb 27 20:23 /etc/shadow
+drwxr-xr-x   2 root root    4096 feb 22 20:01 /bin
+-rwxr-xr-x   1 root root 1037464 sep  1 01:27 /bin/bash
+-rwxr-xr-x   1 root root  208360 dic  9 15:41 /bin/nano
+```
+
+
+### Cambiar permisos
+Comando __chmod__
+```sh
+chmod      644  archivo
+chmod      640  archivo
+
+chmod  -R  755  directorio
+chmod  -R  750  directorio
+```
+[Página en Wikipedia](https://es.wikipedia.org/wiki/Chmod)
 
 
 ### Añadir o quitar permisos
@@ -1223,6 +1238,21 @@ umask
 - 022   Valor umask
 -----
   755   Permisos reales (777-022 = 755) (rwxr-xr-x)
+```
+
+
+### Significado para archivos
+- Read (__r__): Se puede leer y copiar el contenido a otro archivo. 
+- Write (__w__): Además se puede modificar y borrar el archivo.
+- Execute (__x__): Se puede ejecutar el archivo.
+
+
+### Significado para directorios
+- Read (__r__): Se puede listar y copiar su contenido a otro directorio. 
+- Write (__w__): Además se puede modificar y borrar su contenido (archivos y subdirectorios).
+- Execute (__x__): Se puede __ENTRAR__ en el directorio.
+```sh
+cd   directorio
 ```
 
 
@@ -1399,4 +1429,6 @@ kill  -9  PID
 killall   firefox
 xkill
 ```
-
+```
+Ctrl+Alt+Esc     (en escritorio KDE)
+```
