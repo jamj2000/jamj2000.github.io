@@ -10,14 +10,14 @@ element: class="fragment" data-fragment-index="1"
 
 # GNU/Linux
 ---
-![GNU/Linux](assets/img/gnulinux.png)
+![GNU/Linux](assets/gnulinux.png)
 ### Administración de equipos
 <small> 2016 - IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
 # Licencia
 
-[![cc-by-sa](assets/img/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 La versión más actualizada de este documento se encuentra en
 
@@ -54,7 +54,7 @@ La versión más actualizada de este documento se encuentra en
 
 ### Proyecto GNU
 
-![Richard Stallman](assets/img/RichardStallman.jpg)
+![Richard Stallman](assets/RichardStallman.jpg)
 
 Richard Stallman
 
@@ -69,7 +69,7 @@ Richard Stallman
 
 ### Núcleo Linux
 
-![Linus Torvalds](assets/img/LinusTorvalds.jpg)
+![Linus Torvalds](assets/LinusTorvalds.jpg)
 
 Linus Torvalds
 
@@ -105,7 +105,7 @@ Las libertades 1 y 3 requieren __acceso al código fuente__ porque estudiar y mo
 [Software libre](https://es.wikipedia.org/wiki/Software_libre)
 
 
-![copyleft](assets/img/copyleft.png) 
+![copyleft](assets/copyleft.png) 
 ### Copyleft
 
 - Utiliza la ley de copyright para lograr lo opuesto de su propósito usual: 
@@ -134,7 +134,7 @@ Dos grandes ramas
 
 ### Paquetes
 
-![paquetes](assets/img/paquetes.jpg)
+![paquetes](assets/paquetes.jpg)
 
 
 ### Distribuciones
@@ -144,7 +144,7 @@ Dos grandes ramas
 
 ### Distribuciones
 
-![Listado de distros](assets/img/linux-distro-logos.jpg)
+![Listado de distros](assets/linux-distro-logos.jpg)
 
 [distrowatch.com](http://distrowatch.com)
 
@@ -152,31 +152,41 @@ Dos grandes ramas
 ### Linux y los supercomputadores
 [top500.org](http://top500.org)
 
-![Listado de supercomputadores](assets/img/top500-0.png)
+![Listado de supercomputadores](assets/top500-0.png)
+
+<small>Estádisticas de Noviembre 2015</small>
 
 
 ### Familia de S.O. de los supercomputadores
 [top500.org](http://top500.org)
 
-![Supercomputadores - Familia S.O. ](assets/img/top500-1.png)
+![Supercomputadores - Familia S.O. ](assets/top500-1.png)
+
+<small>Estádisticas de Noviembre 2015</small>
 
 
 ### Familia de S.O. de los supercomputadores
 [top500.org](http://top500.org)
 
-![Supercomputadores - Familia S.O. - Listado ](assets/img/top500-1-1.png)
+![Supercomputadores - Familia S.O. - Listado ](assets/top500-1-1.png)
+
+<small>Estádisticas de Noviembre 2015</small>
 
 
 ### S.O. de los supercomputadores
 [top500.org](http://top500.org)
 
-![Supercomputadores - S.O. ](assets/img/top500-2.png)
+![Supercomputadores - S.O. ](assets/top500-2.png)
+
+<small>Estádisticas de Noviembre 2015</small>
 
 
 ### S.O. de los supercomputadores
 [top500.org](http://top500.org)
 
-![Supercomputadores - S.O. - Listado ](assets/img/top500-2-1.png)
+![Supercomputadores - S.O. - Listado ](assets/top500-2-1.png)
+
+<small>Estádisticas de Noviembre 2015</small>
 
 
 ### Instalación de GNU/Linux
@@ -193,18 +203,35 @@ Pasos importantes en una instalación:
 
 
 ### Formatos
-- ext2, ext3, ext4  <!-- .element: class="fragment" data-fragment-index="1" -->
-- swap              <!-- .element: class="fragment" data-fragment-index="2" -->
-- reiser, btrfs, xfs<!-- .element: class="fragment" data-fragment-index="3" -->
-- vfat, exfat, ntfs <!-- .element: class="fragment" data-fragment-index="4" -->
-- iso9660, udf      <!-- .element: class="fragment" data-fragment-index="5" -->
-- nfs, cifs, smbfs  <!-- .element: class="fragment" data-fragment-index="6" -->
-- ... y muchos otros<!-- .element: class="fragment" data-fragment-index="7" -->
+- ext2, ext3, __ext4__  <!-- .element: class="fragment" data-fragment-index="1" -->
+- __swap__              <!-- .element: class="fragment" data-fragment-index="2" -->
+- reiser, btrfs, xfs    <!-- .element: class="fragment" data-fragment-index="3" -->
+- vfat, exfat, ntfs     <!-- .element: class="fragment" data-fragment-index="4" -->
+- iso9660, udf          <!-- .element: class="fragment" data-fragment-index="5" -->
+- nfs, cifs, smbfs      <!-- .element: class="fragment" data-fragment-index="6" -->
+- ... y muchos otros    <!-- .element: class="fragment" data-fragment-index="7" -->
+
+
+### Partición de intercambio
+
+- Usada para dar soporte de memoria virtual.
+- Mayor seguridad que un archivo de intercambio.
+- Tamaño mínimo recomendado:
+  - RAM < 4GB:  __1 o 2GB swap__
+  - RAM > 4GB:  __2GB swap__
+  - En sistemas con __hibernación__ el tamaño debe ser al menos __igual a la RAM__ 
+
+
+### Ejemplo de particionado
+
+![particiones](assets/particiones.png)
+
+- __NOTA__: En sistemas UEFI es necesaria una pequeña partición tipo FAT32.
 
 
 ### Árbol de directorios
 
-![arbol](assets/img/linux-filesystem.png)
+![arbol](assets/linux-filesystem.png)
 
 
 ### Árbol de directorios
@@ -225,10 +252,10 @@ tree  directorio  |  less
 ## Interfaces de texto
 
 
-### Interfaz de texto
+### Tipos
 
-- Terminales virtuales clásicos <!-- .element: class="fragment" data-fragment-index="1" -->
-- Pseudoterminales              <!-- .element: class="fragment" data-fragment-index="2" -->
+- Terminales virtuales clásicos (__tty__) <!-- .element: class="fragment" data-fragment-index="1" -->
+- Pseudoterminales              (__pts__) <!-- .element: class="fragment" data-fragment-index="2" -->
 
 
 ### Terminales virtuales clásicos 
@@ -258,22 +285,78 @@ Para pegar
 ```sh
 who
 ```
+ o también
+```sh
+w
+```
 
 
 ## Interfaces gráficas
 
 
-### Interfaz gráfica
-- Mediante X-Window (servidor gráfico)
-- Muchos tipos de escritorios
+### Componentes
+
+Componente          | GNOME      |  KDE
+--------------------|------------|----------
+Servidor gráfico    | X-Window   | X-Window
+Gestor de sesiones  | GDM        | SSDM
+Gestor de ventanas  | Mutter     | Kwin
+Escritorio          | Gnome shell| Plasma 
+
+
+### Escritorios
+- Muchisimos escritorios:
  - GNOME
- - KDE (Plasma)
+ - KDE
  - Unity
  - XFCE
  - LXDE
+ - Cinnamon
+ - MATE
  - Enlightenment
- - MATE, Cinnamon
  - ...y alguno más
+
+
+### Aplicaciones gráficas
+ 
+Aplicación          | GNOME     | KDE
+--------------------|-----------|---------
+Explorador archivos |nautilus   | dolphin
+Editor de texto     |gedit      | kate
+Compresor archivos  |file roller| ark
+Grabador CD/DVD     |brasero    | k3b
+Visor PDF           |evince     | okular
+Visor imágenes      |eog        | gwenview
+Reproductor música  |gnome music| amarok
+Reproductor vídeo   |totem      | dragon player
+
+
+### Aplicaciones gráficas
+- __Se pueden instalar aplicaciones de un escritorio en otro tipo de escritorio__. Ejemplo: nautilus en KDE
+![nautilus](assets/nautilus.png)
+
+
+### Aplicaciones gráficas
+- Existen muchas aplicaciones comunes (incluso para Windows)
+
+Aplicación          | Nombre
+--------------------|--------------------
+Navegador web       | firefox
+Suite ofimática     | libreoffice
+Editor de imágenes  | gimp
+Reproductor de vídeo| vlc
+Virtualización      | virtual box
+
+
+### Combinaciones de teclas
+
+Combinación                | Operación
+---------------------------|--------------------
+__Alt+F2__                 | Ejecutar aplicación
+__Alt+F4__                 | Cerrar ventana
+__Alt+Tab__                | Cambiar entre ventanas
+__Ctrl+C, Ctrl+X, Ctrl+V__ | Copiar, Cortar, Pegar
+__Ctrl+Alt+Esc__           | Matar ventana bloqueda (sólo KDE)
 
 
 
@@ -354,9 +437,12 @@ type  rm
 ```
 comando   [opciones]   [argumentos]
 ```
+#### Errores de concepto frecuentes
+- Poner un nombre de archivo (texto, imagen, documento u otro) en lugar del comando
+- Poner un nombre de directorio en lugar del comando
 
 
-### Opciones
+### Opciones y argumentos
 Opciones cortas
 ```
 -h  -a  -l  ...
@@ -369,9 +455,7 @@ Opciones largas
 ```
 --help  --verbose ...
 ```
-
-
-### Argumentos
+Argumentos
 ```
 nombre_archivo  nombre_directorio  subcomando  ...
 ```
@@ -469,7 +553,7 @@ cal  2016
 pwd
 cd  directorio_destino
 ```
-![arbol](assets/img/linux-filesystem.png)
+![arbol](assets/linux-filesystem.png)
 
 
 ### Rutas
@@ -722,13 +806,14 @@ env
 - Entorno gráfico ... mediante __Display Manager__
 
 
-### Display Managers
-- Utilizados antes de cargar el escritorio
+### __D__isplay __M__anagers
+- Son __Gestores de Sesiones__ gráficas
 - Función equivalente a login para entorno gráfico
+- Utilizados antes de cargar el escritorio
 - Numerosos Display Managers
- - GDM  (para GNOME)
- - SSDM (para KDE. Antes usaba KDM)
- - LightDM
+ - G__DM__  (para GNOME)
+ - SS__DM__ (para KDE. Antes usaba KDM)
+ - Light__DM__
  - y muchos más
 
 
@@ -790,11 +875,8 @@ sudo  -s
 
 
 ### Listado largo 
-```sh
-ls  -l
-```
 
-![ls -l](assets/img/ls.jpg)
+![ls -l](assets/ls.jpg)
 
 
 ### Tipos de "archivos"
@@ -848,7 +930,7 @@ file  nombre_archivo
 
 ### Tipos de archivos especiales 
 
-![Archivos especiales 1](assets/img/captura-tipo-archivos.png)
+![Archivos especiales 1](assets/captura-tipo-archivos.png)
 
 
 ### Crear archivos y directorios vacíos
@@ -919,9 +1001,23 @@ mv  nombre_antiguo  directorio_existente
 ```
 
 
+### Archivos y directorios ocultos
+- Los archivos y directorios ocultos pueden verse con 
+```
+ls -a
+```
+- En la carpeta personal del usuario existen bastantes (utilizados para guardar la configuración personal del usuario).
+- __Comienzan con un punto__.
+ ![archivos-ocultos](assets/archivos-ocultos.png)
+- Podemos ocultar simplemente cambiándole el nombre
+```sh
+mv   archivo_o_carpeta   .archivo_o_carpeta
+```
+
+
 ### Tarballs
 
-![tarball](assets/img/tarball.png)
+![tarball](assets/tarball.png)
 
 
 ### Comprimir/descomprimir archivos
@@ -995,14 +1091,14 @@ bzip2  *  # Comprime todos los archivos por separado
 - NOTA: No se aplica a los directorios y su contenido. Para este cometido usar comando `tar`.
 
 
-### Descomprimir
+### Descomprimir por separado
 ```sh
 gunzip   archivo1   archivo2 ...  # Descomprime archivos por separado
 bunzip2  archivo1   archivo2 ...  # Descomprime archivos por separado
 ```
 ```sh
-gunzip  *  # Comprime todos los archivos por separado
-bunzip2 *  # Comprime todos los archivos por separado
+gunzip  *  # Descomprime todos los archivos por separado
+bunzip2 *  # Descomprime todos los archivos por separado
 ```
 
 - NOTA: No se aplica a los directorios y su contenido. Para este cometido usar comando `tar`.
@@ -1017,15 +1113,16 @@ rsync  -av              carpeta_origen/    carpeta_destino/
 ```sh
 rsync  -av   --delete   carpeta_origen/    carpeta_destino/
 ``` 
+- IMPORTANTE: Poner la barra inclinada (__`/`__) al final de la carpeta origen y destino.
 
 
 ### Listado largo 
 
-![ls -l](assets/img/ls.jpg)
+![ls -l](assets/ls.jpg)
 
 
 ### Cambiar propietario
-Comando chown
+Comando __chown__
 ```sh
 chown      usuario:grupo  archivo
 chown  -R  usuario:grupo  directorio
@@ -1034,11 +1131,11 @@ chown  -R  usuario:grupo  directorio
 
 ### Permisos
 
-![ls -l](assets/img/linux-permisos-tipos.png)
+![ls -l](assets/linux-permisos-tipos.png)
 
 
 ### Cambiar permisos
-Comando chmod
+Comando __chmod__
 ```sh
 chmod      644  archivo
 chmod  -R  755  directorio
@@ -1048,7 +1145,7 @@ chmod  -R  755  directorio
 
 ### Permisos
 
-![ls -l](assets/img/linux-permisos.png)
+![ls -l](assets/linux-permisos.png)
 
 
 ### Permisos
@@ -1067,7 +1164,7 @@ __`7`__|__`111`__|__`rwx`__
 
 ### Añadir o quitar permisos
 
-![ls -l](assets/img/permisos-ugoa.png)
+![ls -l](assets/permisos-ugoa.png)
 
 
 ### Añadir o quitar permisos
@@ -1131,7 +1228,7 @@ umask
 
 ### Permisos especiales
 
-![ls -l](assets/img/linux-permisos-especiales.png)
+![ls -l](assets/linux-permisos-especiales.png)
 
 
 ### Buscar archivos
@@ -1216,7 +1313,7 @@ __comando1 | comando2__
 
 Ejemplos
 ```sh
-cat /etc/passwd | sort | wc -l
+cat /etc/passwd | wc -l
 cat /etc/passwd | sort | less
 cat /etc/passwd | cut -d : -f 1,5,7
 cat /etc/passwd | cut -d : -f 1,5,7 | sort 
