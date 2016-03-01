@@ -128,6 +128,11 @@ united
 
 </pre>
 # <a name="sistemas_archivos"></a> [Sistemas de archivos](#indice)
+1. __Nombra 4 tipos de formato para particiones__
+<hr>
+
+1. __¿Cuál es el formato por defecto actualmente para particiones de GNU/Linux?__
+<hr>
 
 1. __¿Qué formato de sistema de archivos se utiliza por defecto en GNU/Linux?__
 <hr>
@@ -145,10 +150,24 @@ united
   ![particiones](assets/particiones.png)
 <hr>
 
+1. __¿Dónde se monta la partición swap?__
+<hr>
+
 1. __¿Está soportado el sistema de archivos FAT en GNU/Linux?__
 <hr>
 
 1. __¿Está soportado el sistema de archivos NTFS en GNU/Linux?__
+<hr>
+
+1. __Ejecuta los siguientes comandos para ver información acerca de las particiones.__
+```sh
+fdisk -l
+blkid
+df
+```
+<hr>
+
+1. __¿Cuántas particiones necesitamos para instalar GNU/Linux?__ Explica la respuesta.
 <hr>
 
 1. __Indica qué tipos de archivos se almacenan en:__
@@ -194,23 +213,45 @@ Usa `ls /root` o similar para ver el contenido de cada directorio o realiza una 
  - /lib
 <hr>
 
-1. __Ejecuta los siguientes comandos para ver información acerca de las particiones.__
-```sh
-fdisk -l
-blkid
-df
-```
-<hr>
 
 
 
 ### Actividades de ampliación
+1. __¿Qué utilidades vienen en el paquete __ntfs-3g__?__
+```
+apt-get  install apt-file
+apt-file list ntfs-3g | egrep /s?bin
+```
+<hr>
 
+1. __Comprueba que vienen las siguientes aplicaciones en el paquete anterior?__
+```
+/sbin/mkfs.ntfs
+/sbin/mkntfs
+/sbin/mount.ntfs
+/sbin/ntfsclone
+/sbin/ntfslabel
+/sbin/ntfsresize
+```
+<hr>
 
+1. __¿Por qué crees que todos los comandos anteriores estan bajo el directorio /sbin?__
+<hr>
 
+1. Busca información. __¿Para qué se utilizan las particiones de tipo exFAT?__
+<hr>
 
+1. __¿Qué utilidades vienen en el paquete __exfat-utils__?__
+```
+apt-cache show exfat-utils
+```
+<hr>
 
+1. Busca información. __¿Para qué sirven los comandos mkswap y swapon/swapoff?__
+<hr>
 
+1. Busca información. __¿Qué es FHS referido al sistema de archivos GNU/Linux?__
+<hr>
 
 
 <pre>

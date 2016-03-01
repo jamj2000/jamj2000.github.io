@@ -190,7 +190,19 @@ Dos grandes ramas
 
 
 ### Instalación de GNU/Linux
-Pasos importantes en una instalación:
+#### Instaladores gráficos
+- Existen muchos
+- Los más conocidos:
+  - __Anaconda__ (RedHat, Fedora, ...)
+  - __Ubiquity__ (Ubuntu)
+  - __Debian Installer__ (Debian)
+  - __Calamares__ (Manjaro, KaOS, Netrunner, ...)
+  - ...
+
+
+### Instalación de GNU/Linux
+#### Pasos importantes
+
 - Creación de usuario
 - Particionado (e instalación de GRUB)
 
@@ -226,7 +238,81 @@ Pasos importantes en una instalación:
 
 ![particiones](assets/particiones.png)
 
-- __NOTA__: En sistemas UEFI es necesaria una pequeña partición tipo FAT32.
+- __NOTA__: En sistemas UEFI es necesaria una pequeña partición tipo EFI formateada en FAT32.
+
+
+### Herramientas de particionado
+#### Interfaz gráfica
+```
+gparted
+
+partitionmanager
+```
+<hr>
+#### Interfaz de texto
+```
+fdisk
+
+gdisk (GPT)
+```
+
+
+### Tabla de particiones
+#### __MBR__ (Master Boot Record)
+- __BIOS tradicional__
+- __Máximo 4 particiones primarias__
+- Una de ellas puede cambiarse a __extendida__
+- Dentro de la partición extendida pueden crearse muchas __lógicas__
+  
+<hr>
+#### __GPT__ (GUID Partition Table)
+- __BIOS UEFI__
+- __Máximo 128 particiones__
+- No existen distintos tipos de particiones, todas son iguales
+
+
+### Dispositivos de bloques
+```sh
+/dev/sda      # Primer disco duro
+/dev/sda1     # Primera partición del primer disco duro
+/dev/sda2     # Segunda partición del primer disco duro
+...
+/dev/sdb      # Segundo disco duro o dispositivo extraible
+/dev/sdb1     # Primera partición del segundo disco duro
+/dev/sdb2     # Segunda partición del segundo disco duro
+...
+/dev/sdc      # Tercer disco duro o dispositivo extraible
+/dev/sdc1     # Primera partición del tercer disco duro
+/dev/sdc2     # Segunda partición del tercer disco duro
+...
+```
+
+
+### Formatear particiones
+- Para formatear una partición, ésta debe estar sin uso y desmontada.
+- Todos los datos se perderán.
+- Se utiliza el comando __`mkfs`__ (MaKe FileSystem).
+- Por ejemplo, para formatear la partición séptima con distintos formatos.
+```
+mkfs.ext3   /dev/sda7
+mkfs.ext4   /dev/sda7
+mkfs.vfat   /dev/sda7
+mkfs.ntfs   /dev/sda7
+mkntfs      /dev/sda7 
+```
+
+
+### Comprobar particiones
+- Para comprobar una partición es aconsejable que esté sin uso y desmontada.
+- Se utiliza el comando __`fsck`__ (FileSystem ChecK).
+- Por ejemplo, para comprobar la partición séptima en distintos formatos.
+```
+fsck.ext4   /dev/sda7
+fsck.ext4   /dev/sda7
+fsck.vfat   /dev/sda7
+fsck.ntfs   /dev/sda7
+ntfsck      /dev/sda7
+```
 
 
 ### Árbol de directorios
@@ -235,6 +321,48 @@ Pasos importantes en una instalación:
 
 
 ### Árbol de directorios
+
+![arbol](assets/estructura-directorios-linux.png)
+
+
+### Directorios (I)
+
+Directorio | Contenido
+-----------|-----------------------------------------------
+/bin       | binarios importantes
+/sbin      | binarios importantes del sistema
+__/root__  | archivos personales del usuario root (superusuario)
+__/home__  | directorios personales para cada uno de los usuarios
+__/media__ | particiones montadas automáticamente para medios extraíbles
+/mnt       | particiones montadas manualmente
+
+
+### Directorios (II)
+
+Directorio | Contenido
+-----------|-----------------------------------------------
+__/usr__   | aplicaciones del sistema
+/opt       | aplicaciones opcionales (de terceros)
+/srv       | archivos que se sirven a otros sistemas
+__/var__   | archivos variables: logs, cache, www, ...
+__/tmp__   | archivos temporales
+/lost+found| archivos recuperados
+
+
+### Directorios (III)
+
+Directorio | Contenido
+-----------|-----------------------------------------------
+__/boot__  | archivos de configuración del arranque
+__/etc__   | archivos de configuración del sistema
+/dev       | archivos especiales de dispositivo
+/lib       | librerías del sistema
+/sys       | información del sistema
+/proc      | información de los procesos en ejecución
+/run       | archivos con información en tiempo de ejecución
+
+
+### Listado en árbol
 ```sh
 tree
 tree  directorio
@@ -1329,6 +1457,18 @@ fuser  -mk  /dev/sdb1
 o
 ```sh
 fuser  -mk  /mnt
+```
+
+
+### Volcar datos a disco
+
+- Antes de ejecutar el comando `fuser` es recomendable volcar los datos almacenados en memoria RAM a los archivos correspondientes en disco.
+- Ello evita la pérdida de datos que todavía no hayan sido escritos en el disco.
+- Para esto se utiliza el comando __`sync`__
+
+```sh
+sync
+
 ```
 
 
