@@ -154,7 +154,7 @@ Dos grandes ramas
 
 ![Listado de supercomputadores](assets/top500-0.png)
 
-<small>Estádisticas de Noviembre 2015</small>
+<small>Estadísticas de Noviembre 2015</small>
 
 
 ### Familia de S.O. de los supercomputadores
@@ -162,7 +162,7 @@ Dos grandes ramas
 
 ![Supercomputadores - Familia S.O. ](assets/top500-1.png)
 
-<small>Estádisticas de Noviembre 2015</small>
+<small>Estadísticas de Noviembre 2015</small>
 
 
 ### Familia de S.O. de los supercomputadores
@@ -170,7 +170,7 @@ Dos grandes ramas
 
 ![Supercomputadores - Familia S.O. - Listado ](assets/top500-1-1.png)
 
-<small>Estádisticas de Noviembre 2015</small>
+<small>Estadísticas de Noviembre 2015</small>
 
 
 ### S.O. de los supercomputadores
@@ -178,7 +178,7 @@ Dos grandes ramas
 
 ![Supercomputadores - S.O. ](assets/top500-2.png)
 
-<small>Estádisticas de Noviembre 2015</small>
+<small>Estadísticas de Noviembre 2015</small>
 
 
 ### S.O. de los supercomputadores
@@ -186,7 +186,7 @@ Dos grandes ramas
 
 ![Supercomputadores - S.O. - Listado ](assets/top500-2-1.png)
 
-<small>Estádisticas de Noviembre 2015</small>
+<small>Estadísticas de Noviembre 2015</small>
 
 
 ### Instalación de GNU/Linux
@@ -361,7 +361,7 @@ __/etc__   | archivos de configuración del sistema
 /proc      | información de los procesos en ejecución
 /run       | archivos con información en tiempo de ejecución
 
-
+    
 ### Listado en árbol
 ```sh
 tree
