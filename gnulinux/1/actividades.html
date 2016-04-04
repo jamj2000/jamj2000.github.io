@@ -715,7 +715,7 @@ Haz un captura de pantalla para comprobar como queda el resultado.
 1. __¿Cuál de los grupos secundarios permite que un usuario pueda ejecutar el comando sudo?.__
 <hr>
 
-1. __¿Cuál sería el comando completo para eliminar el usuario1 y sy carpeta personal?.__ No lo elimines, puesto que nos hará falta más adelante.
+1. __¿Cuál sería el comando completo para eliminar el usuario1 y su carpeta personal?.__ No lo elimines, puesto que nos hará falta más adelante.
 <hr>
 
 
@@ -727,11 +727,8 @@ Haz un captura de pantalla para comprobar como queda el resultado.
 1. __Vuelve a editar el archivo /etc/shadow.__ Deja la línea `root:: ...` como estaba, es decir, vuelve a poner `!` en el segundo campo. Debe quedar así `root:!: ...`. Los puntos suspensivos representan el resto de campos que debes dejar tal cual estaban. Pulsa `Ctrl+Alt+F1` e inicia sesión como usuario `root`. ¿Qué sucede?. 
 <hr>
 
-
-
-
-
-
+1. __Abre el archivo `/etc/sudoers`.__ Este archivo guarda los usuarios y grupos que pueden ejecutar el comando `sudo`. ¿Qué usuarios pueden ejecutar este comando? Además, ¿qué grupos de usuarios pueden hacerlo?
+<hr>
 
 
 ## Archivos
@@ -750,15 +747,54 @@ file /bin/* | grep script
 ```
 <hr>
 
+1. __¿Cuál es el código octal para los siguientes permisos?__
+ - rwx rwx rwx --> 777  (resuelto)
+ - rwx r-- --- --> 740  (resuelto)
+ - rw- rw- rw-
+ - rwx r-- r--
+ - r-- r-- r--
+ - r-- r-- ---
+ - r-x r-x r--
+ - rwx r-x r--
+<hr>
+
+1. Para los siguientes códigos en octal, indica cuáles son los permisos asociados.
+ - 777 --> rwx rwx rwx (resuelto)
+ - 740 --> rwx r-- --- (resuelto)
+ - 664
+ - 440
+ - 755
+ - 754
+ - 550
+<hr>
+
+1. __Indica comando completo para dar de forma recursiva los permisos 755 a la carpeta /usr/share/doc.__
+<hr>
+
+1. __Indica comando completo para dar de forma recursiva los permisos 750 a la carpeta /usr/share/doc.__
+<hr>
+
+1. __Indica 3 formas de añadir el permiso de ejecución para todo el mundo sobre el archivo `/bin/bash`.__
+<hr>
+
+1. __Indica como añadimos el permiso de ejecución sólo para el propietario sobre archivo `/bin/bash`.__
+<hr>
+
+1. __Indica como añadimos el permiso de ejecución sólo para el grupo sobre archivo `/bin/bash`.__
+<hr>
+
+1. __Indica como añadimos los permisos de lectura y escritura sólo para el propietario sobre archivo `/bin/bash`.__
+<hr>
+
 1. __Accede a la página http://file-permissions.ninja. Pon los máximos permisos.__
 ![file-permissions.ninja.png](./assets/file-permissions.ninja.png)
 
- Escribe cuál es la representación
+Escribe cuál es la representación
  - numérica
  - binaria
  - simbólica
 <hr>
- 
+
 1. __Activa el SETUID bit.__
 Escribe cuál es la representación
  - numérica
@@ -801,10 +837,8 @@ Escribe cuál es la representación
  - simbólica
 
 
-
+ 
 ### Actividades de ampliación
-
-
 
 
 

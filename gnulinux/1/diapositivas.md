@@ -993,6 +993,7 @@ sudo  -s
 /etc/passwd    # archivo de usuarios
 /etc/group     # archivo de grupos
 /etc/shadow    # archivo de contraseñas
+/etc/sudoers   # usuarios que pueden hacer sudo
 ```
 
 
