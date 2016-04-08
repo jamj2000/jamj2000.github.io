@@ -361,7 +361,7 @@ __/etc__   | archivos de configuración del sistema
 /proc      | información de los procesos en ejecución
 /run       | archivos con información en tiempo de ejecución
 
-    
+
 ### Listado en árbol
 ```sh
 tree
