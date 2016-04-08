@@ -427,7 +427,7 @@ w
 Componente          | GNOME      |  KDE
 --------------------|------------|----------
 Servidor gráfico    | X-Window   | X-Window
-Gestor de sesiones  | GDM        | SSDM
+Gestor de sesiones  | GDM        | SDDM
 Gestor de ventanas  | Mutter     | Kwin
 Escritorio          | Gnome shell| Plasma 
 

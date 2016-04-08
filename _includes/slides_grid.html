@@ -8,9 +8,14 @@
                     <hr class="star-primary">
                 </div>
             </div>
+ 
+
             <div class="row">
-                 <div class="col-sm-4 portfolio-item">
-                        <a href="gnulinux/1/diapositivas" class="portfolio-link" data-toggle="modal">
+                {% for post in site.posts %}
+                 {% if post.categories contains 'slides' %}
+                 <div class="col-sm-4 slides-item">
+                            <a href="{{ post.url }}" class="slides-link" data-toggle="modal">
+                            <!-- a href="gnulinux/1/diapositivas" class="portfolio-link" data-toggle="modal" -->
 
                             <div class="caption">
                                 <div class="caption-content">
@@ -18,24 +23,13 @@
                                     <h4>{{ post.title }}</h4>  
                                 </div>
                             </div>
-                            <img src="gnulinux/1/assets/gnulinux.png" class="img-responsive" alt="captura">
+                            <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
                         </a>
                 </div>
+                 {% endif %}
+                {% endfor %}
             </div>
-            <div class="row">
-                 <div class="col-sm-4 portfolio-item">
-                        <a href="gnulinux/1/actividades" class="portfolio-link" data-toggle="modal">
 
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                    <h4>{{ post.title }}</h4>
-                                </div>
-                            </div>
-                            <img src="gnulinux/1/assets/gnulinux.png" class="img-responsive" alt="captura">
-                        </a>
-                </div>
-            </div>
 
         </div>
     </section>

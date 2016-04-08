@@ -2,9 +2,9 @@
 layout: post
 title: GNU/Linux - Administración de equipos
 img: gnulinux.png
-alt: gnulinux-1
-date: 2016-04-08
-category: portfolio
+alt: gnulinux
+date: 2016-04-18
+category: slides
 description: 
 article: yes
 
