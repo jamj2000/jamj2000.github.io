@@ -940,7 +940,7 @@ env
 - Utilizados antes de cargar el escritorio
 - Numerosos Display Managers
  - G__DM__  (para GNOME)
- - SS__DM__ (para KDE. Antes usaba KDM)
+ - SD__DM__ (para KDE. Antes usaba KDM)
  - Light__DM__
  - y muchos más
 
