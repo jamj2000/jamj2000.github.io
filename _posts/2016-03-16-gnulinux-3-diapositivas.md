@@ -3,7 +3,7 @@ layout: post
 title: GNU/Linux - Scripts
 img: gnulinux.png
 alt: gnulinux
-date: 2016-04-16
+date: 2016-03-16
 category: slides
 description: 
 article: yes

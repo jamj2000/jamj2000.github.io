@@ -3,7 +3,7 @@ layout: post
 title: GNU/Linux - Administración de equipos
 img: gnulinux.png
 alt: gnulinux
-date: 2016-04-18
+date: 2016-03-18
 category: slides
 description: 
 article: yes

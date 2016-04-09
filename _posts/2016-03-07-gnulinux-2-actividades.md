@@ -1,9 +1,9 @@
 ---
 layout: post
-title: GNU/Linux - Scripts
+title: GNU/Linux - Administración de red
 img: gnulinux.png
 alt: gnulinux
-date: 2016-04-06
+date: 2016-03-07
 category: slides
 description: 
 article: yes
@@ -15,10 +15,10 @@ article: yes
 
 ## Description
 
-Actividades de GNU/Linux - Scripts.
+Actividades de GNU/Linux - Administración de red.
 
 2016 - IES Luis Vélez de Guevara - Écija - Spain
 
-[Actividades](http://jamj2000.github.io/gnulinux/3/actividades). 
+[Actividades](http://jamj2000.github.io/gnulinux/2/actividades). 
     
 
