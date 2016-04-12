@@ -136,20 +136,24 @@ wlo1, wlo2, wlo3, ...
 ## Servidores DNS 
 
 
-## Interfaces
+### Interfaces
+__ifconfig__
+
 ```
 ifconfig -s
 
-ip link show
-ip l
+ip link set eth0 down
+ip link set eth0 up
 ```
+
+__iproute2__
 
 ```                      
 ifconfig eth0 down    
 ifconfig eth0 up      
 
-ip link set eth0 down
-ip link set eth0 up
+ip link show
+ip l
 ```
 
 
@@ -206,14 +210,27 @@ echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 # C. dinámica
 ---
 ```
-dhclient -r eth0
+dhclient -r eth1
 ```
 
 ```
-dhclient eth0
+dhclient eth1
 ```
 
 
 
 # Servicios de red
 ---
+- Algunos servicios que pueden implementarse en GNU/Linux.
+ - Servidor web          <!-- .element: class="fragment" data-fragment-index="1" -->
+ - Servidor FTP          <!-- .element: class="fragment" data-fragment-index="2" -->
+ - Servidor DHCP         <!-- .element: class="fragment" data-fragment-index="3" -->
+ - Servidor DNS          <!-- .element: class="fragment" data-fragment-index="4" -->
+ - Servidor Samba        <!-- .element: class="fragment" data-fragment-index="5" -->
+ - Servidor SSH          <!-- .element: class="fragment" data-fragment-index="6" -->
+ - Servidor Proxy-caché  <!-- .element: class="fragment" data-fragment-index="7" -->
+
+
+### Servidor web
+
+
