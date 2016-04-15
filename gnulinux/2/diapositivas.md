@@ -76,7 +76,8 @@ wlo1, wlo2, wlo3, ...
 
 ### Dirección IP y máscara
 - Permite situar la interfaz de red en una red determinada.
-- Por ejemplo:
+- Ejemplo de dirección IP/máscara:
+
 ```
 192.168.1.2     255.255.255.0
 
@@ -86,7 +87,11 @@ wlo1, wlo2, wlo3, ...
 
 ### Puerta de enlace
 - Permite dar salida a otra red. 
-- Por ejemplo:
+- La puerta de enlace suele ser un router.
+- Dicho router debe tener al menos 2 interfaces de red.
+- E interconectar al menos 2 redes distintas.
+- Ejemplo de puerta de enlace:
+
 ```
 192.168.1.1
 ```
@@ -94,7 +99,11 @@ wlo1, wlo2, wlo3, ...
 
 ### Servidores DNS
 - Permite resolver los nombres a direcciones IP.
-- Por ejemplo:
+- Obtienen la IP a partir de un nombre.
+  - www.google.es --> 216.58.214.163
+- Necesarios para la navegación web.
+- Ejemplo de servidores DNS:
+
 ```
 8.8.8.8
 
@@ -105,7 +114,7 @@ wlo1, wlo2, wlo3, ...
 ### Archivo de configuración
 - Archivo donde se guardan los parámetros de red.
   - __/etc/network/interfaces__
-- Por ejemplo:
+- Ejemplo de archivo de configuración:
 ```
   # Configuración estática
   auto eth0
@@ -224,7 +233,7 @@ dhclient eth1
 
 
 
-# Servicios de red
+# Servicios
 ---
 - Algunos servicios que pueden implementarse en GNU/Linux.
  - Servidor web          <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -234,6 +243,28 @@ dhclient eth1
  - Servidor Samba        <!-- .element: class="fragment" data-fragment-index="5" -->
  - Servidor SSH          <!-- .element: class="fragment" data-fragment-index="6" -->
  - Servidor Proxy-caché  <!-- .element: class="fragment" data-fragment-index="7" -->
+
+
+### Introducción
+- Ver estado de un servicio
+
+```
+service  nombre  status 
+```
+
+- Parar/Iniciar un servicio
+
+```
+service  nombre  stop
+service  nombre  start
+```
+
+- Recargar/Reiniciar un servicio
+
+```
+service  nombre  reload
+service  nombre  restart
+```
 
 
 ### Servidor web
