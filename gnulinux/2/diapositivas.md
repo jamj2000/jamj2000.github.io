@@ -51,7 +51,9 @@ La versión más actualizada de este documento se encuentra en
 
 ```
 eth0, eth1, eth2, ...
+
 eno1, eno2, eno3, ...
+
 enp0s0, enp0s1, enp0s2, ...
 ```
 
@@ -60,6 +62,7 @@ enp0s0, enp0s1, enp0s2, ...
 
 ```
 wlan0, wlan1, wlan2, ...
+
 wlo1, wlo2, wlo3, ...
 ```
 
@@ -76,6 +79,7 @@ wlo1, wlo2, wlo3, ...
 - Por ejemplo:
 ```
 192.168.1.2     255.255.255.0
+
 192.168.1.2/24
 ```
 
@@ -93,6 +97,7 @@ wlo1, wlo2, wlo3, ...
 - Por ejemplo:
 ```
 8.8.8.8
+
 8.8.4.4
 ```
 
@@ -142,18 +147,18 @@ __ifconfig__
 ```
 ifconfig -s
 
-ip link set eth0 down
-ip link set eth0 up
+ifconfig eth0 down    
+ifconfig eth0 up      
 ```
 
 __iproute2__
 
 ```                      
-ifconfig eth0 down    
-ifconfig eth0 up      
-
 ip link show
 ip l
+
+ip link set eth0 down
+ip link set eth0 up
 ```
 
 
