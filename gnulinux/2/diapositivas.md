@@ -27,8 +27,8 @@ La versión más actualizada de este documento se encuentra en
 # Índice
 --- 
 ## Introducción
-## Configuración estática
-## Configuración dinámica
+## Configuración
+## Comandos de red
 ## Servicios de red
 
 <!--- Note: Nota a pie de página. -->
@@ -39,12 +39,23 @@ La versión más actualizada de este documento se encuentra en
 ---
 ## Interfaces de red
 ## Parámetros de red
+## Archivos de configuración
 
 
 ### Interfaces de red
 - Un equipo puede tener varias __interfaces de red__
 - Normalmente una sola interfaz de red tiene una única IP.
 - A veces una sola interfaz de red puede tener varias IPs.
+
+
+### Bucle local
+- También se conoce como __loopback__
+- Siempre existe.
+- Su nombre es __`lo`__
+- La dirección IP asociada es __127.0.0.1__
+- Aunque podría ser cualquer 127.x.x.x
+- No tiene salida a Internet.
+- Sirve para pruebas en sitio local.
 
 
 ### Interfaces cableadas
@@ -141,8 +152,30 @@ wlo1, wlo2, wlo3, ...
 ```
 
 
+### Nombres de equipos
 
-# C. estática
+- Equipo local: __/etc/hostname__
+
+- Otros equipos: __/etc/hosts__
+
+
+
+# Config. de red
+
+
+## Configuración dinámica
+---
+- Es necesario un servidor DHCP en la red.
+- El equipo de usuario realiza 2 operaciones.
+
+```bash
+dhclient  -r  eth1    # Liberamos configuración de red
+
+dhclient  eth1        # Renovamos configuración de red 
+```
+
+
+## Configuración estática
 ---
 ## Interfaces
 ## IP / Máscara
@@ -153,16 +186,16 @@ wlo1, wlo2, wlo3, ...
 ### Interfaces
 __ifconfig__
 
-```
+```bash
 ifconfig -s
 
-ifconfig eth0 down    
-ifconfig eth0 up      
+ifconfig eth0 down 
+ifconfig eth0 up    
 ```
 
 __iproute2__
 
-```                      
+```bash
 ip link show
 ip l
 
@@ -174,7 +207,7 @@ ip link set eth0 up
 ### IP / Máscara
 __ifconfig__
 
-```
+```bash
 ifconfig
 
 ifconfig eth0 192.168.1.2 netmask 255.255.255.0    
@@ -182,7 +215,7 @@ ifconfig eth0 192.168.1.2 netmask 255.255.255.0
 
 __iproute2__
 
-```                      
+```bash                      
 ip address show
 ip a
 
@@ -193,7 +226,7 @@ ip address add 192.168.1.2/24 dev eth0
 ### Puerta de enlace
 __ route__
 
-```
+```bash
 route
 
 route add default gw 192.168.1.1
@@ -201,7 +234,7 @@ route add default gw 192.168.1.1
 
 __iproute2__
 
-```
+```bash
 ip route show
 ip r
 
@@ -210,25 +243,101 @@ ip route add default via 192.168.1.1
 
 
 ### Servidores DNS
-```
+```bash
 cat /etc/resolv.conf
 ```
 
-```
+```bash
 echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 ```
 
 
 
-# C. dinámica
----
-```
-dhclient -r eth1
+# Comandos
+
+
+### hostname
+- Para ver y establecer el nombre de nuestro equipo.
+- __Los cambios no son permanentes__.
+- Para ello deberíamos editar el archivo __/etc/hostname__
+- Ejemplos de uso:
+
+```bash
+hostname
+
+hostname portatil
 ```
 
+
+### ping
+- Comprueba la comunicación entre nuestro equipo y otro equipo remoto.
+- Ejemplos de uso:
+
+```bash
+ping  192.168.1.1
+
+ping  8.8.8.8
+
+ping  www.yahoo.es
 ```
-dhclient eth1
+
+
+### traceroute
+- Muestra la ruta entre nuestro equipo y otro equipo destino.
+- Ejemplos de uso:
+
+```bash
+traceroute  8.8.8.8
+
+traceroute  www.yahoo.es
+```
+
+
+### nslookup
+- Comprueba la resolución de nombres a IP.
+- Ejemplos de uso:
+
+```bash
+nslookup  www.yahoo.es
+
+nslookup  www.yahoo.es  8.8.8.8
+```
+
+
+### dig
+- Comprueba la resolución de nombres a IP.
+- Más opciones que `nslookup`.
+- Ejemplos de uso:
+
+```bash
+dig  www.yahoo.es
+
+dig  @8.8.8.8  www.yahoo.es
+```
+
+
+### netstat
+- Comprueba los puertos abiertos en nuestro equipo.
+- Ejemplos de uso:
+
+```bash
+netstat  -punta
+
+netstat  -tup
+```
+
+
+### nmap
+- Comprueba los puertos abiertos en otro equipo.
+- Ejemplos de uso:
+
+```bash
+nmap  -sP  192.168.1.0/24
+
+nmap  -A -T4  192.168.1.1  192.168.1.10
+
+nmap  192.168.1.1
 ```
 
 
@@ -248,20 +357,20 @@ dhclient eth1
 ### Introducción
 - Ver estado de un servicio
 
-```
+```bash
 service  nombre  status 
 ```
 
 - Parar/Iniciar un servicio
 
-```
+```bash
 service  nombre  stop
 service  nombre  start
 ```
 
 - Recargar/Reiniciar un servicio
 
-```
+```bash
 service  nombre  reload
 service  nombre  restart
 ```
