@@ -161,6 +161,9 @@ wlo1, wlo2, wlo3, ...
 
 
 # Config. de red
+---
+## Configuración estática
+## Configuración dinámica
 
 
 ## Configuración dinámica

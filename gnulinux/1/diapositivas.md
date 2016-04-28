@@ -409,13 +409,17 @@ Para pegar
 
 
 ### Sesiones de terminal abiertas
-¿Quién está en el sistema y en que terminales?
+¿Quién está en el sistema y en qué terminales?
 ```sh
 who
 ```
  o también
 ```sh
 w
+```
+¿En qué terminal estoy?
+```sh
+tty
 ```
 
 
@@ -473,7 +477,7 @@ Navegador web       | firefox
 Suite ofimática     | libreoffice
 Editor de imágenes  | gimp
 Reproductor de vídeo| vlc
-Virtualización      | virtual box
+Virtualización      | virtualbox
 
 
 ### Combinaciones de teclas
@@ -807,11 +811,13 @@ ls  [aeiou]* # archivos que empiezan por vocal minúscula
 ### Deshacer un alias
 
 - Podemos ver los alias que tenemos mediante
+
 ```sh
 alias
 ```
 
 - Para deshacer un alias
+
 ```sh
 unalias  nombre_alias
 ```
@@ -1410,7 +1416,9 @@ mount  -t  tipo   dispositivo_o_partición    punto_de_montaje
 ```
 Ejemplo, para montar un pendrive suele valer
 ```sh
-mount  /dev/sdb1   /mnt
+mount  -t vfat   /dev/sdb1   /mnt
+mount  -t ntfs   /dev/sdb1   /mnt
+mount            /dev/sdb1   /mnt
 ```
 
 
@@ -1420,11 +1428,11 @@ umount  dispositivo_o_partición_o_punto_de_montaje
 ```
 Ejemplo, para desmontar un pendrive suele valer
 ```sh
-umount  /mnt
+umount  /dev/sdb1
 ```
 o
 ```sh
-umount  /dev/sdb1
+umount  /mnt
 ```
 
 
@@ -1445,12 +1453,97 @@ umount  /dev/sdb1
 ```
 
 
+### Listado de dispositivos
+
+- Existen numerosos comandos
+- Ejecutar con permisos de administrador
+- Ejemplos:
+
+__Todos los dispositivos__
+```sh
+fdisk -l
+lsblk
+blkid     # dispositivos con UUID
+```
+
+__Dispositivos montados__
+
+```sh
+mount
+df
+```
+
+
+### Archivo de configuración
+
+__/etc/fstab__
+- Indica sistemas de archivos que
+  - se montan de forma permanente
+  - se montan automáticamente en el inicio
+- Ejemplo:
+
+```sh
+#Sistema   Punto montaje   Tipo    Opciones            Volcado Pasada
+/dev/sda1   /               ext4    errors=remount-ro   0       1
+/dev/sda2   /home           ext4    defaults            0       2
+/dev/sda3   none            swap    sw                  0       0
+
+#/dev/sda1: UUID=2793cac2-cbb3-47a8-aca5-1c7849546c11
+#/dev/sda2: UUID=0b12062c-20c1-4488-9dee-dd2c15a8842f
+#/dev/sda3: UUID=1474afb3-6ca5-46ae-bb99-8cc1d99f8aac
+
+# Raspberry SSHFS  
+pi@pi:/mnt/Datos1  /mnt/ssh/Datos1  fuse.sshfs  defaults,allow_other,_netdev  0  0
+```
+
+
+### UUID
+
+- __U__niversally __U__nique __I__dentifier
+- Más adecuado que el número de partición
+- 16 bytes (32 dígitos hexadecimales: `8-4-4-4-12`)
+- Ej: `1474afb3-6ca5-46ae-bb99-8cc1d99f8aac`
+
+
+### Montaje/Desmontaje automático
+ 
+```sh
+mount -a
+
+umount -a
+```
+
+
+### Opciones de montaje
+- Existen muchas opciones genéricas de montaje
+- Existen otras opciones específicas de un sistema de archivos en particular (cifs,vfat,ntfs,ext4,iso9660,udf,...)
+- Ejemplo de opciones genéricas:
+```sh
+defaults  # es igual a rw,suid,dev,exec,auto,nouser,async
+ro
+noauto
+user
+sync
+loop
+``` 
+
+
+### Opciones en la línea de comandos
+- Las opciones se utilizan en __/etc/fstab__
+- Y también pueden usarse en la línea de comandos
+- Ejemplo:
+```sh
+mount -t iso9660  -o loop,ro  imagen.iso  /mnt
+mount             -o loop,ro  imagen.iso  /mnt
+```
+
+
 ### Cerrar archivos abiertos
 
 - Si tenemos algún archivo abierto en un dispositivo que está montado, no podremos desmontar.
 - Una aplicación que se haya cerrado incorrectamente puede dejar archivos abiertos.
 - Primero deberemos cerrar todos los archivos abiertos.
-- Puede usarse el comando __fuser__ para cerrar archivos abiertos.
+- El comando __fuser__ cierra archivos abiertos.
 
 ```sh
 fuser  -mk  /dev/sdb1
@@ -1458,6 +1551,10 @@ fuser  -mk  /dev/sdb1
 o
 ```sh
 fuser  -mk  /mnt
+```
+o
+```
+kill  `fuser  -m  /mnt`
 ```
 
 
