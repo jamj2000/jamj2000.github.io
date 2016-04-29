@@ -285,6 +285,9 @@ gdisk (GPT)
 /dev/sdc1     # Primera partición del tercer disco duro
 /dev/sdc2     # Segunda partición del tercer disco duro
 ...
+/dev/sr0      # Primera unidad de CD/DVD
+/dev/sr1      # Segunda unidad de CD/DVD
+...
 ```
 
 
@@ -1450,6 +1453,9 @@ umount  /mnt
 /dev/sdc1     # Primera partición del tercer disco duro
 /dev/sdc2     # Segunda partición del tercer disco duro
 ...
+/dev/sr0      # Primera unidad de CD/DVD
+/dev/sr1      # Segunda unidad de CD/DVD
+...
 ```
 
 
@@ -1499,7 +1505,7 @@ pi@pi:/mnt/Datos1  /mnt/ssh/Datos1  fuse.sshfs  defaults,allow_other,_netdev  0 
 
 ### UUID
 
-- __U__niversally __U__nique __I__dentifier
+- __U__niversally __U__nique __ID__entifier
 - Más adecuado que el número de partición
 - 16 bytes (32 dígitos hexadecimales: `8-4-4-4-12`)
 - Ej: `1474afb3-6ca5-46ae-bb99-8cc1d99f8aac`
