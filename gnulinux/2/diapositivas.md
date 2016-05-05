@@ -162,8 +162,8 @@ wlo1, wlo2, wlo3, ...
 
 # Config. de red
 ---
-## Configuración estática
 ## Configuración dinámica
+## Configuración estática
 
 
 ## Configuración dinámica
@@ -365,22 +365,22 @@ nmap  192.168.1.1
 
 
 ### Introducción
-- Ver estado de un servicio
+- __Ver estado__ de un servicio
 
  ```bash
  service  nombre  status 
  ```
 
-- Parar/Iniciar un servicio
+- __Parar/Iniciar__ un servicio
 
  ```bash
  service  nombre  stop
  service  nombre  start
  ```
 
-- Recargar/Reiniciar un servicio
+- Cada vez que reconfiguramos un servicio debemos __Recargar/Reiniciar__
 
- ```bash
+```bash
  service  nombre  reload
  service  nombre  restart
  ```
@@ -396,6 +396,10 @@ nmap  192.168.1.1
 apt-get  install  apache2
 ``` 
 
+### www
+- Las páginas web se almacenan en __/var/www/html__
+
+
 ### Configuración
 __/etc/apache2/apache2.conf__
 ```
@@ -406,7 +410,7 @@ Include ports.conf
 
 <Directory /var/www/>
         Options Indexes FollowSymLinks
-        AllowOverride None
+        AllowOverride None   # None --> All: para soportar rewrite
         Require all granted
 </Directory>
 
@@ -417,16 +421,72 @@ IncludeOptional sites-enabled/*.conf
 ```
 
 
-### Infraestructura LAMP
+### Módulos de Apache
+- Permiten ampliar la funcionalidad
+- Archivos de configuración en
+ - __/etc/apache2/mods_available/*__
+ - __/etc/apache2/mods_enabled/*__
+
+
+### Activar/Desactivar módulos
+- Para activar módulos. Ejemplos:
+```sh
+a2enmod  ssl
+a2enmod  rewrite
+```
+
+- Para desactivar módulos. Ejemplos:
+```sh
+a2dismod  ssl
+a2dismod  rewrite
+```
+
+- Reiniciamos servidor web
+```sh
+service  apache2  restart
+```
+
+
+### Sitios virtuales en Apache
+- Permiten ampliar la funcionalidad
+- Archivos de configuración en
+ - __/etc/apache2/sites_available/*__
+ - __/etc/apache2/sites_enabled/*__
+
+
+### Activar/Desactivar sitios
+- Para activar sitios. Ejemplos:
+```sh
+a2ensite  default-ssl
+a2ensite  mi-sitio
+```
+
+- Para desactivar sitios. Ejemplos:
+```sh
+a2dissite  default-ssl
+a2dissite  mi-sitio
+```
+
+- Reiniciamos servidor web
+```sh
+service  apache2  restart
+```
+
+
+### Plataforma LAMP
+__L__inux - __A__pache - __M__ySQL - __P__HP
+
 ![GNU/Linux](assets/lamp.png)
+
 
 ### Instalación
 ```sh
-apt-get  install  apache2  mysql-server  php  php-mysql
+apt  install  apache2  mysql-server  php  php-mysql  libapache2-mod-php
 ```
 
 
 ### LAMP
+
 - Permite el montaje de portales (CMS o SGC)
  - CMS: Content Management System 
  - SGC: Sistemas Gestores de Contenidos
@@ -439,11 +499,75 @@ apt-get  install  apache2  mysql-server  php  php-mysql
  - ... y muchos más
 
 
+### Extensiones de PHP
+- Proporciona mayor funcionalidad a las aplicaciones PHP.
+- Para instalar extensiones. Ejemplos:
+```sh
+apt  install  php-gd  php-curl  php-mcrypt
+```
+- Para activar extensiones. Ejemplos:
+```sh
+phpenmod  gd  curl  mcrypt
+```
+
+- Para desactivar extensiones. Ejemplos:
+```sh
+phpdismod  mcrypt  gd  curl
+```
+
+- Reiniciamos servidor web
+```sh
+service  apache2  restart
+```
+
+
+## Servidor FTP
+__F__ile __T__ransfer __P__rotocol
+
+- Un servidor muy utilizado es __vsftpd__
+- Un cliente muy utilizado es FileZilla
+ - FileZilla soporta FTP, FTPS, FTPES y SFTP
+
+
 ## Servidor DHCP
-![GNU/Linux](assets/dhcp.jpg)
+__D__ynamic __H__ost __C__onfiguration __P__rotocol
+
+Asigna IPs de forma dinámica en una red local
+
+```sh
+apt-get  install  isc-dhcp-server
+``` 
+
+
+## Servidor DNS
+__D__omain __N__ame __S__ervice
+
+Resuelve Nombres --> IP
+
+```sh
+apt-get  install  bind9
+``` 
+
+
+## DDNS = DHCP + DNS
+__D__ynamic __D__omain __N__ame __S__ervice
+
+1. Solución 1: Integramos
+ - isc-dhcp-server
+ - bind9
+1. Solución 2: __dnsmasq__
+ - mejor solución para LANs
+ - archivo de configuración en __/etc/dnsmasq.conf__
+
+```sh
+apt-get  install  dnsmasq
+```
 
 
 ## Servidor Samba
+- Soporte para protocolos __SMB__ y CIFS
+- Permite compartición de archivos e impresoras con Windows
+
 ![GNU/Linux](assets/samba.png)
 
 ### Instalación
@@ -489,7 +613,7 @@ chown  -R  nobody:nogroup  /public
 - Comprobamos conexión
 
  ```sh
- smbclient -L 192.168.1.1
+ smbclient  -L 192.168.1.1
  ```
 
 
@@ -503,16 +627,31 @@ chown  -R  nobody:nogroup  /public
 ![GNU/Linux](assets/samba-win-map3.png)
 
 
-### Linux - Montaje de unidad de red
-```sh
-mount   -t cifs   //192.168.1.1/documentos   /mnt
-```
-
-
+### Linux - Acceso a unidad de red
 ![GNU/Linux](assets/samba-linux-mount.png)
 
 
+### Linux - Montaje de unidad de red
+
+```sh
+mount   -t cifs   //192.168.1.1/documentos   /mnt/docs
+```
+
+- Datos accesibles en carpeta /mnt/docs
+- Configuración no permanente.
+- Para hacer la configuración permanente, editar __/etc/fstab__
+
+``` 
+#Dispositivo              #Punto de montaje  #Tipo   #Opciones                        #Volcado y pasada  
+//192.168.1.1/documentos  /mnt/docs          cifs    guest,uid=1000,iocharset=utf8    0  0
+```
+
+
 ## Servidor SSH
+__S__ecure  __SH__ell
+
+Acceso remoto
+
 ![GNU/Linux](assets/openssh.gif)
 
 
@@ -534,30 +673,53 @@ HostKey /etc/ssh/ssh_host_ed25519_key
 
 PermitRootLogin prohibit-password
 
-X11Forwarding yes
+X11Forwarding yes         # Permite conectar con  ssh -X
 
 Banner /etc/issue
 DenyUsers  usuario
 ```
 
 
-### SSHFS - Instalación
+### Conexión a servidor SSH 
 ```sh
-apt-get install fuse sshfs
+ssh   usuario@servidor
 ```
+### Copia de archivos
+```sh
+scp  archivos_locales  usuario@servidor:directorio_destino
+```
+o en sentido inverso
+```sh
+scp  usuario@servidor:directorio_origen/archivos  directorio_local
+```
+
+
+### SFTP: FTP sobre SSH
+![GNU/Linux](assets/sftp.png)
+
+
+### SSHFS
+- SSHFS es un reciente sistema de archivos en red.
+- Usa el protocolo SSH.
+- Instalación:
+
+ ```sh
+ apt-get  install  sshfs
+ ```
+
 
 ### Montaje y desmontaje manual
-- Para montar usamos el comando sshfs
+- Para montar usamos el comando __sshfs__
 
-```sh
-sshfs [usuario@]equipo:[dir] punto_montaje [opciones]
-```
+ ```sh
+ sshfs  [usuario@]equipo:[dir]  punto_montaje  [opciones]
+ ```
 
-- Para desmontar usamos el comando fusermount
+- Para desmontar usamos el comando __fusermount__
 
-```sh
-fusermount -u punto_montaje 
-```
+ ```sh
+ fusermount  -u punto_montaje 
+ ```
 
 
 ### Montaje y desmontaje automático
@@ -572,3 +734,22 @@ pi@pi:/mnt/Datos1  /mnt/ssh/Datos1   fuse.sshfs    defaults,allow_other,uid=1000
 pi@pi:/mnt/Datos2  /mnt/ssh/Datos2   fuse.sshfs    defaults,allow_other,uid=1000,gid=1000,_netdev    0  0
 ```
 
+
+## Servidor Proxy-caché
+![GNU/Linux](assets/squid.png)
+
+- El proxy más conocido es __squid__
+- Sirve de intermediario entre una LAN y la WWW.
+- Suele trabajar en conjunción con un cortafuegos, por ejemplo _iptables_
+- A menudo realiza cacheo de páginas, permitiendo
+ - reducir el ancho de banda utilizado por la LAN
+ - aumentar la velocidad de navegación
+
+
+### Proxy + Filtro de contenido
+
+![GNU/Linux](assets/squid-dansguardian.png)
+
+- Al proxy puede añadírsele
+ - un filtro de contenido, por ejemplo _dansguardian_ 
+ - un antivirus en línea, por ejemplo _clamav_
