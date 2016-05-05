@@ -1503,6 +1503,20 @@ pi@pi:/mnt/Datos1  /mnt/ssh/Datos1  fuse.sshfs  defaults,allow_other,_netdev  0 
 ```
 
 
+### Montaje/Desmontaje según /etc/fstab
+- Permite montar/desmontar sin tener que reiniciar. 
+- Usamos la opción __-a__ (all)
+- Se montan en el mismo orden que viene en /etc/fstab
+- Si algún dispositivo tiene la opción noauto, no se montará
+- Si algún sistema está siendo usado, no se desmontará
+
+```sh
+mount -a
+
+umount -a
+```
+
+
 ### UUID
 
 - __U__niversally __U__nique __ID__entifier
@@ -1511,26 +1525,17 @@ pi@pi:/mnt/Datos1  /mnt/ssh/Datos1  fuse.sshfs  defaults,allow_other,_netdev  0 
 - Ej: `1474afb3-6ca5-46ae-bb99-8cc1d99f8aac`
 
 
-### Montaje/Desmontaje automático
- 
-```sh
-mount -a
-
-umount -a
-```
-
-
 ### Opciones de montaje
 - Existen muchas opciones genéricas de montaje
 - Existen otras opciones específicas de un sistema de archivos en particular (cifs,vfat,ntfs,ext4,iso9660,udf,...)
 - Ejemplo de opciones genéricas:
 ```sh
 defaults  # es igual a rw,suid,dev,exec,auto,nouser,async
-ro
-noauto
-user
-sync
-loop
+ro        # sólo lectura (Read Only)
+noauto    # no se monta con la opción -a
+user      # usuario ordinario
+sync      # entrada/salida síncrona
+loop      # para montar archivos (.iso, .img, ...)
 ``` 
 
 

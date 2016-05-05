@@ -758,19 +758,19 @@ file /bin/* | grep script
 <hr>
 
 1. __¿Cuál es el código octal para los siguientes permisos?__
- - `rwx rwx rwx` --> 777  (resuelto)
- - `rwx r-- ---` --> 740  (resuelto)
- - `rw- rw- rw-`
- - `rwx r-- r--`
- - `r-- r-- r--`
- - `r-- r-- ---`
- - `r-x r-x r--`
- - `rwx r-x r--`
+ - rwx rwx rwx --> 777  (resuelto)
+ - rwx r-- --- --> 740  (resuelto)
+ - rw- rw- rw-
+ - rwx r-- r--
+ - r-- r-- r--
+ - r-- r-- ---
+ - r-x r-x r--
+ - rwx r-x r--
 <hr>
 
 1. Para los siguientes códigos en octal, indica cuáles son los permisos asociados.
- - 777 --> `rwx rwx rwx` (resuelto)
- - 740 --> `rwx r-- ---` (resuelto)
+ - 777 --> rwx rwx rwx (resuelto)
+ - 740 --> rwx r-- --- (resuelto)
  - 664
  - 440
  - 755
@@ -953,7 +953,6 @@ Para los siguientes directorios:
 ```sh
 ps `fuser -m  /dev/sdb1 2> /dev/null | tr -s ' '`
 ```
-NOTA: Si el dispositivo _sdb1_ no se asigna al pendrive, prueba con _sdc1_, o _sdd1_.
 <hr>
 
 </xmp>
