@@ -258,6 +258,13 @@ echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 
 # Comandos
+---
+- Ver/cambiar nombre de nuestro equipo
+- Comprobar conectividad entre 2 equipos
+- Ver ruta seguida entre 2 equipos
+- Resolución de nombres a IP
+- Comprobación de puertos locales
+- Comprobación de puertos remotos
 
 
 ### hostname
@@ -360,25 +367,208 @@ nmap  192.168.1.1
 ### Introducción
 - Ver estado de un servicio
 
-```bash
-service  nombre  status 
-```
+ ```bash
+ service  nombre  status 
+ ```
 
 - Parar/Iniciar un servicio
 
-```bash
-service  nombre  stop
-service  nombre  start
-```
+ ```bash
+ service  nombre  stop
+ service  nombre  start
+ ```
 
 - Recargar/Reiniciar un servicio
 
-```bash
-service  nombre  reload
-service  nombre  restart
+ ```bash
+ service  nombre  reload
+ service  nombre  restart
+ ```
+
+
+## Servidor web
+![GNU/Linux](assets/apache.png)
+
+
+### Instalación
+
+```sh
+apt-get  install  apache2
+``` 
+
+### Configuración
+__/etc/apache2/apache2.conf__
+```
+IncludeOptional mods-enabled/*.load
+IncludeOptional mods-enabled/*.conf
+
+Include ports.conf
+
+<Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>
+
+AccessFileName .htaccess
+
+IncludeOptional conf-enabled/*.conf
+IncludeOptional sites-enabled/*.conf
 ```
 
 
-### Servidor web
+### Infraestructura LAMP
+![GNU/Linux](assets/lamp.png)
 
+### Instalación
+```sh
+apt-get  install  apache2  mysql-server  php  php-mysql
+```
+
+
+### LAMP
+- Permite el montaje de portales (CMS o SGC)
+ - CMS: Content Management System 
+ - SGC: Sistemas Gestores de Contenidos
+- Ejemplos de SGC:
+ - Joomla
+ - Moodle
+ - Wordpress
+ - Prestashop
+ - ownCloud
+ - ... y muchos más
+
+
+## Servidor DHCP
+![GNU/Linux](assets/dhcp.jpg)
+
+
+## Servidor Samba
+![GNU/Linux](assets/samba.png)
+
+### Instalación
+```
+apt-get  install  samba  smbclient  cifs-utils
+```
+
+
+### Configuración
+__/etc/samba/smb.conf__
+
+```
+[global]
+   workgroup = WORKGROUP
+   server string = Servidor SMB/CIFS Linux
+
+   security = user
+   map to guest = Bad User
+
+   log file = /var/log/samba/%m.log
+   max log size = 50
+
+[documentos]
+   comment = "Carpeta compartida sin autenticación"
+   path = /public
+   public = yes
+   only guest = yes
+   writable = yes
+```
+```sh
+chown  -R  nobody:nogroup  /public
+```
+
+
+### Comprobaciones
+
+- Comprobamos sintaxis de archivo de configuración
+
+ ```sh
+ testparm
+ ```
+
+- Comprobamos conexión
+
+ ```sh
+ smbclient -L 192.168.1.1
+ ```
+
+
+### Windows - Mapeo de unidad red
+![GNU/Linux](assets/samba-win-map1.png)
+
+
+![GNU/Linux](assets/samba-win-map2.png)
+
+
+![GNU/Linux](assets/samba-win-map3.png)
+
+
+### Linux - Montaje de unidad de red
+```sh
+mount   -t cifs   //192.168.1.1/documentos   /mnt
+```
+
+
+![GNU/Linux](assets/samba-linux-mount.png)
+
+
+## Servidor SSH
+![GNU/Linux](assets/openssh.gif)
+
+
+### Instalación
+```sh
+apt-get install ssh
+```
+
+### Configuración
+__/etc/ssh/sshd_config__
+```
+Port 22
+Protocol 2
+
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_dsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+PermitRootLogin prohibit-password
+
+X11Forwarding yes
+
+Banner /etc/issue
+DenyUsers  usuario
+```
+
+
+### SSHFS - Instalación
+```sh
+apt-get install fuse sshfs
+```
+
+### Montaje y desmontaje manual
+- Para montar usamos el comando sshfs
+
+```sh
+sshfs [usuario@]equipo:[dir] punto_montaje [opciones]
+```
+
+- Para desmontar usamos el comando fusermount
+
+```sh
+fusermount -u punto_montaje 
+```
+
+
+### Montaje y desmontaje automático
+
+- Deberemos editar el archivo __/etc/fstab__.
+- Ejemplo de configuración para acceder a particiones compartidas en una Raspberry Pi.
+
+```
+## Raspberry SSHFS  ## Modificar /etc/fuse.conf (user_allow_other)
+# Dispositivo      # Punto montaje   # Tipo        # Opciones                                        #Volcado y pasada
+pi@pi:/mnt/Datos1  /mnt/ssh/Datos1   fuse.sshfs    defaults,allow_other,uid=1000,gid=1000,_netdev    0  0
+pi@pi:/mnt/Datos2  /mnt/ssh/Datos2   fuse.sshfs    defaults,allow_other,uid=1000,gid=1000,_netdev    0  0
+```
 
