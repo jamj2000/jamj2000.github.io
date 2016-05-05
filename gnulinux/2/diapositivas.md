@@ -422,10 +422,30 @@ IncludeOptional sites-enabled/*.conf
 
 
 ### Módulos de Apache
-- Permiten ampliar la funcionalidad
+- Permiten ampliar la funcionalidad de Apache
 - Archivos de configuración en
  - __/etc/apache2/mods_available/*__
  - __/etc/apache2/mods_enabled/*__
+
+
+### Instalar módulos
+- Para instalar módulos. Ejemplos:
+```sh
+apt  install  libapache2-mod-php   
+apt  install  libapache2-mod-python
+apt  install  libapache2-mod-openid
+apt  install  libapache2-mod-radius
+```
+
+- Para desinstalar módulos. Ejemplos:
+```sh
+apt  install  libapache2-mod-radius
+```
+
+- Reiniciamos servidor web
+```sh
+service  apache2  restart
+```
 
 
 ### Activar/Desactivar módulos
@@ -448,10 +468,16 @@ service  apache2  restart
 
 
 ### Sitios virtuales en Apache
-- Permiten ampliar la funcionalidad
+- Permiten alojar varios sitios
 - Archivos de configuración en
  - __/etc/apache2/sites_available/*__
  - __/etc/apache2/sites_enabled/*__
+
+
+### Crear sitios virtuales
+- Es necesario crear un archivo en __/etc/apache2/sites-sites_available/__ para cada sitio.
+- En dicho archivo establecemos la configuración del sitio.
+- Para activar o desactivar el sitio utilizamos __a2ensite__ / __a2dissite__.
 
 
 ### Activar/Desactivar sitios
