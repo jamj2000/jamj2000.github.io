@@ -972,6 +972,22 @@ deluser  nombre_usuario  --remove-home
 ```
 
 
+### Añadir usuario a un grupo secundario
+```sh
+adduser  nombre_usuario  grupo
+```
+Ejemplo
+```sh
+adduser  jose  sudo
+adduser  jose  vboxusers
+```
+
+### Ver grupos de un usuario
+```sh
+id  nombre_usuario
+```
+
+
 ### Cambiar contraseña
 ```sh
 passwd
