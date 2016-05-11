@@ -52,7 +52,7 @@ El proyecto consiste en __implantar una red virtual__, haciendo uso de __Virtual
 
 ![Red](assets/red.png)
 
-__Realizaremos la configuración del soporte de red y instalaremos/configuraremos algunos servicios como HTTP, SSH y SAMBA.
+__Realizaremos la configuración del soporte de red e instalaremos/configuraremos algunos servicios como HTTP, SSH y SAMBA.
 Para el soporte de red haremos uso tanto de configuración dinámica como estática.__
 
 
@@ -71,13 +71,34 @@ Para el soporte de red haremos uso tanto de configuración dinámica como estát
  - una tarjeta de red interna
 <hr>
 
-1. 
+1. __Inicia cada una de las máquinas y comprueba/cambia el nombre que tienen por defecto__. A continuación se explica como hacerlo en Linux. Para Windows puedes utilizar la interfaz gráfica (Propiedades del Equipo). En Linux podemos ver el nombre actual con el comando:
+
+ ```sh
+ hostname
+ ```
+ El nombre puede cambiarse de forma temporal con el mismo comando:
+ ```sh
+ hostname  nuevo_nombre
+ ```
+ No obstante, si deseamos que los cambios sean permanentes deberemos editar el archivo __/etc/hostname__. Después deberíamos reiniciar para aplicar los cambios, pero NO lo haremos puesto que aún vamos a configurar el listado de equipos de la LAN. El contenido del archivo `/etc/hostname` para servidor_linux sería
+ ```
+ servidor_linux
+ ```
 <hr>
 
-1. __Para que el navegador web de dicho equipo pueda resolver los nombres a direcciones IP debemos configurar el parámetro:__
+1. __Configura el listado de los equipos de la red local.__ Para ello deberás editar el archivo __/etc/hosts__ y añadir las siguientes líneas (igual para los 3 equipos):
+ ```
+ 192.168.1.1   servidor-linux
+ 192.168.1.10  cliente-windows
+ 192.168.1.11  cliente-linux
+ ```
+ En Windows 7 el archivo es `C:\Windows\System32\drivers\etc\hosts`. 
 <hr>
 
-1. 
+1. Reiniciamos las máquinas virtuales. 
+```
+NOTA: Como vamos a seguir realizando tareas de configuración y pudiera darse el caso de que alguna tarea necesitara reiniciar el equipo para aplicar los cambios, algunos administradores siguen con el proceso de configuración hasta que alguna tarea les obliga a reiniciar o si no se da este caso entonces hacen un reinicio al final de todo el proceso de configuración. Así evitamos los múltiples reinicios.
+```
 <hr>
 
 
@@ -89,7 +110,7 @@ Para el soporte de red haremos uso tanto de configuración dinámica como estát
 
 #<a name="configuracion"></a>  [Configuración de red](#indice)
 
-1. __¿?__
+1. __Configuración de los parámetros de red__
 <hr>
 
 1. __¿?__
