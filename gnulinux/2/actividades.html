@@ -97,7 +97,7 @@ Para el soporte de red haremos uso tanto de configuración dinámica como estát
 
 1. Reiniciamos las máquinas virtuales. 
 ```
-NOTA: Como vamos a seguir realizando tareas de configuración y pudiera darse el caso de que alguna tarea necesitara reiniciar el equipo para aplicar los cambios, algunos administradores siguen con el proceso de configuración hasta que alguna tarea les obliga a reiniciar o si no se da este caso entonces hacen un reinicio al final de todo el proceso de configuración. Así evitamos los múltiples reinicios.
+NOTA: Algunos administradores siguen con el proceso de configuración hasta que alguna tarea les obliga a reiniciar o si no se da este caso entonces hacen un reinicio al final de todas las tareas de configuración. Así evitan los múltiples reinicios.
 ```
 <hr>
 
@@ -110,10 +110,54 @@ NOTA: Como vamos a seguir realizando tareas de configuración y pudiera darse el
 
 #<a name="configuracion"></a>  [Configuración de red](#indice)
 
-1. __Configuración de los parámetros de red__
+1. __ Archivo /etc/network/interfaces para servidor-linux. __
+ ```
+ auto lo
+ iface lo inet loopback
+
+ auto eth0
+ iface eth0 inet dhcp
+
+ auto eth1
+ iface eth1 inet static
+   address 192.168.1.1
+   netmask 255.255.255.0
+   network 192.168.1.0
+ ```
+ Reiniciamos servicio de red:
+ ```
+ service  networking  restart
+ ```
 <hr>
 
-1. __¿?__
+1. __ Archivo /etc/network/interfaces para cliente-linux. __
+ ```
+ auto lo
+ iface lo inet loopback
+
+ auto eth0
+ iface eth0 inet static
+   address 192.168.1.11
+   netmask 255.255.255.0
+   network 192.168.1.0
+   gateway 192.168.1.1
+   dns-nameservers  8.8.8.8  8.8.4.4
+ ```
+ Reiniciamos servicio de red:
+ ```
+ service  networking  restart
+ ```
+<hr>
+
+1. __ Para cliente-windows puedes utilizar el Centro de Redes para realizar la configuración de red. __ 
+ Los parámetros son:
+ ```
+ IP:               192.168.1.10
+ MÁSCARA:          255.255.255.0
+ PUERTA DE ENLACE: 192.168.1.1
+ DNS1:             8.8.8.8
+ DNS2:             8.8.4.4 
+ ```
 <hr>
 
 
@@ -124,6 +168,13 @@ NOTA: Como vamos a seguir realizando tareas de configuración y pudiera darse el
 </pre>
 
 #<a name="comandos"></a>  [Comandos de red](#indice)
+
+1. __ Prueba que hay comunicación entre los 3 equipos. __ Por ejemplo, desde servidor-linux realizamos:
+```
+ping 192.168.1.10
+ping 192.168.1.11
+```
+NOTA: El cortafuegos de Windows tiene desactivada la respuesta a los mensajes ICMP (ping). Deberás añadir una regla al cortafuegos de Windows para que responda a los mensajes ICMP.
 
 1. __¿?__
 <hr>
@@ -151,6 +202,169 @@ NOTA: Como vamos a seguir realizando tareas de configuración y pudiera darse el
 1. __  __ 
 <hr>
 
+#### DNS
+1. __ En servidor-linux instala los paquetes bind9 y bind9utils.__ Para ello ejecuta 
+```sh
+apt-get  install  bind9  bind9utils
+```
+<hr>
+
+1. __ Archivo /etc/bind/named.conf.local __ . Edita el archivo anterior. Debe tener el siguiente contenido: 
+ ```
+ //
+ // Do any local configuration here
+ //
+
+ // Consider adding the 1918 zones here, if they are not used in your
+ // organization
+ //include "/etc/bind/zones.rfc1918";
+
+ // Zona directa
+ zone "velez.com" IN {
+	type master;
+	file "db.velez.com";
+	allow-update { none; };
+ };
+
+ // Zona inversa
+ zone "1.168.192.in-addr.arpa" IN {
+	type master;   
+	file "db.192";   
+	allow-update { none; }; 
+ };
+
+ ```
+<hr>
+
+1. __ Archivo /etc/bind/db.velez.com __ . Edita el archivo anterior. Debe tener el siguiente contenido:
+
+ ```
+ ;
+ ; BIND:  Zona directa velez.com
+ ;
+ $TTL    604800
+ @                      IN	SOA     ns.velez.com. root.velez.com. (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+ ; Servidor DNS
+ @                      IN	NS      ns.velez.com.
+ ns                     IN	A       192.168.1.1
+
+ ; Otros equipos del dominio
+ cliente-windows        IN	A       192.168.1.10
+ cliente-linux          IN	A       192.168.1.11
+
+ ; Alias
+ servidor-linux         IN	CNAME	ns.velez.com. 
+ www                    IN	CNAME	ns.velez.com.
+ ftp                    IN	CNAME	ns.velez.com.
+
+ ```
+<hr>
+
+1. __ Archivo /etc/bind/db.192 __ . Edita el archivo anterior. Debe tener el siguiente contenido:
+
+ ```
+ ;
+ ; BIND: Zona inversa de velez.com (192.168.1.0)
+ ;
+ $TTL    604800
+ @       IN     SOA     ns.velez.com. root.velez.com. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+
+ ; Servidor DNS
+ @       IN     NS      ns.
+ 1       IN     PTR     ns.velez.com.
+
+ ; Otros equipos del dominio
+ 10      IN     PTR     cliente-windows.velez.com.
+ 11      IN     PTR     cliente-linux.velez.com.
+
+ ```
+<hr>
+
+1. __Archivo /etc/bind/named.conf.options__ Si queremos que nuestro servidor DNS se comunique con otros servidores DNS y así poder realizar consultas sobre otros dominios (y no sólo el nuestro), deberemos descomentar/editar las siguientes líneas:
+ 
+ ```
+        forwarders {
+              8.8.8.8;
+              8.8.4.4;
+        };
+ 
+ ``` 
+Pueden ponerse otros distintos a los indicados. Esto es sólo un ejemplo.
+<hr>
+ 
+1. __Comprueba si tienes errores de sintaxis en los archivos anteriores.__ Ejecuta 
+```
+named-checkconf
+```
+Si no aparece ningún mensaje, enhorabuena, no tienes errores de sintaxis.
+<hr>
+
+1. __Comprueba si tienes errores en la configuración de la zona directa.__ Ejecuta
+```
+named-checkzone  velez.com  db.velez.com
+```
+Debe aparecer algo similar a 
+```
+zone velez.com/IN: loaded serial 1
+OK
+```
+<hr>
+
+1. __Comprueba si tienes errores en la configuración de la zona inversa.__ Ejecuta
+``` 
+named-checkzone  1.168.192.in-addr.arpa  db.192 
+```
+Debe aparecer algo similar a 
+```
+zone 1.168.192.in-addr.arpa/IN: loaded serial 2
+OK
+```
+<hr>
+
+1. __Inicia el servidor de resolución de nombres BIND9. __
+```
+service  bind9  restart
+```
+No suele aparecer ningún mensaje en pantalla.
+<hr>
+
+1. __Comprueba que el servidor BIND está ejecutandose. __
+```
+netstat -punta  |  grep named
+```
+Debe aparecer algo similar a
+```
+tcp        0      0 192.168.1.1:53          0.0.0.0:*               ESCUCHAR    3856/named      
+tcp        0      0 10.0.2.15:53            0.0.0.0:*               ESCUCHAR    3856/named      
+tcp        0      0 127.0.0.1:53            0.0.0.0:*               ESCUCHAR    3856/named      
+tcp        0      0 127.0.0.1:953           0.0.0.0:*               ESCUCHAR    3856/named      
+tcp6       0      0 :::53                   :::*                    ESCUCHAR    3856/named      
+tcp6       0      0 ::1:953                 :::*                    ESCUCHAR    3856/named      
+udp        0      0 192.168.1.1:53          0.0.0.0:*                           3856/named      
+udp        0      0 10.0.2.15:53            0.0.0.0:*                           3856/named      
+udp        0      0 127.0.0.1:53            0.0.0.0:*                           3856/named      
+udp6       0      0 :::53                   :::*                                3856/named      
+```
+<hr>
+
+1. __Comprobamos el correcto funcionamiento.__ Desde servidor-linux vamos a realizar algunas consultas.
+```
+dig  ns.velez.com
+dig  servidor-linux.velez.com
+dig  servidor-linux
+```
+<hr>
 
 
 ### Actividades de ampliación
