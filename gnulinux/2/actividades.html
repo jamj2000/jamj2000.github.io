@@ -123,6 +123,8 @@ NOTA: Algunos administradores siguen con el proceso de configuración hasta que 
    address 192.168.1.1
    netmask 255.255.255.0
    network 192.168.1.0
+   # dns-nameservers  127.0.0.1 
+   # dns-search       velez.local
  ```
  Reiniciamos servicio de red:
  ```
@@ -141,6 +143,7 @@ NOTA: Algunos administradores siguen con el proceso de configuración hasta que 
    netmask 255.255.255.0
    network 192.168.1.0
    gateway 192.168.1.1
+   # dns-nameservers  192.168.1.1
    dns-nameservers  8.8.8.8  8.8.4.4
  ```
  Reiniciamos servicio de red:
@@ -176,17 +179,6 @@ ping 192.168.1.11
 ```
 NOTA: El cortafuegos de Windows tiene desactivada la respuesta a los mensajes ICMP (ping). Deberás añadir una regla al cortafuegos de Windows para que responda a los mensajes ICMP.
 
-1. __¿?__
-<hr>
-
-1. __¿?__
-<hr>
-
-
-### Actividades de ampliación
-
-1. __ .. __
-<hr>
 
 
 <pre>
@@ -199,8 +191,13 @@ NOTA: El cortafuegos de Windows tiene desactivada la respuesta a los mensajes IC
 1. __ Nombra al menos 5 servicios de red.__ 
 <hr>
 
-1. __  __ 
+#### Servicio web
+1. __ En servidor-linux instala el paquete apache2. __ Para ello ejecuta
+```sh
+apt-get  install  apache2
+```
 <hr>
+
 
 #### DNS
 1. __ En servidor-linux instala los paquetes bind9 y bind9utils.__ Para ello ejecuta 
@@ -220,30 +217,30 @@ apt-get  install  bind9  bind9utils
  //include "/etc/bind/zones.rfc1918";
 
  // Zona directa
- zone "velez.com" IN {
+ zone "velez.local" IN {
 	type master;
-	file "db.velez.com";
+	file "/etc/bind/db.velez.local";
 	allow-update { none; };
  };
 
  // Zona inversa
  zone "1.168.192.in-addr.arpa" IN {
 	type master;   
-	file "db.192";   
+	file "/etc/bind/db.192";   
 	allow-update { none; }; 
  };
 
  ```
 <hr>
 
-1. __ Archivo /etc/bind/db.velez.com __ . Edita el archivo anterior. Debe tener el siguiente contenido:
+1. __ Archivo /etc/bind/db.velez.local __ . Edita el archivo anterior. Debe tener el siguiente contenido:
 
  ```
  ;
- ; BIND:  Zona directa velez.com
+ ; BIND:  Zona directa velez.local
  ;
  $TTL    604800
- @                      IN	SOA     ns.velez.com. root.velez.com. (
+ @                      IN	SOA     velez.local. root.velez.local. (
                               1         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
@@ -251,7 +248,7 @@ apt-get  install  bind9  bind9utils
                          604800 )       ; Negative Cache TTL
 
  ; Servidor DNS
- @                      IN	NS      ns.velez.com.
+ @                      IN	NS      ns.velez.local.
  ns                     IN	A       192.168.1.1
 
  ; Otros equipos del dominio
@@ -259,9 +256,9 @@ apt-get  install  bind9  bind9utils
  cliente-linux          IN	A       192.168.1.11
 
  ; Alias
- servidor-linux         IN	CNAME	ns.velez.com. 
- www                    IN	CNAME	ns.velez.com.
- ftp                    IN	CNAME	ns.velez.com.
+ servidor-linux         IN	CNAME	ns.velez.local. 
+ www                    IN	CNAME	ns.velez.local.
+ ftp                    IN	CNAME	ns.velez.local.
 
  ```
 <hr>
@@ -270,10 +267,10 @@ apt-get  install  bind9  bind9utils
 
  ```
  ;
- ; BIND: Zona inversa de velez.com (192.168.1.0)
+ ; BIND: Zona inversa de velez.local (192.168.1.0)
  ;
  $TTL    604800
- @       IN     SOA     ns.velez.com. root.velez.com. (
+ @       IN     SOA     velez.local. root.velez.local. (
                               2         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
@@ -282,16 +279,16 @@ apt-get  install  bind9  bind9utils
 
  ; Servidor DNS
  @       IN     NS      ns.
- 1       IN     PTR     ns.velez.com.
+ 1       IN     PTR     ns.velez.local.
 
  ; Otros equipos del dominio
- 10      IN     PTR     cliente-windows.velez.com.
- 11      IN     PTR     cliente-linux.velez.com.
+ 10      IN     PTR     cliente-windows.velez.local.
+ 11      IN     PTR     cliente-linux.velez.local.
 
  ```
 <hr>
 
-1. __Archivo /etc/bind/named.conf.options__ Si queremos que nuestro servidor DNS se comunique con otros servidores DNS y así poder realizar consultas sobre otros dominios (y no sólo el nuestro), deberemos descomentar/editar las siguientes líneas:
+1. __Archivo /etc/bind/named.conf.options __ . Si queremos que nuestro servidor DNS se comunique con otros servidores DNS y así poder realizar consultas sobre otros dominios (y no sólo el nuestro), deberemos descomentar/editar las siguientes líneas:
  
  ```
         forwarders {
@@ -312,11 +309,11 @@ Si no aparece ningún mensaje, enhorabuena, no tienes errores de sintaxis.
 
 1. __Comprueba si tienes errores en la configuración de la zona directa.__ Ejecuta
 ```
-named-checkzone  velez.com  db.velez.com
+named-checkzone  velez.local  db.velez.local
 ```
 Debe aparecer algo similar a 
 ```
-zone velez.com/IN: loaded serial 1
+zone velez.local/IN: loaded serial 1
 OK
 ```
 <hr>
@@ -359,21 +356,39 @@ udp6       0      0 :::53                   :::*                                
 <hr>
 
 1. __Comprobamos el correcto funcionamiento.__ Desde servidor-linux vamos a realizar algunas consultas.
-```
-dig  ns.velez.com
-dig  servidor-linux.velez.com
-dig  servidor-linux
-```
+ ```
+ dig  servidor-linux.velez.local   @127.0.0.1 
+ ```
+ 
+ Debe aparecer algo parecido a esto
+
+ ```
+ ; <<>> DiG 9.9.5-11ubuntu1.3-Ubuntu <<>> servidor-linux.velez.local @127.0.0.1
+ ;; global options: +cmd
+ ;; Got answer:
+ ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 5808
+ ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 1, ADDITIONAL: 1
+
+ ;; OPT PSEUDOSECTION:
+ ; EDNS: version: 0, flags:; udp: 4096
+ ;; QUESTION SECTION:
+ ;servidor-linux.velez.local.	IN	A
+
+ ;; ANSWER SECTION:
+ servidor-linux.velez.local. 604800 IN	CNAME	ns.velez.local.
+ ns.velez.local.		604800	IN	A	192.168.1.1
+
+ ;; AUTHORITY SECTION:
+ velez.local.		604800	IN	NS	ns.velez.local.
+
+ ;; Query time: 2 msec
+ ;; SERVER: 127.0.0.1#53(127.0.0.1)
+ ;; WHEN: Thu May 19 23:30:57 CEST 2016
+ ;; MSG SIZE  rcvd: 102
+ ```
+ Asegurate de que aparece la __ANSWER SECTION__
 <hr>
 
-
-### Actividades de ampliación
-
-1. __ ¿?__ 
-<hr>
-
-1. __ ¿?__ 
-<hr>
 
 
 <pre>

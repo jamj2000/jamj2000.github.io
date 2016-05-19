@@ -379,10 +379,24 @@ nmap  192.168.1.1
  ```
 
 - Cada vez que reconfiguramos un servicio debemos __Recargar/Reiniciar__
-
-```bash
+ 
+ ```bash
  service  nombre  reload
  service  nombre  restart
+ ```
+
+
+### Introducción
+- __Habilitar un servicio en el inicio__
+
+ ```bash
+ systemctl  enable  nombre 
+ ```
+
+- __Deshabilitar un servicio en el inicio__
+
+ ```bash
+ systemctl  disable  nombre
  ```
 
 
@@ -439,7 +453,7 @@ apt  install  libapache2-mod-radius
 
 - Para desinstalar módulos. Ejemplos:
 ```sh
-apt  install  libapache2-mod-radius
+apt  remove  libapache2-mod-radius
 ```
 
 - Reiniciamos servidor web
