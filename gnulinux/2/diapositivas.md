@@ -313,6 +313,26 @@ nslookup  www.yahoo.es
 
 nslookup  www.yahoo.es  8.8.8.8
 ```
+NOTA: 
+
+Podemos indicar el servidor DNS al que realizar la consulta. 
+En este caso 8.8.8.8.
+
+
+### host 
+- Comprueba la resolución de nombres a IP.
+- Más cómodo que nslookup.
+- Ejemplos de uso:
+
+```bash
+host  www.yahoo.es
+
+host  www.yahoo.es  8.8.8.8
+```
+NOTA: 
+
+Podemos indicar el servidor DNS al que realizar la consulta. 
+En este caso 8.8.8.8.
 
 
 ### dig
@@ -323,8 +343,12 @@ nslookup  www.yahoo.es  8.8.8.8
 ```bash
 dig  www.yahoo.es
 
-dig  @8.8.8.8  www.yahoo.es
+dig  www.yahoo.es  @8.8.8.8
 ```
+NOTA: 
+
+Podemos indicar el servidor DNS al que realizar la consulta. 
+En este caso 8.8.8.8.
 
 
 ### netstat

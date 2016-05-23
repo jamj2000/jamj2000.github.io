@@ -88,9 +88,9 @@ Para el soporte de red haremos uso tanto de configuración dinámica como estát
 
 1. __Configura el listado de los equipos de la red local.__ Para ello deberás editar el archivo __/etc/hosts__ y añadir las siguientes líneas (igual para los 3 equipos):
  ```
- 192.168.1.1   servidor-linux
- 192.168.1.10  cliente-windows
- 192.168.1.11  cliente-linux
+ 192.168.0.1   servidor-linux
+ 192.168.0.10  cliente-windows
+ 192.168.0.11  cliente-linux
  ```
  En Windows 7 el archivo es `C:\Windows\System32\drivers\etc\hosts`. 
 <hr>
@@ -120,9 +120,9 @@ NOTA: Algunos administradores siguen con el proceso de configuración hasta que 
 
  auto eth1
  iface eth1 inet static
-   address 192.168.1.1
+   address 192.168.0.1
    netmask 255.255.255.0
-   network 192.168.1.0
+   network 192.168.0.0
    # dns-nameservers  127.0.0.1 
    # dns-search       velez.local
  ```
@@ -139,11 +139,11 @@ NOTA: Algunos administradores siguen con el proceso de configuración hasta que 
 
  auto eth0
  iface eth0 inet static
-   address 192.168.1.11
+   address 192.168.0.11
    netmask 255.255.255.0
-   network 192.168.1.0
-   gateway 192.168.1.1
-   # dns-nameservers  192.168.1.1
+   network 192.168.0.0
+   gateway 192.168.0.1
+   # dns-nameservers  192.168.0.1
    dns-nameservers  8.8.8.8  8.8.4.4
  ```
  Reiniciamos servicio de red:
@@ -155,9 +155,9 @@ NOTA: Algunos administradores siguen con el proceso de configuración hasta que 
 1. __ Para cliente-windows puedes utilizar el Centro de Redes para realizar la configuración de red. __ 
  Los parámetros son:
  ```
- IP:               192.168.1.10
+ IP:               192.168.0.10
  MÁSCARA:          255.255.255.0
- PUERTA DE ENLACE: 192.168.1.1
+ PUERTA DE ENLACE: 192.168.0.1
  DNS1:             8.8.8.8
  DNS2:             8.8.4.4 
  ```
@@ -174,12 +174,19 @@ NOTA: Algunos administradores siguen con el proceso de configuración hasta que 
 
 1. __ Prueba que hay comunicación entre los 3 equipos. __ Por ejemplo, desde servidor-linux realizamos:
 ```
-ping 192.168.1.10
-ping 192.168.1.11
+ping 192.168.0.10
+ping 192.168.0.11
 ```
 NOTA: El cortafuegos de Windows tiene desactivada la respuesta a los mensajes ICMP (ping). Deberás añadir una regla al cortafuegos de Windows para que responda a los mensajes ICMP.
 
+1. __Ejecuta el siguiente comando para ver los puertos que tienes abiertos. __ 
+```sh
+netstat -lut
+```
+<hr>
 
+1. __¿Para qué sirven las opciones -l, -u, -t, de netstat?__ Consulta el manual de netstat.
+<hr>
 
 <pre>
 
@@ -192,14 +199,121 @@ NOTA: El cortafuegos de Windows tiene desactivada la respuesta a los mensajes IC
 <hr>
 
 #### Servicio web
-1. __ En servidor-linux instala el paquete apache2. __ Para ello ejecuta
+1. __ En servidor-linux instala los paquete apache2 mysql-server php5 php5-mysql. __ Para ello ejecuta
 ```sh
-apt-get  install  apache2
+apt-get  install  apache2  mysql-server  php5  php5-mysql
+```
+NOTA: Para distribuciones ubuntu 16.04, que trabajan con PHP 7 en lugar de PHP 5, los paquetes a instalar son:
+```sh
+apt-get  install  apache2  mysql-server  php  php-mysql  libapache2-mod-php
 ```
 <hr>
 
+1. __ ¿Para que sirve cada paquete de los anteriores? __ Busca información en Internet.
+<hr>
 
-#### DNS
+1. __ Visualiza en un navegador web la página web por defecto del servidor.__ Haz una captura de pantalla. En el navegador deberás escribir:
+```
+http://192.168.0.1
+```
+o, si tienes soporte DNS, algo similar a esto
+```
+http://servidor-linux.velez.local
+```
+![Página por defecto de Apache2](assets/apache-default-page.png)
+<hr>
+
+1. La página por defecto es __/var/www/html/index.html__. Renómbrala a __/var/www/html/index.html.orig__. Vuelve a cargar la URL anterior y haz una captura de pantalla.
+<hr>
+
+1. Crea un archico __/var/www/html/info.php__ con el siguiente contenido:
+ ```php
+ <?php
+
+    phpinfo();
+
+ ?>
+ ```
+![Apache2 - Índice de archivos](assets/apache-index.png)
+<hr>
+
+1. __ Visualiza en un navegador web la página info.php.__ Haz una captura de pantalla. En el navegador deberás escribir:
+```
+http://192.168.0.1/info.php
+```
+o, si tienes soporte DNS, algo similar a esto
+```
+http://servidor-linux.velez.local/info.php
+```
+![apache info](assets/apache-info.png)
+<hr>
+ 
+1. Comprueba el apartado __Loaded Modules__. Observa que no tienes cargados los módulos:
+```
+mod_rewrite
+mod_ssl
+```
+Estos son módulos de Apache para proporcionar reescritura de URL (para mejor indexación de motores de búsqueda) y soporte SSL (y por tanto HTTPS).
+<hr>
+
+1. Habilita los módulos anteriores. Para ello ejecuta en un terminal con permisos de administrador:
+```sh
+a2enmod  rewrite  ssl
+service  apache2  restart
+```
+<hr>
+
+1. __Vuelve a cargar la página info.php.__ Haz una captura del apartado __Loaded Modules__.
+![Módulos de Apache](assets/apache-modules.png)
+<hr>
+
+1. __Accede al servidor a través de HTTPS.__ Para ello escribe en el navegador la URL
+```
+https://192.168.0.1
+```
+o, si tienes soporte DNS, algo similar a esto
+```
+https://servidor-linux.velez.local
+```
+Haz una captura de pantalla del resultado.
+<hr>
+
+1. En la actividad anterior no teníamos habilitado el sitio con soporte SSL. Tenemos un sitio disponible para esto en __/etc/apache2/sites-available/__.
+Haz un listado de dicho directorio e indica que archivos están disponibles en él.
+<hr>
+
+1. Haz un listado también de los archivos que tenemos en __/etc/apache2/sites-enabled/__.
+<hr>
+
+1. Para habilitar el sitio con soporte SSL hacemos en un terminal con permisos de administrador:
+```sh
+a2ensite  default-ssl 
+service  apache2  restart
+```
+<hr>
+
+1. Comprueba que ha aparecido un enlace simbólico en __/etc/apache2/sites-enabled/__ que no existía antes.
+<hr>
+
+1. __Vuelve a acceder al servidor a través de HTTPS.__ Para ello escribe en el navegador la URL
+```
+https://192.168.0.1
+```
+o, si tienes soporte DNS, algo similar a esto
+```
+https://servidor-linux.velez.local
+```
+Haz una captura de pantalla del resultado.
+
+ NOTA: En ubuntu, Apache viene con un certificado autofirmado, por lo que no es reconocido por el navegador. Deberás añadir una excepción.
+<hr>
+
+1. Investiga como puedes ver el certificado que te envía el servidor-linux. Una vez lo sepas, visualízalo y haz una captura de pantalla.
+![Certificado SSL en KUbuntu](assets/apache-certificado-ssl.png)
+<hr>
+
+
+#### Servicio DNS
 1. __ En servidor-linux instala los paquetes bind9 y bind9utils.__ Para ello ejecuta 
 ```sh
 apt-get  install  bind9  bind9utils
@@ -224,7 +338,7 @@ apt-get  install  bind9  bind9utils
  };
 
  // Zona inversa
- zone "1.168.192.in-addr.arpa" IN {
+ zone "0.168.192.in-addr.arpa" IN {
 	type master;   
 	file "/etc/bind/db.192";   
 	allow-update { none; }; 
@@ -249,11 +363,11 @@ apt-get  install  bind9  bind9utils
 
  ; Servidor DNS
  @                      IN	NS      ns.velez.local.
- ns                     IN	A       192.168.1.1
+ ns                     IN	A       192.168.0.1
 
  ; Otros equipos del dominio
- cliente-windows        IN	A       192.168.1.10
- cliente-linux          IN	A       192.168.1.11
+ cliente-windows        IN	A       192.168.0.10
+ cliente-linux          IN	A       192.168.0.11
 
  ; Alias
  servidor-linux         IN	CNAME	ns.velez.local. 
@@ -267,7 +381,7 @@ apt-get  install  bind9  bind9utils
 
  ```
  ;
- ; BIND: Zona inversa de velez.local (192.168.1.0)
+ ; BIND: Zona inversa de velez.local (192.168.0.0)
  ;
  $TTL    604800
  @       IN     SOA     velez.local. root.velez.local. (
@@ -320,11 +434,11 @@ OK
 
 1. __Comprueba si tienes errores en la configuración de la zona inversa.__ Ejecuta
 ``` 
-named-checkzone  1.168.192.in-addr.arpa  db.192 
+named-checkzone  0.168.192.in-addr.arpa  db.192 
 ```
 Debe aparecer algo similar a 
 ```
-zone 1.168.192.in-addr.arpa/IN: loaded serial 2
+zone 0.168.192.in-addr.arpa/IN: loaded serial 2
 OK
 ```
 <hr>
@@ -342,13 +456,13 @@ netstat -punta  |  grep named
 ```
 Debe aparecer algo similar a
 ```
-tcp        0      0 192.168.1.1:53          0.0.0.0:*               ESCUCHAR    3856/named      
+tcp        0      0 192.168.0.1:53          0.0.0.0:*               ESCUCHAR    3856/named      
 tcp        0      0 10.0.2.15:53            0.0.0.0:*               ESCUCHAR    3856/named      
 tcp        0      0 127.0.0.1:53            0.0.0.0:*               ESCUCHAR    3856/named      
 tcp        0      0 127.0.0.1:953           0.0.0.0:*               ESCUCHAR    3856/named      
 tcp6       0      0 :::53                   :::*                    ESCUCHAR    3856/named      
 tcp6       0      0 ::1:953                 :::*                    ESCUCHAR    3856/named      
-udp        0      0 192.168.1.1:53          0.0.0.0:*                           3856/named      
+udp        0      0 192.168.0.1:53          0.0.0.0:*                           3856/named      
 udp        0      0 10.0.2.15:53            0.0.0.0:*                           3856/named      
 udp        0      0 127.0.0.1:53            0.0.0.0:*                           3856/named      
 udp6       0      0 :::53                   :::*                                3856/named      
@@ -376,7 +490,7 @@ udp6       0      0 :::53                   :::*                                
 
  ;; ANSWER SECTION:
  servidor-linux.velez.local. 604800 IN	CNAME	ns.velez.local.
- ns.velez.local.		604800	IN	A	192.168.1.1
+ ns.velez.local.		604800	IN	A	192.168.0.1
 
  ;; AUTHORITY SECTION:
  velez.local.		604800	IN	NS	ns.velez.local.
@@ -390,8 +504,109 @@ udp6       0      0 :::53                   :::*                                
 <hr>
 
 
+#### Servicio SaMBa
+1. __ En servidor-linux instala los paquetes samba, smbclient y cifs-utilss.__ Para ello ejecuta 
+```sh
+apt-get  install  samba  smbclient  cifs-utils
+```
+<hr>
 
+1. __ Archivo /etc/samba/smb.conf __ . Este archivo contiene la configuración del servidor SAMBA. Vamos a realizar una copia de seguridad, por si acaso.
+```sh
+mv  /etc/samba/smb.conf   /etc/samba/smb.conf.orig
+```
+<hr>
+
+1. __Creamos un nuevo archivo /etc/samba/smb.conf con el siguiente contenido:__
+
+ ```
+ [global]
+   workgroup = WORKGROUP
+   server string = Servidor SMB/CIFS Linux
+
+   security = user
+   map to guest = Bad User
+
+   log file = /var/log/samba/%m.log
+   max log size = 50
+
+ [documentos]
+   comment = "Carpeta compartida sin autenticación"
+   path = /public
+   public = yes
+   only guest = yes
+   writable = yes
+ ```
+ En este archivo indicamos que vamos a compartir como usuario invitado (sin solicitar usuario/contraseña) el recursos documentos con permisos de lectura y escritura.
+ Dicho recurso se halla en la carpeta /public
+<hr>
+
+1. __Reinicia el servidor samba__
+```sh
+service  samba  restart
+```
+
+1. __Crea la carpeta /public y pon como propietario a nobody y como grupo a nogroup__
+```sh
+mkdir /public
+chown  -R  nobody:nogroup  /public
+```
+<hr>
+
+1. __Copia algún archivo de prueba en el directorio anterior. __ Deberás poner también a este archivo el mismo propietario y grupo anteriores.
+Haz un listado largo del contenido de la carpeta /public.
+<hr>
+
+1. __Comprueba si la sintaxis de /etc/samba/smb.conf es correcta.__ Para ello ejecuta el comando:
+```sh
+testparm
+```
+Haz una captura de pantalla del resultado.
+<hr>
+
+1. __Desde Linux (servidor o cliente) comprobamos la conexión__. 
+```sh
+smbclient  -L 192.168.1.1
+```
+Haz una captura de pantalla del resultado.
+<hr>
+
+1. __En el cliente-windows realiza un mapeo de unidad de red del recurso compartido (documentos) por el servidor-linux. __ Haz una captura de pantalla.
+Para ello deberás examinar la red, encontrar el recurso compartido y pulsar con el botón secundario del ratón encima para mostrar el menú contextual.
+Una vez ahí pulsa en 'Map network drive'.
+
+ ![Windows - Mapeo 1](assets/samba-win-map1.png)
+
+ En lugar de 'pc' debería aparecerte 'servidor-linux'.
+<hr>
+
+1. __Selecciona la unidad de red deseada.__ Haz una captura de pantalla. Evita las unidades A: ... C: ... H:, puesto que se utilizan para disqueteras, discos duros, CD/DVD, pendrives y demás. Utiliza letras de unidad altas.
+
+ ![Windows - Mapeo 2](assets/samba-win-map2.png)
 <pre>
+
+1. Ya puedes utilizar tu unidad de red a través del explorador de archivos. __Prueba a copiar, modificar y borrar algunos archivos. __ Haz una captura de pantalla.
+
+ ![Windows - Mapeo 3](assets/samba-win-map3.png)
+<hr>
+
+1. __En el cliente-linux realiza un acceso al recurso compartido (documentos) por el servidor-linux.__ Haz una captura de pantalla.
+Para ello deberás abrir el explorador de archivos y escribir en la barra de dirección lo siguiente:
+```sh
+smb://192.168.1.1
+```
+ ![Linux - Recurso SAMBA](assets/samba-linux-mount.png)
+
+ O, en nuestro caso, como tenemos el servidor-linux con IP 192.168.0.1 
+```sh
+smb://192.168.0.1
+```
+<hr>
+
+
+#### Servicio SSH
+
+
 
 
 </pre>
