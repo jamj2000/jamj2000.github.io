@@ -42,23 +42,160 @@ united
 
 
 <pre>
+</pre>
 
+<center>
+<table>
+<tr>
+<td>
+ ![GNU/Linux](assets/aviso.png)
+</td>
+<td>
+ <h4>
+  Para realizar las siguientes actividades sigue estos pasos:
 
+  1. En tu directorio personal crea una carpeta llamada scripts.
+  1. Abre un editor de texto (nano, gedit u otro que prefieras)
+  1. Escribe el script que se muestra y guárdalo con el nombre indicado en la carpeta scripts.
+  1. Asignale permisos de ejecución (puedes utilizar el comando `chmod +x nombre_script`)
+  1. Ejecuta el script (siguiendo la forma  `./nombre_script`)
+  1. Examina qué resultado obtienes y explica qué es lo que hace.
+ </h4>
+</td>
+</tr>
+</table>
+</center>
+<pre>
 </pre>
 
 #<a name="introduccion"></a>  [Introducción](#indice)
 
-1. __¿?__
+1. __comillas.sh__
+
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de distintas clases de comillas
+
+ D="date"
+
+ echo '$D'
+ echo "$D"
+ echo `$D`
+ ```
 <hr>
 
-1. __¿?__
+1. __variables.sh__
+
+ ```sh
+ #!/bin/bash
+ #
+ # Algunas variables importantes
+
+ echo "Valor de salida del último proceso ejecutado ->  $?"
+ echo "Número de argumentos                         ->  $#"
+ echo "Argumento num. 0                             ->  $0"
+ echo "Argumento num. 1                             ->  $1"
+ echo "Argumento num. 2                             ->  $2"
+ echo "Pid de la shell                              ->  $$"
+ echo "Directorio inicial del usuario               ->  $HOME"
+ echo "Ruta de búsqueda                             ->  $PATH"
+ echo "Directorio de trabajo                        ->  $PWD"
+ echo "Nombre de equipo                             ->  $HOSTNAME"
+ echo "Tipo de máquina                              ->  $MACHTYPE"
+ echo "Sistema operativo                            ->  $OSTYPE"
+ echo "Número aleatorio entre 1 y 32767             ->  $RANDOM"
+ ```
 <hr>
 
+1. __retorno.sh__
 
-### Actividades de ampliación
+ ```sh
+ #!/bin/bash
+ #
+ # Analizamos el valor retornado con $?
 
-1. __  __
+ expr 1 + 3
+ echo $?
+
+ echo Bienvenido
+ echo $?
+
+ No se que poner aquí
+ echo $?
+
+ date
+ echo $?
+
+ echon $?
+ echo $?
+ ```
 <hr>
+
+1. __aritmetica1.sh__
+
+ ```sh
+ #!/bin/bash
+ #
+ # Operaciones aritméticas con expr
+
+ echo -n "Introduce un número: "
+ read num1
+ echo -n "Introduce otro número: "
+ read num2
+
+ echo `expr $num1 + $num2`
+ echo `expr $num1 - $num2`
+ echo `expr $num1 \* $num2`
+ echo `expr $num1 / $num2`
+ echo `expr $num1 % $num2`
+ ```
+<hr>
+
+1. __aritmetica2.sh__
+
+ ```sh
+ #!/bin/bash
+ # 
+ # Operaciones aritméticas con (( ))
+
+ echo -n "Introduce un número: "
+ read num1
+ echo -n "Introduce otro número: "
+ read num2
+
+ echo $((num1 + num2))
+ echo $((num1 - num2))
+ echo $((num1 * num2))
+ echo $((num1 / num2))
+ echo $((num1 % num2))
+ echo $((num1 ** num2))
+ echo $((RANDOM % 10))
+ ```
+<hr>
+
+1. __aritmetica3.sh__
+
+ ```sh
+ #!/bin/bash
+ # 
+ # Operaciones aritméticas con calculadora (comando bc)
+
+ echo -n "Introduce un número: "
+ read num1
+ echo -n "Introduce otro número: "
+ read num2
+
+ echo "$num1 + $num2"  | bc 
+ echo "$num1 - $num2"  | bc 
+ echo "$num1 * $num2"  | bc 
+ echo "$num1 / $num2"  | bc 
+ echo "$num1 % $num2"  | bc
+ echo "$num1 ^ $num2"  | bc 
+ echo "$RANDOM % 10"   | bc 
+ ```
+<hr>
+
 
 
 <pre>
@@ -67,22 +204,439 @@ united
 </pre>
 
 #<a name="decision"></a> [Estructuras de decisión](#indice)
-1. __ __
+
+
+1. __if0.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de if
+
+ echo -n "/etc/fstab "
+
+ if [ -d /etc/fstab ]; then 
+         echo " es un directorio" 
+ elif [ -f /etc/fstab ]; then 
+         echo " es un archivo regular"
+ elif [ -p /etc/fstab ]; then
+         echo " es una tuberia (pipe)"
+ elif [ -b /etc/fstab ]; then
+         echo " es un archivo especial de bloques"
+ elif [ -c /etc/fstab ]; then
+         echo " es un archivo especial de caracteres"
+ else 
+         echo " probablemente no exista"
+ fi
+ ```
 <hr>
 
-1. __¿?__
+1. __lista0.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Listas de instrucciones
+
+ [ -e /etc/motd ] && cat /etc/motd
+ [ -e /etc/pp ]   || echo "No existe /etc/pp"
+ ```
 <hr>
 
+1. __lista1.sh__
 
+ ```sh
+ #!/bin/bash
+ #
+ # Listas de instrucciones
 
-
-### Actividades de ampliación
-1. __¿?__
+ [ -e /etc/motd ] && cat /etc/motd || echo "No existe el archivo /etc/motd o no ha podido mostrarse"
+ ```
 <hr>
 
-1. __ __
+1. __lista2.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Listas de instrucciones
+
+ cd / && cd usr && cd share && cd doc && echo "Todos los pasos anteriores \
+ han sido ejecutados correctamente"
+ ```
 <hr>
 
+1. __lista3.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Listas de instrucciones
+
+ cd perico || cd juana || cd alex || cd tintin || echo "Ninguno de los pasos anteriores \
+ ha sido ejecutado correctamente"
+ ```
+<hr>
+
+1. __lista4.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Listas de instrucciones
+
+ cd perico 2> /dev/null || cd juana 2> /dev/null || \
+    cd alex 2> /dev/null|| cd tintin 2> /dev/null || echo "Ninguno de los pasos anteriores \
+ ha sido ejecutado correctamente"
+ ```
+<hr>
+
+1. __argumentos0.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Utilización de los argumentos 
+
+ if [ $# -ne 1 ]; then
+         echo -e "\nDebes introducir un argumento."
+         echo -e "P. ej.:   $0  <palabra>\n"
+         exit -1
+ fi
+
+ echo -e "\nEl argumento introducido ha sido: $1\n"
+ ```
+<hr>
+
+1. __argumentos1.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Utilización de los argumentos 
+
+ if [ $# -lt 1 ]; then
+         echo -e "\nDebes introducir al menos un argumento."
+         echo -e "P. ej.:   $0  <palabra>\n"
+         exit -1
+ fi
+
+ echo -e "\nLos argumentos introducidos han sido $#. La lista es: $*\n"
+ ```
+<hr>
+
+1. __include0.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Inclusión de archivos con .
+
+ [ -e variables.sh ] && . variables.sh
+ ```
+<hr>
+
+1. __include1.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Inclusión de archivos con .
+
+ if [ $# -ne 1 ]; then
+         echo -e "\nDebes introducir el guión a incluir."
+         echo -e "P. ej.:   $0  <guion>\n"
+         exit -1
+ fi
+
+ [ -e $1 ] && . $1 || echo "$1 no existe o no puede incluirse"
+ ```
+<hr>
+
+1. __include2.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Inclusión de archivos con .
+
+ if [ $# -ne 1 ]; then
+         echo -e "\nDebes introducir el guión a incluir."
+         echo -e "P. ej.:   $0  <guion>\n"
+         exit -1
+ fi
+
+ if [ -e $1 ]; then
+         . $1 
+ else
+         echo "$1 no existe o no puede incluirse"
+ fi
+ ```
+<hr>
+
+1. __if1.sh__
+ ```sh
+ #!bin/bash
+ #
+ # Uso de if
+
+ echo -n "$1 "
+
+ if [ -d $1 ]; then 
+         echo " es un directorio" 
+ elif [ -f $1 ]; then 
+         echo " es un archivo regular"
+ elif [ -p $1 ]; then
+         echo " es una tuberia (pipe)"
+ elif [ -b $1 ]; then
+         echo " es un archivo especial de bloques"
+ elif [ -c $1 ]; then
+         echo " es un archivo especial de caracteres"
+ else 
+         echo " probablemente no exista"
+ fi
+ ```
+<hr>
+
+1. __if2.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de if
+
+ echo -n "$1 "
+
+ if [ -e $1 ]; then
+         if [ -d $1 ]; then 
+                 echo " es un directorio" 
+         elif [ -f $1 ]; then 
+                 echo " es un archivo regular"
+         elif [ -p $1 ]; then
+                 echo " es una tuberia (pipe)"
+         elif [ -b $1 ]; then
+                 echo " es un archivo especial de bloques"
+         elif [ -c $1 ]; then
+                 echo " es un archivo especial de caracteres"
+         fi
+ else
+         echo " no existe"
+ fi
+ ```
+<hr>
+
+1. __if3.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de if
+
+ if [ -z $1 ]; then
+         echo -e "Modo de uso: \n$0 nombre_de_archivo"
+ else
+         echo -n "$1 "
+
+         if [ -e $1 ]; then
+                 if [ -d $1 ]; then 
+                         echo " es un directorio" 
+                 elif [ -f $1 ]; then 
+                         echo " es un archivo regular"
+                 elif [ -p $1 ]; then
+                         echo " es una tuberia (pipe)"
+                 elif [ -b $1 ]; then
+                         echo " es un archivo especial de bloques"
+                 elif [ -c $1 ]; then
+                         echo " es un archivo especial de caracteres"
+                 fi
+         else
+                 echo " no existe"
+         fi
+ fi
+ ```
+<hr>
+
+1. __if4.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de if
+
+ if [ -e /etc/fstab -a -e /etc/issue -a -e /etc/motd -a ! -e /etc/pepe ]; then
+         echo "Existen /etc/fstab y /etc/issue y /etc/motd y no existe /etc/pepe"
+ fi
+ ```
+<hr>
+
+1. __if5.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de if
+
+ if test -e /etc/fstab -a -e /etc/issue -a -e /etc/motd -a ! -e /etc/pepe; then
+         echo "Existen /etc/fstab y /etc/issue y /etc/motd y no existe /etc/pepe"
+ fi
+ ```
+<hr>
+
+1. __if6.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de if
+
+ echo -n "Introduce un número: " ; read num1
+ echo -n "Introduce otro número: "; read num2
+
+ if [ $((num1)) -gt $((num2)) ]; then
+         echo "El primer número es mayor que el segundo"
+ elif [ $((num1)) -eq $((num2)) ]; then
+         echo "El primer número es iqual al segundo"
+ else
+         echo "El primer número es menor que el segundo"
+ fi
+ ```
+<hr>
+
+1. __case0.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de case
+
+ case "$1" in
+   cuadrado)
+         echo ""
+         echo "###############"
+         echo "###############"
+         echo "###############"
+         echo "###############"
+         echo "###############"
+         echo "###############"
+         echo "###############"
+         echo ""
+         ;;
+   circulo)
+         echo ""
+         echo "    #######    "
+         echo " ############# "
+         echo "###############"
+         echo "###############"
+         echo "###############"
+         echo " ############# "
+         echo "    #######    "
+         echo ""
+         ;;
+   rombo)
+         echo ""
+         echo "       #       "
+         echo "     #####     "
+         echo "   #########   "
+         echo " ############# "
+         echo "   #########   "
+         echo "     #####     "
+         echo "       #       "
+         echo ""
+         ;;
+   *)
+         echo -e "\nDebes de introducir uno de los siguientes argumentos:"
+         echo -e " $0  [ cuadrado | circulo | rombo ]\n"
+ esac
+ ```
+<hr>
+
+1. __case1.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de case
+
+ case "$1" in
+   negro)
+         echo -e "\033[0;30m"        
+         echo    '\033[0;30m'
+         echo -e "\033[0m"
+         ;;
+   azul) 
+         echo -e "\033[0;34m"        
+         echo    '\033[0;34m'
+         echo -e "\033[0m"
+         ;;
+   verde) 
+         echo -e "\033[0;32m"        
+         echo    '\033[0;32m'
+         echo -e "\033[0m"
+         ;;
+   cyan) 
+         echo -e "\033[0;36m"                
+         echo    '\033[0;36m'
+         echo -e "\033[0m"
+         ;;
+   rojo) 
+         echo -e "\033[0;31m"        
+         echo    '\033[0;31m'
+         echo -e "\033[0m"
+         ;;
+   purpura) 
+         echo -e "\033[0;35m"        
+         echo    '\033[0;35m'
+         echo -e "\033[0m"
+         ;;
+   marron)       
+         echo -e "\033[0;33m"        
+         echo    '\033[0;33m'
+         echo -e "\033[0m"
+         ;;
+   grisclaro)    
+         echo -e "\033[0;37m"        
+         echo    '\033[0;37m'
+         echo -e "\033[0m"
+         ;;
+   grisoscuro)
+         echo -e "\033[1;30m"
+         echo    '\033[1;30m'
+         echo -e "\033[0m"
+         ;;
+   azulclaro)    
+         echo -e "\033[1;34m"
+         echo    '\033[1;34m'
+         echo -e "\033[0m"
+         ;;
+   verdeclaro)
+         echo -e "\033[1;32m"   
+         echo    '\033[1;32m'
+         echo -e "\033[0m"
+         ;;
+   cyanclaro)
+         echo -e "\033[1;36m"    
+         echo    '\033[1;36m'
+         echo -e "\033[0m"
+         ;;
+   rojoclaro)    
+         echo -e "\033[1;31m"
+         echo    '\033[1;31m'
+         echo -e "\033[0m"
+         ;;
+   purpuraclaro) 
+         echo -e "\033[1;35m"
+         echo    '\033[1;35m'
+         echo -e "\033[0m"
+         ;;
+   amarillo)     
+         echo -e "\033[1;33m"
+         echo    '\033[1;33m'
+         echo -e "\033[0m"
+         ;;
+   blanco)       
+         echo -e "\033[1;37m"
+         echo    '\033[1;37m'
+         echo -e "\033[0m"
+         ;;
+   *) 
+         echo "Uso:"
+         echo "     $0  <color>"
+         echo -e "
+                 negro         grisoscuro   
+                 azul          azulclaro  
+                 verde         verdeclaro  
+                 cyan          cyanclaro  
+                 rojo          rojoclaro  
+                 purpura       purpuraclaro  
+                 marron        amarillo  
+                 grisclaro     blanco 
+                 \n" 
+ esac
+ ```
+<hr>
 
 
 <pre>
@@ -92,27 +646,126 @@ united
 
 #<a name="iteracion"></a> [Estructuras de iteración](#indice) 
 
-1. __ __ 
+
+1. __while.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle while
+
+ i=0
+
+ while [ $i -lt 10 ]; do
+         echo $i
+         let $((i++))
+ done
+ ```
 <hr>
 
-1. __ __ 
+1. __until.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle until
+
+ i=0
+
+ until [ $i -eq 10 ]; do
+         echo $i
+         let $((i++))
+ done
+ ```
 <hr>
 
+1. __for0.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle for
 
-
-### Actividades de ampliación
-
-1. __ .__ 
+ for ((i=0; i<10; i++)); do
+         echo $i
+ done
+ ```
 <hr>
 
-1. __ .__ 
+1. __for1.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle for
+
+ for i in 0 1 2 3 4 5 6 7 8 9; do
+         echo $i
+ done
+ ```
 <hr>
 
+1. __for2.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle for
+
+ for i in una palabra tras otra; do
+         echo $i
+ done
+ ```
+<hr>
+
+1. __for3.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle for
+
+ for i in "una palabra" tras otra; do
+         echo $i
+ done
+ ```
+<hr>
+
+1. __for4.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle for
+
+ for i in `cat /etc/resolv.conf`; do
+         echo $i
+ done
+ ```
+<hr>
+
+1. __for5.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle for
+
+ for i in "`cat /etc/resolv.conf`"; do
+         echo $i
+ done
+ ```
+<hr>
+
+1. __for6.sh__
+ ```sh
+ #!/bin/bash
+ #
+ # Uso de bucle for
+
+ for i in "`cat /etc/resolv.conf`"; do
+         echo "$i"
+ done
+ ```
+<hr>
 
 <pre>
 
 
 </pre>
+
 
 </xmp>
 

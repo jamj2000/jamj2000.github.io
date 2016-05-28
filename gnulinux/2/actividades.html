@@ -583,7 +583,7 @@ Una vez ahí pulsa en 'Map network drive'.
 1. __Selecciona la unidad de red deseada.__ Haz una captura de pantalla. Evita las unidades A: ... C: ... H:, puesto que se utilizan para disqueteras, discos duros, CD/DVD, pendrives y demás. Utiliza letras de unidad altas.
 
  ![Windows - Mapeo 2](assets/samba-win-map2.png)
-<pre>
+<hr>
 
 1. Ya puedes utilizar tu unidad de red a través del explorador de archivos. __Prueba a copiar, modificar y borrar algunos archivos. __ Haz una captura de pantalla.
 
@@ -605,8 +605,48 @@ smb://192.168.0.1
 
 
 #### Servicio SSH
+1. __¿Pára qué se utiliza el servicio SSH?__ Busca información si es necesario.
+<hr>
 
+1. __ En servidor-linux instala el paquete ssh.__ Para ello ejecuta 
+```sh
+apt-get  install  ssh
+```
+<hr>
 
+1. Archivo __/etc/ssh/sshd_config __ . Este archivo contiene la configuración del servidor SSH. En Ubuntu suele venir con una configuración bastante adecuada por lo que no es necesario tocar nada. No obstante comprueba que existe la directiva: 
+```
+X11Forwarding yes
+```
+Para ello puedes utilizar un editor como nano
+```sh
+nano  /etc/ssh/sshd_config
+```
+<hr>
+
+1. __Conecta desde cliente-linux.__ Para ello, en cliente-linux ejecuta:
+```sh
+ssh  -X  192.168.0.1
+```
+La opción -X te permitirá lanzar aplicaciones gráficas si así lo deseas.
+<hr>
+
+1. Una vez conectado a servidor-linux __ejecuta algunos comandos__ para comprobar que realmente estás en dicho equipo. Por ejemplo:
+```sh
+hostname
+ifconfig
+who
+```
+<hr>
+
+1. Puedes también __lanzar una aplicación gráfica__. Por ejemplo:
+```sh
+firefox
+libreoffice
+```
+__NOTA__: Ten en cuenta que aunque la interfaz gráfica de la aplicación se muestra en cliente-linux, dicha aplicación se está ejecutando realmente en servidor-linux y tiene acceso a los archivos y demás recursos del servidor.
+
+<pre>
 
 
 </pre>

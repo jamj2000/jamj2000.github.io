@@ -441,6 +441,7 @@ apt-get  install  apache2
 ### Configuración
 __/etc/apache2/apache2.conf__
 ```
+...
 IncludeOptional mods-enabled/*.load
 IncludeOptional mods-enabled/*.conf
 
@@ -456,6 +457,7 @@ AccessFileName .htaccess
 
 IncludeOptional conf-enabled/*.conf
 IncludeOptional sites-enabled/*.conf
+...
 ```
 
 
@@ -544,8 +546,13 @@ __L__inux - __A__pache - __M__ySQL - __P__HP
 
 
 ### Instalación
+A partir de Ubuntu 16.04 (con PHP7)
 ```sh
 apt  install  apache2  mysql-server  php  php-mysql  libapache2-mod-php
+```
+Antes de Ubuntu 16.04 (con PHP5)
+```sh
+apt-get  install  apache2  mysql-server  php5  php5-mysql
 ```
 
 
@@ -564,7 +571,7 @@ apt  install  apache2  mysql-server  php  php-mysql  libapache2-mod-php
 
 
 ### Extensiones de PHP
-- Proporciona mayor funcionalidad a las aplicaciones PHP.
+- Proporciona mayor funcionalidad a las aplicaciones PHP (versión 7).
 - Para instalar extensiones. Ejemplos:
 ```sh
 apt  install  php-gd  php-curl  php-mcrypt
@@ -719,6 +726,17 @@ Acceso remoto
 ![GNU/Linux](assets/openssh.gif)
 
 
+### Utilidad
+- Muy utilizado actualmente para acceso remoto por terminal.
+- Más seguro que telnet.
+- El tráfico viaja cifrado, cosa que no hace telnet.
+- Cualquier comando del terminal de Linux está disponible.
+- Con la opción __-X__ se pueden lanzar también aplicaciones gráficas.
+- Comandos relacionados:
+ - __scp__:   para copia remota
+ - __sftp__:  para FTP sobre SSH
+
+
 ### Instalación
 ```sh
 apt-get install ssh
@@ -727,6 +745,7 @@ apt-get install ssh
 ### Configuración
 __/etc/ssh/sshd_config__
 ```
+...
 Port 22
 Protocol 2
 
@@ -741,12 +760,13 @@ X11Forwarding yes         # Permite conectar con  ssh -X
 
 Banner /etc/issue
 DenyUsers  usuario
+...
 ```
 
 
 ### Conexión a servidor SSH 
 ```sh
-ssh   usuario@servidor
+ssh  -X   usuario@servidor
 ```
 ### Copia de archivos
 ```sh
