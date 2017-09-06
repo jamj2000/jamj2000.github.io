@@ -1,5 +1,6 @@
 # Site settings
-title: jamj2000
+title: Personal site
+author: José Antonio Muñoz Jiménez
 email: jamj2000@gmail.com
 url: http://jamj2000.github.io
 description: "Open Source Projects of José Antonio Muñoz Jiménez, aka jamj2000. He works as teacher in vocational training in computer science in Andalusia, Spain."
@@ -14,13 +15,21 @@ contact: static
 
 
 # Color settings (hex-codes without the leading hash-tag)
+# color:
+#   articletext: 4e4e4e          # Color de texto gris
+#   primary: 221300              # Marrón
+#   primary-rgb: "172,112,35"    # Marrón claro
+#   secondary: 2f8a2f            # Verde
+#   secondary-dark: 1a4a1a       # Verde oscuro
+#   tertiary: ac7023             # Marrón claro
+
 color:
   articletext: 4e4e4e          # Color de texto gris
-  primary: 221300              # Marrón
-  primary-rgb: "172,112,35"    # Marrón claro
-  secondary: 2f8a2f            # Verde
-  secondary-dark: 1a4a1a       # Verde oscuro
-  tertiary: ac7023             # Marrón claro
+  primary: 8b4513              # SaddleBrown    
+  primary-rgb: "107,142,35"    # BurlyWood       
+  secondary: 9acd32            # YellowGreen       
+  secondary-dark: 228b22       # ForestGreen  
+  tertiary: 6b8e23             # OliveDrab
 
 
 # Footer settings

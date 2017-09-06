@@ -379,7 +379,7 @@ section.success {
 #article-img img {
     max-width: 100%;
     margin: 30px auto;
-    border: 5px solid #{{ site.color.primary }};
+#    border: 5px solid #{{ site.color.primary }};
 }
 
 #article-img code {
