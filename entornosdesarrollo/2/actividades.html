@@ -65,32 +65,32 @@ united
  ```
 
  ```c
-//-------------
-// suma.c
-//-------------
+ //-------------
+ // suma.c
+ //-------------
 
-int suma (int a, int b) {
-    return a + b;
-}
+ int suma (int a, int b) {
+     return a + b;
+ }
  ```
 
  ```c 
-//-------------
-// main.c
-//-------------
+ //-------------
+ // main.c
+ //-------------
 
-#include <stdio.h>
+ #include <stdio.h>
 
-int suma (int a, int b);
+ int suma (int a, int b);
 
-extern char *mensaje;
-extern int  num1, num2;
+ extern char *mensaje;
+ extern int  num1, num2;
 
-int main(){
-    printf("%s\n", mensaje);
-    printf("%d\n", suma (num1, num2) );
-    return 0;
-}
+ int main(){
+     printf("%s\n", mensaje);
+     printf("%d\n", suma (num1, num2) );
+     return 0;
+ }
  ```
 
  ```bash
@@ -134,34 +134,32 @@ int main(){
  ```
 
  ```cpp
- 
-//-------------
-// main.c
-//-------------
-#include <iostream>
+ //-------------
+ // main.c
+ //-------------
+ #include <iostream>
 
-using namespace std;
+ using namespace std;
 
-int suma (int a, int b);
+ int suma (int a, int b);
 
-extern char *mensaje;
-extern int  num1, num2;
+ extern char *mensaje;
+ extern int  num1, num2;
 
-int main(){
-  cout << mensaje << endl;
-  cout << suma (num1, num2) << endl;
-  return 0;
-}
+ int main(){
+   cout << mensaje << endl;
+   cout << suma (num1, num2) << endl;
+   return 0;
+ }
  ``` 
 
  ```cpp
- 
-//-------------
-// suma.c
-//-------------
-int suma (int a, int b) {
-  return a + b;
-}
+ //-------------
+ // suma.c
+ //-------------
+ int suma (int a, int b) {
+   return a + b;
+ }
  ```
  
  ```bash
