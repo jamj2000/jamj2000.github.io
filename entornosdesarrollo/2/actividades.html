@@ -55,42 +55,42 @@ united
 1. Obtener el código objeto a partir del código fuente de los 3 archivos siguientes:
 
  ```c
- //-------------
- // datos.c
- //-------------
+//-------------
+// datos.c
+//-------------
 
- char *mensaje="Hola a todos y todas";
- int  num1 = 8;
- int  num2 = 10;
+char *mensaje="Hola a todos y todas";
+int  num1 = 8;
+int  num2 = 10;
  ```
 
  ```c
- //-------------
- // suma.c
- //-------------
+//-------------
+// suma.c
+//-------------
 
- int suma (int a, int b) {
-     return a + b;
- }
+int suma (int a, int b) {
+    return a + b;
+}
  ```
 
  ```c 
- //-------------
- // main.c
- //-------------
+//-------------
+// main.c
+//-------------
 
- #include <stdio.h>
+#include <stdio.h>
 
- int suma (int a, int b);
+int suma (int a, int b);
 
- extern char *mensaje;
- extern int  num1, num2;
+extern char *mensaje;
+extern int  num1, num2;
 
- int main(){
-     printf("%s\n", mensaje);
-     printf("%d\n", suma (num1, num2) );
-     return 0;
- }
+int main(){
+    printf("%s\n", mensaje);
+    printf("%d\n", suma (num1, num2) );
+    return 0;
+}
  ```
 
  ```bash
