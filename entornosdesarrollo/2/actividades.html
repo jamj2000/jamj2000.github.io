@@ -54,31 +54,74 @@ united
 
 <hr>
 
-1. Enunciado de la segunda actividad.
+1. Obtener el código objeto a partir del código fuente de los 3 archivos siguientes:
 
- ```sh
- # Algo de código
- #
- # Algunas variables importantes
+```c
+//-------------
+// datos.c
+//-------------
+ 
+char *mensaje="Hola a todos y todas";
+int  num1 = 8;
+int  num2 = 10;
+```
+ 
+```c
+//-------------
+// suma.c
+//-------------
 
- echo "Valor de salida del último proceso ejecutado ->  $?"
- echo "Número de argumentos                         ->  $#"
- echo "Argumento num. 0                             ->  $0"
- echo "Argumento num. 1                             ->  $1"
- echo "Argumento num. 2                             ->  $2"
- echo "Pid de la shell                              ->  $$"
- echo "Directorio inicial del usuario               ->  $HOME"
- echo "Ruta de búsqueda                             ->  $PATH"
- echo "Directorio de trabajo                        ->  $PWD"
- echo "Nombre de equipo                             ->  $HOSTNAME"
- echo "Tipo de máquina                              ->  $MACHTYPE"
- echo "Sistema operativo                            ->  $OSTYPE"
- echo "Número aleatorio entre 1 y 32767             ->  $RANDOM"
- ```
+int suma (int a, int b) {
+  return a + b;
+}
+```
+ 
+```c 
+//-------------
+// main.c
+//-------------
+ 
+#include <stdio.h>
+
+int suma (int a, int b);
+
+extern char *mensaje;
+extern int  num1, num2;
+
+int main(){
+  printf("%s\n", mensaje);
+  printf("%d\n", suma (num1, num2) );
+  return 0;
+}
+```
+
+```bash
+# Para obtener código objeto
+
+gcc  -c  main.c  datos.c  suma.c 
+```
+
+Deberemos obtener 3 archivos:  `main.o`,  `suma.o`  y `datos.o`
 <hr>
 
+1. Obtener el código binario ejecutable a partir del código objeto de los 3 archivos anteriores:
 
+```bash
+# Para obtener código objeto
 
+gcc  -o  programa  main.o  datos.o  suma.o 
+```
+
+Deberememos obtener un archivo `programa` binario ejecutable. Si lo ejecutamos obtenemos el siguiente resultado:
+
+```
+./programa
+Hola a todos y todas
+18
+```
+ 
+ 
+<hr>
 
 <pre>
 
