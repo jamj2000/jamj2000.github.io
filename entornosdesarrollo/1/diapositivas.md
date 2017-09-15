@@ -30,7 +30,8 @@ element: class="fragment" data-fragment-index="1"
 
 
 # Introducción
----
+
+
 En esta Unidad aprenderemos a:
 
 - Reconocer la relación de los programas con los componentes del sistema informático, memoria, procesador, periféricos, entre otros.
@@ -52,7 +53,6 @@ En esta Unidad aprenderemos a:
 # Ciclo de vida del sofware
 
 
-
 ## Fases del desarrollo de software
 ---
 ##  
@@ -64,7 +64,6 @@ En esta Unidad aprenderemos a:
 
 
 # Lenguajes de programación
-
 
 
 ## Lenguajes de programación - Tipos (I)
