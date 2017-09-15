@@ -24,7 +24,6 @@ element: class="fragment" data-fragment-index="1"
 ### Ciclo de vida del sofware
 ### Lenguajes de programación
 
-
 <!--- Note: Nota a pie de página. -->
 
 

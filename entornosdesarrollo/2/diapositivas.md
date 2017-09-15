@@ -18,7 +18,6 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
-
 ## Índice
 --- 
 ### Introducción
@@ -30,7 +29,8 @@ element: class="fragment" data-fragment-index="1"
 
 
 # Introducción
----
+
+
 En esta Unidad aprenderemos a:
 
 - Instalar distintas herramientas de desarrollo.
@@ -50,6 +50,7 @@ En esta Unidad aprenderemos a:
 ## Automatización 
 
 Construir (Build) = Compilar + Enlazar
+
 
 
 # Herramientas de desarrollo
