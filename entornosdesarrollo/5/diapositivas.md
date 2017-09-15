@@ -18,23 +18,51 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
+
 ## Índice
 --- 
-### Sección 1
-### Sección 2
+### Introducción
+### Diagramas de clases
 
 <!--- Note: Nota a pie de página. -->
 
 
 
-# Sección 1
+# Introducción
 ---
-##  
-## 
+En esta Unidad aprenderemos a:
+
+- Identificar los conceptos básicos de la programación orientada a objetos.
+- Instalar el módulo del entorno integrado de desarrollo que permite la utilización de diagramas de clases.
+- Identificar las herramientas para la elaboración de diagramas de clases.
+- Interpretar el significado de diagramas de clases.
+- Trazar diagramas de clases a partir de las especificaciones de las mismas.
+- Generar código a partir de un diagrama de clases.
+- Generar un diagrama de clases mediante ingeniería inversa.
+
+
+## Tipos de diagramas UML
+
+
+## Conceptos de POO
 
 
 
-# Sección 2
----
-## 
-## 
+# Diagramas de clases
+
+
+
+## Representación de una clase
+
+
+## Relación de herencia
+
+
+## Relación de composición
+
+
+## Relación de agregación
+
+
+
+

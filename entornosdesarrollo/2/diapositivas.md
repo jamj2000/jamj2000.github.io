@@ -13,30 +13,52 @@ element: class="fragment" data-fragment-index="1"
 <small> 2017-18 - IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
-## Evaluación de entornos integrados de desarrollo
+## Entornos integrados de desarrollo
 
 [![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
+
 ## Índice
 --- 
-### Sección 1
-### Sección 2
+### Introducción
+### Ciclo de vida del sofware
+### Lenguajes de programación
 
 <!--- Note: Nota a pie de página. -->
 
 
 
-# Historia
+# Introducción
+---
+En esta Unidad aprenderemos a:
+
+- Instalar distintas herramientas de desarrollo.
+- Diferenciar la función de cada herramienta.
+- Instalar entornos de desarrollo, propietarios y libres.
+- Añadir y eliminar módulos en el entorno de desarrollo.
+- Personalizar y automatizar el entorno de desarrollo.
+- Configurar el sistema de actualización del entorno de desarrollo.
+- Generar ejecutables a partir de código fuente de diferentes lenguajes en un mismo entorno de desarrollo.
+- Identificar las características comunes y específicas de diversos entornos de desarrollo.
+- Identificar las funciones más usuales de las herramientas CASE para el desarrollo, prueba y documentación de código.
+
+
+## Herramientas básicas
+
+
+## Automatización 
+
+Construir (Build) = Compilar + Enlazar
+
+
+# Herramientas de desarrollo
 ---
 ##  
 
-[Historia simplificada](http://rigaux.org/language-study/diagram-light.png)
-
-[Historia detallada](http://rigaux.org/language-study/diagram.png)
 
 
-# Sección 2
+# Entornos integrados de desarrollo (IDE)
 ---
 ## 
 ## 

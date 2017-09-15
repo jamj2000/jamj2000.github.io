@@ -11,8 +11,8 @@ article: yes
 ---
 # Diapositivas
 
-- [ED - Reconocimiento de elementos del desarrollo de software](/entornosdesarrollo/1/diapositivas). 
-- [ED - Evaluación de entornos integrados de desarrollo](/entornosdesarrollo/2/diapositivas). 
+- [ED - Elementos del desarrollo de software](/entornosdesarrollo/1/diapositivas). 
+- [ED - Entornos integrados de desarrollo](/entornosdesarrollo/2/diapositivas). 
 - [ED - Diseño y realización de pruebas](/entornosdesarrollo/3/diapositivas). 
 - [ED - Optimización y documentación](/entornosdesarrollo/4/diapositivas). 
 - [ED - Elaboración de diagramas de clases](/entornosdesarrollo/5/diapositivas). 
@@ -20,8 +20,8 @@ article: yes
    
 # Actividades
 
-- [ED - Reconocimiento de elementos del desarrollo de software](/entornosdesarrollo/1/actividades). 
-- [ED - Evaluación de entornos integrados de desarrollo](/entornosdesarrollo/2/actividades). 
+- [ED - Elementos del desarrollo de software](/entornosdesarrollo/1/actividades). 
+- [ED - Entornos integrados de desarrollo](/entornosdesarrollo/2/actividades). 
 - [ED - Diseño y realización de pruebas](/entornosdesarrollo/3/actividades). 
 - [ED - Optimización y documentación](/entornosdesarrollo/4/actividades). 
 - [ED - Elaboración de diagramas de clases](/entornosdesarrollo/5/actividades). 

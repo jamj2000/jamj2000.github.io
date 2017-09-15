@@ -18,23 +18,55 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
+
 ## Índice
 --- 
-### Sección 1
-### Sección 2
+### Introducción
+### Diagramas de casos de uso
+### Diagramas de interacción
+### Diagramas de estados
+### Diagramas de actividades
 
 <!--- Note: Nota a pie de página. -->
 
 
 
-# Sección 1
+# Introducción
 ---
-##  
-## 
+En esta Unidad aprenderemos a:
+
+- Identificar los distintos tipos de diagramas de comportamiento.
+- Reconocer el significado de los diagramas de casos de uso.
+- Interpretar diagramas de interacción.
+- Elaborar diagramas de interacción sencillos.
+- Interpretar diagramas de estados.
+- Plantear diagramas de estados sencillos.
+- Interpretar el significado de diagramas de actividades.
+- Elaborar diagramas de actividades sencillos.
+
+
+## Tipos de diagramas de comportamiento
 
 
 
-# Sección 2
----
-## 
-## 
+# Diagramas de casos de uso
+
+
+
+## Elementos básicos
+
+- Actores
+- Casos de uso
+- Relaciones 
+
+
+
+# Diagramas de interacción
+
+
+
+# Diagramas de estados
+
+
+
+# Diagramas de actividades

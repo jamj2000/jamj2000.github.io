@@ -18,23 +18,41 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
+
 ## Índice
 --- 
-### Sección 1
-### Sección 2
+### Introducción
+### Ciclo de vida del sofware
+### Lenguajes de programación
 
 <!--- Note: Nota a pie de página. -->
 
 
 
-# Sección 1
+# Introducción
 ---
-##  
-## 
+En esta Unidad aprenderemos a:
+
+- Identificado los diferentes tipos de pruebas.
+- Definir casos de prueba.
+- Identificar las herramientas de depuración y prueba de aplicaciones ofrecidas por el entorno de desarrollo.
+- Utilizar herramientas de depuración para definir puntos de ruptura y seguimiento.
+- Utilizar las herramientas de depuración para examinar y modificar el comportamiento de un programa en tiempo de ejecución.
+- Documentar el plan de pruebas.
+- Efectuar pruebas unitarias de clases y funciones.
+- Efectuar pruebas de integración, de sistema y de aceptación.
+- Implementar pruebas automáticas.
+- Documentar las incidencias detectadas.
+- Aplicar normas de calidad a los procedimientos de desarrollo de software.
+- Realizar medidas de calidad sobre el software desarrollado.
 
 
+## Herramientas básicas
 
-# Sección 2
----
-## 
-## 
+
+## Automatización 
+
+Construir (Build) = Compilar + Enlazar
+
+
+# Herramientas de desarrollo

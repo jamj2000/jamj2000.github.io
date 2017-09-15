@@ -18,23 +18,40 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
+
 ## Índice
 --- 
-### Sección 1
-### Sección 2
+### Introducción
+### Ciclo de vida del sofware
+### Lenguajes de programación
 
 <!--- Note: Nota a pie de página. -->
 
 
 
-# Sección 1
+# Introducción
 ---
-##  
-## 
+En esta Unidad aprenderemos a:
+
+- Trabajar de forma habitual con un sistema de control de versiones.  
+- Identificar los patrones de refactorización más usuales.
+- Elaborar las pruebas asociadas a la refactorización.
+- Revisar el código fuente usando un analizador de código.
+- Identificar las posibilidades de configuración de un analizador de código.
+- Aplicar patrones de refactorización con las herramientas que proporciona el entorno de desarrollo.
+- Realizar el control de versiones integrado en el entorno de desarrollo.
+- Documentar el código fuente mediante comentarios.
+- Utilizar herramientas del entorno de desarrollo para documentar los procesos, datos y eventos.
+- Utilizar herramientas del entorno de desarrollo para documentar las clases.
 
 
 
-# Sección 2
----
-## 
-## 
+## Herramientas básicas
+
+
+## Automatización 
+
+Construir (Build) = Compilar + Enlazar
+
+
+# Herramientas de desarrollo
