@@ -27,11 +27,12 @@ element: class="fragment" data-fragment-index="1"
 
 
 
-# Sección 1
+# Historia
 ---
 ##  
 
 [Historia simplificada](http://rigaux.org/language-study/diagram-light.png)
+
 [Historia detallada](http://rigaux.org/language-study/diagram.png)
 
 

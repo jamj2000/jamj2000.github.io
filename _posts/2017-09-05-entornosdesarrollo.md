@@ -11,19 +11,19 @@ article: yes
 ---
 # Diapositivas
 
-- [EED - Reconocimiento de elementos del desarrollo de software](/entornosdesarrollo/1/diapositivas). 
-- [EED - Evaluación de entornos integrados de desarrollo](/entornosdesarrollo/2/diapositivas). 
-- [EED - Diseño y realización de pruebas](/entornosdesarrollo/3/diapositivas). 
-- [EED - Optimización y documentación](/entornosdesarrollo/4/diapositivas). 
-- [EED - Elaboración de diagramas de clases](/entornosdesarrollo/5/diapositivas). 
-- [EED - Elaboración de diagramas de comportamiento](/entornosdesarrollo/6/diapositivas). 
+- [ED - Reconocimiento de elementos del desarrollo de software](/entornosdesarrollo/1/diapositivas). 
+- [ED - Evaluación de entornos integrados de desarrollo](/entornosdesarrollo/2/diapositivas). 
+- [ED - Diseño y realización de pruebas](/entornosdesarrollo/3/diapositivas). 
+- [ED - Optimización y documentación](/entornosdesarrollo/4/diapositivas). 
+- [ED - Elaboración de diagramas de clases](/entornosdesarrollo/5/diapositivas). 
+- [ED - Elaboración de diagramas de comportamiento](/entornosdesarrollo/6/diapositivas). 
    
 # Actividades
 
-- [EED - Reconocimiento de elementos del desarrollo de software](/entornosdesarrollo/1/actividades). 
-- [EED - Evaluación de entornos integrados de desarrollo](/entornosdesarrollo/2/actividades). 
-- [EED - Diseño y realización de pruebas](/entornosdesarrollo/3/actividades). 
-- [EED - Optimización y documentación](/entornosdesarrollo/4/actividades). 
-- [EED - Elaboración de diagramas de clases](/entornosdesarrollo/5/actividades). 
-- [EED - Elaboración de diagramas de comportamiento](/entornosdesarrollo/6/actividades). 
+- [ED - Reconocimiento de elementos del desarrollo de software](/entornosdesarrollo/1/actividades). 
+- [ED - Evaluación de entornos integrados de desarrollo](/entornosdesarrollo/2/actividades). 
+- [ED - Diseño y realización de pruebas](/entornosdesarrollo/3/actividades). 
+- [ED - Optimización y documentación](/entornosdesarrollo/4/actividades). 
+- [ED - Elaboración de diagramas de clases](/entornosdesarrollo/5/actividades). 
+- [ED - Elaboración de diagramas de comportamiento](/entornosdesarrollo/6/actividades). 
 
