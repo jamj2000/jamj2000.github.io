@@ -30,8 +30,9 @@ element: class="fragment" data-fragment-index="1"
 
 
 # Introducción
----
+
 En esta Unidad aprenderemos a:
+
 
 - Identificado los diferentes tipos de pruebas.
 - Definir casos de prueba.
