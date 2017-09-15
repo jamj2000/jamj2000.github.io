@@ -31,7 +31,8 @@ element: class="fragment" data-fragment-index="1"
 ---
 ##  
 
-[Lenguajes](https://www.levenez.com/lang/lang.pdf)
+[Historia de los lenguajes (simplificada)]http://rigaux.org/language-study/diagram-light.pdf)
+[Historia de los lenguajes](https://www.levenez.com/lang/lang.pdf)
 
 
 # Sección 2
