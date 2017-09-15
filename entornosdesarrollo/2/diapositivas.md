@@ -33,15 +33,13 @@ element: class="fragment" data-fragment-index="1"
 
 En esta Unidad aprenderemos a:
 
-- Instalar distintas herramientas de desarrollo.
-- Diferenciar la función de cada herramienta.
 - Instalar entornos de desarrollo, propietarios y libres.
 - Añadir y eliminar módulos en el entorno de desarrollo.
 - Personalizar y automatizar el entorno de desarrollo.
 - Configurar el sistema de actualización del entorno de desarrollo.
-- Generar ejecutables a partir de código fuente de diferentes lenguajes en un mismo entorno de desarrollo.
+- Generar ejecutables a partir de código fuente.
 - Identificar las características comunes y específicas de diversos entornos de desarrollo.
-- Identificar las funciones más usuales de las herramientas CASE para el desarrollo, prueba y documentación de código.
+- Identificar las funciones más usuales de las herramientas CASE.
 
 
 ## Herramientas básicas

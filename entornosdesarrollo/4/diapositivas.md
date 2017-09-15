@@ -18,7 +18,6 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
-
 ## Índice
 --- 
 ### Introducción
@@ -30,7 +29,8 @@ element: class="fragment" data-fragment-index="1"
 
 
 # Introducción
----
+
+
 En esta Unidad aprenderemos a:
 
 - Trabajar de forma habitual con un sistema de control de versiones.  

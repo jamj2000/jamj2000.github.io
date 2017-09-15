@@ -33,10 +33,10 @@ element: class="fragment" data-fragment-index="1"
 
 En esta Unidad aprenderemos a:
 
-- Reconocer la relación de los programas con los componentes del sistema informático, memoria, procesador, periféricos, entre otros.
+- Reconocer la relación de los programas con los componentes del sistema informático.
 - Clasificar los lenguajes de programación.
-- Diferenciar los conceptos de código fuente, objeto y ejecutable.
-- Reconocer las características de la generación de código intermedio para su ejecución en máquinas virtuales.
+- Diferenciar código fuente, objeto y ejecutable.
+- Reconocer las características de la generación de código intermedio.
 - Evaluar la funcionalidad ofrecida por las herramientas utilizadas en programación.
 - Diferenciar el funcionamiento de los distintos tipos de traductores de lenguajes ante el código fuente de un programa.
 - Identificar las fases de desarrollo de una aplicación informática.

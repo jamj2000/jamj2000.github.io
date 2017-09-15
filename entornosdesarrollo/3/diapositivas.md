@@ -18,7 +18,6 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
-
 ## Índice
 --- 
 ### Introducción
@@ -31,10 +30,10 @@ element: class="fragment" data-fragment-index="1"
 
 # Introducción
 
+
 En esta Unidad aprenderemos a:
 
-
-- Identificado los diferentes tipos de pruebas.
+- Identificar los diferentes tipos de pruebas.
 - Definir casos de prueba.
 - Identificar las herramientas de depuración y prueba de aplicaciones ofrecidas por el entorno de desarrollo.
 - Utilizar herramientas de depuración para definir puntos de ruptura y seguimiento.
