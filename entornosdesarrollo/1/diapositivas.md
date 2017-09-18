@@ -82,7 +82,7 @@ Hay dos formas de ejecutar un programa:
 - __CODIFICACIÓN__
 - __PRUEBAS__
 - __MANTENIMIENTO__  
- 
+
 
 ###  Resultado tras cada fase
 
