@@ -138,16 +138,16 @@ Factores de calidad: Corrección, Fiabilidad, ....
 
 ###  Resultado tras cada fase
 
-- Ingeniería de sistemas: Especificación del sistema.
-- ANÁLISIS: Especificación de requisitos del software.
-- DISENO arquitectónico: Documento de arquitectura del software.
-- DISENO detallado: Especificación de módulos y funciones.
-- CODIFICACIÓN: Código fuente.
-- PRUEBAS de unidades: Módulos utilizables.
-- PRUEBAS de integración: Sistema utilizable.
-- PRUEBAS del sistema: Sistema aceptado.
-- Documentación: Documentación técnica y de usuario. 
-- MANTENIMIENTO: Informes de errores y control de cambios.
+- Ingeniería de sistemas: __Especificación del sistema__
+- ANÁLISIS: __Especificación de requisitos del software__
+- DISENO arquitectónico: __Documento de arquitectura del software__
+- DISENO detallado: __Especificación de módulos y funciones__
+- CODIFICACIÓN: __Código fuente__
+- PRUEBAS de unidades: __Módulos utilizables__
+- PRUEBAS de integración: __Sistema utilizable__
+- PRUEBAS del sistema: __Sistema aceptado__
+- Documentación: __Documentación técnica y de usuario__ 
+- MANTENIMIENTO: __Informes de errores y control de cambios__
 
 
 ### Modelos de desarrollo de software
