@@ -21,7 +21,7 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Ciclo de vida del sofware
+### Ciclo de vida del software
 ### Lenguajes de programación
 
 <!--- Note: Nota a pie de página. -->
@@ -51,24 +51,55 @@ En esta Unidad aprenderemos a:
 
 ### Relación Hardware-Software  
 
-- Disco duro: almacena los archivos ejecutables y de datos.
-- Memoria RAM: se cargan en ella el código binario de los archivos ejecutables y los archivos de datos necesarios.
-- CPU: lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
-- E/S: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
+- __Disco duro__: almacena los archivos ejecutables y de datos.
+- __Memoria RAM__: se cargan en ella el código binario de los archivos ejecutables y los archivos de datos necesarios.
+- __CPU__: lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
+- __E/S__: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
 
 
 ### Códigos fuente, objeto y ejecutable
 
 - Código fuente: archivo de texto legible escrito en un lenguaje de programación.
-- Código objeto: archivo binario no ejecutable.
+- Código (intermedio) objeto: archivo binario no ejecutable.
 - Código ejecutable: archivo binario ejecutable. 
 
+### Ejecución a partir del código fuente
 
-### Ejecución de un programa
+Para ejecutar un programa tenemos 2 opciones:
 
-Hay dos formas de ejecutar un programa:
-- Compilación
-- Interpretación
+- Compilar
+- Interpretar
+
+
+### Lenguajes compilados
+
+- Ejemplos: C, C++
+- Ventajas:
+  - Muy eficientes
+- Desventajas:
+  - Ejecución y depuración después de compilar
+
+
+### Lenguajes interpretados
+
+- Ejemplos: PHP, Javascript
+- Ventajas:
+  - Ejecución y depuración directa
+- Desventajas:
+  - Menos eficientes
+
+
+### Lenguajes compilados e interpretados
+
+- Ejemplos: Java
+- Ventajas:
+  - Estructurado y Orientado a Objetos
+  - Relativamente fácil de aprender
+  - Buena documentación y base de usuarios 
+- Desventajas:
+  - Algo menos eficiente que los lenguajes compilados 
+
+Nota: El código fuente Java __se compila__ y se obtiene un código binario intermedio denominado __bytecode__. Puede considerarse código objeto pero destinado a la máquina virtual de Java en lugar de código objeto nativo. Después este __bytecode__ __se interpreta__ para ejecutarlo.
 
 
 
@@ -82,6 +113,27 @@ Hay dos formas de ejecutar un programa:
 - __CODIFICACIÓN__
 - __PRUEBAS__
 - __MANTENIMIENTO__  
+
+
+#### ANÁLISIS
+
+
+#### DISEÑO
+
+
+#### CODIFICACIÓN
+
+
+#### PRUEBAS
+
+
+#### MANTENIMIENTO
+
+- Correctivo
+- Perfectivo
+- Adaptativo
+
+Factores de calidad: Corrección, Fiabilidad, ....
 
 
 ###  Resultado tras cada fase
@@ -129,10 +181,10 @@ Hay dos formas de ejecutar un programa:
 
 
 
-# Lenguajes de computadora
+# Lenguajes 
 
-- Lenguajes de programación: C, C++, Java, Javascript, ...
-- Lenguajes de otro tipo: HTML, XML, JSON, ...
+- __Lenguajes de programación__: C, C++, Java, Javascript, ...
+- __Lenguajes de otro tipo__: HTML, XML, JSON, ...
 
 
 ### Lenguajes de programación - Tipos (I)
@@ -177,3 +229,11 @@ Tipos de __lenguajes imperativos__:
 
 [Historia detallada](http://rigaux.org/language-study/diagram.png)
 
+
+### Criterios para la selección de un lenguaje
+
+- Campo de aplicación
+- Herramientas de desarrollo
+- Documentación
+- Base de usuarios
+- Imposición del cliente
