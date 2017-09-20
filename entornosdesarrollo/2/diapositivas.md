@@ -21,8 +21,8 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Ciclo de vida del sofware
-### Lenguajes de programación
+### Conceptos y herramientas básicas
+### Entornos integrados de desarrollo (IDE)
 
 <!--- Note: Nota a pie de página. -->
 
@@ -42,22 +42,77 @@ En esta Unidad aprenderemos a:
 - Identificar las funciones más usuales de las herramientas CASE.
 
 
-## Herramientas básicas
+
+### Conceptos y herramientas básicas
 
 
-## Automatización 
+#### Conceptos
+
+- Codigo fuente
+- Codigo intermedio u objeto
+- Codigo binario
+- Bibliotecas (librerías)
+- Compilar
+- Enlazar (Link)
+- Interpretar
+
+
+### Herramientas básicas
+
+- Editor de texto: permite escribir código fuente
+- Compilador: genera código objeto a partir del código fuente
+- Enlazador: agrupa varios archivos objeto en uno binario
+- Interprete: lee código fuente y genera código binario para su ejecución
+- Bibliotecas: conjunto de archivos objeto que extienden la funcionalidad del lenguaje
+
+
+#### Bibliotecas (o librerías) (I)
+
+- __Biblioteca estándar__ del lenguaje
+  - Entrada y salida por terminal
+  - Manejo de archivos
+  - Funciones matemáticas
+  - Interfaz gráfica (en algunos lenguajes, p. ej. Java)
+- __Bibliotecas adicionales__
+  - Bases de datos
+  - Gráficos
+  - Red
+  - etc
+
+
+#### Bibliotecas (o librerías) (II)
+
+- Cada biblioteca está compuesta por varios archivos objeto
+- Las bibliotecas modernas son dínamicas (.DLL o .so)
+- También existe una versión estática (.LIB o .a)
+  - es poco usada actualmente
+
+
+#### Bibliotecas (o librerías) (III)
+
+- Una biblioteca se compone de 2 partes:
+  - Especificación (ofrece una API)
+  - Implementación 
+
+- API = Interfaz de Programación de Aplicaciones
+
+
+#### Automatización 
 
 Construir (Build) = Compilar + Enlazar
 
 
 
-# Herramientas de desarrollo
----
-##  
+### Entornos integrados de desarrollo (IDE)
 
+- Para C++:
+  - DevC++
+  - Microsoft Visual Studio
+  - QtCreator
+- Para Java:
+  - Netbeans
+  - Eclipse
+  - IntelJ IDEA
+  - Oracle JDeveloper
 
-
-# Entornos integrados de desarrollo (IDE)
----
-## 
-## 
+ 

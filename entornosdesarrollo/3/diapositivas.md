@@ -47,12 +47,10 @@ En esta Unidad aprenderemos a:
 - Realizar medidas de calidad sobre el software desarrollado.
 
 
-## Herramientas básicas
 
+### Factores de calidad
 
-## Automatización 
-
-Construir (Build) = Compilar + Enlazar
-
-
-# Herramientas de desarrollo
+- Corrección
+- Fiabilidad
+- Eficiencia
+- ...
