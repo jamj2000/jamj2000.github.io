@@ -83,11 +83,29 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 #### ANÁLISIS
 
-Se determina y determina claramente las necesidades del cliente y se especifica los requisitos que debe cumplir el software a desarrollar. 
+Se determina y define claramente las necesidades del cliente y se especifica los requisitos que debe cumplir el software a desarrollar. 
+
+La especificación de requisitos debe:
+- Ser completa y sin omisiones
+- Ser concisa y sin trivialidades
+- Evitar ambigüedades
+- Evitar detalles de diseño o implementación
+- Ser entendible por el cliente
+- Separar requisitos funcionales y no funcionales
+- Dividir y jerarquizar el modelo
+- Fijar criterios de validación
+
 
 #### DISEÑO
 
 Se descompone y organiza el sistema en elementos componentes que pueden ser desarrollados por separado. Se especifica la interrelación y funcionalidad de los elementos componentes.
+
+Las actividades habituales son las siguientes:
+- Diseño arquitectónico
+- Diseño detallado
+- Diseño de datos
+- Diseño de interfaz
+
 
 #### CODIFICACIÓN
 
@@ -266,7 +284,10 @@ Tipos de lenguajes según nivel de abstracción:
 ### Criterios para la selección de un lenguaje
 
 - Campo de aplicación
+- Experiencia previa
 - Herramientas de desarrollo
 - Documentación disponible
 - Base de usuarios
+- Reusabilidad
+- Transportabilidad
 - Imposición del cliente

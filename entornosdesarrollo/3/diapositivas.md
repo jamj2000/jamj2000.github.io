@@ -21,8 +21,8 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Ciclo de vida del sofware
-### Lenguajes de programación
+### Prueba
+### Integración
 
 <!--- Note: Nota a pie de página. -->
 
@@ -35,17 +35,51 @@ En esta Unidad aprenderemos a:
 
 - Identificar los diferentes tipos de pruebas.
 - Definir casos de prueba.
-- Identificar las herramientas de depuración y prueba de aplicaciones ofrecidas por el entorno de desarrollo.
-- Utilizar herramientas de depuración para definir puntos de ruptura y seguimiento.
-- Utilizar las herramientas de depuración para examinar y modificar el comportamiento de un programa en tiempo de ejecución.
-- Documentar el plan de pruebas.
 - Efectuar pruebas unitarias de clases y funciones.
 - Efectuar pruebas de integración, de sistema y de aceptación.
 - Implementar pruebas automáticas.
-- Documentar las incidencias detectadas.
-- Aplicar normas de calidad a los procedimientos de desarrollo de software.
 - Realizar medidas de calidad sobre el software desarrollado.
 
+
+# Pruebas
+
+### Estrategías de prueba
+
+- De __caja negra__
+  - Particiones de equivalencia
+  - Valores límite
+  - Comparación de versiones
+- De __caja blanca__
+  - Cubrimiento lógico
+  - Prueba de bucles
+  - Empleo de intuición
+
+
+### Tipos de pruebas
+
+- Pruebas unitarias (o de unidad)
+- Pruebas de integración 
+- Pruebas del sistema
+- Pruebas alfa y beta
+
+
+### Uso del depurador
+
+- Puntos de ruptura
+- Ejecución paso a paso
+- Análisis de variables
+
+
+
+# Integración
+
+
+### Formas de integración
+
+- Big bang
+- Descendente
+- Ascendente
+- Continua
 
 
 ### Factores de calidad
@@ -53,12 +87,15 @@ En esta Unidad aprenderemos a:
 - Corrección
 - Fiabilidad
 - Eficiencia
-- ...
+- Seguridad
+- Facilidad de uso
+- Mantenibilidad
+- Flexibilidad
+- Facilidad de prueba
+- Transportabilidad
+- Reusabilidad
+- Interoperatividad
 
 
-### Pruebas
 
-- Pruebas unitarias (o de unidad)
-- Pruebas de integración 
-- Pruebas del sistema
-- Pruebas alfa y beta
+
