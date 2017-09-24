@@ -48,24 +48,24 @@ element: class="fragment" data-fragment-index="1"
 
 ### Relación Hardware-Software  
 
-__Disco duro__ :
+- _Disco duro__ :
 almacena de forma permanente los archivos ejecutables y los archivos de datos.
 
-__Memoria RAM__ :
+- __Memoria RAM__ :
 almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios.
  
-__CPU__ :
+- __CPU__ :
 lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
 
-__E/S__ :
+- __E/S__ :
 recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
 
 
 ### Códigos fuente, objeto y ejecutable
 
-- Código fuente: archivo de texto legible escrito en un lenguaje de programación.
-- Código (intermedio) objeto: archivo binario no ejecutable.
-- Código ejecutable: archivo binario ejecutable. 
+- __Código fuente__: archivo de texto legible escrito en un lenguaje de programación.
+- __Código objeto__ (intermedio): archivo binario no ejecutable.
+- __Código ejecutable__: archivo binario ejecutable. 
 
 
 
