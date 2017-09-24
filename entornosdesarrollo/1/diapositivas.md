@@ -100,24 +100,24 @@ Lenguajes informáticos
 
 #### MANTENIMIENTO
 
-- Correctivo: se corrigen defectos
-- Perfectivo: se mejora la funcionalidad
-- Evolutivo: se añade funcionalidades nuevas
-- Adaptativo: se adapta a nuevos entornos
+- __Correctivo__: se corrigen defectos
+- __Perfectivo__: se mejora la funcionalidad
+- __Evolutivo__: se añade funcionalidades nuevas
+- __Adaptativo__: se adapta a nuevos entornos
 
 
 ###  Resultado tras cada fase
 
-- Ingeniería de sistemas: __Especificación del sistema__
-- ANÁLISIS: __Especificación de requisitos del software__
-- DISENO arquitectónico: __Documento de arquitectura del software__
-- DISENO detallado: __Especificación de módulos y funciones__
-- CODIFICACIÓN: __Código fuente__
-- PRUEBAS de unidades: __Módulos utilizables__
-- PRUEBAS de integración: __Sistema utilizable__
-- PRUEBAS del sistema: __Sistema aceptado__
-- Documentación: __Documentación técnica y de usuario__ 
-- MANTENIMIENTO: __Informes de errores y control de cambios__
+Ingeniería de sistemas: __Especificación del sistema__
+ANÁLISIS: __Especificación de requisitos del software__
+DISENO arquitectónico: __Documento de arquitectura del software__
+DISENO detallado: __Especificación de módulos y funciones__
+CODIFICACIÓN: __Código fuente__
+PRUEBAS de unidades: __Módulos utilizables__
+PRUEBAS de integración: __Sistema utilizable__
+PRUEBAS del sistema: __Sistema aceptado__
+Documentación: __Documentación técnica y de usuario__ 
+MANTENIMIENTO: __Informes de errores y control de cambios__
 
 
 ### Modelos de desarrollo de software
