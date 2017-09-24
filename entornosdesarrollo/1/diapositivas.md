@@ -83,45 +83,40 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 #### ANÁLISIS
 
-Se determina y define claramente las necesidades del cliente y se especifica los requisitos que debe cumplir el software a desarrollar. 
-
-La especificación de requisitos debe:
-- Ser completa y sin omisiones
-- Ser concisa y sin trivialidades
-- Evitar ambigüedades
-- Evitar detalles de diseño o implementación
-- Ser entendible por el cliente
-- Separar requisitos funcionales y no funcionales
-- Dividir y jerarquizar el modelo
-- Fijar criterios de validación
+- Se determina y define claramente las necesidades del cliente y se especifica los requisitos que debe cumplir el software a desarrollar. 
+- La especificación de requisitos debe:
+  - Ser completa y sin omisiones
+  - Ser concisa y sin trivialidades
+  - Evitar ambigüedades
+  - Evitar detalles de diseño o implementación
+  - Ser entendible por el cliente
+  - Separar requisitos funcionales y no funcionales
+  - Dividir y jerarquizar el modelo
+  - Fijar criterios de validación
 
 
 #### DISEÑO
 
-Se descompone y organiza el sistema en elementos componentes que pueden ser desarrollados por separado. Se especifica la interrelación y funcionalidad de los elementos componentes.
-
-Las actividades habituales son las siguientes:
-- Diseño arquitectónico
-- Diseño detallado
-- Diseño de datos
-- Diseño de interfaz
+- Se descompone y organiza el sistema en elementos componentes que pueden ser desarrollados por separado. Se especifica la interrelación y funcionalidad de los elementos componentes.
+- Las actividades habituales son las siguientes:
+  - Diseño arquitectónico
+  - Diseño detallado
+  - Diseño de datos
+  - Diseño de interfaz
 
 
 #### CODIFICACIÓN
 
-Se escribe el código fuente de cada componente.
-
-Pueden utilizarse distintos lenguajes informáticos:
-
+- Se escribe el código fuente de cada componente.
+- Pueden utilizarse distintos lenguajes informáticos:
   - __Lenguajes de programación__: C, C++, Java, Javascript, ...
   - __Lenguajes de otro tipo__: HTML, XML, JSON, ...
 
 
 #### PRUEBAS
 
-El principal objetivo de las pruebas debe ser conseguir que el programa funcione incorrectamente y que se descubran defectos.
-
-Deberemos someter al programa al máximo número de situaciones diferentes.
+- El principal objetivo de las pruebas debe ser conseguir que el programa funcione incorrectamente y que se descubran defectos.
+- Deberemos someter al programa al máximo número de situaciones diferentes.
 
 
 #### MANTENIMIENTO
@@ -170,7 +165,7 @@ Deberemos someter al programa al máximo número de situaciones diferentes.
 
 ### Modelo en V
 
-![Modelo en V](assets/V.png)
+![Modelo en V](assets/v.png)
 
 
 ### Construcción de prototipos
