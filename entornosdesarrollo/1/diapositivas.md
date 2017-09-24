@@ -31,7 +31,7 @@ element: class="fragment" data-fragment-index="1"
 # Introducción
 
 
-#### En esta Unidad aprenderemos a
+### En esta Unidad aprenderemos a
 
 - Reconocer la relación de los programas con los componentes del sistema informático.
 - Diferenciar código fuente, objeto y ejecutable.
@@ -48,16 +48,16 @@ element: class="fragment" data-fragment-index="1"
 
 ### Relación Hardware-Software  
 
-__Disco duro__ 
+__Disco duro__ :
 almacena de forma permanente los archivos ejecutables y los archivos de datos.
 
-__Memoria RAM__
+__Memoria RAM__ :
 almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios.
  
-__CPU__
+__CPU__ :
 lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
 
-__E/S__
+__E/S__ :
 recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
 
 
@@ -212,7 +212,7 @@ Tipos de __lenguajes declarativos__:
   - Funcionales: Utilizan funciones. Ej: Lisp, Haskell
   - Algebraicos: Utilizan sentencias. Ej: SQL
 
-- Normalmente son lenguajes interpretados
+Normalmente son lenguajes interpretados
 
 
 ### Tipos (III)
@@ -222,8 +222,9 @@ Tipos de __lenguajes imperativos__:
   - Orientados a objetos: Java
   - Multiparadigma: C++, Javascript
 
-- Los lenguajes orientados a objetos son también lenguajes estructurados. 
-- Muchos de ellos son lenguajes compilados
+Los lenguajes orientados a objetos son también lenguajes estructurados. 
+
+Muchos de ellos son lenguajes compilados
 
 
 ### Tipos (IV)
