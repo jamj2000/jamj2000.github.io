@@ -34,27 +34,28 @@ element: class="fragment" data-fragment-index="1"
 En esta Unidad aprenderemos a:
 
 - Reconocer la relación de los programas con los componentes del sistema informático.
-- Clasificar los lenguajes de programación.
 - Diferenciar código fuente, objeto y ejecutable.
-- Reconocer las características de la generación de código intermedio.
-- Evaluar la funcionalidad ofrecida por las herramientas utilizadas en programación.
-- Diferenciar el funcionamiento de los distintos tipos de traductores de lenguajes ante el código fuente de un programa.
 - Identificar las fases de desarrollo de una aplicación informática.
+- Clasificar los lenguajes de programación.
 
 
 ### Tipos de software 
 
-- De sistema (Sistema operativo, drivers)
-- De aplicación (Suite ofimática, Navegador, Edición de imagen, ...)
-- De desarrollo (Editores, compiladores, interpretes, ...)
+- __De sistema__ (Sistema operativo, drivers)
+- __De aplicación__ (Suite ofimática, Navegador, Edición de imagen, ...)
+- __De desarrollo__ (Editores, compiladores, interpretes, ...)
 
 
 ### Relación Hardware-Software  
 
-- __Disco duro__: almacena los archivos ejecutables y de datos.
-- __Memoria RAM__: se cargan en ella el código binario de los archivos ejecutables y los archivos de datos necesarios.
-- __CPU__: lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
-- __E/S__: recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
+__Disco duro__ 
+ - almacena de forma permanente los archivos ejecutables y los archivos de datos.
+__Memoria RAM__
+ - almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios.
+__CPU__
+ - lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
+__E/S__
+ - recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
 
 
 ### Códigos fuente, objeto y ejecutable
@@ -63,49 +64,6 @@ En esta Unidad aprenderemos a:
 - Código (intermedio) objeto: archivo binario no ejecutable.
 - Código ejecutable: archivo binario ejecutable. 
 
-
-### Ejecución a partir del código fuente
-
-Para ejecutar un programa tenemos 2 opciones:
-
-- Compilar
-- Interpretar
-
-
-### Lenguajes compilados
-
-- Ejemplos: C, C++
-- Ventajas:
-  - Muy eficientes
-- Desventajas:
-  - Ejecución y depuración después de compilar
-
-
-### Lenguajes interpretados
-
-- Ejemplos: PHP, Javascript
-- Ventajas:
-  - Ejecución y depuración directa
-- Desventajas:
-  - Menos eficientes
-
-
-### JAVA (I)
-
-- Lenguajes compilado e interpretado
-- El código fuente Java __se compila__ y se obtiene un código binario intermedio denominado __bytecode__. 
-- Puede considerarse código objeto pero destinado a la máquina virtual de Java en lugar de código objeto nativo. 
-- Después este __bytecode__ __se interpreta__ para ejecutarlo.
-
-
-### JAVA (II)
-
-- Ventajas:
-  - Estructurado y Orientado a Objetos
-  - Relativamente fácil de aprender
-  - Buena documentación y base de usuarios 
-- Desventajas:
-  - Menos eficiente que los lenguajes compilados 
 
 
 # Ciclo de vida del software
@@ -128,8 +86,8 @@ Para ejecutar un programa tenemos 2 opciones:
 
 #### CODIFICACIÓN
 
+Lenguajes informáticos
 
-- Lenguajes informáticos
   - __Lenguajes de programación__: C, C++, Java, Javascript, ...
   - __Lenguajes de otro tipo__: HTML, XML, JSON, ...
 
@@ -193,32 +151,79 @@ Para ejecutar un programa tenemos 2 opciones:
 # Lenguajes de programación
 
 
-### Lenguajes de programación - Tipos (I)
+###  Obtención de código ejecutable
+
+Para obtener código binario ejecutable tenemos 2 opciones
+- __Compilar__
+- __Interpretar__
+
+
+### Lenguajes compilados
+
+- Ejemplos: C, C++
+- Ventajas:
+  - Muy eficientes
+- Desventajas:
+  - Ejecución y depuración después de compilar
+
+
+### Lenguajes interpretados
+
+- Ejemplos: PHP, Javascript
+- Ventajas:
+  - Ejecución y depuración directa
+- Desventajas:
+  - Menos eficientes
+
+
+### JAVA (I)
+
+- Lenguajes compilado e interpretado
+- El código fuente Java __se compila__ y se obtiene un código binario intermedio denominado __bytecode__. 
+- Puede considerarse código objeto pero destinado a la máquina virtual de Java en lugar de código objeto nativo. 
+- Después este __bytecode__ __se interpreta__ para ejecutarlo.
+
+
+### JAVA (II)
+
+- Ventajas:
+  - Estructurado y Orientado a Objetos
+  - Relativamente fácil de aprender
+  - Buena documentación y base de usuarios 
+- Desventajas:
+  - Menos eficiente que los lenguajes compilados 
+
+
+
+### Tipos (I)
 
 - Según la forma en la que operan:
   - __Declarativos__: indicamos el resultado a obtener sin especificar los pasos.
   - __Imperativos__: indicamos los pasos a seguir para obtener un resultado.
 
 
-### Lenguajes de programación - Tipos (II)
+### Tipos (II)
 
 Tipos de __lenguajes declarativos__:
   - Lógicos: Utilizan reglas. Ej: Prolog
   - Funcionales: Utilizan funciones. Ej: Lisp, Haskell
   - Algebraicos: Utilizan sentencias. Ej: SQL
 
+- Normalmente son lenguajes interpretados
 
-### Lenguajes de programación - Tipos (III)
+
+### Tipos (III)
 
 Tipos de __lenguajes imperativos__:
   - Estructurados: C
   - Orientados a objetos: Java
   - Multiparadigma: C++, Javascript
 
-- Nota: Los lenguajes orientados a objetos son también lenguajes estructurados. 
+- Los lenguajes orientados a objetos son también lenguajes estructurados. 
+- Muchos de ellos son lenguajes compilados
 
 
-### Lenguajes de programación - Tipos (IV)
+### Tipos (IV)
 
 Tipos de lenguajes según nivel de abstracción: 
   - Bajo nivel: ensamblador
@@ -226,7 +231,7 @@ Tipos de lenguajes según nivel de abstracción:
   - Alto nivel: C++, Java
 
 
-### Lenguajes de programación - Evolución
+### Evolución
 
 - Código binario
 - Ensamblador 
@@ -234,7 +239,7 @@ Tipos de lenguajes según nivel de abstracción:
 - Lenguajes orientados a objetos
 
 
-### Lenguajes de programación - Historia (I)
+### Historia (I)
 
 [Historia simplificada](http://rigaux.org/language-study/diagram-light.png)
 
