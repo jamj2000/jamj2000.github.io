@@ -171,7 +171,6 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 ### Construcción de prototipos
 
 
-
 ### Modelo en espiral
 
 ![Modelo en espiral](assets/espiral.png)
