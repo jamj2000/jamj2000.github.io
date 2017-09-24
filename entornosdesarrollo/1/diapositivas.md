@@ -31,7 +31,7 @@ element: class="fragment" data-fragment-index="1"
 # Introducción
 
 
-En esta Unidad aprenderemos a:
+#### En esta Unidad aprenderemos a
 
 - Reconocer la relación de los programas con los componentes del sistema informático.
 - Diferenciar código fuente, objeto y ejecutable.
@@ -49,16 +49,16 @@ En esta Unidad aprenderemos a:
 ### Relación Hardware-Software  
 
 __Disco duro__ 
- - almacena de forma permanente los archivos ejecutables y los archivos de datos.
+almacena de forma permanente los archivos ejecutables y los archivos de datos.
 
 __Memoria RAM__
- - almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios.
+almacena de forma temporal el código binario de los archivos ejecutables y los archivos de datos necesarios.
  
 __CPU__
- - lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
- 
+lee y ejecuta instrucciones almacenadas en memoria RAM, así como los datos necesarios.
+
 __E/S__
- - recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
+recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guardan a disco, ...
 
 
 ### Códigos fuente, objeto y ejecutable
