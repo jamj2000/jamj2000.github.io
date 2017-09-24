@@ -54,3 +54,11 @@ En esta Unidad aprenderemos a:
 - Fiabilidad
 - Eficiencia
 - ...
+
+
+### Pruebas
+
+- Pruebas unitarias (o de unidad)
+- Pruebas de integración 
+- Pruebas del sistema
+- Pruebas alfa y beta

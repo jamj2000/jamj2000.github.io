@@ -63,6 +63,7 @@ En esta Unidad aprenderemos a:
 - Código (intermedio) objeto: archivo binario no ejecutable.
 - Código ejecutable: archivo binario ejecutable. 
 
+
 ### Ejecución a partir del código fuente
 
 Para ejecutar un programa tenemos 2 opciones:
@@ -89,18 +90,22 @@ Para ejecutar un programa tenemos 2 opciones:
   - Menos eficientes
 
 
-### Lenguajes compilados e interpretados
+### JAVA (I)
 
-- Ejemplos: Java
+- Lenguajes compilado e interpretado
+- El código fuente Java __se compila__ y se obtiene un código binario intermedio denominado __bytecode__. 
+- Puede considerarse código objeto pero destinado a la máquina virtual de Java en lugar de código objeto nativo. 
+- Después este __bytecode__ __se interpreta__ para ejecutarlo.
+
+
+### JAVA (II)
+
 - Ventajas:
   - Estructurado y Orientado a Objetos
   - Relativamente fácil de aprender
   - Buena documentación y base de usuarios 
 - Desventajas:
-  - Algo menos eficiente que los lenguajes compilados 
-
-Nota: El código fuente Java __se compila__ y se obtiene un código binario intermedio denominado __bytecode__. Puede considerarse código objeto pero destinado a la máquina virtual de Java en lugar de código objeto nativo. Después este __bytecode__ __se interpreta__ para ejecutarlo.
-
+  - Menos eficiente que los lenguajes compilados 
 
 
 # Ciclo de vida del software
@@ -124,16 +129,20 @@ Nota: El código fuente Java __se compila__ y se obtiene un código binario inte
 #### CODIFICACIÓN
 
 
+- Lenguajes informáticos
+  - __Lenguajes de programación__: C, C++, Java, Javascript, ...
+  - __Lenguajes de otro tipo__: HTML, XML, JSON, ...
+
+
 #### PRUEBAS
 
 
 #### MANTENIMIENTO
 
-- Correctivo
-- Perfectivo
-- Adaptativo
-
-Factores de calidad: Corrección, Fiabilidad, ....
+- Correctivo: se corrigen defectos
+- Perfectivo: se mejora la funcionalidad
+- Evolutivo: se añade funcionalidades nuevas
+- Adaptativo: se adapta a nuevos entornos
 
 
 ###  Resultado tras cada fase
@@ -181,17 +190,14 @@ Factores de calidad: Corrección, Fiabilidad, ....
 
 
 
-# Lenguajes 
-
-- __Lenguajes de programación__: C, C++, Java, Javascript, ...
-- __Lenguajes de otro tipo__: HTML, XML, JSON, ...
+# Lenguajes de programación
 
 
 ### Lenguajes de programación - Tipos (I)
 
 - Según la forma en la que operan:
-  - __Declarativos__: Indicamos el resultado a obtener sin especificar los pasos.
-  - __Imperativos__: Indicamos los pasos a seguir para obtener un resultado.
+  - __Declarativos__: indicamos el resultado a obtener sin especificar los pasos.
+  - __Imperativos__: indicamos los pasos a seguir para obtener un resultado.
 
 
 ### Lenguajes de programación - Tipos (II)
@@ -212,7 +218,12 @@ Tipos de __lenguajes imperativos__:
 - Nota: Los lenguajes orientados a objetos son también lenguajes estructurados. 
 
 
-### Lenguajes de programación
+### Lenguajes de programación - Tipos (IV)
+
+Tipos de lenguajes según nivel de abstracción: 
+  - Bajo nivel: ensamblador
+  - Medio nivel: C
+  - Alto nivel: C++, Java
 
 
 ### Lenguajes de programación - Evolución
@@ -234,6 +245,6 @@ Tipos de __lenguajes imperativos__:
 
 - Campo de aplicación
 - Herramientas de desarrollo
-- Documentación
+- Documentación disponible
 - Base de usuarios
 - Imposición del cliente
