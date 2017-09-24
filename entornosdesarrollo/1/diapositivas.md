@@ -72,7 +72,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 # Ciclo de vida del software
 
 
-### Fases principales del desarrollo de software
+### Fases principales del desarrollo
 
 - __ANÁLISIS__  
 - __DISEÑO__
@@ -119,6 +119,9 @@ Pueden utilizarse distintos lenguajes informáticos:
 
 #### PRUEBAS
 
+El principal objetivo de las pruebas debe ser conseguir que el programa funcione incorrectamente y que se descubran defectos.
+
+Deberemos someter al programa al máximo número de situaciones diferentes.
 
 
 #### MANTENIMIENTO
@@ -154,7 +157,7 @@ Pueden utilizarse distintos lenguajes informáticos:
 - Modelos clásicos
   - Modelo en cascada
   - Modelo en V
-- Modelo de construcción de prototipos 
+- Modelo de construcción de prototipos
 - Modelos evolutivos
   - Modelo en espiral
   - Metodologías ágiles
@@ -171,6 +174,7 @@ Pueden utilizarse distintos lenguajes informáticos:
 
 
 ### Construcción de prototipos
+
 
 
 ### Modelo en espiral
@@ -226,7 +230,6 @@ Para obtener código binario ejecutable tenemos 2 opciones
   - Buena documentación y base de usuarios 
 - Desventajas:
   - Menos eficiente que los lenguajes compilados 
-
 
 
 ### Tipos (I)
