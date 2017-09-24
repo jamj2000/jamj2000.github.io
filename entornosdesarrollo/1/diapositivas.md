@@ -48,7 +48,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### Relación Hardware-Software  
 
-- _Disco duro__ :
+- __Disco duro__ :
 almacena de forma permanente los archivos ejecutables y los archivos de datos.
 
 - __Memoria RAM__ :
@@ -83,19 +83,24 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 #### ANÁLISIS
 
+Se determina y determina claramente las necesidades del cliente y se especifica los requisitos que debe cumplir el software a desarrollar. 
 
 #### DISEÑO
 
+Se descompone y organiza el sistema en elementos componentes que pueden ser desarrollados por separado. Se especifica la interrelación y funcionalidad de los elementos componentes.
 
 #### CODIFICACIÓN
 
-Lenguajes informáticos
+Se escribe el código fuente de cada componente.
+
+Pueden utilizarse distintos lenguajes informáticos:
 
   - __Lenguajes de programación__: C, C++, Java, Javascript, ...
   - __Lenguajes de otro tipo__: HTML, XML, JSON, ...
 
 
 #### PRUEBAS
+
 
 
 #### MANTENIMIENTO
@@ -128,10 +133,11 @@ Lenguajes informáticos
 
 ### Modelos de desarrollo de software
 
-- Modelo en cascada
-- Modelo en cascada con realimentación
+- Modelos clásicos
+  - Modelo en cascada
+  - Modelo en V
+- Modelo de construcción de prototipos 
 - Modelos evolutivos
-  - Modelo de prototipos
   - Modelo en espiral
   - Metodologías ágiles
 
@@ -141,16 +147,17 @@ Lenguajes informáticos
 ![Modelo en cascada](assets/cascada.png)
 
 
-### Modelo en cascada con realimentación
+### Modelo en V
+
+![Modelo en V](assets/V.png)
 
 
-### Modelos evolutivos
-
-
-### Modelo de prototipos
+### Construcción de prototipos
 
 
 ### Modelo en espiral
+
+![Modelo en espiral](assets/espiral.png)
 
 
 ### Metodologías ágiles
