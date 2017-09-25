@@ -1,3 +1,5 @@
+<meta charset="utf-8">
+
 <!---
 Ejemplos
 
@@ -8,7 +10,6 @@ slide: data-background="#ff0000"
 element: class="fragment" data-fragment-index="1"
 -->
 
-<meta charset="utf-8">
 
 ## Entornos de desarrollo
 ---
