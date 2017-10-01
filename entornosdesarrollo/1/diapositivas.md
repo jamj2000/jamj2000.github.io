@@ -82,7 +82,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 
 ### Desarrollo de software 
-#### Fases principales
+#### ___Fases principales___
 
 - __ANÁLISIS__  
 - __DISEÑO__
@@ -107,7 +107,8 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 #### __DISEÑO__
 
-- Se descompone y organiza el sistema en elementos componentes que pueden ser desarrollados por separado. Se especifica la interrelación y funcionalidad de los elementos componentes.
+- Se descompone y organiza el sistema en elementos componentes que pueden ser desarrollados por separado.
+- Se especifica la interrelación y funcionalidad de los elementos componentes.
 - Las actividades habituales son las siguientes:
   - Diseño arquitectónico
   - Diseño detallado
@@ -131,7 +132,8 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 #### __MANTENIMIENTO__
 
-- Durante la explotación del sistema software es necesario realizar cambios ocasionales, para corregir errores no detectados o para introducir mejoras. Para ello hay que rehacer parte del trabajo realizado en las fases previas.
+- Durante la explotación del sistema software es necesario realizar cambios ocasionales.
+- Para ello hay que rehacer parte del trabajo realizado en las fases previas.
 - Tipos de mantenimiento:
   - __Correctivo__: se corrigen defectos
   - __Perfectivo__: se mejora la funcionalidad
@@ -150,7 +152,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 ###  Resultado tras cada fase (II)
 
-( Continuación)
+( _Continuación_ )
 
 - PRUEBAS de unidades: __Módulos utilizables__
 - PRUEBAS de integración: __Sistema utilizable__
@@ -200,6 +202,8 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 
 ### Modelo en espiral (II)
+### ___Aplicado a la programación orientada a objetos___
+
 
 
 ### Metodologías ágiles
