@@ -195,9 +195,10 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 ### Metodologías ágiles
 
+- 
 - Las más conocidas son:
   - Kanban
-  - XP (Extreme Programming)
+  - XP (eXtreme Programming)
   - Scrum
 
 
@@ -216,14 +217,14 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 ###  Obtención de código ejecutable
 
-- Para obtener código binario ejecutable tenemos 2 opciones
+- Para obtener código binario ejecutable tenemos 2 opciones:
   - __Compilar__
   - __Interpretar__
 
 
 ### Proceso de compilación/interpretación
 
-- Durante la compilación/interpretación del código fuente se llevan a cabo dos fases:
+- La compilación/interpretación del código fuente se lleva a cabo en dos fases:
   1. __Análisis léxico__
   2. __Análisis sintáctico__
 - Si no existen errores, se genera el código objeto correspondiente.

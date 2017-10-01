@@ -21,8 +21,9 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Ciclo de vida del sofware
-### Lenguajes de programación
+### Optimización
+### Documentación
+### Control de versiones
 
 <!--- Note: Nota a pie de página. -->
 
@@ -35,14 +36,8 @@ En esta Unidad aprenderemos a:
 
 - Trabajar de forma habitual con un sistema de control de versiones.  
 - Identificar los patrones de refactorización más usuales.
-- Elaborar las pruebas asociadas a la refactorización.
 - Revisar el código fuente usando un analizador de código.
-- Identificar las posibilidades de configuración de un analizador de código.
-- Aplicar patrones de refactorización con las herramientas que proporciona el entorno de desarrollo.
-- Realizar el control de versiones integrado en el entorno de desarrollo.
-- Documentar el código fuente mediante comentarios.
-- Utilizar herramientas del entorno de desarrollo para documentar los procesos, datos y eventos.
-- Utilizar herramientas del entorno de desarrollo para documentar las clases.
+- Documentar el código fuente.
 
 
 
@@ -54,4 +49,51 @@ En esta Unidad aprenderemos a:
 Construir (Build) = Compilar + Enlazar
 
 
-# Herramientas de desarrollo
+## Ejemplos de constructores
+
+- C: __make__
+- Java: maven, ant 
+
+
+
+# Optimización
+
+
+## Análisis de código
+
+- Tipos:
+  - Análisis estático (__lint__)
+  - Análisis dinámico (unit tests)
+
+
+## (Linter) Analizador estático
+
+[Introducción a los linters -en inglés-](https://github.com/mcandre/linters)
+
+
+## Ejemplos de linters
+
+- C: lint
+- Java: sonar
+- Javascript: JSLint, ESLint 
+
+
+## Refactorización
+
+- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
+- 
+
+
+# Documentación
+
+
+
+# Control de versiones
+
+
+
+### Sistemas más conocidos:
+  - CVS
+  - Subversion
+  - Mercurial
+  - Git
