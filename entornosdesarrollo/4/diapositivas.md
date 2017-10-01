@@ -59,6 +59,16 @@ Construir (Build) = Compilar + Enlazar
 # Optimización
 
 
+## Hediondez del código
+
+- También llamado __code smell__ en inglés
+- Es síntoma en el código fuente que indica posiblemente un problema más profundo.
+- Usualmente no son bug de programación (errores): no son técnicamente incorrectos y en realidad no impiden que el programa funcione correctamente. 
+- Indica deficiencias en el diseño que puede ralentizar el desarrollo o aumentan el riesgo de errores o fallos en el futuro.
+- Es un motivo importante para realizar refactorización.
+- [Hediondez del código](https://es.wikipedia.org/wiki/Hediondez_del_c%C3%B3digo)
+
+
 ## Análisis de código
 
 - Tipos:
@@ -68,7 +78,7 @@ Construir (Build) = Compilar + Enlazar
 
 ## (Linter) Analizador estático
 
-[Introducción a los linters -en inglés-](https://github.com/mcandre/linters)
+- [Introducción a los linters -en inglés-](https://github.com/mcandre/linters)
 
 
 ## Ejemplos de linters
@@ -82,15 +92,20 @@ Construir (Build) = Compilar + Enlazar
 ## Refactorización
 
 - Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
-- 
+- Técnicas:
+  - Renombrado de variables
+  - Pasar código duplicado a funciones
+  - ...
 
 
 # Documentación
 
+- Javadoc
+- Gitbook
+
 
 
 # Control de versiones
-
 
 
 ### Sistemas más conocidos:
@@ -98,3 +113,6 @@ Construir (Build) = Compilar + Enlazar
   - Subversion
   - Mercurial
   - Git
+
+
+### Git

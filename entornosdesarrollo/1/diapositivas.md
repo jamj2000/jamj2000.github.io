@@ -225,12 +225,6 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - [Kanban en desarrollo software](https://dosideas.com/noticias/metodologias/184-como-usar-kanban-en-el-desarrollo-de-software)
 
 
-#### __Kanban (I)__
-
-<iframe src="https://player.vimeo.com/video/127233813?byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/127233813">LeanKit Product Tour</a> from <a href="https://vimeo.com/leankit">LeanKit</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-
 #### __Kanban (II)__
 
 ![Pizarra kanban](assets/kanban-board.png)
