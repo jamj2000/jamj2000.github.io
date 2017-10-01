@@ -205,7 +205,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 ### Prototipos (I)
 
 - A menudo los requisitos no están especificados claramente:
-  - por ser un sistema novedoso donde no existe experiencia previa.
+  - por no existir experiencia previa.
   - por indecisión del usuario/cliente.
 
 ![Modelo de construcción de prototipos](assets/prototipos.png)
