@@ -156,30 +156,58 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - Modelo en cascada
   - Modelo en V
 - Modelo de construcción de prototipos
-- Modelos evolutivos
+  - Prototipos rápidos
+  - Prototipos evolutivos
+- Modelos evolutivos o incrementales
   - Modelo en espiral
   - Metodologías ágiles
 
 
-### Modelo en cascada
+### Modelo en cascada (I)
 
 ![Modelo en cascada](assets/cascada.png)
 
 
-### Modelo en V
+### Modelo en cascada (II)
+
+
+### Modelo en V (I)
 
 ![Modelo en V](assets/v.png)
 
 
-### Construcción de prototipos
+### Modelo en V (II)
 
 
-### Modelo en espiral
+### Prototipos rápidos (I)
+
+
+### Prototipos rápidos (II)
+
+
+### Modelo en espiral (I)
 
 ![Modelo en espiral](assets/espiral.png)
 
 
+### Modelo en espiral (II)
+
+
 ### Metodologías ágiles
+
+- Las más conocidas son:
+  - Kanban
+  - XP (Extreme Programming)
+  - Scrum
+
+
+#### __Kanban__
+
+
+#### XP (Programación extrema)
+
+
+#### Scrum
 
 
 
@@ -188,9 +216,19 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 ###  Obtención de código ejecutable
 
-Para obtener código binario ejecutable tenemos 2 opciones
-- __Compilar__
-- __Interpretar__
+- Para obtener código binario ejecutable tenemos 2 opciones
+  - __Compilar__
+  - __Interpretar__
+
+
+### Proceso de compilación/interpretación
+
+- Durante la compilación/interpretación del código fuente se llevan a cabo dos fases:
+  1. __Análisis léxico__
+  2. __Análisis sintáctico__
+- Si no existen errores, se genera el código objeto correspondiente.
+- Un código fuente correctamente escrito no significa que funcione según lo deseado.
+- No se realiza un análisis semántico.
 
 
 ### Lenguajes compilados
@@ -238,29 +276,26 @@ Para obtener código binario ejecutable tenemos 2 opciones
 
 ### Tipos (II)
 
-Tipos de __lenguajes declarativos__:
+- Tipos de __lenguajes declarativos__:
   - Lógicos: Utilizan reglas. Ej: Prolog
   - Funcionales: Utilizan funciones. Ej: Lisp, Haskell
   - Algebraicos: Utilizan sentencias. Ej: SQL
-
-Normalmente son lenguajes interpretados
+- Normalmente son lenguajes interpretados
 
 
 ### Tipos (III)
 
-Tipos de __lenguajes imperativos__:
+- Tipos de __lenguajes imperativos__:
   - Estructurados: C
   - Orientados a objetos: Java
   - Multiparadigma: C++, Javascript
-
-Los lenguajes orientados a objetos son también lenguajes estructurados. 
-
-Muchos de ellos son lenguajes compilados
+- Los lenguajes orientados a objetos son también lenguajes estructurados. 
+- Muchos de estos lenguajes son compilados
 
 
 ### Tipos (IV)
 
-Tipos de lenguajes según nivel de abstracción: 
+- Tipos de lenguajes según nivel de abstracción: 
   - Bajo nivel: ensamblador
   - Medio nivel: C
   - Alto nivel: C++, Java
@@ -274,9 +309,12 @@ Tipos de lenguajes según nivel de abstracción:
 - Lenguajes orientados a objetos
 
 
-### Historia (I)
+### Historia simplificada
 
 [Historia simplificada](http://rigaux.org/language-study/diagram-light.png)
+
+
+### Historia detallada
 
 [Historia detallada](http://rigaux.org/language-study/diagram.png)
 
