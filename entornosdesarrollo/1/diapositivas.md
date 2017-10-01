@@ -82,7 +82,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - __MANTENIMIENTO__  
 
 
-#### ANÁLISIS
+#### __ANÁLISIS__
 
 - Se determina y define claramente las necesidades del cliente y se especifica los requisitos que debe cumplir el software a desarrollar. 
 - La especificación de requisitos debe:
@@ -96,7 +96,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - Fijar criterios de validación
 
 
-#### DISEÑO
+#### __DISEÑO__
 
 - Se descompone y organiza el sistema en elementos componentes que pueden ser desarrollados por separado. Se especifica la interrelación y funcionalidad de los elementos componentes.
 - Las actividades habituales son las siguientes:
@@ -106,7 +106,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - Diseño de interfaz
 
 
-#### CODIFICACIÓN
+#### __CODIFICACIÓN__
 
 - Se escribe el código fuente de cada componente.
 - Pueden utilizarse distintos lenguajes informáticos:
@@ -114,15 +114,15 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - __Lenguajes de otro tipo__: HTML, XML, JSON, ...
 
 
-#### PRUEBAS
+#### __PRUEBAS__
 
 - El principal objetivo de las pruebas debe ser conseguir que el programa funcione incorrectamente y que se descubran defectos.
 - Deberemos someter al programa al máximo número de situaciones diferentes.
 
 
-#### MANTENIMIENTO
+#### __MANTENIMIENTO__
 
-- 
+- Durante la explotación del sistema software es necesario realizar cambios ocasionales, para corregir errores no detectados o para introducir mejoras. Para ello hay que rehacer parte del trabajo realizado en las fases previas.
 - Tipos de mantenimiento:
   - __Correctivo__: se corrigen defectos
   - __Perfectivo__: se mejora la funcionalidad
