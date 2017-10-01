@@ -181,6 +181,13 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 ### Modelo en cascada (II)
 
+- Modelo de mayor antigüedad.
+- Identifica las fases principales del desarrollo software.
+- Las fases han de realizarse en el orden indicado.
+- El resultado de una fase es la entrada de la siguiente fase.
+- Es un modelo bastante rígido que se adapta mal al cambio continuo de especificaciones.
+- Existen diferentes variantes con mayor o menor cantidad de actividades.
+
 
 ### Modelo en V (I)
 
@@ -188,6 +195,13 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 
 ### Modelo en V (II)
+
+- Modelo muy parecido al modelo en cascada.
+- Visión jerarquizada con distintos niveles.
+- Los niveles superiores indican mayor abstracción.
+- Los niveles inferiores indican mayor nivel de detalle.
+- El resultado de una fase es la entrada de la siguiente fase.
+- Existen diferentes variantes con mayor o menor cantidad de actividades.
 
 
 ### Prototipos rápidos
@@ -198,11 +212,18 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 ### Modelo en espiral (I)
 
+- Desarrollado por Boehm en 1988.
+- Introduce la actividad de ___análisis del riesgo___ como elemento fundamental para guiar la evolución del proceso de desarrollo.
+- La actividad de ___ingeniería___ corresponde a las fases de los modelos clásicos: análisis, diseño, codificación, ...
+
 ![Modelo en espiral](assets/espiral.png)
 
 
 ### Modelo en espiral (II)
 #### ___Aplicado a la programación orientada a objetos___
+
+- Este modelo se adapta bien al desarrollo orientado a objetos.
+- En la actividad de ___ingeniería___ se da gran importancia a la reutilización de código.
 
 ![Modelo en espiral](assets/espiral-poo.png)
 
@@ -229,7 +250,8 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 
 #### __Kanban (II)__
-#### Pizarra kanban
+
+__Pizarra kanban__
 
 ![Pizarra kanban](assets/kanban-board.png)
 
