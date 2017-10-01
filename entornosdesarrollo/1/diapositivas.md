@@ -179,10 +179,10 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 ### Modelo en V (II)
 
 
-### Prototipos rápidos (I)
+### Prototipos rápidos
 
 
-### Prototipos rápidos (II)
+### Prototipos evolutivos
 
 
 ### Modelo en espiral (I)
@@ -202,13 +202,26 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - Scrum
 
 
-#### __Kanban__
+#### __Kanban (I)__
+
+- También se denomina "sistema de tarjetas".
+- __Desarrollado inicialmente por Toyota para la industria de fabricación de productos__.
+- __Controla por demanda__ la fabricación de los productos necesarios en la cantidad y tiempo necesarios.
+- Enfocado a entregar el máximo valor para los clientes, utilizando los recursos justos.
+- [Lean manufacturing](https://es.wikipedia.org/wiki/Lean_manufacturing)
+- [Kanban en desarrollo software](https://dosideas.com/noticias/metodologias/184-como-usar-kanban-en-el-desarrollo-de-software)
+- [LeanKit](https://leankit.com/product-demo/)
 
 
-#### XP (Programación extrema)
+#### __Kanban (II)__
+
+![Pizarra kanban](assets/img/kanban-board.png)
 
 
-#### Scrum
+#### __XP (Programación extrema)__
+
+
+#### __Scrum__
 
 
 
@@ -235,24 +248,20 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 ### Lenguajes compilados
 
 - Ejemplos: C, C++
-- Ventajas:
-  - Muy eficientes
-- Desventajas:
-  - Ejecución y depuración después de compilar
+- Principal ventaja: Ejecución muy eficiente.
+- Principal desventaja: Es necesario compilar cada vez que el código fuente es modificado.
 
 
 ### Lenguajes interpretados
 
 - Ejemplos: PHP, Javascript
-- Ventajas:
-  - Ejecución y depuración directa
-- Desventajas:
-  - Menos eficientes
+- Principal ventaja: El código fuente se interpreta directamente.
+- Principal desventaja: Ejecución menos eficiente.
 
 
 ### JAVA (I)
 
-- Lenguajes compilado e interpretado
+- Lenguajes compilado e interpretado.
 - El código fuente Java __se compila__ y se obtiene un código binario intermedio denominado __bytecode__. 
 - Puede considerarse código objeto pero destinado a la máquina virtual de Java en lugar de código objeto nativo. 
 - Después este __bytecode__ __se interpreta__ para ejecutarlo.
@@ -281,7 +290,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - Lógicos: Utilizan reglas. Ej: Prolog
   - Funcionales: Utilizan funciones. Ej: Lisp, Haskell
   - Algebraicos: Utilizan sentencias. Ej: SQL
-- Normalmente son lenguajes interpretados
+- Normalmente son lenguajes interpretados.
 
 
 ### Tipos (III)
@@ -291,7 +300,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - Orientados a objetos: Java
   - Multiparadigma: C++, Javascript
 - Los lenguajes orientados a objetos son también lenguajes estructurados. 
-- Muchos de estos lenguajes son compilados
+- Muchos de estos lenguajes son compilados.
 
 
 ### Tipos (IV)

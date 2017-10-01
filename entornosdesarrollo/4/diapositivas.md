@@ -76,6 +76,7 @@ Construir (Build) = Compilar + Enlazar
 - C: lint
 - Java: sonar
 - Javascript: JSLint, ESLint 
+- Multilenguaje: SonarQube
 
 
 ## Refactorización
