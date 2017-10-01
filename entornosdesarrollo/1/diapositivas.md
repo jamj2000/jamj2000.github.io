@@ -1,12 +1,12 @@
-
+<!---
+Ejemplos de inserción de videos
 
 <video class="stretch" controls><source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4"></video>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3RBq-WlL4cU" frameborder="0" allowfullscreen></iframe>
 
 slide: data-background="#ff0000" 
 element: class="fragment" data-fragment-index="1"
-
-
+-->
 
 ## Entornos de desarrollo
 ---
@@ -122,10 +122,12 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 #### MANTENIMIENTO
 
-- __Correctivo__: se corrigen defectos
-- __Perfectivo__: se mejora la funcionalidad
-- __Evolutivo__: se añade funcionalidades nuevas
-- __Adaptativo__: se adapta a nuevos entornos
+- 
+- Tipos de mantenimiento:
+  - __Correctivo__: se corrigen defectos
+  - __Perfectivo__: se mejora la funcionalidad
+  - __Evolutivo__: se añade funcionalidades nuevas
+  - __Adaptativo__: se adapta a nuevos entornos
 
 
 ###  Resultado tras cada fase (I)
