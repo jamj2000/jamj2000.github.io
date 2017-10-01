@@ -213,7 +213,6 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 ### Modelo en espiral (I)
 
 - Desarrollado por Boehm en 1988.
-- Introduce la actividad de ___análisis del riesgo___ como elemento fundamental para guiar la evolución del proceso de desarrollo.
 - La actividad de ___ingeniería___ corresponde a las fases de los modelos clásicos: análisis, diseño, codificación, ...
 
 ![Modelo en espiral](assets/espiral.png)
@@ -222,7 +221,6 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 ### Modelo en espiral (II)
 #### ___Aplicado a la programación orientada a objetos___
 
-- Este modelo se adapta bien al desarrollo orientado a objetos.
 - En la actividad de ___ingeniería___ se da gran importancia a la reutilización de código.
 
 ![Modelo en espiral](assets/espiral-poo.png)
