@@ -208,8 +208,10 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 ### Metodologías ágiles
 
-- 
-- Las más conocidas son:
+- Son métodos de ingeniería del software basados en el desarrollo iterativo e incremental.
+- Los requisitos y soluciones evolucionan con el tiempo según la necesidad del proyecto.
+- El trabajo es realizado mediante la colaboración de equipos auto-organizados y multidisciplinarios, inmersos en un proceso compartido de toma de decisiones a corto plazo.
+- Las metodologías más conocidas son:
   - Kanban
   - XP (eXtreme Programming)
   - Scrum
