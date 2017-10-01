@@ -204,6 +204,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 ### Modelo en espiral (II)
 #### ___Aplicado a la programación orientada a objetos___
 
+![Modelo en espiral](assets/espiral-poo.png)
 
 
 ### Metodologías ágiles
@@ -213,8 +214,8 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - El trabajo es realizado mediante la colaboración de equipos auto-organizados y multidisciplinarios, inmersos en un proceso compartido de toma de decisiones a corto plazo.
 - Las metodologías más conocidas son:
   - Kanban
-  - XP (eXtreme Programming)
   - Scrum
+  - XP (eXtreme Programming)
 
 
 #### __Kanban (I)__
@@ -228,14 +229,15 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 
 #### __Kanban (II)__
+#### Pizarra kanban
 
 ![Pizarra kanban](assets/kanban-board.png)
 
 
-#### __XP (Programación extrema)__
-
-
 #### __Scrum__
+
+
+#### __XP (Programación extrema)__
 
 
 
