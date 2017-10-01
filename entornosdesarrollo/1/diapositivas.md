@@ -215,7 +215,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 - Proceso:
   - Se crea un prototipo durante la __fase de análisis__ y es probado por el usuario/cliente para refinar los requisitos del software a desarrollar.
- - Se repite el paso anterior las veces necesarias.
+  - Se repite el paso anterior las veces necesarias.
 
 
 ### Prototipos (III)
