@@ -81,6 +81,8 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - __PRUEBAS__
 - __MANTENIMIENTO__  
 
+> La disciplina que estudia los principios y metodologías para el desarrollo y mantenimiento de sistemas software se conoce como  __Ingeniería del Software__.
+
 
 #### __ANÁLISIS__
 
