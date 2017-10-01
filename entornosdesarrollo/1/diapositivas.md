@@ -135,10 +135,10 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - Durante la explotación del sistema software es necesario realizar cambios ocasionales.
 - Para ello hay que rehacer parte del trabajo realizado en las fases previas.
 - Tipos de mantenimiento:
-  - __Correctivo__: se corrigen defectos
-  - __Perfectivo__: se mejora la funcionalidad
-  - __Evolutivo__: se añade funcionalidades nuevas
-  - __Adaptativo__: se adapta a nuevos entornos
+  - __Correctivo__: se corrigen defectos.
+  - __Perfectivo__: se mejora la funcionalidad.
+  - __Evolutivo__: se añade funcionalidades nuevas.
+  - __Adaptativo__: se adapta a nuevos entornos.
 
 
 ###  Resultado tras cada fase (I)
@@ -202,7 +202,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 
 ### Modelo en espiral (II)
-### ___Aplicado a la programación orientada a objetos___
+#### ___Aplicado a la programación orientada a objetos___
 
 
 
@@ -223,12 +223,17 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - Enfocado a entregar el máximo valor para los clientes, utilizando los recursos justos.
 - [Lean manufacturing](https://es.wikipedia.org/wiki/Lean_manufacturing)
 - [Kanban en desarrollo software](https://dosideas.com/noticias/metodologias/184-como-usar-kanban-en-el-desarrollo-de-software)
-- [LeanKit](https://leankit.com/product-demo/)
+
+
+#### __Kanban (I)__
+
+<iframe src="https://player.vimeo.com/video/127233813?byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/127233813">LeanKit Product Tour</a> from <a href="https://vimeo.com/leankit">LeanKit</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 
 #### __Kanban (II)__
 
-![Pizarra kanban](assets/img/kanban-board.png)
+![Pizarra kanban](assets/kanban-board.png)
 
 
 #### __XP (Programación extrema)__
