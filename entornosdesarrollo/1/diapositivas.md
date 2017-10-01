@@ -167,8 +167,6 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - Modelo en cascada
   - Modelo en V
 - Modelo de construcción de prototipos
-  - Prototipos rápidos
-  - Prototipos evolutivos
 - Modelos evolutivos o incrementales
   - Modelo en espiral
   - Metodologías ágiles
@@ -204,10 +202,26 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - Existen diferentes variantes con mayor o menor cantidad de actividades.
 
 
-### Prototipos rápidos
+### Prototipos (I)
+
+- A menudo los requisitos no están especificados claramente:
+  - por ser un sistema novedoso donde no existe experiencia previa.
+  - por indecisión del usuario/cliente.
+- Se crea un prototipo durante la __fase de análisis__ y es probado por el usuario/cliente para refinar los requisitos del software a desarrollar.
+- Se repite el paso anterior las veces necesarias.
+
+![Modelo de construcción de prototipos](assets/prototipos.png)
 
 
-### Prototipos evolutivos
+### Prototipos (II)
+
+- Tipos de prototipos:
+  - __Prototipos rápidos__ 
+    - El prototipo puede estar desarrollado usando otro lenguaje y/o herramientas.
+    - Finalmente el prototipo se desecha.
+  - __Prototipos evolutivos__ 
+    - El prototipo está diseñado en el mismo lenguaje y herramientas del proyecto.
+    - El prototipo se usa como base para desarrollar el proyecto.
 
 
 ### Modelo en espiral (I)
