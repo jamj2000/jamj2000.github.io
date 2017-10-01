@@ -8,7 +8,7 @@ skills: Open Source Projects
 aboutA: "José Antonio Muñoz Jiménez, aka jamj2000. Teacher in vocational training in computer science in Andalusia, Spain."
 aboutB: "This site holds works I created in my spare time as a hobby. It aims to serve myself as repository of my 'experiments' in very different programming languages mainly in C++, PHP, CSS, Javascript, R and others. I'm not a professional programmer so don't blame me for them. Though I hope these works are handy for you. Greetings!"
 keywords: "José Antonio Muñoz Jiménez, Muñoz Jiménez José Antonio, José Antonio,Muñoz Jiménez, jamj2000, jamj, fp-resultados, projects, software projects, source code, c++, php, css, bash, js, r, programming languages"
-
+encoding: utf-8
 
 # Contact form: comment the line below if you want to stick with the default PHP contact form
 contact: static
