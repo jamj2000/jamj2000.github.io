@@ -249,7 +249,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 #### __Kanban (II)__
 
-__Pizarra kanban__
+Pizarra kanban
 
 ![Pizarra kanban](assets/kanban-board.png)
 
