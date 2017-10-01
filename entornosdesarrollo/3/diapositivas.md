@@ -21,14 +21,14 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Prueba
+### Pruebas
 ### Integración
 
 <!--- Note: Nota a pie de página. -->
 
 
 
-# Introducción
+## Introducción
 
 
 En esta Unidad aprenderemos a:
@@ -41,7 +41,7 @@ En esta Unidad aprenderemos a:
 - Realizar medidas de calidad sobre el software desarrollado.
 
 
-# Pruebas
+## Pruebas
 
 ### Estrategías de prueba
 
@@ -71,7 +71,7 @@ En esta Unidad aprenderemos a:
 
 
 
-# Integración
+## Integración
 
 
 ### Formas de integración

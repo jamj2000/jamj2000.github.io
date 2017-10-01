@@ -29,7 +29,7 @@ element: class="fragment" data-fragment-index="1"
 
 
 
-# Introducción
+## Introducción
 
 
 En esta Unidad aprenderemos a:
@@ -41,25 +41,25 @@ En esta Unidad aprenderemos a:
 
 
 
-## Herramientas básicas
+### Herramientas básicas
 
 
-## Automatización 
+### Automatización 
 
 Construir (Build) = Compilar + Enlazar
 
 
-## Ejemplos de constructores
+### Ejemplos de constructores
 
 - C: __make__
 - Java: maven, ant 
 
 
 
-# Optimización
+## Optimización
 
 
-## Hediondez del código
+### Hediondez del código
 
 - También llamado __code smell__ en inglés
 - Es síntoma en el código fuente que indica posiblemente un problema más profundo.
@@ -69,19 +69,19 @@ Construir (Build) = Compilar + Enlazar
 - [Hediondez del código](https://es.wikipedia.org/wiki/Hediondez_del_c%C3%B3digo)
 
 
-## Análisis de código
+### Análisis de código
 
 - Tipos:
   - Análisis estático (__lint__)
   - Análisis dinámico (unit tests)
 
 
-## (Linter) Analizador estático
+### (Linter) Analizador estático
 
 - [Introducción a los linters -en inglés-](https://github.com/mcandre/linters)
 
 
-## Ejemplos de linters
+### Ejemplos de linters
 
 - C: lint
 - Java: sonar
@@ -89,7 +89,7 @@ Construir (Build) = Compilar + Enlazar
 - Multilenguaje: SonarQube
 
 
-## Refactorización
+### Refactorización
 
 - Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
 - Técnicas:
@@ -98,14 +98,14 @@ Construir (Build) = Compilar + Enlazar
   - ...
 
 
-# Documentación
+## Documentación
 
 - Javadoc
 - Gitbook
 
 
 
-# Control de versiones
+## Control de versiones
 
 
 ### Sistemas más conocidos:
@@ -116,3 +116,4 @@ Construir (Build) = Compilar + Enlazar
 
 
 ### Git
+

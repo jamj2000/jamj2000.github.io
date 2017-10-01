@@ -28,7 +28,7 @@ element: class="fragment" data-fragment-index="1"
 
 
 
-# Introducción
+## Introducción
 
 
 En esta Unidad aprenderemos a:
@@ -43,10 +43,10 @@ En esta Unidad aprenderemos a:
 
 
 
-### Conceptos y herramientas básicas
+## Conceptos y herramientas básicas
 
 
-#### Conceptos
+### Conceptos
 
 - Codigo fuente
 - Codigo intermedio u objeto
@@ -66,7 +66,7 @@ En esta Unidad aprenderemos a:
 - Bibliotecas: conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 
 
-#### Bibliotecas (o librerías) (I)
+### Bibliotecas (o librerías) (I)
 
 - __Biblioteca estándar__ del lenguaje
   - Entrada y salida por terminal
@@ -80,7 +80,7 @@ En esta Unidad aprenderemos a:
   - etc
 
 
-#### Bibliotecas (o librerías) (II)
+### Bibliotecas (o librerías) (II)
 
 - Cada biblioteca está compuesta por varios archivos objeto
 - Las bibliotecas modernas son dínamicas (.DLL o .so)
@@ -88,7 +88,7 @@ En esta Unidad aprenderemos a:
   - es poco usada actualmente
 
 
-#### Bibliotecas (o librerías) (III)
+### Bibliotecas (o librerías) (III)
 
 - Una biblioteca se compone de 2 partes:
   - Especificación (ofrece una API)
@@ -97,12 +97,12 @@ En esta Unidad aprenderemos a:
 - API = Interfaz de Programación de Aplicaciones
 
 
-#### Automatización 
+### Automatización 
 
 Construir (Build) = Compilar + Enlazar
 
 
-### Entornos integrados de desarrollo (IDE)
+## Entornos integrados de desarrollo (IDE)
 
 - Para C++:
   - DevC++

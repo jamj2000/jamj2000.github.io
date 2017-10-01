@@ -30,7 +30,7 @@ element: class="fragment" data-fragment-index="1"
 
 
 
-# Introducción
+## Introducción
 
 
 En esta Unidad aprenderemos a:
@@ -45,15 +45,15 @@ En esta Unidad aprenderemos a:
 - Elaborar diagramas de actividades sencillos.
 
 
-## Tipos de diagramas de comportamiento
+### Tipos de diagramas de comportamiento
 
 
 
-# Diagramas de casos de uso
+## Diagramas de casos de uso
 
 
 
-## Elementos básicos
+### Elementos básicos
 
 - Actores
 - Casos de uso
@@ -61,12 +61,12 @@ En esta Unidad aprenderemos a:
 
 
 
-# Diagramas de interacción
+## Diagramas de interacción
 
 
 
-# Diagramas de estados
+## Diagramas de estados
 
 
 
-# Diagramas de actividades
+## Diagramas de actividades

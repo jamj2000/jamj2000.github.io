@@ -27,7 +27,7 @@ element: class="fragment" data-fragment-index="1"
 
 
 
-# Introducción
+## Introducción
 
 
 En esta Unidad aprenderemos a:
@@ -41,27 +41,27 @@ En esta Unidad aprenderemos a:
 - Generar un diagrama de clases mediante ingeniería inversa.
 
 
-## Tipos de diagramas UML
+### Tipos de diagramas UML
 
 
-## Conceptos de POO
-
-
-
-# Diagramas de clases
+### Conceptos de POO
 
 
 
-## Representación de una clase
+## Diagramas de clases
 
 
-## Relación de herencia
+
+### Representación de una clase
 
 
-## Relación de composición
+### Relación de herencia
 
 
-## Relación de agregación
+### Relación de composición
+
+
+### Relación de agregación
 
 
 
