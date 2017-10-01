@@ -207,13 +207,18 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - A menudo los requisitos no están especificados claramente:
   - por ser un sistema novedoso donde no existe experiencia previa.
   - por indecisión del usuario/cliente.
-- Se crea un prototipo durante la __fase de análisis__ y es probado por el usuario/cliente para refinar los requisitos del software a desarrollar.
-- Se repite el paso anterior las veces necesarias.
 
 ![Modelo de construcción de prototipos](assets/prototipos.png)
 
 
 ### Prototipos (II)
+
+- Proceso:
+  - Se crea un prototipo durante la __fase de análisis__ y es probado por el usuario/cliente para refinar los requisitos del software a desarrollar.
+ - Se repite el paso anterior las veces necesarias.
+
+
+### Prototipos (III)
 
 - Tipos de prototipos:
   - __Prototipos rápidos__ 
