@@ -245,7 +245,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 ![Modelo en espiral](assets/espiral-poo.png)
 
 
-### Metodologías ágiles
+### Metodologías ágiles (I)
 
 - Son métodos de ingeniería del software basados en el desarrollo iterativo e incremental.
 - Los requisitos y soluciones evolucionan con el tiempo según la necesidad del proyecto.
@@ -254,6 +254,16 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
   - Kanban
   - Scrum
   - XP (eXtreme Programming)
+
+
+### Metodologías ágiles (II)
+
+[Manifiesto por el Desarrollo Ágil](https://es.wikipedia.org/wiki/Manifiesto_%C3%A1gil)
+
+- __Individuos e interacciones__ sobre procesos y herramientas
+- __Software funcionando__ sobre documentación extensiva
+- __Colaboración con el cliente__ sobre negociación contractual
+- __Respuesta ante el cambio__ sobre seguir un plan
 
 
 #### __Kanban (I)__
@@ -273,7 +283,18 @@ Pizarra kanban
 ![Pizarra kanban](assets/kanban-board.png)
 
 
-#### __Scrum__
+#### __Scrum (I)__
+
+- Modelo de desarrollo incremental.
+- Interaciones (__sprint__) regulares cada 2 a 4 semanas.
+- Al principio de cada iteración se establecen sus __objetivos priorizados__ (__sprint backlog__).
+- Al finalizar cada iteración se obtiene una __entrega parcial utilizable por el cliente__.
+- Existen reuniones diarias para tratar la marcha del _sprint_.
+
+
+#### __Scrum (II)__
+
+![Proceso SCRUM](assets/scrum.png)
 
 
 #### __XP (Programación extrema)__
