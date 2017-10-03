@@ -206,7 +206,7 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 - A menudo los requisitos no están especificados claramente:
   - por no existir experiencia previa.
-  - por indecisión del usuario/cliente.
+  - por omisión o falta de concreción del usuario/cliente.
 
 ![Modelo de construcción de prototipos](assets/prototipos.png)
 
