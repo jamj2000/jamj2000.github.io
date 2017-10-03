@@ -163,13 +163,13 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 
 ### Modelos de desarrollo de software
 
-- Modelos clásicos
+- Modelos clásicos (predictivos)
   - Modelo en cascada
   - Modelo en V
 - Modelo de construcción de prototipos
 - Modelos evolutivos o incrementales
-  - Modelo en espiral
-  - Metodologías ágiles
+  - Modelo en espiral (iterativos)
+  - Metodologías ágiles (adaptativos)
 
 
 ### Modelo en cascada (I)
@@ -297,7 +297,30 @@ Pizarra kanban
 ![Proceso SCRUM](assets/scrum.png)
 
 
-#### __XP (Programación extrema)__
+#### __XP (Programación extrema) (I)__
+
+__Valores__
+
+- Simplicidad
+- Comunicación
+- Retroalimentación
+- Valentía o coraje
+- Respeto o humildad 
+
+
+#### __XP (Programación extrema) (II)__
+
+__Características__
+
+- Diseño sencillo
+- Pequeñas mejoras continuas
+- Pruebas y refactorización
+- Integración continua
+- __Programación por parejas__
+- __El cliente se integra en el equipo de desarrollo__
+- Propiedad del código compartida
+- Estándares de codificación
+- 40 horas semanales
 
 
 
