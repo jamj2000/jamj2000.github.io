@@ -21,7 +21,8 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Conceptos y herramientas básicas
+### Conceptos
+### Herramientas básicas
 ### Entornos integrados de desarrollo (IDE)
 
 <!--- Note: Nota a pie de página. -->
@@ -34,16 +35,9 @@ element: class="fragment" data-fragment-index="1"
 En esta Unidad aprenderemos a:
 
 - Instalar entornos de desarrollo, propietarios y libres.
-- Añadir y eliminar módulos en el entorno de desarrollo.
 - Personalizar y automatizar el entorno de desarrollo.
-- Configurar el sistema de actualización del entorno de desarrollo.
 - Generar ejecutables a partir de código fuente.
 - Identificar las características comunes y específicas de diversos entornos de desarrollo.
-- Identificar las funciones más usuales de las herramientas CASE.
-
-
-
-## Conceptos y herramientas básicas
 
 
 ### Conceptos
@@ -57,38 +51,51 @@ En esta Unidad aprenderemos a:
 - Interpretar
 
 
-### Herramientas básicas
+
+## Herramientas básicas
+
+
+### Herramientas
 
 - Editor de texto: permite escribir código fuente
 - Compilador: genera código objeto a partir del código fuente
 - Enlazador: agrupa varios archivos objeto en uno binario
 - Interprete: lee código fuente y genera código binario para su ejecución
-- Bibliotecas: conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 
 
 ### Bibliotecas (o librerías) (I)
 
+Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
+
 - __Biblioteca estándar__ del lenguaje
-  - Entrada y salida por terminal
-  - Manejo de archivos
-  - Funciones matemáticas
-  - Interfaz gráfica (en algunos lenguajes, p. ej. Java)
 - __Bibliotecas adicionales__
-  - Bases de datos
-  - Gráficos
-  - Red
-  - etc
 
 
 ### Bibliotecas (o librerías) (II)
 
+- __Biblioteca estándar del lenguaje C__
+  - Entrada y salida por terminal
+  - Manejo de archivos
+  - Funciones matemáticas
+- __Biblioteca estándar del lenguaje Java__
+  - Entrada y salida por terminal
+  - Manejo de archivos
+  - Funciones matemáticas
+  - Interfaz gráfica 
+  - Red
+  - Bases de datos
+  - Gráficos (sólo 2D)
+
+
+### Bibliotecas (o librerías) (III)
+
 - Cada biblioteca está compuesta por varios archivos objeto
-- Las bibliotecas modernas son dínamicas (.DLL o .so)
+- Las bibliotecas modernas son dinámicas (.DLL o .so) (.jar en Java)
 - También existe una versión estática (.LIB o .a)
   - es poco usada actualmente
 
 
-### Bibliotecas (o librerías) (III)
+### Bibliotecas (o librerías) (IV)
 
 - Una biblioteca se compone de 2 partes:
   - Especificación (ofrece una API)
@@ -97,9 +104,35 @@ En esta Unidad aprenderemos a:
 - API = Interfaz de Programación de Aplicaciones
 
 
-### Automatización 
+### Automatización (I) 
 
-Construir (Build) = Compilar + Enlazar
+> Construir (Build) = Compilar + Enlazar
+
+- Dos opciones:
+ - Herramientas de construcción
+ - Servidor de construcción
+
+
+### Automatización (II) 
+
+- Herramientas de construcción
+  - make, ninja (C, C++)
+  - ant, maven, gradle (Java)
+  - grunt, gulp (Javascript)
+  - rake (ruby)
+- Generadores de scripts 
+  - cmake
+  - meson
+
+
+### Automatización(II) 
+
+ - Servidores de construcción
+  - Jenkins 
+  - TravisCI
+  - CircleCI
+  - Bamboo
+  - TeamCity
 
 
 ## Entornos integrados de desarrollo (IDE)
