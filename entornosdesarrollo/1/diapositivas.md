@@ -286,7 +286,7 @@ Pizarra kanban
 #### __Scrum (I)__
 
 - Modelo de desarrollo incremental.
-- Interaciones (__sprint__) regulares cada 2 a 4 semanas.
+- Iteraciones (__sprint__) regulares cada 2 a 4 semanas.
 - Al principio de cada iteración se establecen sus __objetivos priorizados__ (__sprint backlog__).
 - Al finalizar cada iteración se obtiene una __entrega parcial utilizable por el cliente__.
 - Existen reuniones diarias para tratar la marcha del _sprint_.

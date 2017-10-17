@@ -79,7 +79,7 @@ En esta Unidad aprenderemos a:
 - Big bang
 - Descendente
 - Ascendente
-- Continua
+- Continua (CI)
 
 
 ### Factores de calidad
