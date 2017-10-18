@@ -21,7 +21,6 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Conceptos
 ### Herramientas básicas
 ### Entornos integrados de desarrollo (IDE)
 
@@ -120,12 +119,29 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
   - ant, maven, gradle (Java)
   - grunt, gulp (Javascript)
   - rake (ruby)
-- Generadores de scripts 
-  - cmake
-  - meson
 
 
-### Automatización(II) 
+## Automatización (III) 
+
+- Scripts de construcción (build files)
+  - make: Makefile
+  - ninja: build.ninja
+  - ant: build.xml
+  - maven: pom.xml
+  - gradle: build.gradle
+  - grunt: Gruntfile.js
+  - gulp: gulpfile.js
+  - rake: Rakefile
+
+
+## Automatización (IV) 
+
+- Generadores de scripts de construcción
+  - cmake: CMakeLists.txt
+  - meson: meson.build  
+  
+
+### Automatización(V) 
 
  - Servidores de construcción
   - Jenkins 
@@ -135,13 +151,17 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
   - TeamCity
 
 
+
 ## Entornos integrados de desarrollo (IDE)
 
-- Para C++:
+
+### Ejemplos
+
+- Destinados principalmente a C++:
   - DevC++
   - Microsoft Visual Studio
   - QtCreator
-- Para Java:
+- Destinados principalmente a Java:
   - Netbeans
   - Eclipse
   - IntelJ IDEA
