@@ -37,7 +37,6 @@ En esta Unidad aprenderemos a:
 - Definir casos de prueba.
 - Efectuar pruebas unitarias de clases y funciones.
 - Efectuar pruebas de integración, de sistema y de aceptación.
-- Implementar pruebas automáticas.
 - Realizar medidas de calidad sobre el software desarrollado.
 
 
