@@ -89,9 +89,11 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 ### Bibliotecas (o librerías) (III)
 
 - Cada biblioteca está compuesta por varios archivos objeto
-- Las bibliotecas modernas son dinámicas (.DLL o .so) (.jar en Java)
-- También existe una versión estática (.LIB o .a)
-  - es poco usada actualmente
+- Tipos
+  - bibliotecas dinámicas (.DLL o .so) (.jar en Java)
+    - muy usadas
+  - bibliotecas estática (.LIB o .a)
+    - menos usada actualmente
 
 
 ### Bibliotecas (o librerías) (IV)
