@@ -105,14 +105,13 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 
 ### Entorno necesario en java
 
-
 - JRE: necesario para ejecutar programas
   - JVM
   - Biblioteca estándar
 - JDK: necesario para desarrollar programas
 
 
-### Automatización (I) 
+### Construir (Build) (I) 
 
 > Construir (Build) = Compilar + Enlazar
 
@@ -121,36 +120,36 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
  - Servidor de construcción
 
 
-### Automatización (II) 
+### Construir (Build) (II) 
+#### __Herramientas de construcción__
 
-- Herramientas de construcción
   - make, ninja (C, C++)
   - ant, maven, gradle (Java)
   - grunt, gulp (Javascript)
   - rake (ruby)
 
 
-### Automatización (III) 
+### Construir (Build) (III) 
+### __Archivos de construcción (buildfiles)__
 
-- Archivos de construcción (buildfiles)
-  - make: Makefile
-  - ninja: build.ninja
-  - ant: build.xml
-  - maven: pom.xml
-  - gradle: build.gradle
-  - grunt: Gruntfile.js
-  - gulp: gulpfile.js
-  - rake: Rakefile
+  - make: __Makefile__
+  - ninja: __build.ninja__
+  - ant: __build.xml__
+  - maven: __pom.xml__
+  - gradle: __build.gradle__
+  - grunt: __Gruntfile.js__
+  - gulp: __gulpfile.js__
+  - rake: __Rakefile__
 
 
-### Automatización (IV) 
+### Construir (Build) (IV) 
 
 - Generadores de arcnivos de construcción
   - CMake: CMakeLists.txt
   - Meson: meson.build  
 
 
-### Automatización(V) 
+### Construir (Build) (V) 
 
  - Servidores de construcción
   - Jenkins 
