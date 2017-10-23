@@ -54,7 +54,7 @@ En esta Unidad aprenderemos a:
 ## Herramientas básicas
 
 
-### Herramientas 
+### Lo básico
 
 - Editor de texto: permite escribir código fuente
 - Compilador: genera código objeto a partir del código fuente
@@ -103,9 +103,9 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 - API = Interfaz de Programación de Aplicaciones
 
 
-### Entorno en java
+### Entorno necesario en java
 
-Elementos:
+
 - JRE: necesario para ejecutar programas
   - JVM
   - Biblioteca estándar
@@ -130,9 +130,9 @@ Elementos:
   - rake (ruby)
 
 
-## Automatización (III) 
+### Automatización (III) 
 
-- Scripts de construcción (build files)
+- Archivos de construcción (buildfiles)
   - make: Makefile
   - ninja: build.ninja
   - ant: build.xml
@@ -143,12 +143,12 @@ Elementos:
   - rake: Rakefile
 
 
-## Automatización (IV) 
+### Automatización (IV) 
 
-- Generadores de scripts de construcción
+- Generadores de arcnivos de construcción
   - CMake: CMakeLists.txt
   - Meson: meson.build  
-  
+
 
 ### Automatización(V) 
 
