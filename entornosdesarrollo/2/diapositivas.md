@@ -54,7 +54,7 @@ En esta Unidad aprenderemos a:
 ## Herramientas básicas
 
 
-### Herramientas
+### Herramientas 
 
 - Editor de texto: permite escribir código fuente
 - Compilador: genera código objeto a partir del código fuente
@@ -103,6 +103,15 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 - API = Interfaz de Programación de Aplicaciones
 
 
+### Entorno en java
+
+Elementos:
+- JRE: necesario para ejecutar programas
+  - JVM
+  - Biblioteca estándar
+- JDK: necesario para desarrollar programas
+
+
 ### Automatización (I) 
 
 > Construir (Build) = Compilar + Enlazar
@@ -137,8 +146,8 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 ## Automatización (IV) 
 
 - Generadores de scripts de construcción
-  - cmake: CMakeLists.txt
-  - meson: meson.build  
+  - CMake: CMakeLists.txt
+  - Meson: meson.build  
   
 
 ### Automatización(V) 
