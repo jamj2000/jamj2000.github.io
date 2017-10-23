@@ -93,7 +93,7 @@ En esta Unidad aprenderemos a:
   - bibliotecas dinámicas (.DLL o .so) (.jar en Java)
     - muy usadas
   - bibliotecas estática (.LIB o .a)
-    - menos usada actualmente
+    - menos usadas actualmente
 
 
 ### Bibliotecas (o librerías) (IV)
@@ -102,7 +102,7 @@ En esta Unidad aprenderemos a:
   - Especificación (ofrece una API)
   - Implementación 
 
-- API = Interfaz de Programación de Aplicaciones
+__API__ = Interfaz de Programación de Aplicaciones
 
 
 ### Entorno necesario en java
