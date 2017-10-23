@@ -64,7 +64,7 @@ En esta Unidad aprenderemos a:
 
 ### Bibliotecas (o librerías) (I)
 
-Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
+> Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 
 - __Biblioteca estándar__ del lenguaje
 - __Bibliotecas adicionales__
