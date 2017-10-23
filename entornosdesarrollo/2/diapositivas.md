@@ -132,7 +132,7 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 
 
 ### Construir (Build) (III) 
-### __Archivos de construcción (buildfiles)__
+#### __Archivos de construcción (buildfiles)__
 
   - make: __Makefile__
   - ninja: __build.ninja__
@@ -146,7 +146,7 @@ Conjunto de archivos objeto que extienden la funcionalidad del lenguaje
 
 ### Construir (Build) (IV) 
 
-- Generadores de arcnivos de construcción
+- Generadores de archivos de construcción
   - CMake: CMakeLists.txt
   - Meson: meson.build  
 
