@@ -108,9 +108,10 @@ __API__ = Interfaz de Programación de Aplicaciones
 ### Entorno necesario en java
 
 - JRE: necesario para ejecutar programas
-  - JVM
+  - JVM (inteprete java)
   - Biblioteca estándar
 - JDK: necesario para desarrollar programas
+  - Herramientas: javac, jar, javadoc, ...
 
 
 ### Construir (Build) (I) 
