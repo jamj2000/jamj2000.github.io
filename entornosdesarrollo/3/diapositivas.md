@@ -42,7 +42,61 @@ En esta Unidad aprenderemos a:
 
 ## Pruebas
 
-### Estrategías de prueba
+
+### Forma de las pruebas
+
+- __Pruebas estáticas__
+  Se realizan sin ejecutar el código de la aplicación. Se examina el código fuente.
+- __Pruebas dinámicas__
+  Requieren la ejecución de la aplicación. Permiten medir el comportamiento de la aplicación desarrollada.
+
+
+### Mecanismos de prueba
+
+- Manual
+  - Mediante pruebas realizadas por personal de la empresa o externo.
+- Automático
+  - Mediante software que ejecuta código de forma automatizada y compara los resultados obtenidos y los resultados esperados.
+
+
+#### Pruebas manuales (I)
+
+__Uso del depurador__
+
+- Puntos de ruptura
+- Ejecución paso a paso
+- Análisis de variables
+
+
+#### Pruebas manuales (II)
+
+__Ejecución de código__
+
+- Prueba de condiciones
+- Prueba de bucles
+- Empleo de intuición
+
+
+### Automatización de pruebas (I)
+
+- 
+
+
+### Estrategias de prueba (I)
+
+- De __caja negra__
+  - Se estudia el sistema desde fuera.
+  - Se trabaja sobre la interfaz.
+  - No se tienen en cuenta los detalles internos de funcionamiento.
+  - Se proporcionan entradas y se estudian las salidas.
+- De __caja blanca__
+  - Se examina el código fuente y su ejecución.
+  - Se comprueban los flujos de ejecución dentro de cada unidad (función, clase, módulo, etc.) 
+  - También pueden comprobarse los flujos entre unidades durante la integración.
+  - E incluso entre subsistemas, durante las pruebas de sistema.
+
+
+### Estrategías de prueba (II)
 
 - De __caja negra__
   - Particiones de equivalencia
@@ -56,17 +110,43 @@ En esta Unidad aprenderemos a:
 
 ### Tipos de pruebas
 
+- Funcionales
+  - Evaluan el cumplimiento de los requisitos.
+- No funcionales
+  - Evaluan aspectos adicionales como rendimiento, seguridad, ... 
+
+
+### Pruebas funcionales
+
 - Pruebas unitarias (o de unidad)
 - Pruebas de integración 
 - Pruebas del sistema
+- Pruebas de humo (smooke test)
 - Pruebas alfa y beta
+- Pruebas de aceptación (validación por parte del cliente)
+- Pruebas de regresión
 
 
-### Uso del depurador
+### Pruebas no funcionales
 
-- Puntos de ruptura
-- Ejecución paso a paso
-- Análisis de variables
+- Pruebas de usabilidad
+- Pruebas de rendimiento
+- Pruebas de stress
+- Pruebas de seguridad
+- Pruebas de compatibilidad
+- Pruebas de portabilidad
+- ...
+
+
+#### Pruebas unitarias
+
+- Desarrollo guiado por pruebas de software, o Test-driven development (TDD) 
+
+
+#### Pruebas de integración
+
+
+#### Pruebas de sistema
 
 
 
@@ -79,6 +159,16 @@ En esta Unidad aprenderemos a:
 - Descendente
 - Ascendente
 - Continua (CI)
+
+
+### Servidores de integración continua
+
+> CI : Integración continua
+> CD : Despliegue continuo
+
+- Jenkins
+- TravisCI
+- CircleCI
 
 
 ### Factores de calidad
@@ -94,7 +184,3 @@ En esta Unidad aprenderemos a:
 - Transportabilidad
 - Reusabilidad
 - Interoperatividad
-
-
-
-
