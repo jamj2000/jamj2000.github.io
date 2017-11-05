@@ -155,10 +155,10 @@ __Ejecución de código__
 
 ### Formas de integración
 
-- Big bang
-- Descendente
-- Ascendente
-- Continua (CI)
+- Integración Big bang
+- Integración Descendente
+- Integración Ascendente
+- Integración Continua (CI)
 
 
 ### Servidores de integración continua
