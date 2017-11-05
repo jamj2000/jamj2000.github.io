@@ -79,7 +79,9 @@ __Ejecución de código__
 
 ### Automatización de pruebas (I)
 
-- 
+- Frameworks de pruebas (xUnit)
+- Aserciones
+
 
 
 ### Estrategias de prueba (I)
@@ -138,15 +140,11 @@ __Ejecución de código__
 - ...
 
 
-#### Pruebas unitarias
+### TDD
 
 - Desarrollo guiado por pruebas de software, o Test-driven development (TDD) 
-
-
-#### Pruebas de integración
-
-
-#### Pruebas de sistema
+  - Escribir las pruebas primero (Test First Development).
+  - Refactorización (Refactoring).
 
 
 
