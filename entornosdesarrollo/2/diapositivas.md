@@ -90,15 +90,15 @@ En esta Unidad aprenderemos a:
 
 - Cada biblioteca está compuesta por varios archivos objeto
 - Tipos:
-  - bibliotecas dinámicas (.DLL o .so) (.jar en Java) -> muy usadas
-  - bibliotecas estáticas (.LIB o .a) -> poco usadas
+  - bibliotecas __dinámicas__ (.DLL o .so) (.jar en Java) 
+  - bibliotecas __estáticas__ (.LIB o .a)
 
 
 ### Bibliotecas (o librerías) (IV)
 
 - Partes de una biblioteca:
-  - Especificación (ofrece una API)
-  - Implementación 
+  - __Especificación__ (ofrece una __API__)
+  - __Implementación__ 
 
 Note: __API__ = Interfaz de Programación de Aplicaciones
 
@@ -122,7 +122,7 @@ Note: __API__ = Interfaz de Programación de Aplicaciones
 
 
 ### Construir (Build) (II) 
-#### Equipo local
+#### __Equipo local__
 
 - __Herramientas de construcción__
   - make, ninja (C, C++)
@@ -148,7 +148,7 @@ Note: __API__ = Interfaz de Programación de Aplicaciones
 
 
 ### Construir (Build) (IV) 
-#### Generadores de _buildfiles_
+#### __Generadores de _buildfiles_ __
 
 - __Herramienta y archivo asociado__
   - CMake: CMakeLists.txt
