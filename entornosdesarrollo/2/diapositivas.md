@@ -89,43 +89,42 @@ En esta Unidad aprenderemos a:
 ### Bibliotecas (o librerías) (III)
 
 - Cada biblioteca está compuesta por varios archivos objeto
-- Tipos
-  - bibliotecas dinámicas (.DLL o .so) (.jar en Java)
-    - muy usadas
-  - bibliotecas estática (.LIB o .a)
-    - menos usadas actualmente
+- Tipos:
+  - bibliotecas dinámicas (.DLL o .so) (.jar en Java) -> muy usadas
+  - bibliotecas estáticas (.LIB o .a) -> poco usadas
 
 
 ### Bibliotecas (o librerías) (IV)
 
-- Una biblioteca se compone de 2 partes:
+- Partes de una biblioteca:
   - Especificación (ofrece una API)
   - Implementación 
 
-__API__ = Interfaz de Programación de Aplicaciones
+Note: __API__ = Interfaz de Programación de Aplicaciones
 
 
 ### Entorno necesario en java
 
-- JRE: necesario para ejecutar programas
+- __JRE__: necesario para ejecutar programas
   - JVM (inteprete java)
   - Biblioteca estándar
-- JDK: necesario para desarrollar programas
+- __JDK__: necesario para desarrollar programas
   - Herramientas: javac, jar, javadoc, ...
 
 
 ### Construir (Build) (I) 
 
-> Construir (Build) = Compilar + Enlazar
+> __Construir (Build) = Compilar + Enlazar__
 
-- Dos opciones:
- - Herramientas de construcción
+- Opciones:
+ - Equipo local
  - Servidor de construcción
 
 
 ### Construir (Build) (II) 
-#### __Herramientas de construcción__
+#### Equipo local
 
+- __Herramientas de construcción__
   - make, ninja (C, C++)
   - ant, maven, gradle (Java)
   - grunt, gulp (Javascript)
@@ -135,8 +134,9 @@ __API__ = Interfaz de Programación de Aplicaciones
 
 
 ### Construir (Build) (III) 
-#### __Archivos de construcción (buildfiles)__
+#### __Archivos de construcción__
 
+- __Buildfiles__
   - make: __Makefile__
   - ninja: __build.ninja__
   - ant: __build.xml__
@@ -148,8 +148,9 @@ __API__ = Interfaz de Programación de Aplicaciones
 
 
 ### Construir (Build) (IV) 
+#### Generadores de _buildfiles_
 
-- Generadores de archivos de construcción
+- __Herramienta y archivo asociado__
   - CMake: CMakeLists.txt
   - Meson: meson.build  
 
