@@ -100,8 +100,9 @@ Construir (Build) = Compilar + Enlazar
 
 ## Documentación
 
-- Javadoc
-- Gitbook
+- Javadoc (html)
+- Gitbook (markdown)
+- Readthedocs (restructured text)
 
 
 
