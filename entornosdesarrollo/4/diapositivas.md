@@ -131,8 +131,8 @@ Note: A fecha Diciembre 2017
 
 
 
-
 ## Documentación
+
 
 ### Insignias (badges)
 
@@ -152,6 +152,7 @@ Note: A fecha Diciembre 2017
 - Gitbook (Markdown)
 - Readthedocs (reStructuredText)
 - (asciiDoc)
+
 
 
 ## Control de versiones
