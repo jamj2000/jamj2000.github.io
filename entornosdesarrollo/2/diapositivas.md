@@ -155,8 +155,9 @@ __API__ = Interfaz de Programación de Aplicaciones
 
 
 ### Construir (Build) (V) 
+#### __Servidores de construcción__
 
- - Servidores de construcción
+- __Integración continua (CI)__
   - Jenkins 
   - Bamboo
   - TravisCI
