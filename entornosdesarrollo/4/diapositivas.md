@@ -41,22 +41,16 @@ En esta Unidad aprenderemos a:
 
 
 
-### Herramientas básicas
-
-
-### Automatización 
-
-Construir (Build) = Compilar + Enlazar
-
-
-### Ejemplos de constructores
-
-- C: __make__
-- Java: maven, ant 
-
-
-
 ## Optimización
+
+
+### Refactorización
+
+- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
+- Técnicas:
+  - Renombrado de variables
+  - Pasar código duplicado a funciones
+  - ...
 
 
 ### Hediondez del código
@@ -86,24 +80,78 @@ Construir (Build) = Compilar + Enlazar
 - C: lint
 - Java: sonar
 - Javascript: JSLint, ESLint 
-- Multilenguaje: SonarQube
 
 
-### Refactorización
+### Inspección de código
 
-- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
-- Técnicas:
-  - Renombrado de variables
-  - Pasar código duplicado a funciones
-  - ...
+__Continuous Inspection__
+
+- Scrutinizer
+- Codecov
+- SonarQube
+
+
+#### Scrutinizer
+
+[ ![scrutinizer](assets/scrutinizer.png)  ](https://scrutinizer-ci.com)
+
+- PHP, Python y Ruby soportados
+- 14 días de prueba gratis
+- Precio/Mes:
+  - Plan Basic: 49 €
+  - Plan Professional: 99 €
+  - Plan Unlimited: 199 €
+
+Note: A fecha Diciembre 2017
+
+
+#### Codecov
+
+[ ![codecov](assets/codecov.png)  ](https://codecov.io)
+
+- Más de 20 lenguajes soportados
+- Precio/Mes:
+  - Plan Free: 0 $
+  - Plan Team: 2,50 $ por repositorio
+  - Plan Enterprise: 20 $ por usuario
+
+Note: A fecha Diciembre 2017
+
+
+#### SonarQube
+
+[ ![sonarqube](assets/sonarqube.png)  ](https://www.sonarqube.org/)
+
+- Más de 20 lenguajes soportados
+- Precio/Mes:
+  - Plan Open Source: 0 $
+  - Plan Private Projects: Desde 5 $ 
+
+Note: A fecha Diciembre 2017
+
+
 
 
 ## Documentación
 
-- Javadoc (html)
-- Gitbook (markdown)
-- Readthedocs (restructured text)
+### Insignias (badges)
 
+[ ![badges](assets/badges.png) ](https://shields.io/)
+
+
+### Tipos de documentación
+
+- Documentación de código
+- Documentación técnica
+- Documentación de usuario
+
+
+### Formatos de documentación
+
+- Javadoc (html)
+- Gitbook (Markdown)
+- Readthedocs (reStructuredText)
+- (asciiDoc)
 
 
 ## Control de versiones
