@@ -130,6 +130,15 @@ Note: A fecha Diciembre 2017
 Note: A fecha Diciembre 2017
 
 
+### Refactorización
+ 
+- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
+- Técnicas:
+  - Renombrado de variables
+  - Pasar código duplicado a funciones
+  - ...
+
+
 
 ## Documentación
 

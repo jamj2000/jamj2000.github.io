@@ -42,7 +42,13 @@ En esta Unidad aprenderemos a:
 
 ### Framework
 
-En general, un framework (marco de trabajo) es un conjunto de mejores prácticas, suposiciones, herramientas comunes y bibliotecas que se pueden usar en todos los equipos de desarrollo.
+En general, un framework (marco de trabajo) está compuesto por:
+
+- un conjunto de las mejores prácticas y suposiciones
+- herramientas comunes
+- bibliotecas 
+
+Normalmente es usado en todos los equipos de desarrollo.
 
 
 
@@ -148,7 +154,7 @@ __Ejecución de código__
 
 ### TDD
 
-- Desarrollo guiado por pruebas de software, o Test-driven development (TDD) 
+- Desarrollo guiado por pruebas de software, o Test-Driven Development (TDD) 
   - Escribir las pruebas primero (Test First Development).
   - Refactorización (Refactoring).
 
@@ -167,7 +173,7 @@ __Ejecución de código__
 
 ### Servidores de integración continua
 
-> CI : Integración continua
+> CI : Integración continua  
 > CD : Despliegue continuo
 
 - Jenkins
