@@ -96,30 +96,26 @@ __Ejecución de código__
 
 
 
-### Estrategias de prueba (I)
+### Estrategias de prueba de caja negra (I)
 
-- De __caja negra__
-  - Se estudia el sistema desde fuera.
-  - Se trabaja sobre la interfaz.
-  - No se tienen en cuenta los detalles internos de funcionamiento.
-  - Se proporcionan entradas y se estudian las salidas.
-- De __caja blanca__
-  - Se examina el código fuente y su ejecución.
-  - Se comprueban los flujos de ejecución dentro de cada unidad (función, clase, módulo, etc.) 
-  - También pueden comprobarse los flujos entre unidades durante la integración.
-  - E incluso entre subsistemas, durante las pruebas de sistema.
-
-
-### Estrategías de prueba (II)
-
-- De __caja negra__
+- Se estudia el sistema desde fuera.
+- Se trabaja sobre la interfaz.
+- No se tienen en cuenta los detalles internos de funcionamiento.
+- Se proporcionan entradas y se estudian las salidas.
+- Principales técnicas:
   - Particiones de equivalencia
   - Valores límite
-  - Comparación de versiones
-- De __caja blanca__
+
+
+### Estrategias de prueba de caja blanca (II)
+
+- Se examina el código fuente y su ejecución.
+- Se comprueban los flujos de ejecución dentro de cada unidad (función, clase, módulo, etc.) 
+- También pueden comprobarse los flujos entre unidades durante la integración.
+- E incluso entre subsistemas, durante las pruebas de sistema.
+- Principales técnicas:
   - Cubrimiento lógico
   - Prueba de bucles
-  - Empleo de intuición
 
 
 ### Tipos de pruebas
@@ -196,4 +192,12 @@ __Ejecución de código__
 - Reusabilidad
 - Interoperatividad
 
-Note: QA = Quality Aasurance
+
+## Calidad del proceso/producto (QA/QC)
+
+- QA es un conjunto de actividades para garantizar la __calidad en los procesos__ mediante los cuales se desarrollan los productos. 
+- QC es un conjunto de actividades para garantizar __la calidad de los productos__. Las actividades se centran en identificar defectos en los productos reales producidos.
+
+> control de calidad = medición de la calidad de un producto -> Pruebas
+
+Note: QA = Quality Assurance / QC = Quality Control
