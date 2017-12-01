@@ -40,6 +40,12 @@ En esta Unidad aprenderemos a:
 - Realizar medidas de calidad sobre el software desarrollado.
 
 
+### Framework
+
+En general, un framework (marco de trabajo) es un conjunto de mejores prácticas, suposiciones, herramientas comunes y bibliotecas que se pueden usar en todos los equipos de desarrollo.
+
+
+
 ## Pruebas
 
 
@@ -165,6 +171,7 @@ __Ejecución de código__
 > CD : Despliegue continuo
 
 - Jenkins
+- Bamboo
 - TravisCI
 - CircleCI
 
@@ -182,3 +189,5 @@ __Ejecución de código__
 - Transportabilidad
 - Reusabilidad
 - Interoperatividad
+
+Note: QA = Quality Aasurance
