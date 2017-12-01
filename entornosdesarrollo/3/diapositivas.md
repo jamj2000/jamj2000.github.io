@@ -23,6 +23,7 @@ element: class="fragment" data-fragment-index="1"
 ### Introducción
 ### Pruebas
 ### Integración
+### Calidad
 
 <!--- Note: Nota a pie de página. -->
 
@@ -48,7 +49,7 @@ En general, un framework (marco de trabajo) está compuesto por:
 - herramientas comunes
 - bibliotecas 
 
-Normalmente es usado en todos los equipos de desarrollo.
+Permite unificar el proceso de desarrollo entre desarrolladores.
 
 
 
@@ -57,46 +58,23 @@ Normalmente es usado en todos los equipos de desarrollo.
 
 ### Forma de las pruebas
 
-- __Pruebas estáticas__
-  Se realizan sin ejecutar el código de la aplicación. Se examina el código fuente.
-- __Pruebas dinámicas__
-  Requieren la ejecución de la aplicación. Permiten medir el comportamiento de la aplicación desarrollada.
+#### Pruebas dinámicas
+Requieren la ejecución de la aplicación. Permiten medir el comportamiento de la aplicación desarrollada.
+
+#### Pruebas estáticas
+Se realizan sin ejecutar el código de la aplicación. Se examina el código fuente.
 
 
-### Mecanismos de prueba
+### Estrategias de prueba
 
-- Manual
-  - Mediante pruebas realizadas por personal de la empresa o externo.
-- Automático
-  - Mediante software que ejecuta código de forma automatizada y compara los resultados obtenidos y los resultados esperados.
+#### Caja negra
+Se estudia el sistema desde fuera.
 
-
-#### Pruebas manuales (I)
-
-__Uso del depurador__
-
-- Puntos de ruptura
-- Ejecución paso a paso
-- Análisis de variables
+#### Caja blanca
+Se examina el código fuente y su ejecución.
 
 
-#### Pruebas manuales (II)
-
-__Ejecución de código__
-
-- Prueba de condiciones
-- Prueba de bucles
-- Empleo de intuición
-
-
-### Automatización de pruebas (I)
-
-- Frameworks de pruebas (xUnit)
-- Aserciones
-
-
-
-### Estrategias de prueba de caja negra (I)
+### Estrategias de prueba de caja negra
 
 - Se estudia el sistema desde fuera.
 - Se trabaja sobre la interfaz.
@@ -107,7 +85,7 @@ __Ejecución de código__
   - Valores límite
 
 
-### Estrategias de prueba de caja blanca (II)
+### Estrategias de prueba de caja blanca
 
 - Se examina el código fuente y su ejecución.
 - Se comprueban los flujos de ejecución dentro de cada unidad (función, clase, módulo, etc.) 
@@ -120,10 +98,11 @@ __Ejecución de código__
 
 ### Tipos de pruebas
 
-- Funcionales
-  - Evaluan el cumplimiento de los requisitos.
-- No funcionales
-  - Evaluan aspectos adicionales como rendimiento, seguridad, ... 
+#### Funcionales
+Evaluan el cumplimiento de los requisitos.
+
+#### No funcionales
+Evaluan aspectos adicionales como rendimiento, seguridad, ... 
 
 
 ### Pruebas funcionales
@@ -155,6 +134,27 @@ __Ejecución de código__
   - Refactorización (Refactoring).
 
 
+### Mecanismos de prueba
+
+- Manual
+  - Mediante pruebas realizadas por personal de la empresa o externo.
+- Automático
+  - Mediante software que ejecuta código de forma automatizada y compara los resultados obtenidos y los resultados esperados.
+
+
+###__Soporte del depurador__
+
+- Puntos de ruptura
+- Ejecución paso a paso
+- Análisis de variables
+
+
+### Automatización de pruebas
+
+- Frameworks de pruebas (xUnit)
+- Aserciones
+
+
 
 ## Integración
 
@@ -178,7 +178,11 @@ __Ejecución de código__
 - CircleCI
 
 
-### Factores de calidad
+
+# Calidad
+
+
+## Factores de calidad
 
 - Corrección
 - Fiabilidad
