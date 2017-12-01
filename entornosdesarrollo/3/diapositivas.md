@@ -177,7 +177,7 @@ Evaluan aspectos adicionales como rendimiento, seguridad, ...
 - TravisCI
 - CircleCI
 
-
+Note: CI=Continuous Integration / CD=Continuous Delivery.
 
 # Calidad
 
