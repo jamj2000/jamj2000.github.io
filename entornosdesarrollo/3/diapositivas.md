@@ -108,12 +108,12 @@ Evaluan aspectos adicionales como rendimiento, seguridad, ...
 ### Pruebas funcionales
 
 - Pruebas unitarias (o de unidad)
+- Pruebas de regresión
 - Pruebas de integración 
 - Pruebas del sistema
 - Pruebas de humo (smooke test)
 - Pruebas alfa y beta
 - Pruebas de aceptación (validación por parte del cliente)
-- Pruebas de regresión
 
 
 ### Pruebas no funcionales
