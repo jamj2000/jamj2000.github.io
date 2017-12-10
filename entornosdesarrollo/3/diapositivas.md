@@ -127,13 +127,6 @@ Evaluan aspectos adicionales como rendimiento, seguridad, ...
 - ...
 
 
-### TDD
-
-- Desarrollo guiado por pruebas de software, o Test-Driven Development (TDD) 
-  - Escribir las pruebas primero (Test First Development).
-  - Refactorización (Refactoring).
-
-
 ### Mecanismos de prueba
 
 - Manual
@@ -142,7 +135,7 @@ Evaluan aspectos adicionales como rendimiento, seguridad, ...
   - Mediante software que ejecuta código de forma automatizada y compara los resultados obtenidos y los resultados esperados.
 
 
-###__Soporte del depurador__
+### Soporte del depurador
 
 - Puntos de ruptura
 - Ejecución paso a paso
@@ -183,7 +176,7 @@ http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
 - @AfterClass
 
 
-### JUnit - Aserciones (I)
+### JUnit - Aserciones
 
 ```java
 import org.junit.Test;
@@ -203,6 +196,13 @@ assertNotSame(objeto_esperado,objeto_real)
 ```
 
 http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
+
+
+### TDD
+
+- Desarrollo guiado por pruebas de software, o Test-Driven Development (TDD) 
+  - Escribir las pruebas primero (Test First Development).
+  - Refactorización (Refactoring).
 
 
 
