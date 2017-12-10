@@ -70,7 +70,7 @@ Se realizan sin ejecutar el código de la aplicación. Se examina el código fue
 - __Caja negra:__
 Se estudia el sistema desde fuera.
 
-__Caja blanca:__
+- __Caja blanca:__
 Se examina el código fuente y su ejecución.
 
 
@@ -98,10 +98,10 @@ Se examina el código fuente y su ejecución.
 
 ### Tipos de pruebas
 
-__Funcionales:__
+- __Funcionales:__
 Evaluan el cumplimiento de los requisitos.
 
-__No funcionales:__
+- __No funcionales:__
 Evaluan aspectos adicionales como rendimiento, seguridad, ... 
 
 
@@ -183,16 +183,17 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 // ... 
-fail()	                    // el test termina con fallo
-assertTrue(expresión)	      // expresión es true ?
-assertFalse(expresión)	    // expresión es false ?
-assertEquals(esperado,real)	// esperado es igual a real ?
-assertNull(objeto)	        // objeto es null ?
-assertNotNull(objeto)	      // objeto no es null ?
-// objeto_esperado es igual objeto_real ?
-assertSame(objeto_esperado,objeto_real)	
+fail()                      // el test termina con fallo
+assertTrue(expresión)       // expresión es true ?
+assertFalse(expresión)      // expresión es false ?
+assertEquals(esperado,real) // esperado es igual a real ?
+assertNull(objeto)          // objeto es null ?
+assertNotNull(objeto)       // objeto es distinto de null ?
+
+// objeto_esperado es igual a objeto_real ?
+assertSame(objeto_esperado,objeto_real)
 // objeto_esperado es distinto de objeto_real ?
-assertNotSame(objeto_esperado,objeto_real)	
+assertNotSame(objeto_esperado,objeto_real)
 ```
 
 http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
