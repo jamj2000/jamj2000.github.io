@@ -58,19 +58,19 @@ Permite unificar el proceso de desarrollo entre desarrolladores.
 
 ### Forma de las pruebas
 
-#### Pruebas dinámicas
+- __Pruebas dinámicas:__
 Requieren la ejecución de la aplicación. Permiten medir el comportamiento de la aplicación desarrollada.
 
-#### Pruebas estáticas
+- __Pruebas estáticas:__
 Se realizan sin ejecutar el código de la aplicación. Se examina el código fuente.
 
 
 ### Estrategias de prueba
 
-#### Caja negra
+- __Caja negra:__
 Se estudia el sistema desde fuera.
 
-#### Caja blanca
+__Caja blanca:__
 Se examina el código fuente y su ejecución.
 
 
@@ -98,10 +98,10 @@ Se examina el código fuente y su ejecución.
 
 ### Tipos de pruebas
 
-#### Funcionales
+__Funcionales:__
 Evaluan el cumplimiento de los requisitos.
 
-#### No funcionales
+__No funcionales:__
 Evaluan aspectos adicionales como rendimiento, seguridad, ... 
 
 
@@ -183,23 +183,25 @@ http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
 - @AfterClass
 
 
-### JUnit - Aserciones
+### JUnit - Aserciones (I)
 
 ```java
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-... 
-assertTrue(expresión)	comprueba que expresión evalúe a true
-assertFalse(expresión)	comprueba que expresión evalúe a false
-assertEquals(esperado,real)	comprueba que esperado sea igual a real
-assertNull(objeto)	comprueba que objeto sea null
-assertNotNull(objeto)	comprueba que objeto no sea null
-assertSame(objeto_esperado,objeto_real)	comprueba que objeto_esperado y objeto_real sean el mismo objeto
-assertNotSame(objeto_esperado,objeto_real)	comprueba que objeto_esperado no sea el mismo objeto que objeto_real
-fail()	hace que el test termine con fallo
-
+// ... 
+fail()	                    // el test termina con fallo
+assertTrue(expresión)	      // expresión es true ?
+assertFalse(expresión)	    // expresión es false ?
+assertEquals(esperado,real)	// esperado es igual a real ?
+assertNull(objeto)	        // objeto es null ?
+assertNotNull(objeto)	      // objeto no es null ?
+// objeto_esperado es igual objeto_real ?
+assertSame(objeto_esperado,objeto_real)	
+// objeto_esperado es distinto de objeto_real ?
+assertNotSame(objeto_esperado,objeto_real)	
 ```
+
 http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
 
 
