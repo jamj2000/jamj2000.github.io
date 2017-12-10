@@ -154,6 +154,54 @@ Evaluan aspectos adicionales como rendimiento, seguridad, ...
 - Frameworks de pruebas (xUnit)
 - Aserciones
 
+https://en.wikipedia.org/wiki/XUnit
+
+
+### Frameworks para pruebas
+
+- Java: JUnit, TestNG
+- C++: CppUnit, Google Test
+- PHP: PHPUnit
+- Javascript: Mocha
+
+https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks
+
+
+### Caso de prueba
+
+- Una entrada conocida (precondición) --> Una salida esperada (postcondición)
+
+http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
+
+
+### JUnit - Anotaciones
+
+- @BeforeClass
+- @Before
+- @Test
+- @After
+- @AfterClass
+
+
+### JUnit - Aserciones
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+... 
+assertTrue(expresión)	comprueba que expresión evalúe a true
+assertFalse(expresión)	comprueba que expresión evalúe a false
+assertEquals(esperado,real)	comprueba que esperado sea igual a real
+assertNull(objeto)	comprueba que objeto sea null
+assertNotNull(objeto)	comprueba que objeto no sea null
+assertSame(objeto_esperado,objeto_real)	comprueba que objeto_esperado y objeto_real sean el mismo objeto
+assertNotSame(objeto_esperado,objeto_real)	comprueba que objeto_esperado no sea el mismo objeto que objeto_real
+fail()	hace que el test termine con fallo
+
+```
+http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
+
 
 
 ## Integración
