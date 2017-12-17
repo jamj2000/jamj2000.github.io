@@ -99,10 +99,10 @@ Se examina el código fuente y su ejecución.
 ### Tipos de pruebas
 
 - __Funcionales:__
-  - Evaluan el cumplimiento de los requisitos.
+Evaluan el cumplimiento de los requisitos.
 
 - __No funcionales:__
-  - Evaluan aspectos adicionales como rendimiento, seguridad, ... 
+Evaluan aspectos adicionales como rendimiento, seguridad, ... 
 
 
 ### Pruebas funcionales
