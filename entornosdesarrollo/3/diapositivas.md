@@ -43,13 +43,13 @@ En esta Unidad aprenderemos a:
 
 ### Framework
 
-En general, un framework (marco de trabajo) está compuesto por:
+- En general, un framework (marco de trabajo) está compuesto por:
 
-- un conjunto de las mejores prácticas y suposiciones
-- herramientas comunes
-- bibliotecas 
+  - un conjunto de las mejores prácticas y suposiciones
+  - herramientas comunes
+  - bibliotecas 
 
-Permite unificar el proceso de desarrollo entre desarrolladores.
+- Permite unificar el proceso de desarrollo entre desarrolladores.
 
 
 
@@ -99,10 +99,10 @@ Se examina el código fuente y su ejecución.
 ### Tipos de pruebas
 
 - __Funcionales:__
-Evaluan el cumplimiento de los requisitos.
+  - Evaluan el cumplimiento de los requisitos.
 
 - __No funcionales:__
-Evaluan aspectos adicionales como rendimiento, seguridad, ... 
+  - Evaluan aspectos adicionales como rendimiento, seguridad, ... 
 
 
 ### Pruebas funcionales
@@ -162,18 +162,19 @@ https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks
 
 ### Caso de prueba
 
-- Una entrada conocida (precondición) --> Una salida esperada (postcondición)
+- precondición --> postcondición
+- Una entrada conocida  --> Una salida esperada 
 
 http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
 
 
 ### JUnit - Anotaciones
 
-- @BeforeClass
-- @Before
+- @BeforeClass / BeforeAll
+- @Before / BeforeEach
 - @Test
-- @After
-- @AfterClass
+- @After / AfterEach
+- @AfterClass / AfterAll
 
 
 ### JUnit - Aserciones
@@ -183,12 +184,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 // ... 
-fail()                      // el test termina con fallo
-assertTrue(expresión)       // expresión es true ?
-assertFalse(expresión)      // expresión es false ?
-assertEquals(esperado,real) // esperado es igual a real ?
-assertNull(objeto)          // objeto es null ?
-assertNotNull(objeto)       // objeto es distinto de null ?
+fail()                         // el test termina con fallo
+assertTrue(expresión)          // expresión es true ?
+assertFalse(expresión)         // expresión es false ?
+assertEquals(esperado,real)    // esperado es igual a real ?
+assertNotEquals(esperado,real) // esperado es distinto de real ?
+assertNull(objeto)             // objeto es null ?
+assertNotNull(objeto)          // objeto es distinto de null ?
 
 // objeto_esperado es igual a objeto_real ?
 assertSame(objeto_esperado,objeto_real)
@@ -230,7 +232,23 @@ http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
 
 Note: CI=Continuous Integration / CD=Continuous Delivery.
 
+
+
 # Calidad
+
+
+## Control de calidad
+
+Control de calidad = medición de la calidad de un producto
+--> Pruebas
+
+
+## Calidad del proceso/producto (QA/QC)
+
+- QA es un conjunto de actividades para garantizar la __calidad en los procesos__ mediante los cuales se desarrollan los productos. 
+- QC es un conjunto de actividades para garantizar __la calidad de los productos__. Las actividades se centran en identificar defectos en los productos reales producidos.
+
+Note: QA = Quality Assurance / QC = Quality Control
 
 
 ## Factores de calidad
@@ -246,13 +264,3 @@ Note: CI=Continuous Integration / CD=Continuous Delivery.
 - Transportabilidad
 - Reusabilidad
 - Interoperatividad
-
-
-## Calidad del proceso/producto (QA/QC)
-
-- QA es un conjunto de actividades para garantizar la __calidad en los procesos__ mediante los cuales se desarrollan los productos. 
-- QC es un conjunto de actividades para garantizar __la calidad de los productos__. Las actividades se centran en identificar defectos en los productos reales producidos.
-
-> control de calidad = medición de la calidad de un producto -> Pruebas
-
-Note: QA = Quality Assurance / QC = Quality Control
