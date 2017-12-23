@@ -168,13 +168,14 @@ https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks
 http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
 
 
-### JUnit - Anotaciones
+### JUnit4/5 - Anotaciones
 
-- @BeforeClass / BeforeAll
-- @Before / BeforeEach
+- @BeforeClass / @BeforeAll
+- @Before / @BeforeEach
 - @Test
-- @After / AfterEach
-- @AfterClass / AfterAll
+- @After / @AfterEach
+- @AfterClass / @AfterAll
+- @Ignore
 
 
 ### JUnit - Aserciones
