@@ -41,6 +41,16 @@ En esta Unidad aprenderemos a:
 - Realizar medidas de calidad sobre el software desarrollado.
 
 
+### Objetivos de las pruebas
+
+- Una buena prueba debe centrarse en dos objetivos: 
+
+ 1. probar si el software no hace lo que debe hacer
+ 2. probar si el software hace lo que no debe hacer.
+
+- Existen distintos **frameworks** para la realización de pruebas.
+
+
 ### Framework
 
 - En general, un framework (marco de trabajo) está compuesto por:
@@ -68,10 +78,15 @@ Se realizan sin ejecutar el código de la aplicación. Se examina el código fue
 ### Estrategias de prueba
 
 - __Caja negra:__
-Se estudia el sistema desde fuera.
+Se estudia el sistema desde fuera. Son pruebas funcionales.
 
 - __Caja blanca:__
-Se examina el código fuente y su ejecución.
+Se examina el código fuente y su ejecución. Son pruebas estructurales.
+
+
+### Estrategias de prueba
+
+![Caja blanca vs Caja negra](assets/caja_blanca-caja-negra.png)
 
 
 ### Estrategias de prueba de caja negra
@@ -92,7 +107,7 @@ Se examina el código fuente y su ejecución.
 - También pueden comprobarse los flujos entre unidades durante la integración.
 - E incluso entre subsistemas, durante las pruebas de sistema.
 - Principales técnicas:
-  - Cubrimiento lógico
+  - Cobertura lógica
   - Prueba de bucles
 
 
