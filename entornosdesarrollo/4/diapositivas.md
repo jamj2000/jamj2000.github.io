@@ -44,15 +44,6 @@ En esta Unidad aprenderemos a:
 ## Optimización
 
 
-### Refactorización
-
-- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
-- Técnicas:
-  - Renombrado de variables
-  - Pasar código duplicado a funciones
-  - ...
-
-
 ### Hediondez del código
 
 - También llamado __code smell__ en inglés
@@ -66,8 +57,8 @@ En esta Unidad aprenderemos a:
 ### Análisis de código
 
 - Tipos:
-  - Análisis estático (__lint__)
-  - Análisis dinámico (unit tests)
+  - __Análisis dinámico__ (unit tests)
+  - __Análisis estático__ (__lint__)
 
 
 ### Analizador estático (Linter)
@@ -80,6 +71,20 @@ En esta Unidad aprenderemos a:
 - C: lint
 - Java: sonar
 - Javascript: JSLint, ESLint 
+
+
+### Refactorización
+ 
+- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
+- Técnicas:
+  - Renombrado de variables
+  - Pasar código duplicado a funciones
+  - Eliminación de código inalcanzable
+  - Eliminación de código redundante 
+  - Eliminación de código muerto
+  - ...
+
+[Artículo en Wikipedia](https://es.wikipedia.org/wiki/Eliminaci%C3%B3n_de_c%C3%B3digo_muerto)
 
 
 ### Inspección de código
@@ -128,16 +133,6 @@ Note: A fecha Diciembre 2017
   - Plan Private Projects: Desde 5 $ 
 
 Note: A fecha Diciembre 2017
-
-
-### Refactorización
- 
-- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
-- Técnicas:
-  - Renombrado de variables
-  - Pasar código duplicado a funciones
-  - Eliminación de código muerto
-  - ...
 
 
 
