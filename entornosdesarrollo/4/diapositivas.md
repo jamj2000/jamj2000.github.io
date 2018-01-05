@@ -61,16 +61,19 @@ En esta Unidad aprenderemos a:
   - __Análisis estático__ (__lint__)
 
 
-### Analizador estático (Linter)
+### Analizador estático
 
+- Tambien conocido con el término inglés __linter__
 - [Introducción a los linters -en inglés-](https://github.com/mcandre/linters)
 
 
-### Ejemplos de linters
+### Linters 
 
-- C: lint
-- Java: sonar
-- Javascript: JSLint, ESLint 
+**Ejemplos**
+
+- __lint__: C  
+- __sonar__: Java
+- __JSLint__, __ESLint__: Javascript 
 
 
 ### Refactorización
@@ -180,6 +183,15 @@ Note: A fecha Diciembre 2017
 - Eficiente
 
 
+### Git (Conceptos)
+
+- Repository (local & remote)
+- Commit
+- Branch
+  - Checkout
+  - Merge (fast-forward, 3-way)
+
+
 ### Git (Áreas)
 
 ![Git areas](assets/git-areas1.png)
@@ -188,15 +200,6 @@ Note: A fecha Diciembre 2017
 ### Git (Áreas)
 
 ![Git areas](assets/git-areas2.png)
-
-
-### Git (Conceptos)
-
-- Repository (local & remote)
-- Commit
-- Branch
-  - Checkout
-  - Merge (fast-forward, 3-way)
 
 
 ### Git (Ramas)
@@ -214,7 +217,7 @@ Note: A fecha Diciembre 2017
   clone, remote add, remote rm
 
 # Básicos
- init, status, log, add, rm, commit, push, pull
+  init, status, log, add, rm, commit, push, pull
 
 # Ramas (branches)
   branch, branch -d, merge, checkout, stash
