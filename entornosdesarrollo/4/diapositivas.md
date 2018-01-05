@@ -206,25 +206,31 @@ Note: A fecha Diciembre 2017
 
 ### Git (Comandos)
 
-- Configuración
-  - `config` 
-- Repositorios
-  - `clone`, `remote add`, `remote rm`
-- Básicos
-  - `init`, `status`, `log`, `add`, `rm`, `commit`, `push`, `pull`
-- Ramas (branches)
-  - `branch`, `branch -d`, `merge`, `checkout`, `stash`
-- Otros
-  - `diff`, `tag`, `submodule`
+```bash
+# Configuración
+  config 
+
+# Repositorios
+  clone, remote add, remote rm
+
+# Básicos
+ init, status, log, add, rm, commit, push, pull
+
+# Ramas (branches)
+  branch, branch -d, merge, checkout, stash
+
+# Otros
+  diff, tag, submodule
+```
 
 [CheatSheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 
 
 ### Sitios que soportan GIT
 
-- __GitHub__ (https://github.com)
-- __Bitbucket__ (https://bitbucket.org/)
-- __GitLab__ (https://gitlab.com/ )
-- __Coding__ -en chino- (https://coding.net/)
+- __[GitHub](https://github.com)__
+- __[Bitbucket](https://bitbucket.org/)__
+- __[GitLab](https://gitlab.com/ )__
+- __[Coding -en chino-](https://coding.net/)__
 
 ![Git sites](assets/git-sites.png)
