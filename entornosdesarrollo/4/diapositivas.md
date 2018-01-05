@@ -70,7 +70,7 @@ En esta Unidad aprenderemos a:
   - Análisis dinámico (unit tests)
 
 
-### (Linter) Analizador estático
+### Analizador estático (Linter)
 
 - [Introducción a los linters -en inglés-](https://github.com/mcandre/linters)
 
@@ -136,6 +136,7 @@ Note: A fecha Diciembre 2017
 - Técnicas:
   - Renombrado de variables
   - Pasar código duplicado a funciones
+  - Eliminación de código muerto
   - ...
 
 
@@ -157,10 +158,10 @@ Note: A fecha Diciembre 2017
 
 ### Formatos de documentación
 
-- Javadoc (html)
-- Gitbook (Markdown)
-- Readthedocs (reStructuredText)
-- (asciiDoc)
+- **HTML** (p. ej. Javadoc)
+- **Markdown** (p. ej. Gitbook)
+- **reStructuredText** (p. ej. Readthedocs)
+- **asciiDoc** 
 
 
 
@@ -168,11 +169,67 @@ Note: A fecha Diciembre 2017
 
 
 ### Sistemas más conocidos:
+
   - CVS
   - Subversion
   - Mercurial
-  - Git
+  - **Git**
 
 
 ### Git
 
+**Características**
+
+- Moderno
+- Distribuido
+- Eficiente
+
+
+### Git (Áreas)
+
+![Git areas](assets/git-areas1.png)
+
+
+### Git (Áreas)
+
+![Git areas](assets/git-areas2.png)
+
+
+### Git (Conceptos)
+
+- Repository (local & remote)
+- Commit
+- Branch
+  - Checkout
+  - Merge (fast-forward, 3-way)
+
+
+### Git (Comandos)
+
+- Configuración
+  - config 
+- Repositorios
+  - clone, remote add, remote rm
+- Básicos
+  - init, status, log, add, rm, commit, push, pull
+- Ramas (branches)
+  - branch, branch -d, merge, checkout, stash
+- Otros
+  - diff, tag, submodule
+
+[CheatSheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+
+
+### Git (Ramas)
+
+![Git areas](assets/git-areas2.png)
+
+
+### Sitios que soportan GIT
+
+- [GitHub](https://github.com)
+- [GitLab](https://gitlab.com/ )
+- [Bitbucket](https://bitbucket.org/)
+- [Coding -chino-](https://coding.net/)
+
+![Git sites](assets/git-sites.png)
