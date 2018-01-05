@@ -199,32 +199,32 @@ Note: A fecha Diciembre 2017
   - Merge (fast-forward, 3-way)
 
 
+### Git (Ramas)
+
+![Git areas](assets/git-branches.png)
+
+
 ### Git (Comandos)
 
 - Configuración
-  - config 
+  - `config` 
 - Repositorios
-  - clone, remote add, remote rm
+  - `clone`, `remote add`, `remote rm`
 - Básicos
-  - init, status, log, add, rm, commit, push, pull
+  - `init`, `status`, `log`, `add`, `rm`, `commit`, `push`, `pull`
 - Ramas (branches)
-  - branch, branch -d, merge, checkout, stash
+  - `branch`, `branch -d`, `merge`, `checkout`, `stash`
 - Otros
-  - diff, tag, submodule
+  - `diff`, `tag`, `submodule`
 
 [CheatSheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 
 
-### Git (Ramas)
-
-![Git areas](assets/git-areas2.png)
-
-
 ### Sitios que soportan GIT
 
-- [GitHub](https://github.com)
-- [GitLab](https://gitlab.com/ )
-- [Bitbucket](https://bitbucket.org/)
-- [Coding -chino-](https://coding.net/)
+- __GitHub__ (https://github.com)
+- __Bitbucket__ (https://bitbucket.org/)
+- __GitLab__ (https://gitlab.com/ )
+- __Coding__ -en chino- (https://coding.net/)
 
 ![Git sites](assets/git-sites.png)
