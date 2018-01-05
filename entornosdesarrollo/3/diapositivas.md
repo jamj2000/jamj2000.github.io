@@ -86,7 +86,7 @@ Se examina el código fuente y su ejecución. Son pruebas estructurales.
 
 ### Estrategias de prueba
 
-![Caja blanca vs Caja negra](assets/caja_blanca-caja-negra.png)
+![Caja blanca vs Caja negra](assets/caja_blanca-caja_negra.png)
 
 
 ### Estrategias de prueba de caja negra
