@@ -61,42 +61,29 @@ En esta Unidad aprenderemos a:
   - __Análisis estático__ (__lint__)
 
 
-### Analizador estático
+### Análisis estático de código
 
-- Tambien conocido con el término inglés __linter__
-- [Introducción a los linters -en inglés-](https://github.com/mcandre/linters)
+- Mediante analizadores estáticos (__linters__)
+ - [Introducción a los linters -en inglés-](https://github.com/mcandre/linters)
+- Mediante sitios web para inspección de código (__Continuous Inspection__) 
 
 
 ### Linters 
 
-**Ejemplos**
+- Analizadores estáticos de código:
 
-- __lint__: C  
-- __sonar__: Java
-- __JSLint__, __ESLint__: Javascript 
-
-
-### Refactorización
- 
-- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
-- Técnicas:
-  - Renombrado de variables
-  - Pasar código duplicado a funciones
-  - Eliminación de código inalcanzable
-  - Eliminación de código redundante 
-  - Eliminación de código muerto
-  - ...
-
-[Artículo en Wikipedia](https://es.wikipedia.org/wiki/Eliminaci%C3%B3n_de_c%C3%B3digo_muerto)
+ - __lint__: C  
+ - __sonar__: Java
+ - __JSLint__, __ESLint__: Javascript 
 
 
-### Inspección de código
+### Continuous Inspection
 
-__Continuous Inspection__
+- Sitios web que ofrecen __inspección de código__:
 
-- Scrutinizer
-- Codecov
-- SonarQube
+ - __Scrutinizer__
+ - __Codecov__
+ - __SonarQube__
 
 
 #### Scrutinizer
@@ -136,6 +123,20 @@ Note: A fecha Diciembre 2017
   - Plan Private Projects: Desde 5 $ 
 
 Note: A fecha Diciembre 2017
+
+
+### Refactorización
+ 
+- Es el proceso de reestructurar un código fuente, alterando su estructura interna sin cambiar su comportamiento externo. 
+- Técnicas:
+  - Renombrado de variables
+  - Pasar código duplicado a funciones
+  - Eliminación de código inalcanzable
+  - Eliminación de código redundante 
+  - Eliminación de código muerto
+  - ...
+
+[Artículo en Wikipedia](https://es.wikipedia.org/wiki/Eliminaci%C3%B3n_de_c%C3%B3digo_muerto)
 
 
 

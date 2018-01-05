@@ -138,6 +138,45 @@ united
   NOTA: Existen muchas otras tareas que pueden realizarse en Gradle. Sin embargo, la tarea `run` fallará puesto que no existe método `main`.
 <hr>
 
+1. Clona el repositorio https://github.com/jamj2000/DAW1-ED-Pruebas-Ejemplo1 en tu equipo local.
+<hr>
+ 
+1. Comprueba que en el archivo `build.gradle`  aparece la línea:
+
+  ```gradle
+  apply plugin: "jacoco"
+  ```
+<hr>
+
+1. Comprueba que en el archivo `build.gradle`  aparecen también las líneas:
+
+  ```gradle
+  jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+  }
+  ```
+<hr>
+
+1. Ejecuta el comando `gradle tasks` para ver las tareas disponibles.
+<hr>
+
+1. Ejecuta el comando `gradle test` para construir y pasar los tests.
+<hr>
+
+1. Ejecuta el comando `gradle jacocoTestReport` para generar informe de cobertura de código.
+  Para visualizaar dicho informe ejecuta `firefox  build/jacocoHtml/index.html`.
+<hr>
+
+1. Modifica y añade los tests necesarios para que la cobertura de código sea completa.
+<hr>
+
+1. Modifica el código fuente de la clase `Utilidades.java` para solucionar los errores que aparecen y superar los tests.
+<hr>
+
 
 <pre>
 
@@ -147,17 +186,35 @@ united
 #<a name="integracion"></a> [Integración](#indice)
 
 
-1. ...
-
-
+1. ¿Indica al menos 3 servicios web de Integración Continua?
 <hr>
 
-1. ...
-
-
+1. En GitHub, haz un fork del repositorio https://github.com/jamj2000/DAW1-ED-Pruebas-Ejemplo1 y haz una clonación en tu equipo local de dicho fork.
 <hr>
 
+1. Edita el archivo `.travis.yml` de tu repositorio local, en caso de ser necesario.
+<hr>
+
+1. Regístrate con tu cuenta de GitHub en TravisCI (https://travis-ci.org/)
+<hr>
+
+1. En TravisCI, añade tu repositorio remoto (bifurcado) para construir y realizar los tests en dicho sitio web. 
+<hr>
+
+1. En TravisCI, haz click en el _badge_ o insignia que aparece en la parte superior derecha, y copia el código en formato Markdown.
+<hr>
+
+1. En GitHub, en tu repositorio bifurcado, copia el código Markdown anterior en el archivo README.md.
+<hr>
+
+
+1. [Opcional. _Vale por 1 pto en la nota de esta Unidad] En una plataforma Linux (preferiblemente Ubuntu), realiza la instalación de un servicio de Integración Continua basado en Jenkins.
  
+  Explica los pasos seguidos y elabora un documento PDF donde quede reflejado todo el proceso y las pruebas que haz realizado.
+
+  Deberas seguir los pasos indicados en el enlace de instrucciones que aparece a continuación.
+  INSTRUCCIONES: https://yeiei.net/es/como-construir-un-entorno-de-integracion-continua-con-jenkins-y-docker/
+<hr>
 
 
 
@@ -170,18 +227,11 @@ united
 #<a name="calidad"></a> [Calidad](#indice)
 
 
-1. ...
-
-
+1. ¿Qué significan las siglas QA y QC? ¿Qué diferencia existe entre ellas?
 <hr>
 
-1. ...
-
-
+1. Explica brevemente cada uno de los factores de calidad que aparecen en las diapositivas.
 <hr>
-
- 
-
 
 
 <pre>
