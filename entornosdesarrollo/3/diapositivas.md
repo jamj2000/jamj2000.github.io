@@ -126,7 +126,7 @@ Evaluan aspectos adicionales como rendimiento, seguridad, ...
 - Pruebas de regresión
 - Pruebas de integración 
 - Pruebas del sistema
-- Pruebas de humo (smooke test)
+- Pruebas de humo (smoke test)
 - Pruebas alfa y beta
 - Pruebas de aceptación (validación por parte del cliente)
 
