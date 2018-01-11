@@ -181,7 +181,7 @@ Note: __API__ = Interfaz de Programación de Aplicaciones
 - Destinados principalmente a Java:
   - Netbeans
   - Eclipse
-  - IntelJ IDEA
+  - IntelliJ IDEA
   - Oracle JDeveloper
 
  
