@@ -239,7 +239,7 @@ http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
 ### Servidores de integración continua
 
 > CI : Integración continua  
-> CD : Despliegue continuo
+> CD : Entrega continua
 
 - Jenkins
 - Bamboo
