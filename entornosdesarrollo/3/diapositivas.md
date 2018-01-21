@@ -107,7 +107,7 @@ Se examina el código fuente y su ejecución. Son pruebas estructurales.
 - También pueden comprobarse los flujos entre unidades durante la integración.
 - E incluso entre subsistemas, durante las pruebas de sistema.
 - Principales técnicas:
-  - Cobertura lógica
+  - Cobertura de código
   - Prueba de bucles
 
 
