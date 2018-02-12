@@ -249,17 +249,21 @@ http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
 Note: CI=Continuous Integration / CD=Continuous Delivery.
 
 
+### Servidores de integración continua
 
-# Calidad
-
-
-## Control de calidad
-
-Control de calidad = medición de la calidad de un producto
---> Pruebas
+![Jenkins, Bamboo, Travis](assets/jenkins-bamboo-travisci.png)
 
 
-## Calidad del proceso/producto (QA/QC)
+
+## Calidad
+
+
+### Control de calidad
+
+Medición de la calidad de un producto --> Pruebas
+
+
+### Calidad del proceso/producto (QA/QC)
 
 - QA es un conjunto de actividades para garantizar la __calidad en los procesos__ mediante los cuales se desarrollan los productos. 
 - QC es un conjunto de actividades para garantizar __la calidad de los productos__. Las actividades se centran en identificar defectos en los productos reales producidos.
@@ -267,7 +271,7 @@ Control de calidad = medición de la calidad de un producto
 Note: QA = Quality Assurance / QC = Quality Control
 
 
-## Factores de calidad
+### Factores de calidad
 
 - Corrección
 - Fiabilidad
