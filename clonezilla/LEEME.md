@@ -34,9 +34,6 @@ Pasos a seguir para instalar Clonezilla en el disco duro
     - grub-install --root-directory=/mnt  /dev/sda 
 
 
-
-
-
 ## Información consultada
 
 - http://joaalsai.com/index.php/2017/11/17/creacion-de-un-menu-de-restauracion/
