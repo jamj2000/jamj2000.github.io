@@ -77,12 +77,11 @@ En esta Unidad aprenderemos a:
  - __JSLint__, __ESLint__: Javascript 
 
 
-### Continuous Inspection
+### Continuous Inspection o Continuous Analysis
 
 - Sitios web que ofrecen __inspección de código__:
 
  - __Scrutinizer__
- - __Codecov__
  - __SonarQube__
 
 
@@ -96,19 +95,6 @@ En esta Unidad aprenderemos a:
   - Plan Basic: 49 €
   - Plan Professional: 99 €
   - Plan Unlimited: 199 €
-
-Note: A fecha Diciembre 2017
-
-
-#### Codecov
-
-[ ![codecov](assets/codecov.png)  ](https://codecov.io)
-
-- Más de 20 lenguajes soportados
-- Precio/Mes:
-  - Plan Free: 0 $
-  - Plan Team: 2,50 $ por repositorio
-  - Plan Enterprise: 20 $ por usuario
 
 Note: A fecha Diciembre 2017
 

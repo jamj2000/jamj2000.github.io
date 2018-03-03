@@ -254,6 +254,29 @@ Note: CI=Continuous Integration / CD=Continuous Delivery.
 ![Jenkins, Bamboo, Travis](assets/jenkins-bamboo-travisci.png)
 
 
+### Cobertura del código
+
+- Es una medida que indica el porcentaje de código que ha sido ejecutado durante las pruebas.
+- Es aconsejable que sea del 100%.
+- Si es del 100% entonces se ha ejecutado todo el código fuente durante las pruebas.
+- Si es menor del 100% entonces existe código fuente que no se ha ejecutado durante las pruebas.
+- Es posible realizar la cobertura tanto desde el IDE como desde un servicio web apropiado.
+- Un servidor web que proporciona cobertura de código es CODECOV.IO
+
+
+#### Codecov
+
+[ ![codecov](assets/codecov.png)  ](https://codecov.io)
+
+- Más de 20 lenguajes soportados
+- Precio/Mes:
+  - Plan Free: 0 $
+  - Plan Team: 2,50 $ por repositorio
+  - Plan Enterprise: 20 $ por usuario
+
+Note: A fecha Diciembre 2017
+
+
 
 ## Calidad
 
@@ -281,6 +304,6 @@ Note: QA = Quality Assurance / QC = Quality Control
 - Mantenibilidad
 - Flexibilidad
 - Facilidad de prueba
-- Transportabilidad
+- Portabilidad
 - Reusabilidad
 - Interoperatividad
