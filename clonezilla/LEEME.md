@@ -23,10 +23,10 @@ Pasos a seguir para instalar Clonezilla en el disco duro
 
     - mount /dev/sdb2 /media
     
-6. Copiar archivo /media/grub.cfg y /media/background.png a /mnt/EFI
+6. Copiar archivos /media/grub.cfg y /media/background.png a /mnt/EFI/boot
   
     - cd  /mnt/EFI/boot
-    - cp  /media/grub.cfg  .
+    - cp  /media/grub.cfg .
     - cp  /media/background.png .
 
 7. Instalar grub2  
