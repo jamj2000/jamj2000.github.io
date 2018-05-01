@@ -21,8 +21,8 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### UML: Lenguaje de modelado unificado
-### UML: Software para crear diagramas
+### UML
+### UML: Software
 ### UML: Tipos de diagramas
 ### UML: Diagramas de clases
 
@@ -42,7 +42,9 @@ En esta Unidad aprenderemos a:
 
 
 
-## UML: Lenguaje de modelado unificado
+## UML
+
+**Lenguaje de modelado unificado**
 
 - Es un lenguaje visual de propósito general para representar **modelos**.
 - Pretende proporcionar una forma estándar de representar el diseño de un sistema.
