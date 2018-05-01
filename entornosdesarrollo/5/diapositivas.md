@@ -35,11 +35,8 @@ element: class="fragment" data-fragment-index="1"
 
 En esta Unidad aprenderemos a:
 
-- Identificar los conceptos básicos de la programación orientada a objetos.
-- Instalar el módulo del entorno integrado de desarrollo que permite la utilización de diagramas de clases.
 - Identificar las herramientas para la elaboración de diagramas de clases.
 - Interpretar el significado de diagramas de clases.
-- Trazar diagramas de clases a partir de las especificaciones de las mismas.
 - Generar código a partir de un diagrama de clases.
 - Generar un diagrama de clases mediante ingeniería inversa.
 
@@ -77,6 +74,7 @@ En esta Unidad aprenderemos a:
 
 
 ## UML: Diagramas de clases
+
 
 ![Diagrama introductorio](assets/class-diagram-domain-overview.png)
 
@@ -160,7 +158,3 @@ En esta Unidad aprenderemos a:
 - [Videojuego](https://raw.githubusercontent.com/iesvelez-daw/videojuego/master/img/videojuegoUML.png)
 - [Colegio](https://raw.githubusercontent.com/iesvelez-daw/colegio/master/img/colegioUML.png)
 - [Zoo](https://raw.githubusercontent.com/iesvelez-daw/zoo/master/img/zooUML.png)
-
-
-
-
