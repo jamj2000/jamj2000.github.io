@@ -33,7 +33,6 @@ element: class="fragment" data-fragment-index="1"
 
 ## Introducción
 
-
 En esta Unidad aprenderemos a:
 
 - Identificar los conceptos básicos de la programación orientada a objetos.
@@ -79,24 +78,26 @@ En esta Unidad aprenderemos a:
 
 ## UML: Diagramas de clases
 
-(assets/class-diagram-domain-overview.png)
+![Diagrama introductorio](assets/class-diagram-domain-overview.png)
 
 
 ### Clases
 
-![](assets/class-no-compartments.png)
-![](assets/class-compartments-impl.png)
+![Clase](assets/class-no-compartments.png)
+
+![Clase con compartimentos](assets/class-compartments-impl.png)
 
 
 ### Objetos
 
-![](assets/object-named-slots-value.png)
+![Objeto](assets/object-named-slots-value.png)
 
 
 ### Interfaces
 
-![](assets/class-interface.png)
-![](assets/class-interface-compartments.png)
+![Interface](assets/class-interface.png)
+
+![Interface con compartimentos](assets/class-interface-compartments.png)
 
 
 ### Relaciones
@@ -111,47 +112,54 @@ En esta Unidad aprenderemos a:
 
 #### Asociación
 
-![](assets/association.png)
-![](assets/link.png)
-![](assets/core-comment-note.png)
+![Asociación](assets/association.png)
+
+![Instancia de asociación](assets/link.png)
+
+![Nota](assets/core-comment-note.png)
 
 
 #### Agregación
 
-![](assets/shared-aggregation.png)
+![Agregación](assets/shared-aggregation.png)
 
 
 #### Composición
 
-![](assets/class-composition.png)
-![](assets/class-composition-optional.png)
+![Composición](assets/class-composition.png)
+
+![Composición opcional](assets/class-composition-optional.png)
 
 
 #### Dependencia
 
-![](assets/instantiate.png)
-![](assets/class-dependency-usage.png)
-![](assets/use-package.png)
+![Dependencia de instanciación](assets/instantiate.png)
+
+![Dependencia de uso de clase](assets/class-dependency-usage.png)
+
+![Dependencia de uso de paquete](assets/use-package.png)
 
 
 #### Generalización (herencia)
 
-![](assets/class-generalizaion-separate.png)
-![](assets/class-generalizaion-shared.png)
+![Generalización separada](assets/class-generalizaion-separate.png)
+
+![Generalización compartida](assets/class-generalizaion-shared.png)
 
 
 #### Realización (implementación de interfaces)
 
-![](assets/class-interface-realization-ball.png)
-![](assets/class-interface-realization.png)
+![Realización bola](assets/class-interface-realization-ball.png)
+
+![Realización](assets/class-interface-realization.png)
 
 
 ### Ejemplos
 
-- https://raw.githubusercontent.com/iesvelez-daw/karts/master/img/kartsUML.png
-- https://raw.githubusercontent.com/iesvelez-daw/videojuego/master/img/videojuegoUML.png
-- https://raw.githubusercontent.com/iesvelez-daw/colegio/master/img/colegioUML.png 
-- https://raw.githubusercontent.com/iesvelez-daw/zoo/master/img/zooUML.png
+- [Karts](https://raw.githubusercontent.com/iesvelez-daw/karts/master/img/kartsUML.png)
+- [Videojuego](https://raw.githubusercontent.com/iesvelez-daw/videojuego/master/img/videojuegoUML.png)
+- [Colegio](https://raw.githubusercontent.com/iesvelez-daw/colegio/master/img/colegioUML.png)
+- [Zoo](https://raw.githubusercontent.com/iesvelez-daw/zoo/master/img/zooUML.png)
 
 
 
