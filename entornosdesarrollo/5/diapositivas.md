@@ -22,9 +22,8 @@ element: class="fragment" data-fragment-index="1"
 --- 
 ### Introducción
 ### UML
-### UML: Software
-### UML: Tipos de diagramas
-### UML: Diagramas de clases
+### Diagramas de clases
+### Software
 
 
 <!--- Note: Nota a pie de página. -->
@@ -52,30 +51,19 @@ En esta Unidad aprenderemos a:
 - Cada tipo de diagrama muestra un aspecto diferente del modelo.
 
 
-
-## UML: Software para crear diagramas
-
-- Enterprise Architect
-- Visual Paradigm
-- Microsoft Visio
-- Dia, ArgoUML, Umbrello
-- Plugins para Netbeans (**easyUML**, plantUML)
-- Plugins para Eclipse (...)
-- Plugins para IntellJ Idea (...)
-- [Lista exhaustiva](https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools)
-
-
-
-## UML: Tipos de diagramas
+###  UML: Tipos de diagramas (I)
 
 - **diagramas de estructura** (aspecto estático)
 - **diagramas de comportamiento** (aspecto dinámico)
+
+
+###  UML: Tipos de diagramas (II)
 
 ![Tipos de diagramas](assets/uml-diagrams.png)
 
 
 
-## UML: Diagramas de clases
+## Diagramas de clases
 
 
 ![Diagrama introductorio](assets/class-diagram-domain-overview.png)
@@ -156,7 +144,35 @@ En esta Unidad aprenderemos a:
 
 ### Ejemplos
 
-- [Karts](https://raw.githubusercontent.com/iesvelez-daw/karts/master/img/kartsUML.png)
-- [Videojuego](https://raw.githubusercontent.com/iesvelez-daw/videojuego/master/img/videojuegoUML.png)
-- [Colegio](https://raw.githubusercontent.com/iesvelez-daw/colegio/master/img/colegioUML.png)
-- [Zoo](https://raw.githubusercontent.com/iesvelez-daw/zoo/master/img/zooUML.png)
+
+#### Karts
+
+![Karts](https://raw.githubusercontent.com/iesvelez-daw/karts/master/img/kartsUML.png)
+
+
+#### Videojuego
+
+![Videojuego](https://raw.githubusercontent.com/iesvelez-daw/videojuego/master/img/videojuegoUML.png)
+
+
+#### Colegio
+
+![Colegio](https://raw.githubusercontent.com/iesvelez-daw/colegio/master/img/colegioUML.png)
+
+
+#### Zoo
+
+![Zoo](https://raw.githubusercontent.com/iesvelez-daw/zoo/master/img/zooUML.png)
+
+
+
+## UML: Software
+
+- Enterprise Architect
+- Visual Paradigm
+- Microsoft Visio
+- Dia, ArgoUML, Umbrello
+- Plugins para Netbeans (**easyUML**, plantUML)
+- Plugins para Eclipse (...)
+- Plugins para IntellJ Idea (...)
+- [Lista exhaustiva](https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools)
