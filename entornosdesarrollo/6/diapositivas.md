@@ -21,10 +21,9 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Diagramas de casos de uso
-### Diagramas de interacción
-### Diagramas de estados
-### Diagramas de actividades
+### UML: Diagramas de casos de uso
+### UML: Diagramas de secuencia
+### Referencias
 
 <!--- Note: Nota a pie de página. -->
 
@@ -45,11 +44,8 @@ En esta Unidad aprenderemos a:
 - Elaborar diagramas de actividades sencillos.
 
 
-### Tipos de diagramas de comportamiento
+## UML: Diagramas de casos de uso
 
-
-
-## Diagramas de casos de uso
 
 
 
@@ -59,7 +55,14 @@ En esta Unidad aprenderemos a:
 - Casos de uso
 - Relaciones 
 
+## UML: Diagramas de secuencia
 
+
+## Referencias
+
+- http://uml.org/
+- https://www.uml-diagrams.org/
+- https://www.omg.org/
 
 ## Diagramas de interacción
 

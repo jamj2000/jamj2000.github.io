@@ -21,7 +21,11 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### Diagramas de clases
+### UML: Lenguaje de modelado unificado
+### UML: Software para crear diagramas
+### UML: Tipos de diagramas
+### UML: Diagramas de clases
+
 
 <!--- Note: Nota a pie de página. -->
 
@@ -41,27 +45,113 @@ En esta Unidad aprenderemos a:
 - Generar un diagrama de clases mediante ingeniería inversa.
 
 
-### Tipos de diagramas UML
+
+## UML: Lenguaje de modelado unificado
+
+- Es un lenguaje visual de propósito general para representar **modelos**.
+- Pretende proporcionar una forma estándar de representar el diseño de un sistema.
+- Dispone de numerosos tipos de diagramas.
+- Cada tipo de diagrama muestra un aspecto diferente del modelo.
 
 
-### Conceptos de POO
+
+## UML: Software para crear diagramas
+
+- Enterprise Architect
+- Visual Paradigm
+- Microsoft Visio
+- Dia, ArgoUML, Umbrello
+- Plugins para Netbeans (**easyUML**, plantUML)
+- Plugins para Eclipse (...)
+- Plugins para IntellJ Idea (...)
+- [Lista exhaustiva](https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools)
 
 
 
-## Diagramas de clases
+## UML: Tipos de diagramas
+
+- **diagramas de estructura** (aspecto estático)
+- **diagramas de comportamiento** (aspecto dinámico)
+
+![Tipos de diagramas](assets/uml-diagrams.png)
 
 
 
-### Representación de una clase
+## UML: Diagramas de clases
+
+(assets/class-diagram-domain-overview.png)
 
 
-### Relación de herencia
+### Clases
+
+![](assets/class-no-compartments.png)
+![](assets/class-compartments-impl.png)
 
 
-### Relación de composición
+### Objetos
+
+![](assets/object-named-slots-value.png)
 
 
-### Relación de agregación
+### Interfaces
+
+![](assets/class-interface.png)
+![](assets/class-interface-compartments.png)
+
+
+### Relaciones
+
+- Asociación
+    - Agregación
+    - Composición
+- Dependencia
+- Generalización
+- Realización
+
+
+#### Asociación
+
+![](assets/association.png)
+![](assets/link.png)
+![](assets/core-comment-note.png)
+
+
+#### Agregación
+
+![](assets/shared-aggregation.png)
+
+
+#### Composición
+
+![](assets/class-composition.png)
+![](assets/class-composition-optional.png)
+
+
+#### Dependencia
+
+![](assets/instantiate.png)
+![](assets/class-dependency-usage.png)
+![](assets/use-package.png)
+
+
+#### Generalización (herencia)
+
+![](assets/class-generalizaion-separate.png)
+![](assets/class-generalizaion-shared.png)
+
+
+#### Realización (implementación de interfaces)
+
+![](assets/class-interface-realization-ball.png)
+![](assets/class-interface-realization.png)
+
+
+### Ejemplos
+
+- https://raw.githubusercontent.com/iesvelez-daw/karts/master/img/kartsUML.png
+- https://raw.githubusercontent.com/iesvelez-daw/videojuego/master/img/videojuegoUML.png
+- https://raw.githubusercontent.com/iesvelez-daw/colegio/master/img/colegioUML.png 
+- https://raw.githubusercontent.com/iesvelez-daw/zoo/master/img/zooUML.png
 
 
 
