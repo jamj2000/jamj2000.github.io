@@ -24,8 +24,6 @@ element: class="fragment" data-fragment-index="1"
 ### UML
 ### Diagramas de clases
 ### Software
-
-
 <!--- Note: Nota a pie de página. -->
 
 
