@@ -47,6 +47,7 @@ En esta Unidad aprenderemos a:
 - Pretende proporcionar una forma estándar de representar el diseño de un sistema.
 - Dispone de numerosos tipos de diagramas.
 - Cada tipo de diagrama muestra un aspecto diferente del modelo.
+- Actualmente disponible la versión 2.5. Existen algunas diferencias respecto a las versiones 1.x.
 
 
 ###  UML: Tipos de diagramas (I)
@@ -55,9 +56,19 @@ En esta Unidad aprenderemos a:
 - **diagramas de comportamiento** (aspecto dinámico)
 
 
-###  UML: Tipos de diagramas (II)
+### UML: Tipos de diagramas (II)
 
 ![Tipos de diagramas](assets/uml-diagrams.png)
+
+
+### UML: Diagramas de estructura
+
+Los más utilizados son:
+
+- Diagramas de clases
+- Diagramas de paquetes
+- Diagramas de componentes
+- Diagramas de implementación
 
 
 
@@ -75,6 +86,8 @@ En esta Unidad aprenderemos a:
 
 
 ### Objetos
+
+![Objeto anónimo](assets/object-anonymous.png)
 
 ![Objeto](assets/object-named-slots-value.png)
 
@@ -161,6 +174,24 @@ En esta Unidad aprenderemos a:
 #### Zoo
 
 ![Zoo](https://raw.githubusercontent.com/iesvelez-daw/zoo/master/img/zooUML.png)
+
+
+
+## Diagramas de paquetes
+
+![Diagrama de paquetes](package-diagram-elements.png)
+
+
+
+## Diagramas de componentes
+
+![Diagrama de componentes](component-diagram-overview.png)
+
+
+
+## Diagramas de implementación (deployment)
+
+![Diagrama de implementación](deployment-diagram-overview-specification.png)
 
 
 

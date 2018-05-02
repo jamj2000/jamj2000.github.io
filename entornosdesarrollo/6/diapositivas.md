@@ -21,55 +21,120 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-### UML: Diagramas de casos de uso
-### UML: Diagramas de secuencia
+### Diagramas de casos de uso
+### Diagramas de secuencia
+### Diagramas de estados
+### Diagramas de actividades
 ### Referencias
-
 <!--- Note: Nota a pie de página. -->
 
 
 
 ## Introducción
 
-
 En esta Unidad aprenderemos a:
 
-- Identificar los distintos tipos de diagramas de comportamiento.
+- Identificar los distintos tipos de **diagramas de comportamiento**.
 - Reconocer el significado de los diagramas de casos de uso.
-- Interpretar diagramas de interacción.
-- Elaborar diagramas de interacción sencillos.
-- Interpretar diagramas de estados.
-- Plantear diagramas de estados sencillos.
-- Interpretar el significado de diagramas de actividades.
-- Elaborar diagramas de actividades sencillos.
+- Elaborar e interpretar diagramas de interacción sencillos.
+- Interpretar y plantear diagramas de estados.
+- Elaborar e interpretar el significado de diagramas de actividades.
 
 
-## UML: Diagramas de casos de uso
+### UML: Diagramas de comportamiento
+
+Los más utilizados son:
+
+- Diagramas de casos de uso
+- Diagramas de secuencia
+- Diagramas de estados
+- Diagramas de actividades
 
 
 
-
-### Elementos básicos
-
-- Actores
-- Casos de uso
-- Relaciones 
-
-## UML: Diagramas de secuencia
+## Diagramas de casos de uso
 
 
-## Referencias
 
-- http://uml.org/
-- https://www.uml-diagrams.org/
-- https://www.omg.org/
+### Actores
 
-## Diagramas de interacción
+
+### Casos de uso
+
+
+### Relaciones
+
+
+
+## Diagramas de secuencia
+
+- Es uno tipo de diagrama de interacción.
+
+
 
 
 
 ## Diagramas de estados
 
 
+### Inicio y fin
+
+#### Pseudoestado inicial
+
+![](assets/pseudostate-initial.png)
+
+#### Estado final
+
+![](assets/state-final.png)
+
+
+### Estados simples
+
+![](assets/state-simple.png)
+
+![](assets/state-simple-internal-activities.png)
+
+### Estados compuestos
+
+![](assets/state-composite.png)
+
+![](assets/state-composite-hidden-decomposition.png)
+
+
+### Ejemplo 1
+
+![](assets/state-machine-example-water.png)
+
+
+### Ejemplo 2
+
+![](assets/state-machine-example-java-6-thread-states.png)
+
+
 
 ## Diagramas de actividades
+
+![](control-nodes-overview.png)
+
+
+### Ejemplo 1
+
+![](activity-examples-online-shopping.png)
+
+
+### Ejemplo 2
+
+![](activity-examples-process-order.png)
+
+
+### Ejemplo 3
+
+![](activity-example-document-management.png)
+
+
+
+## Referencias
+
+- [Diagramas UML de ejemplo](https://uml-diagrams.org)
+- [OMG.org, donde bajar las especificaciones de UML](https://www.omg.org/spec/UML/)
+- [UML.org](http://uml.org)
