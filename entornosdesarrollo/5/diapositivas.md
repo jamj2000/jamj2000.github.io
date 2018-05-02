@@ -179,19 +179,22 @@ Los más utilizados son:
 
 ## Diagramas de paquetes
 
-![Diagrama de paquetes](package-diagram-elements.png)
+
+![Diagrama de paquetes](assets/package-diagram-elements.png)
 
 
 
 ## Diagramas de componentes
 
-![Diagrama de componentes](component-diagram-overview.png)
+
+![Diagrama de componentes](assets/component-diagram-overview.png)
 
 
 
 ## Diagramas de implementación (deployment)
 
-![Diagrama de implementación](deployment-diagram-overview-specification.png)
+
+![Diagrama de implementación](assets/deployment-diagram-overview-specification.png)
 
 
 

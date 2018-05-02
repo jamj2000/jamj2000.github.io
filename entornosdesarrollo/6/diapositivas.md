@@ -87,7 +87,7 @@ Los más utilizados son:
 
 ### Ejemplo 1
 
-![Compras on-line](assets/online-shopping-uml-sequence-diagram-example.png)
+![Compras on-line](assets/sequence-examples-online-bookshop.png)
 
 
 ### Ejemplo 2
@@ -134,22 +134,22 @@ Los más utilizados son:
 
 ## Diagramas de actividades
 
-![Diagrama de actividades](control-nodes-overview.png)
+![Diagrama de actividades](assets/control-nodes-overview.png)
 
 
 ### Ejemplo 1
 
-![Compras on-line](activity-examples-online-shopping.png)
+![Compras on-line](assets/activity-examples-online-shopping.png)
 
 
 ### Ejemplo 2
 
-![Proceso de pedido](activity-examples-process-order.png)
+![Proceso de pedido](assets/activity-examples-process-order.png)
 
 
 ### Ejemplo 3
 
-![Gestión de documentos](activity-example-document-management.png)
+![Gestión de documentos](assets/activity-example-document-management.png)
 
 
 
