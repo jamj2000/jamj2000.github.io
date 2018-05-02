@@ -59,8 +59,8 @@ Los más utilizados son:
 
 ### Elementos
 
-- Actor
-- Caso de uso
+- Actores
+- Casos de uso
 - Relaciones
 
 
