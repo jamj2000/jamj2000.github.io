@@ -46,7 +46,7 @@ En esta Unidad aprenderemos a:
 Los más utilizados son:
 
 - Diagramas de casos de uso
-- Diagramas de secuencia
+- Diagramas de secuencia (es un diagrama de interacción)
 - Diagramas de estados
 - Diagramas de actividades
 
@@ -54,82 +54,102 @@ Los más utilizados son:
 
 ## Diagramas de casos de uso
 
+![Diagrama de casos de uso](assets/use-case-diagram-elements.png)
 
 
-### Actores
+### Elementos
+
+- Actor
+- Caso de uso
+- Relaciones
 
 
-### Casos de uso
+### Ejemplo 1
+
+![Compras on-line](assets/use-case-example-online-shopping.png)
 
 
-### Relaciones
+### Ejemplo 1 (continuación)
+
+![Compras on-line - checkout](assets/use-case-example-online-shopping-checkout.png)
+
+
+### Ejemplo 2
+
+![Estado final](assets/use-case-example-hospital-reception.png)
 
 
 
 ## Diagramas de secuencia
 
-- Es uno tipo de diagrama de interacción.
+![Diagrama de secuencia](assets/sequence-diagram-overview.png)
 
 
+### Ejemplo 1
+
+![Compras on-line](assets/online-shopping-uml-sequence-diagram-example.png)
+
+
+### Ejemplo 2
+
+![Autenticación en Facebook](assets/sequence-example-facebook-authentication.png)
 
 
 
 ## Diagramas de estados
 
-
-### Inicio y fin
-
 #### Pseudoestado inicial
 
-![](assets/pseudostate-initial.png)
+![Pseudoestado inicial](assets/pseudostate-initial.png)
 
 #### Estado final
 
-![](assets/state-final.png)
+![Estado final](assets/state-final.png)
 
 
 ### Estados simples
 
-![](assets/state-simple.png)
+![Estado simple](assets/state-simple.png)
 
-![](assets/state-simple-internal-activities.png)
+![Estado simple con actividades internas](assets/state-simple-internal-activities.png)
+
 
 ### Estados compuestos
 
-![](assets/state-composite.png)
+![Estado compuesto](assets/state-composite.png)
 
-![](assets/state-composite-hidden-decomposition.png)
+![Estado compuesto con interior oculto](assets/state-composite-hidden-decomposition.png)
 
 
 ### Ejemplo 1
 
-![](assets/state-machine-example-water.png)
+![Ciclo del agua](assets/state-machine-example-water.png)
 
 
 ### Ejemplo 2
 
-![](assets/state-machine-example-java-6-thread-states.png)
+![Estados de un hilo en Java](assets/state-machine-example-java-6-thread-states.png)
 
 
 
 ## Diagramas de actividades
 
-![](control-nodes-overview.png)
+![Diagrama de actividades](control-nodes-overview.png)
 
 
 ### Ejemplo 1
 
-![](activity-examples-online-shopping.png)
+![Compras on-line](activity-examples-online-shopping.png)
 
 
 ### Ejemplo 2
 
-![](activity-examples-process-order.png)
+![Proceso de pedido](activity-examples-process-order.png)
 
 
 ### Ejemplo 3
 
-![](activity-example-document-management.png)
+![Gestión de documentos](activity-example-document-management.png)
 
 
 
