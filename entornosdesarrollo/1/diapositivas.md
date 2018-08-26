@@ -436,5 +436,5 @@ __Características__
 - Documentación disponible
 - Base de usuarios
 - Reusabilidad
-- Transportabilidad
+- Portabilidad
 - Imposición del cliente

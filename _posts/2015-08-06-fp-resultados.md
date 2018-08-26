@@ -24,4 +24,3 @@ There is a minitutorial about how it was created this application. It can be obt
 
 * [Development with Laravel 4.2](https://github.com/jamj2000/fp-resultados/blob/master/DESARROLLO.md) (in Spanish)
 
-https://github.com/iesvelez/TemarioDAW/archive/master.zip
