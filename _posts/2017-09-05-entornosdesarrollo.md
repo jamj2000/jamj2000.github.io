@@ -16,7 +16,7 @@ article: yes
 - [ED - Diseño y realización de pruebas](http://jamj2000.github.io/entornosdesarrollo/3/diapositivas). 
 - [ED - Optimización y documentación](http://jamj2000.github.io/entornosdesarrollo/4/diapositivas). 
 - [ED - Elaboración de diagramas de clases](http://jamj2000.github.io/entornosdesarrollo/5/diapositivas). 
-- [ED - Elaboración de diagramas de comportamiento](http://jamj2000.github.io(/entornosdesarrollo/6/diapositivas). 
+- [ED - Elaboración de diagramas de comportamiento](http://jamj2000.github.io/entornosdesarrollo/6/diapositivas). 
    
 # Actividades
 
