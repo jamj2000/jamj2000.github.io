@@ -9,13 +9,13 @@ element: class="fragment" data-fragment-index="1"
 -->
 ## Entornos de desarrollo
 ---
-![Entornos de desarrollo](assets/entornosdesarrollo.png)
+![Entornos de desarrollo](http://jamj2000.github.io/entornosdesarrollo/entornosdesarrollo.png)
 <small> 2017-18 - IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
 ## Entornos integrados de desarrollo
 
-[![cc-by-sa](assets/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![cc-by-sa](http://jamj2000.github.io/entornosdesarrollo/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
 ## Índice

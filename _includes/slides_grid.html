@@ -10,7 +10,7 @@
  
 
             <div class="row">
-                {% for post in site.posts %}
+                {% for post in site.posts reversed %}
                  {% if post.categories contains 'slides' %}
                  <div class="col-sm-4 slides-item">
                             <a href="{{ post.url }}" class="slides-link" data-toggle="modal">
