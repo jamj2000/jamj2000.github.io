@@ -11,19 +11,19 @@ article: yes
 ---
 # Diapositivas
 
-- [DAW - Arquitecturas web](/despliegueaplicacionesweb/1/diapositivas). 
-- [DAW - Servidores web](/despliegueaplicacionesweb/2/diapositivas). 
-- [DAW - Servidores de aplicaciones](/despliegueaplicacionesweb/3/diapositivas). 
-- [DAW - Servidores de transferencia de archivos](/despliegueaplicacionesweb/4/diapositivas). 
-- [DAW - Parámetros de red](/despliegueaplicacionesweb/5/diapositivas). 
-- [DAW - Documentación y Control de versiones](/despliegueaplicacionesweb/6/diapositivas). 
+- [DAW - Arquitecturas web](http://jamj2000.github.io/despliegueaplicacionesweb/1/diapositivas). 
+- [DAW - Servidores web](http://jamj2000.github.io/despliegueaplicacionesweb/2/diapositivas). 
+- [DAW - Servidores de aplicaciones](http://jamj2000.github.io/despliegueaplicacionesweb/3/diapositivas). 
+- [DAW - Servidores de transferencia de archivos](http://jamj2000.github.io/despliegueaplicacionesweb/4/diapositivas). 
+- [DAW - Parámetros de red](http://jamj2000.github.io/despliegueaplicacionesweb/5/diapositivas). 
+- [DAW - Documentación y Control de versiones](http://jamj2000.github.io/despliegueaplicacionesweb/6/diapositivas). 
    
 # Actividades
 
-- [DAW - Arquitecturas web](/despliegueaplicacionesweb/1/actividades). 
-- [DAW - Servidores web](/despliegueaplicacionesweb/2/actividades). 
-- [DAW - Servidores de aplicaciones](/despliegueaplicacionesweb/3/actividades). 
-- [DAW - Servidores de transferencia de archivos](/despliegueaplicacionesweb/4/actividades). 
-- [DAW - Parámetros de red](/despliegueaplicacionesweb/5/actividades). 
-- [DAW - Documentación y Control de versiones](/despliegueaplicacionesweb/6/actividades). 
+- [DAW - Arquitecturas web](http://jamj2000.github.io/despliegueaplicacionesweb/1/actividades). 
+- [DAW - Servidores web](http://jamj2000.github.io/despliegueaplicacionesweb/2/actividades). 
+- [DAW - Servidores de aplicaciones](http://jamj2000.github.io/despliegueaplicacionesweb/3/actividades). 
+- [DAW - Servidores de transferencia de archivos](http://jamj2000.github.io/despliegueaplicacionesweb/4/actividades). 
+- [DAW - Parámetros de red](http://jamj2000.github.io/despliegueaplicacionesweb/5/actividades). 
+- [DAW - Documentación y Control de versiones](http://jamj2000.github.io/despliegueaplicacionesweb/6/actividades). 
 
