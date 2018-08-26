@@ -14,6 +14,8 @@ element: class="fragment" data-fragment-index="1"
 <small> 2017-18 - IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
+
+
 ## Elementos del desarrollo de software
 
 [![cc-by-sa](http://jamj2000.github.io/entornosdesarrollo/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)

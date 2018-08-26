@@ -45,14 +45,3 @@ It's based in tutorial "Creating R packages in Windows" located in [gastonsanche
 >latest update: June 2015
 
 
-# Local deploy
-
-If you like, you can deploy this site locally into your computer.
-
-Make sure you have `ruby` in your PC. Then run de following sentences:
-
-```bash
-gem  install  bundler
-bundle  install
-bundle  exec  jekyll  serve
-```
