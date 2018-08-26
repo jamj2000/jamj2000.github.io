@@ -8,15 +8,15 @@ slide: data-background="#ff0000"
 element: class="fragment" data-fragment-index="1"
 -->
 
-## Entornos de desarrollo
+## Despliegue de aplicaciones web
 ---
-![Entornos de desarrollo](http://jamj2000.github.io/entornosdesarrollo/entornosdesarrollo.png)
+![Despliegue de aplicaciones web](http://jamj2000.github.io/entornosdesarrollo/despliegueaplicacionesweb.png)
 <small> 2017-18 - IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
 ## Elementos del desarrollo de software
 
-[![cc-by-sa](http://jamj2000.github.io/entornosdesarrollo/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![cc-by-sa](http://jamj2000.github.io/despliegueaplicacionesweb/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
 ## Índice
