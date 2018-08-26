@@ -10,7 +10,7 @@ element: class="fragment" data-fragment-index="1"
 
 ## HLC - Fullstack
 ---
-![HLC-Fullstack](http://jamj2000.github.io/hcl-fullstack/hcl-fullstack.png)
+![HLC-Fullstack](http://jamj2000.github.io/hlc-fullstack/hcl-fullstack.png)
 <small> 2018-19 - IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
