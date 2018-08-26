@@ -16,7 +16,7 @@ element: class="fragment" data-fragment-index="1"
 
 ## Introducción a Javascript
 
-[![cc-by-sa](http://jamj2000.github.io/hcl-fullstack/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![cc-by-sa](http://jamj2000.github.io/hlc-fullstack/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
 ## Índice
