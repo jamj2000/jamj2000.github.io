@@ -145,31 +145,29 @@ Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlad
 ![Modelo Vista Controlador](assets/MVC.png)
 
 
-## Single Page Application
-
-![Aplicación de Página Única](assets/SPA.png)
-
-
-## MVC vs SPA
-
-![MVC vs SPA](assets/mvc-spa.png)
-
-
-## MVC vs SPA
-
-#### MVC
+## Modelo-Vista-Controlador
 
 - se ejecuta casi toda la lógica de aplicación en el backend. 
 - el servidor sirve múltiples vistas, cada vista es una página HTML. 
 - es una aplicación de múltiples páginas (MPA). 
 
-#### SPA
+## Single Page Application
+
+![Aplicación de Página Única](assets/SPA.png)
+
+
+## Single Page Application
 
 - se ejecuta gran parte de la lógica de la aplicación en el frontend. 
 - el servidor sirve datos mediante una API web. 
 - principalmente se usan 2 formatos para el intercambio de datos:
   - **XML**
   - **JSON** 
+
+
+## MVC vs SPA
+
+![MVC vs SPA](assets/mvc-spa.png)
 
 
 
