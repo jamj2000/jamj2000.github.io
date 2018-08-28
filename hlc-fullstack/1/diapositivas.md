@@ -22,7 +22,11 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 ### Introducción
-
+### Tecnologías para el backend
+### Tecnologías para el frontend
+### MVC: Modelo-Vista-Controlador
+### SPA: Single Page Application 
+### Persistencia de los datos
 
 <!--- Note: Nota a pie de página. -->
 
@@ -33,8 +37,152 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
+- Identificar las tecnologías base de la web.
+- Identfificar los lenguajes y frameworks usados en el lado del servidor.
+- Identfificar los lenguajes y frameworks usados en el lado del cliente.
+- Reconocer el patrón MVC.
+- Distinguir entre MPA y SPA.
+- Valorar la importancia de la persistencia de los datos.
+
+
+### La base de la web
+
+![HTML CSS Javascript](assets/html-css-js.png)
+
+- **HTML**: Estructura del documento. `HTML5`. 
+- **CSS**: Formato/apariencia del documento. `CSS3`.
+- **Javascript**: Funcionalidad del documento. `ECMAScript6`.
+
+Note: Al final de línea se muestra la versión más relevante actualmente.
+
+
+### Partes de una aplicación web
+
+![Backend-Frontend](assets/frontend-backend.png)
+
+
+### Partes de una aplicación web
+
+- **Backend**: parte que se ejecuta en el servidor.
+  - Se encarga de atender las peticiones de los clientes.
+  - Suele tener soporte de almacenamiento de datos.
+  - También se denomina capa de acceso a datos
+- **Frontend**: parte que se ejecuta en el cliente.
+  - Se encarga de la experiencia del usuario (UX).
+  - Puede tener soporte de cache de datos.
+  - También se denomina capa de presentación.
+
+
+
+## Tecnologías para el backend
+
+
+### Lenguajes del lado del servidor
+
+![Backend Languages](assets/backend-languages.png)
+
+
+### Lenguajes del lado del servidor
+
+- **PHP**: PHP Hypertext Preprocessor. Uno de los lenguajes más utilizados para la creación de todo tipo de CMS.
+- **JSP**: JavaServer Pages. Es la propuesta de Java, el lenguaje clásico y uno de los más demandados.
+- **ASP**: Active Server Pages. Es el lenguaje de desarrollo web de Microsoft. 
+- **Ruby**: es un lenguaje de programación interpretado, reflexivo y orientado a objetos.
+- **Python**: es un lenguaje de programación multiparadigma cuya filosofía hace hincapié en una sintaxis que favorezca un código legible. 
+- **Javascript (Node.js)**: cada vez más popular debido a que usa el mismo lenguaje que en el lado cliente.
+
+
+### Frameworks del lado servidor 
+
+![Backend Frameworks](assets/backend-frameworks.png)
+
+- PHP: **Laravel**, **Symphony**.
+- JSP: **Spring**, **Struts**.
+- ASP: **ASP.NET**, **ASP.NET Core**.
+- Ruby: **Ruby on rails**.
+- Python: **Django**.
+- Node.js: **Express**. 
+
+Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador 
+
+
+### Resumen
+
+![Desarrollo Backend](assets/back-end-development.png)
+
+
+
+## Tecnologías para el frontend
+
+
+### Lenguajes del lado del cliente
+
+- **Javascript**: 
+
+![Desarrollo Backend](assets/javascript.png)
+
+
+### Frameworks del lado cliente 
+
+- **React**
+- **Angular**
+- **Vue**
+
+![Desarrollo Backend](assets/react-angular-vue.png)
+
+
+### Resumen
+
+![Desarrollo Frontend](assets/front-end-development.png)
+
+
+
+## Modelo-Vista-Controlador
+
+![Modelo Vista Controlador](assets/MVC.png)
+
+
+## Single Page Application
+
+![Aplicación de Página Única](assets/SPA.png)
+
+
+## MVC vs SPA
+
+![MVC vs SPA](assets/mvc-spa.png)
+
+
+## MVC vs SPA
+
+- MVC: se ejecuta la mayor parte de la lógica de aplicación en el backend. El servidor sirve múltiples vistas.
+- SPA: se ejecuta parte de la lógica de la aplicación en el frontend. El servidor sirve datos mediante una API web. Principalmente se usan 2 formatos para el intercambio de datos:
+  - XML
+  - JSON 
+
+
+
+## Persistencia de los datos
+
+- Uso de archivos
+- Bases de datos relacionales
+  - Subtipo importante: BBDD objeto-relacionales.
+- Bases de datos no relacionales
+  - Subtipo importante: BBDD noSQL
+ 
+
+### Bases de datos relacionales
+
+- SQL Server 
+- Oracle
+- MySQL
+- MariaDB
+- PostgreSQL
+- SQLite
+
+
+### Bases de datos no relacionales (noSQL)
+
+- MongoDB
+- Redis
+- Cassandra
 
