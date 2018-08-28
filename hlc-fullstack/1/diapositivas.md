@@ -91,6 +91,7 @@ Note: Al final de línea se muestra la versión más relevante actualmente.
 - **Python**: es un lenguaje de programación multiparadigma que hace hincapié en el código legible. 
 - **Javascript (Node.js)**: cada vez más popular puesto que se usa también en el lado cliente.
 
+
 ### Frameworks del lado servidor 
 
 ![Backend Frameworks](assets/backend-frameworks.png)
@@ -105,7 +106,7 @@ Note: Al final de línea se muestra la versión más relevante actualmente.
 - Python: **Django**.
 - Node.js: **Express**. 
 
-Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador 
+https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador 
 
 
 ### Resumen
@@ -149,6 +150,7 @@ Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlad
 - se ejecuta casi toda la lógica de aplicación en el backend. 
 - el servidor sirve múltiples vistas, cada vista es una página HTML. 
 - es una aplicación de múltiples páginas (MPA). 
+
 
 ## Single Page Application
 
@@ -205,5 +207,3 @@ Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlad
 - MongoDB
 - Redis
 - CouchDB
-
-
