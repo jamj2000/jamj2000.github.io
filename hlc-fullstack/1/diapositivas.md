@@ -85,16 +85,19 @@ Note: Al final de línea se muestra la versión más relevante actualmente.
 ### Lenguajes del lado del servidor
 
 - **PHP**: PHP Hypertext Preprocessor. Uno de los lenguajes más utilizados para la creación de todo tipo de CMS.
-- **JSP**: JavaServer Pages. Es la propuesta de Java, el lenguaje clásico y uno de los más demandados.
+- **JSP**: JavaServer Pages. Es la propuesta de Java, y uno de los más demandados.
 - **ASP**: Active Server Pages. Es el lenguaje de desarrollo web de Microsoft. 
 - **Ruby**: es un lenguaje de programación interpretado, reflexivo y orientado a objetos.
-- **Python**: es un lenguaje de programación multiparadigma cuya filosofía hace hincapié en una sintaxis que favorezca un código legible. 
-- **Javascript (Node.js)**: cada vez más popular debido a que usa el mismo lenguaje que en el lado cliente.
+- **Python**: es un lenguaje de programación multiparadigma que hace hincapié en el código legible. 
+- **Javascript (Node.js)**: cada vez más popular puesto que usa el mismo lenguaje que en el lado cliente.
 
 
 ### Frameworks del lado servidor 
 
 ![Backend Frameworks](assets/backend-frameworks.png)
+
+
+### Frameworks del lado servidor 
 
 - PHP: **Laravel**, **Symphony**.
 - JSP: **Spring**, **Struts**.
@@ -177,7 +180,7 @@ Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlad
   - Subtipo importante: BBDD objeto-relacionales.
 - Bases de datos no relacionales
   - Subtipo importante: BBDD noSQL
- 
+
 
 ### Bases de datos relacionales
 
