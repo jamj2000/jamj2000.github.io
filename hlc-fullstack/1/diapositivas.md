@@ -154,10 +154,19 @@ Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlad
 
 ## MVC vs SPA
 
-- MVC: se ejecuta la mayor parte de la lógica de aplicación en el backend. El servidor sirve múltiples vistas.
-- SPA: se ejecuta parte de la lógica de la aplicación en el frontend. El servidor sirve datos mediante una API web. Principalmente se usan 2 formatos para el intercambio de datos:
-  - XML
-  - JSON 
+#### MVC
+
+- se ejecuta casi toda la lógica de aplicación en el backend. 
+- el servidor sirve múltiples vistas, cada vista es una página HTML. 
+- es una aplicación de múltiples páginas (MPA). 
+
+#### SPA
+
+- se ejecuta gran parte de la lógica de la aplicación en el frontend. 
+- el servidor sirve datos mediante una API web. 
+- principalmente se usan 2 formatos para el intercambio de datos:
+  - **XML**
+  - **JSON** 
 
 
 
@@ -172,6 +181,11 @@ Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlad
 
 ### Bases de datos relacionales
 
+![BBDD relacionales](assets/SQL.png)
+
+
+### Bases de datos relacionales
+
 - SQL Server 
 - Oracle
 - MySQL
@@ -182,7 +196,14 @@ Referencia: https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlad
 
 ### Bases de datos no relacionales (noSQL)
 
+![BBDD relacionales](assets/noSQL.png)
+
+
+### Bases de datos no relacionales (noSQL)
+
+- Cassandra
 - MongoDB
 - Redis
-- Cassandra
+- CouchDB
+
 
