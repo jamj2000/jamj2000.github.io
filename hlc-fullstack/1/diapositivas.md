@@ -176,9 +176,9 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 
 - Uso de archivos
 - Bases de datos relacionales
-  - Subtipo importante: BBDD objeto-relacionales.
+  - Subtipo importante: **BBDD objeto-relacionales**.
 - Bases de datos no relacionales
-  - Subtipo importante: BBDD noSQL
+  - Subtipo importante: **BBDD noSQL**.
 
 
 ### Bases de datos relacionales
