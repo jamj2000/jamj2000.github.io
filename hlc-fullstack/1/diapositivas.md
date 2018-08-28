@@ -89,8 +89,7 @@ Note: Al final de línea se muestra la versión más relevante actualmente.
 - **ASP**: Active Server Pages. Es el lenguaje de desarrollo web de Microsoft. 
 - **Ruby**: es un lenguaje de programación interpretado, reflexivo y orientado a objetos.
 - **Python**: es un lenguaje de programación multiparadigma que hace hincapié en el código legible. 
-- **Javascript (Node.js)**: cada vez más popular puesto que usa el mismo lenguaje que en el lado cliente.
-
+- **Javascript (Node.js)**: cada vez más popular puesto que se usa también en el lado cliente.
 
 ### Frameworks del lado servidor 
 
