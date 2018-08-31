@@ -33,8 +33,9 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
+- Instalar y configurar el entorno de desarrollo.
+- Gestionar las dependencias mediante el uso del gestor de paquetes.
+- Elaborar una API RESTful.
+- Hacer peticiones a la API desde distintos clientes.
+- Definir el modelo de datos y acceder a la base de datos desde el código de la aplicación.
 

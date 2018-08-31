@@ -33,8 +33,8 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
+- Identificar los principales archivos de configuración y de bibliotecas compartidas.
+- Realizar los ajustes necesarios para el despliegue de aplicaciones sobre el servidor.
+- Realizar pruebas de funcionamiento y rendimiento de la aplicación Web desplegada.
+- Elaborar documentación relativa al despliegue de aplicaciones sobre el servidor de aplicaciones.
 

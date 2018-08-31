@@ -33,8 +33,9 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
+- Instalar el sistema gestor de bases de datos noSQL.
+- Gestionar el sistema gestor de bases de datos noSQL.
+- Distinguir los conceptos de base de datos, colección y documento.
+- Realizar consultas de lectura y modificación de datos.
+- Realizar y restaurar copias de seguridad de los datos.
 

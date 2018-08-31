@@ -33,8 +33,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
-
+- Identificar diferentes herramientas de generación de documentación.
+- Utilizar diferentes formatos para la documentación.
+- Utilizar herramientas colaborativas para la elaboración y mantenimiento de la documentación.
+- Instalar, configurar y utilizar un sistema de control de versiones.

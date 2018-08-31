@@ -33,8 +33,8 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
+- Identificar los tipos básicos y los conceptos básicos de la programación funcional.
+- Trabajar y realizar operaciones con arrays y objetos.
+- Trabajar con el formato de intercambio de datos JSON.
+- Hacer uso de AJAX.
 

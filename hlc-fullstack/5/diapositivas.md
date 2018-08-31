@@ -33,8 +33,8 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
+- Utilizar las nuevas características de ECMAScript6. 
+- Manipular el DOM.
+- Gestionar distintos tipos de eventos.
+- Realizar peticiones asíncronas de datos.
 

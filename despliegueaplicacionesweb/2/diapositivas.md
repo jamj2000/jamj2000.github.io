@@ -33,8 +33,9 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
+- Reconocer los parámetros de administración más importantes del servidor Web.
+- Crear y configurar sitios virtuales.
+- Establecer mecanismos para asegurar las comunicaciones entre el cliente y el servidor.
+- Realizar los ajustes necesarios para la implantación de aplicaciones en el servidor Web.
 
+ 

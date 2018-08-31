@@ -33,8 +33,9 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Reconocer la relación de los programas con los componentes del sistema informático.
-- Diferenciar código fuente, objeto y ejecutable.
-- Identificar las fases de desarrollo de una aplicación informática.
-- Clasificar los lenguajes de programación.
+- Instalar y configurar servidores de transferencia de archivos.
+- Crear usuarios y grupos para el acceso remoto al servidor.
+- Realizar pruebas con clientes en línea de comandos y clientes en modo gráfico.
+- Utilizar el protocolo seguro de transferencia de archivos..
+
 
