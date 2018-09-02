@@ -44,7 +44,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### ¿Qué es Internet?
 
-![Internet](assets/internet.png)
+![Internet](assets/internet.jpg)
 
 
 ### ¿Qué es Internet?
@@ -109,6 +109,7 @@ element: class="fragment" data-fragment-index="1"
 GET /index.html HTTP/1.1
 Host: www.example.com
 ```
+
 
 ### Ejemplo de respuesta
 
