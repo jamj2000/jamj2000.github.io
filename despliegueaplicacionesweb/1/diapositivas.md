@@ -191,7 +191,7 @@ Server          | Server: Apache/2.4.1 (Unix)   | Servidor web.
 Status          | Status: 200 OK                | Código de estado.
 ...             | ...                           | ...
 
- 
+
 ### Tipos MIME 
 **Multipurpose Internet Mail Extension**
 
@@ -263,6 +263,7 @@ video/H264            | Video con codificación H.264
 - nginx
 - IIS (Internet Information Server de Microsoft)
 - Tomcat (servidor orientado a desarrollo Java)
+
 
 
 ## Despliegue en Internet
