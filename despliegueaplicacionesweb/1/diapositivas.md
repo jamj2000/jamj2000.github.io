@@ -275,10 +275,10 @@ video/H264            | Video con codificación H.264
 
 ### Servidores web
 
-- Apache
-- nginx
-- IIS (Internet Information Server de Microsoft)
-- Tomcat (servidor orientado a desarrollo Java)
+- **Apache**
+- **nginx**
+- **IIS** (Internet Information Server de Microsoft)
+- **Tomcat** (servidor orientado a desarrollo Java)
 
 
 
