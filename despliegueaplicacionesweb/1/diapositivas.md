@@ -177,8 +177,8 @@ Accept-Encoding	| Accept-Encoding: gzip, deflate| Lista de codificaciones (compr
  Cabecera       |     Ejemplo                   |  Descripción 
 ----------------|-------------------------------|--------------
 Accept-Language	| Accept-Language: en-US	    | Lista de idiomas admitidos como respuesta.
-Host            | Host: en.wikipedia.org:8080   | El nombre de dominio del servidor (y puerto si es distinto de 80)
-User-Agent      |User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0 | Agente del usuario.
+Host            | Host: en.wikipedia.org:8080   | Nombre de dominio del servidor (:puerto si es distinto de 80)
+User-Agent      |User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) | Agente del usuario.
 ...             | ...                           | ...
 
 
@@ -279,6 +279,12 @@ video/H264            | Video con codificación H.264
 - **nginx**
 - **IIS** (Internet Information Server de Microsoft)
 - **Tomcat** (servidor orientado a desarrollo Java)
+
+
+### Apache
+#### Directorios y archivos de configuración
+
+![Apache2](assets/apache2-files.png)
 
 
 
