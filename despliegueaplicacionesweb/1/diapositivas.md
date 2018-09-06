@@ -291,6 +291,12 @@ video/H264            | Video con codificación H.264
 ## Despliegue en Internet
 
 
+### Escalabilidad
+
+- **Vertical** -> Servidores más potentes.  
+- **Horizontal** -> Más servidores.
+
+
 ### Tipos de servidores
 #### Evolución
 
