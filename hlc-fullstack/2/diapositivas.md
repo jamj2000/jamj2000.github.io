@@ -77,7 +77,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### Instalación
 
-#### Ubuntu 18.04:
+#### Ubuntu 18.04
 
 ```bash
 apt update 
@@ -87,7 +87,7 @@ apt install mongodb  # se instala la versión 3.6.3
 
 ### Instalación
 
-### Ubuntu 16.04 y 14.04:
+#### Ubuntu 16.04 y 14.04
 
 - No instalaremos el paquete que viene en los repositorios.
 - Se instalará el paquete mongodb-org, con un versión más actualizada.
@@ -128,7 +128,7 @@ connecting to: test
 MongoDB shell version: 3.2.21
 ```
 
-**mongo  *nombre_bd***
+**mongo   *nombre_bd***
 
 ```bash
 $ mongo local
@@ -165,7 +165,7 @@ switched to db prueba
 **db**
 
 ```bash
-> db    //Esta variable contine el nombre de la BD en uso
+> db    //Esta variable contiene el nombre de la BD en uso
 prueba
 ```
 
@@ -203,7 +203,7 @@ Campo            | Propiedad
 - De ahora en adelante, usaremos una BD llamada **agenda**.
 - Dicha BD almacenará documentos de **personas**.
 
-```mongo
+```bash
 > use agenda
 switched to db agenda
 ```
@@ -257,7 +257,7 @@ DELETE    | DELETE      | remove
 
 ### Insertar documentos
 
-**db.*nombre_coleccion*.insert ( ... )**
+**db.*nombre_colección*.insert ( ... )**
 
 Si la colección no existe, entonces se crea.
 
@@ -273,7 +273,7 @@ WriteResult({ "nInserted" : 1 })
 
 ### Insertar varios documentos de una vez
 
-**`db.nombre_coleccion.insert ( ... )`**
+**db.*nombre_colección*.insert ( ... )`**
 
 En lugar de insertar un sólo documento, insertamos un array.
 
@@ -286,7 +286,7 @@ En lugar de insertar un sólo documento, insertamos un array.
 
 ### Listar documentos 
 
-**`db.nombre_coleccion.find( ... )`**
+**db.*nombre_colección*.find( ... )**
 
 A cada elemento insertado se le asigna de forma automática un identificador único.
 
@@ -302,7 +302,7 @@ A cada elemento insertado se le asigna de forma automática un identificador ún
 
 ### Ver un solo documento
 
-**`db.nombre_coleccion.findOne( ... )`**
+**db.*nombre_colección*.findOne( ... )**
 
 ```bash
 > db.personas.findOne()
