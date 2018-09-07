@@ -77,37 +77,40 @@ element: class="fragment" data-fragment-index="1"
 
 ### Instalación
 
-- En Ubuntu 18.04:
-  ```bash
-  apt update 
-  apt install mongodb  # se instala la versión 3.6.3
-  ``` 
+#### Ubuntu 18.04:
+
+```bash
+apt update 
+apt install mongodb  # se instala la versión 3.6.3
+``` 
 
 
 ### Instalación
 
-- En distribuciones más antiguas, la versión que viene en los repositorios está anticuada.
-- En Ubuntu 16.04 y 14.04:
-  - No instalaremos el paquete que viene en los repositorios.
-  - Sino que seguiremos los pasos indicados en https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/.
-  - Se instalará el paquete mongodb-org, con un versión más actualizada.
+### Ubuntu 16.04 y 14.04:
+
+- No instalaremos el paquete que viene en los repositorios.
+- Se instalará el paquete mongodb-org, con un versión más actualizada.
+- Seguiremos los pasos indicados en https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/.
 
 
 ### Servicio
 
-- Ver estado del servicio: `systemctl  status  mongodb`
-- Iniciar el servicio: `systemctl  start  mongodb`
-- Reiniciar el servicio: `systemctl  restart  mongodb`
-- Parar el servicio: `systemctl  stop  mongodb`
+```bash
+systemctl  status   mongodb   # Estado 
+systemctl  start    mongodb   # Iniciar
+systemctl  restart  mongodb   # Reiniciar
+systemctl  stop     mongodb   # Parar
 
-- Habilitar en el inicio: `systemctl  enable  mongodb`
-- Deshabilitar en el inicio: `systemctl  disable  mongodb`
+systemctl  enable   mongodb   # Habilitar
+systemctl  disable  mongodb   # Deshabilitar
+```
 
 
 ### Servidor y cliente 
 
-- Servidor: `mongod`
-- Cliente: `mongo`
+- **mongod**: servidor
+- **mongo**: cliente
 
 ```bash
 mongod  --version
@@ -117,66 +120,64 @@ mongo   --version
 
 ### Conectar al gestor de BBDD
 
-**`mongo`**
-**`mongo  nombre_bd`**
+**mongo**
 
-- Ejemplo 1:
-  ```bash
-  $ mongo 
-  connecting to: test
-  MongoDB shell version: 3.2.21
-  ```
-- Ejemplo 2:
-  ```bash
-  $ mongo local
-  connecting to: local
-  MongoDB shell version: 3.2.21
-  ```
+```bash
+$ mongo 
+connecting to: test
+MongoDB shell version: 3.2.21
+```
+
+**mongo  *nombre_bd***
+
+```bash
+$ mongo local
+connecting to: local
+MongoDB shell version: 3.2.21
+```
 
 
 ### Listar BBDD
 
-**`show databases`**
+**show databases**
 
-  ```bash
-  > show databases;
-  admin  0.000GB
-  local  0.000GB
-  ```
+```bash
+> show databases;
+admin  0.000GB
+local  0.000GB
+```
 
 
 ### Usar/Crear una BD
 
-**`use nombre_bd`**
+**use *nombre_bd***
 
-- Si la BD no existe, entonces se crea.
-- Ejemplo:
-  ```bash
-  > use prueba
-  switched to db prueba
-  ```
+Si la BD no existe, entonces se crea.
+
+```bash
+> use prueba
+switched to db prueba
+```
 
 
 ### Ver la BD en uso
 
-**`db`**
+**db**
 
-- Ejemplo:
-  ```bash
-  > db    //la variable db contiene el nombre de la BD en uso
-  prueba
-  ```
+```bash
+> db    //Esta variable contine el nombre de la BD en uso
+prueba
+```
 
 
 ### Eliminar una BD
 
-**`db.dropDatabase()`**
+**db.dropDatabase()**
 
-- Ejemplo:
-  ```bash
-  > db.dropDatabase()
-  { "ok" : 1 }
-  ```
+```bash
+> db.dropDatabase()
+{ "ok" : 1 }
+```
 
 
 ### Colecciones y Documentos
@@ -199,23 +200,26 @@ Campo            | Propiedad
 
 ### BD de pruebas
 
-- De ahora en adelante, usaremos una BD llamada `agenda`.
-- Dicha BD almacenará documentos de personas.
-- Para crear dicha BD escribiremos `use agenda`.
+- De ahora en adelante, usaremos una BD llamada **agenda**.
+- Dicha BD almacenará documentos de **personas**.
+
+```mongo
+> use agenda
+switched to db agenda
+```
 
 
 ### Listar colecciones de la BD en uso
 
-**`show collections`**
+**show collections**
 
-- Ejemplo
-  ```bash
-  > show collections
-  personas
-  tareas
-  ```
+```bash
+> show collections
+personas
+tareas
+```
 
-Note: 
+Note: Aunque en el ejemplo aparecen 2 colecciones, a tí no debería aparecerte ninguna todavía.  
 
 
 ## Operaciones básicas
@@ -241,7 +245,7 @@ DELETE    | DELETE      | remove
 
 ### Crear objetos (documentos)
 
-```console
+```bash
 > var persona1 = {nombre: "Mario", apellido: "Neta"}
 > var persona2 = {nombre: "Pere", apellido: "Gil", pais: "España"}
 > persona1
@@ -253,54 +257,54 @@ DELETE    | DELETE      | remove
 
 ### Insertar documentos
 
-`db.nombre_coleccion.insert ( ... )`
+**db.*nombre_coleccion*.insert ( ... )**
 
-- Si la colección no existe, entonces se crea.
-- Ejemplo:
-  ```bash
-  > db.personas.insert(persona1)
-  WriteResult({ "nInserted" : 1 })
-  > db.personas.insert(persona2)
-  WriteResult({ "nInserted" : 1 })
-  > db.personas.insert({nombre: "Elba", apellido: "Lazo", edad: 24})
-  WriteResult({ "nInserted" : 1 })
-  ```
+Si la colección no existe, entonces se crea.
+
+```bash
+> db.personas.insert(persona1)
+WriteResult({ "nInserted" : 1 })
+> db.personas.insert(persona2)
+WriteResult({ "nInserted" : 1 })
+> db.personas.insert({nombre: "Elba", apellido: "Lazo", edad: 24})
+WriteResult({ "nInserted" : 1 })
+```
 
 
-### Insertar varios documentos al mismo tiempo
+### Insertar varios documentos de una vez
 
-`db.nombre_coleccion.insert ( ... )`
+**`db.nombre_coleccion.insert ( ... )`**
 
-- En lugar de insertar un sólo documento, insertamos un array.
-- Ejemplo:
-  ```console
-  > var p1 = { nombre: "Lola", apellido: "Mento", edad: 35 }
-  > var p2 = { nombre: "Encarna", apellido: "Vales", edad: 17, pais: "USA" }
-  > db.personas.insert( [p1, p2] )
-  ```
+En lugar de insertar un sólo documento, insertamos un array.
+
+```bash
+> var p1 = { nombre: "Lola", apellido: "Mento", edad: 35 }
+> var p2 = { nombre: "Encarna", apellido: "Vales", edad: 17, pais: "USA" }
+> db.personas.insert( [p1, p2] )
+```
 
 
 ### Listar documentos 
 
 **`db.nombre_coleccion.find( ... )`**
 
-- A cada elemento insertado se le asigna de forma automática un identificador único.
-- Ejemplo:
-  ```console
-  > db.personas.find()  // equivalente a `SELECT * FROM personas` en BD relacional
-  { "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-  { "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
-  { "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-  { "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
-  { "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
-  ```
+A cada elemento insertado se le asigna de forma automática un identificador único.
+
+```bash
+> db.personas.find()  // equivalente a `SELECT * FROM personas` en BD relacional
+{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
+{ "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
+{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
+{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
+{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
+```
 
 
 ### Ver un solo documento
 
 **`db.nombre_coleccion.findOne( ... )`**
 
-```console
+```bash
 > db.personas.findOne()
 {
 	"_id" : ObjectId("58937be7a70c3985de49a38f"),
@@ -309,9 +313,10 @@ DELETE    | DELETE      | remove
 }
 ```
 
+
 ### Búsqueda condicional I
 
-```console
+```bash
 > db.personas.find({nombre: "Elba"})
 { "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
 > 
@@ -319,11 +324,12 @@ DELETE    | DELETE      | remove
 { "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
 ```
 
+
 ### Búsqueda condicional II
 
 `$ne` significa *not equal*, `$gt` es *greater than* y `$lt` es *less than*.
 
-```console
+```bash
 > db.personas.find( { pais: {$ne: "España"} } )
 { "_id" : ObjectId("5b91a55cc09f7d7243295719"), "nombre" : "Mario", "apellido" : "Neta" }
 { "_id" : ObjectId("5b91a5abc09f7d724329571c"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
@@ -343,11 +349,11 @@ DELETE    | DELETE      | remove
 
 Vamos a mostrar un listado de los personas solo con los campos `nombre` y `edad`.
 
-```console
+```bash
 > db.personas.find({}, {nombre: 1, edad: 1, _id:0})
 { "nombre" : "Mario" }
+{ "nombre" : "Pere" }
 { "nombre" : "Elba", "edad" : 24 }
-{ "nombre" : "Salva", "edad" : 35 }
 { "nombre" : "Lola", "edad": 35 }
 { "nombre" : "Encarna", "edad": 17 } 
 ```
@@ -355,38 +361,31 @@ Vamos a mostrar un listado de los personas solo con los campos `nombre` y `edad`
 
 ### Contar documentos
 
-```console
+```bash
 > db.personas.find()
 { "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
+{ "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
 { "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 19, "pais" : "USA" }
+{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
+{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
 > 
 > db.personas.find().count()
-4
+5
 ```
+
 
 ### Consultas ordenadas
 
-El valor `1` se utiliza para realizar una consulta en orden ascendente y el `-1` para descendente. Con `limit()` se puede limitar el resultado a un número máximo de documentos.
+El valor `1` se utiliza para realizar una consulta en orden ascendente y el `-1` para descendente. 
 
-```console
-> db.personas.find().sort( {apellido: 1} )
+Con `limit()` se puede limitar el resultado a un número máximo de documentos.
+
+```bash
+> db.personas.find().sort( {apellido: -1} ).limit(4)
+{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
+{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
+{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
 { "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 19, "pais" : "USA" }
-> 
-> db.personas.find().sort( {apellido: -1} )
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 19, "pais" : "USA" }
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-> 
-> db.personas.find().sort( {apellido: -1} ).limit(3)
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 19, "pais" : "USA" }
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
 ```
 
 
@@ -394,133 +393,23 @@ El valor `1` se utiliza para realizar una consulta en orden ascendente y el `-1`
 
 La función `skip()` permite "saltar" un número determinado de documentos de la consulta.
 
-```console
-> db.personas.find().sort( {apellido: 1} ).limit(2)
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-> 
-> db.personas.find().sort( {apellido: 1} ).skip(1).limit(2)
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
+```bash
+> db.personas.find().sort( {apellido: -1} ).skip(1).limit(2)
+{ "_id" : ObjectId("5b92dbe0b55c8a3a0d8651cf"), "nombre" : "Mario", "apellido" : "Neta" }
+{ "_id" : ObjectId("5b92dc2b1ab0370cf4d942d9"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
 ```
+
 
 ### La función `size()`
 
 A diferencia de `count()`, el método `size()` ofrece la cuenta de la consulta una vez filtrada con `skip()`, `limit()`, etc.
 
-```console
+```bash
 > db.personas.find().sort( {apellido: 1} ).skip(1).limit(2).count()
-4
+5
 > 
 > db.personas.find().sort( {apellido: 1} ).skip(1).limit(2).size()
 2
-```
-
-### Agrupación de documentos
-
-Antes de hacer pruebas con la agrupación de documentos, vamos a meter más datos en nuestra colección de personas.
-
-```console
-> db.personas.insert({nombre: "Elsa", apellido: "Pato", edad: 52, pais: "Portugal"})
-WriteResult({ "nInserted" : 1 })
-> db.personas.insert({nombre: "Armando", apellido: "Bronca", edad: 22, pais: "Francia"})
-WriteResult({ "nInserted" : 1 })
-> db.personas.insert({nombre: "Leandro", apellido: "Gado", edad: 48, pais: "Venezuela"})
-WriteResult({ "nInserted" : 1 })
-> db.personas.insert({nombre: "Olga", apellido: "Seosa", edad: 29, pais: "España"})
-WriteResult({ "nInserted" : 1 })
-> db.personas.insert({nombre: "Elena", apellido: "Nito", edad: 30, pais: "USA"})
-WriteResult({ "nInserted" : 1 })
-> 
-> db.personas.find()
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
-{ "_id" : ObjectId("5895b74415c260814ec7f139"), "nombre" : "Elsa", "apellido" : "Pato", "edad" : 52, "pais" : "Portugal" }
-{ "_id" : ObjectId("5895b77215c260814ec7f13a"), "nombre" : "Armando", "apellido" : "Bronca", "edad" : 22, "pais" : "Francia" }
-{ "_id" : ObjectId("5895b7d915c260814ec7f13b"), "nombre" : "Leandro", "apellido" : "Gado", "edad" : 48, "pais" : "Venezuela" }
-{ "_id" : ObjectId("5895b88815c260814ec7f13c"), "nombre" : "Olga", "apellido" : "Seosa", "edad" : 29, "pais" : "España" }
-{ "_id" : ObjectId("5895b8ab15c260814ec7f13d"), "nombre" : "Elena", "apellido" : "Nito", "edad" : 30, "pais" : "USA" }
-```
-
-Vamos a mostrar todos los países de donde son los personas.
-
-```console
-> db.personas.aggregate( [ {$group: {_id: "$pais"}} ] )
-{ "_id" : "Venezuela" }
-{ "_id" : "Francia" }
-{ "_id" : null }
-{ "_id" : "España" }
-{ "_id" : "USA" }
-{ "_id" : "Portugal" }
-```
-
-Ahora igual pero diciendo cuántas veces se repite cada pais.
-
-```console
-> db.personas.aggregate( [ {$group: {_id: "$pais", repetidos: {$sum: 1}}} ] )
-{ "_id" : "Venezuela", "repetidos" : 1 }
-{ "_id" : "Francia", "repetidos" : 1 }
-{ "_id" : null, "repetidos" : 3 }
-{ "_id" : "España", "repetidos" : 2 }
-{ "_id" : "USA", "repetidos" : 2 }
-{ "_id" : "Portugal", "repetidos" : 1 }
-```
-
-Igual y además con la media de edad por pais.
-
-```console
-> db.personas.aggregate( [ {$group: {_id: "$pais", repetidos: {$sum: 1}, "edad media": {$avg: "$edad"}}} ] )
-{ "_id" : "Venezuela", "repetidos" : 1, "edad media" : 48 }
-{ "_id" : "Francia", "repetidos" : 1, "edad media" : 22 }
-{ "_id" : null, "repetidos" : 3, "edad media" : 29.5 }
-{ "_id" : "España", "repetidos" : 2, "edad media" : 29 }
-{ "_id" : "USA", "repetidos" : 2, "edad media" : 23.5 }
-{ "_id" : "Portugal", "repetidos" : 1, "edad media" : 52 }
-```
-
-Igual que todo lo anterior y además excluyendo los valores `null` para el atributo `pais`.
-
-```console
-> db.personas.aggregate( [ {$match: {pais: {$ne: null}}}, {$group: {_id: "$pais", repetidos: {$sum: 1}, "edad media": {$avg: "$edad"}}} ])
-{ "_id" : "Venezuela", "repetidos" : 1, "edad media" : 48 }
-{ "_id" : "España", "repetidos" : 2, "edad media" : 29 }
-{ "_id" : "USA", "repetidos" : 2, "edad media" : 23.5 }
-{ "_id" : "Portugal", "repetidos" : 1, "edad media" : 52 }
-{ "_id" : "Francia", "repetidos" : 1, "edad media" : 22 }
-```
-
-
-### Consultas con expresiones regulares
-
-Vamos a mostrar todos los personas cuyos apellidos contienen la letra "e".
-
-```console
-> db.personas.find( {apellido: /e/} )
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
-{ "_id" : ObjectId("5895b88815c260814ec7f13c"), "nombre" : "Olga", "apellido" : "Seosa", "edad" : 29, "pais" : "España" }
-```
-
-personas cuyo nombre termina con la cadena "na".
-
-```console
-> db.personas.find( {nombre: /na$/} )
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
-{ "_id" : ObjectId("5895b8ab15c260814ec7f13d"), "nombre" : "Elena", "apellido" : "Nito", "edad" : 30, "pais" : "USA" }
-```
-
-personas cuyo nombre comienza por "El".
-
-```console
-> db.personas.find( {nombre: /^El/} )
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("5895b74415c260814ec7f139"), "nombre" : "Elsa", "apellido" : "Pato", "edad" : 52, "pais" : "Portugal" }
-{ "_id" : ObjectId("5895b8ab15c260814ec7f13d"), "nombre" : "Elena", "apellido" : "Nito", "edad" : 30, "pais" : "USA" }
-> 
 ```
 
 
@@ -528,7 +417,7 @@ personas cuyo nombre comienza por "El".
 
 Vamos a modificar la edad de la persona cuyo nombre es `Encarna`.
 
-```console
+```bash
 > p = db.personas.findOne({nombre: "Encarna"})
 {
 	"_id" : ObjectId("58938745a70c3985de49a393"),
@@ -550,7 +439,7 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 
 De nuevo vamos a modificar la edad de `Encarna`.
 
-```console
+```bash
 > db.personas.update( {nombre: "Encarna"}, {$set: {edad: 19} } )
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 > db.personas.find({nombre: "Encarna"})
@@ -560,7 +449,7 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 
 ### Edición de un documento con `save()`
 
-```console
+```bash
 > var persona = db.personas.findOne({ "_id" : ObjectId("58938745a70c3985de49a392")})
 > persona
 {
@@ -588,21 +477,14 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 { "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
 ```
 
-:warning: Cuidado al guardar el documento en una variable. Hay que usar `findOne()` ya que utilizando `find()` el valor de la variable se pierde. Otra opción es volcar el resultado de la consulta en un array con `find().toArray`.
+Note: Cuidado al guardar el documento en una variable. Hay que usar `findOne()` ya que utilizando `find()` el valor de la variable se pierde. Otra opción es volcar el resultado de la consulta en un array con `find().toArray`.
 
 
 ### Eliminar documentos
 
-Vamos a eliminar todos los personas cuyo atributo `pais` sea `España`.
+Vamos a eliminar todas las personas cuyo atributo `pais` sea `España`.
 
-```console
-> db.personas.find()
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 19, "pais" : "USA" }
-> 
+```bash
 > db.personas.remove({pais: "España"})
 WriteResult({ "nRemoved" : 1 })
 > 
@@ -611,7 +493,6 @@ WriteResult({ "nRemoved" : 1 })
 { "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
 { "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
 { "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 19, "pais" : "USA" }
-
 ```
 
 
@@ -620,27 +501,21 @@ WriteResult({ "nRemoved" : 1 })
 
 ### Realizar copia de seguridad de una BD
 
-**`mongodump  -d  nombre_bd`**
+**mongodump  -d  *nombre_bd***
 
-- El comando `mongodump` se ejecuta desde el terminal de Linux, no desde la *shell* de MongoDB.
-- Dentro de `dump` se crea otro directorio con el nombre de la base de datos, en este caso `agenda`. 
-- Dentro de este último directorio se guardan las colecciones de la base de datos en formato BSON. 
-- Ejemplo:
-  ```console
-  $ mongodump -d agenda
-  ```
+- Se ejecuta desde el terminal de Linux, no desde la *shell* de MongoDB.
+- Se crea directorio `dump` y dentro el diretorio *nombre_bd*, en este caso `agenda`. 
+- Las colecciones de la base de datos en formato BSON. 
+
+```bash
+mongodump  -d  agenda
+```
+
 
 ### Restaurar copia de seguridad de una BD
  
-**`mongorestore  -d  nombre_bd  dump/nombre_bd`** 
+**mongorestore  -d  *nombre_bd*  dump/*nombre_bd*** 
 
-- Ejemplo:
-  ```console
-  $ mongorestore -d agenda dump/agenda
-  ```
-
-
-
-
-
-
+```bash
+mongorestore  -d  agenda  dump/agenda
+```
