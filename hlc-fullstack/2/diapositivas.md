@@ -222,6 +222,7 @@ tareas
 Note: Aunque en el ejemplo aparecen 2 colecciones, a tí no debería aparecerte ninguna todavía.  
 
 
+
 ## Operaciones básicas
 
 
@@ -263,17 +264,14 @@ Si la colección no existe, entonces se crea.
 
 ```bash
 > db.personas.insert(persona1)
-WriteResult({ "nInserted" : 1 })
 > db.personas.insert(persona2)
-WriteResult({ "nInserted" : 1 })
 > db.personas.insert({nombre: "Elba", apellido: "Lazo", edad: 24})
-WriteResult({ "nInserted" : 1 })
 ```
 
 
-### Insertar varios documentos de una vez
+### Insertar documentos en una vez
 
-**db.*nombre_colección*.insert ( ... )`**
+**db.*nombre_colección*.insert ( ... )**
 
 En lugar de insertar un sólo documento, insertamos un array.
 
@@ -292,11 +290,6 @@ A cada elemento insertado se le asigna de forma automática un identificador ún
 
 ```bash
 > db.personas.find()  // equivalente a `SELECT * FROM personas` en BD relacional
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
 ```
 
 
@@ -318,30 +311,22 @@ A cada elemento insertado se le asigna de forma automática un identificador ún
 
 ```bash
 > db.personas.find({nombre: "Elba"})
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-> 
 > db.personas.find({pais: "España"})
-{ "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
 ```
 
 
 ### Búsqueda condicional II
 
-`$ne` significa *not equal*, `$gt` es *greater than* y `$lt` es *less than*.
+`$ne`: *not equal*
+
+`$gt`: *greater than*
+
+`$lt`: *less than*
 
 ```bash
 > db.personas.find( { pais: {$ne: "España"} } )
-{ "_id" : ObjectId("5b91a55cc09f7d7243295719"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("5b91a5abc09f7d724329571c"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("5b91a5b8c09f7d724329571d"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("5b91a5c6c09f7d724329571e"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
-> 
 > db.personas.find( { edad: {$gt: 18} } )
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre": "Lola", "apellido": "Mento", "edad": 35 }
-> 
 > db.personas.find( { edad: {$lt: 18} } )
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre": "Encarna", "apellido": "Vales", "edad": 17, "pais": "USA" }
 ```
 
 
@@ -351,24 +336,12 @@ Vamos a mostrar un listado de los personas solo con los campos `nombre` y `edad`
 
 ```bash
 > db.personas.find({}, {nombre: 1, edad: 1, _id:0})
-{ "nombre" : "Mario" }
-{ "nombre" : "Pere" }
-{ "nombre" : "Elba", "edad" : 24 }
-{ "nombre" : "Lola", "edad": 35 }
-{ "nombre" : "Encarna", "edad": 17 } 
 ```
 
 
 ### Contar documentos
 
 ```bash
-> db.personas.find()
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
-> 
 > db.personas.find().count()
 5
 ```
@@ -382,10 +355,6 @@ Con `limit()` se puede limitar el resultado a un número máximo de documentos.
 
 ```bash
 > db.personas.find().sort( {apellido: -1} ).limit(4)
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
 ```
 
 
@@ -395,8 +364,6 @@ La función `skip()` permite "saltar" un número determinado de documentos de la
 
 ```bash
 > db.personas.find().sort( {apellido: -1} ).skip(1).limit(2)
-{ "_id" : ObjectId("5b92dbe0b55c8a3a0d8651cf"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("5b92dc2b1ab0370cf4d942d9"), "nombre" : "Lola", "apellido" : "Mento", "edad" : 35 }
 ```
 
 
@@ -419,19 +386,8 @@ Vamos a modificar la edad de la persona cuyo nombre es `Encarna`.
 
 ```bash
 > p = db.personas.findOne({nombre: "Encarna"})
-{
-	"_id" : ObjectId("58938745a70c3985de49a393"),
-	"nombre" : "Encarna",
-	"apellido" : "Vales",
-	"edad" : 17,
-	"pais" : "USA"
-}
 > p.edad = 18
-18
 > db.personas.update({nombre: "Encarna"}, p)
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
-> db.personas.find({nombre: "Encarna"})
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 18, "pais" : "USA" }
 ```
 
 
@@ -441,9 +397,6 @@ De nuevo vamos a modificar la edad de `Encarna`.
 
 ```bash
 > db.personas.update( {nombre: "Encarna"}, {$set: {edad: 19} } )
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
-> db.personas.find({nombre: "Encarna"})
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 19, "pais" : "USA" }
 ```
 
 
@@ -451,30 +404,8 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 
 ```bash
 > var persona = db.personas.findOne({ "_id" : ObjectId("58938745a70c3985de49a392")})
-> persona
-{
-	"_id" : ObjectId("58938745a70c3985de49a392"),
-	"nombre" : "Lola",
-	"apellido" : "Mento",
-	"edad" : 35
-}
 > persona.nombre = "Salva"
-Salva
-> persona
-{
-	"_id" : ObjectId("58938745a70c3985de49a392"),
-	"nombre" : "Salva",
-	"apellido" : "Mento",
-	"edad" : 35
-}
 > db.personas.save(persona)
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
-> db.personas.find()
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58937beca70c3985de49a390"), "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 17, "pais" : "USA" }
 ```
 
 Note: Cuidado al guardar el documento en una variable. Hay que usar `findOne()` ya que utilizando `find()` el valor de la variable se pierde. Otra opción es volcar el resultado de la consulta en un array con `find().toArray`.
@@ -482,18 +413,12 @@ Note: Cuidado al guardar el documento en una variable. Hay que usar `findOne()` 
 
 ### Eliminar documentos
 
-Vamos a eliminar todas las personas cuyo atributo `pais` sea `España`.
+Eliminar todas las personas cuyo atributo `pais` sea `España`.
 
 ```bash
 > db.personas.remove({pais: "España"})
-WriteResult({ "nRemoved" : 1 })
-> 
-> db.personas.find()
-{ "_id" : ObjectId("58937be7a70c3985de49a38f"), "nombre" : "Mario", "apellido" : "Neta" }
-{ "_id" : ObjectId("58937c23a70c3985de49a391"), "nombre" : "Elba", "apellido" : "Lazo", "edad" : 24 }
-{ "_id" : ObjectId("58938745a70c3985de49a392"), "nombre" : "Salva", "apellido" : "Mento", "edad" : 35 }
-{ "_id" : ObjectId("58938745a70c3985de49a393"), "nombre" : "Encarna", "apellido" : "Vales", "edad" : 19, "pais" : "USA" }
 ```
+
 
 
 ## Copias de seguridad
