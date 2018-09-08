@@ -65,6 +65,9 @@ united
 1. ¿Cómo vemos las bases de datos que existen?
 <hr>
 
+1. ¿Cómo sabemos la base de datos con la que estamos trabajando?
+<hr>
+
 1. ¿Cómo seleccionamos una BD?
 <hr>
 
@@ -83,15 +86,54 @@ united
 1. Los documentos que hay en una colección deben tener todos el mismo esquema. Explica la respuesta.
 <hr>
 
-1. ¿Qué significan las siglas CRUD?
+1. ¿Qué sucede si escribimos en el terminal `mongo  datos`? Explica la respuesta.
 <hr>
 
- 
+1. ¿Qué significan las siglas CRUD? ¿Qué funciones proporciona MongoDB para ello?
+<hr>
+
+1. Define colección. ¿Qué equivalencia tiene en las BD relacionales?
+<hr> 
+
+1. Define documento. ¿Qué equivalencia tiene en las BD relacionales?
+<hr>
+
+1. Escribe las sentencias de MongoDB para crear 10 documentos que almacenen información de paises. 
+La base de datos se llamará `geografia`. Cada país debe tener al menos las siguientes propiedades: nombre, continente, habitantes, extension.
+<hr>
+
+1. Escribe la sentencia de MongoDB para ver los países de Europa. 
+<hr>
+
+1. Escribe la sentencia de MongoDB para ver los países de Europa con menos de un millón de habitantes. 
+<hr>
+
+1. Escribe la sentencia de MongoDB para ver los países de Europa con menos de un millón de habitantes ordenados de forma ascendente. 
+<hr> 
+
+1. Escribe la sentencia de MongoDB para la cantidad de países de Europa con menos de un millón de habitantes. 
+<hr> 
+
+1. Suma un millón de habitantes a cada uno de los paises de Europa.
+<hr>
+
+1. Escribe la sentencia de MongoDB para eliminar los países de América con más de 100 millones de habitantes. 
+<hr> 
+
+1. Haz una copia de seguridad de la base de datos anterior con el nombre `geografia`.
+<hr>
+
+1. Restaura la copia de seguridad anterior con el nombre `mundo`.
+<hr>
+
 
 <pre>
 
 
 </pre>
+
+#<a name="practicas"></a>[Prácticas](#indice) 
+
 ## Práctica 1
 
 Instala y verifica el correcto funcionamiento del **SGBD MongoDB**.
@@ -103,7 +145,17 @@ Instala y verifica el correcto funcionamiento del **SGBD MongoDB**.
  - Habilita el servicio para que se inicie al arrancar el equipo.
  - Crea una base de datos llamada `agenda` con los datos de 10 `personas`.
  - Todas ellas deben tener un domicilio compuesto de 3 propiedades: calle, número y localidad. 
-<hr>
+
+## Práctica 2
+
+Crea una base de datos `blog` y dentro una colección `entradas`. La base de datos guardará todos los posts que han sido enviados a nuestro blog, así como los comentarios en cada post.
+
+ - Inserta 4 entradas.
+ - Cada entrada debe tener al menos 2 comentarios.
+ - Las propiedades de cada entrada son: titulo, contenido, fecha y comentarios.
+ - Las propiedades de cada comentario son: autor, fecha y votos.
+
+
 
 
 </xmp>

@@ -23,9 +23,9 @@ element: class="fragment" data-fragment-index="1"
 --- 
 ### Introducción
 ### Bases de datos noSQL
-### MongoDB
-### Operaciones básicas
-### Copias de seguridad
+### MongoDB: Primeros pasos
+### MongoDB: Operaciones básicas
+### MongoDB: Copias de seguridad
 
 <!--- Note: Nota a pie de página. -->
 
@@ -72,7 +72,7 @@ element: class="fragment" data-fragment-index="1"
 
 
 
-## MongoDB
+## MongoDB: Primeros pasos
 
 
 ### Instalación
@@ -148,11 +148,11 @@ local  0.000GB
 ```
 
 
-### Usar/Crear una BD
+### Cambiar de BD
 
 **use *nombre_bd***
 
-Si la BD no existe, entonces se crea.
+- Si la BD no existe, automáticamente se crea.
 
 ```bash
 > use prueba
@@ -160,12 +160,14 @@ switched to db prueba
 ```
 
 
-### Ver la BD en uso
+### db
 
 **db**
 
+- **db** es la variable que contiene el nombre de la BD en uso.
+
 ```bash
-> db    //Esta variable contiene el nombre de la BD en uso
+> db    
 prueba
 ```
 
@@ -198,10 +200,10 @@ Registro o fila  | Documento (objeto)
 Campo            | Propiedad
 
 
-### BD de pruebas
+### BD de ejemplo
 
 - De ahora en adelante, usaremos una BD llamada **agenda**.
-- Dicha BD almacenará documentos de **personas**.
+- Dicha BD tendrá una colección de **personas**.
 
 ```bash
 > use agenda
@@ -223,7 +225,7 @@ Note: Aunque en el ejemplo aparecen 2 colecciones, a tí no debería aparecerte 
 
 
 
-## Operaciones básicas
+## MongoDB: Operaciones básicas
 
 
 ### Trabajar con documentos 
@@ -244,7 +246,7 @@ UPDATE    | UPDATE      | update
 DELETE    | DELETE      | remove 
 
 
-### Crear objetos (documentos)
+### Crear documentos (objetos)
 
 ```bash
 > var persona1 = {nombre: "Mario", apellido: "Neta"}
@@ -260,7 +262,9 @@ DELETE    | DELETE      | remove
 
 **db.*nombre_colección*.insert ( ... )**
 
-Si la colección no existe, entonces se crea.
+- Si la colección no existe, automáticamente se crea.
+- A cada elemento se le asigna automáticamente un identificador único.
+- Insertamos documentos uno a uno.
 
 ```bash
 > db.personas.insert(persona1)
@@ -269,11 +273,12 @@ Si la colección no existe, entonces se crea.
 ```
 
 
-### Insertar documentos en una vez
+### Insertar documentos
 
 **db.*nombre_colección*.insert ( ... )**
 
-En lugar de insertar un sólo documento, insertamos un array.
+- Es posible insertar **varios documentos de una vez**.
+- Para ello insertamos un **array**.
 
 ```bash
 > var p1 = { nombre: "Lola", apellido: "Mento", edad: 35 }
@@ -282,18 +287,98 @@ En lugar de insertar un sólo documento, insertamos un array.
 ```
 
 
-### Listar documentos 
+### Ver documentos 
 
 **db.*nombre_colección*.find( ... )**
 
-A cada elemento insertado se le asigna de forma automática un identificador único.
-
 ```bash
-> db.personas.find()  // equivalente a `SELECT * FROM personas` en BD relacional
+> db.personas.find()  // equivale a `SELECT * FROM personas` en BD relacional
 ```
 
 
-### Ver un solo documento
+### Propiedades específicas
+
+```bash
+> db.personas.find({}, { nombre: 1, edad: 1, _id: 0 })
+```
+
+
+### Búsqueda condicional
+
+- `$ne`: *not equal*
+- `$gt`: *greater than*
+- `$lt`: *less than*
+
+```bash
+> db.personas.find( { pais: "España"} )
+> db.personas.find( { pais: {$ne: "España"} } )
+> db.personas.find( { edad: {$gt: 18} } )
+> db.personas.find( { edad: {$lt: 18} } )
+```
+
+
+### La función sort(...)
+
+-  `1`: orden ascendente
+- `-1`: orden descendente. 
+
+```bash
+> db.personas.find().sort( {apellido: -1} )
+```
+
+
+### La función limit(...)
+
+- `limit()`: muestra un número máximo de documentos.
+
+```bash
+> db.personas.find().limit(2)
+```
+
+
+### La función skip(...)
+
+- `skip()`: salta un número de documentos.
+
+```bash
+> db.personas.find().sort( {apellido: -1} ).skip(1)
+```
+
+
+### La función count()
+
+- `count()`: indica el número de documentos totales encontrados.
+
+```bash
+> db.personas.find().sort( {apellido: 1} ).skip(1).count()  // 5
+```
+
+
+### La función size()
+
+- `size()`: indica el número de documentos que se muestran.
+
+```bash
+> db.personas.find().sort( {apellido: 1} ).skip(1).size()  // 4
+```
+
+
+### Diferencia entre count() y size()
+
+- `count()`
+  - cuenta todos los documentos de la consulta. 
+  - No tiene en cuenta a `skip()`, `limit()`, etc.
+- `size()` 
+  - cuenta los documentos mostrados. 
+  - Sí tiene en cuenta a `skip()`, `limit()`, etc.
+
+```bash
+> db.personas.find().sort( {apellido: 1} ).skip(1).limit(2).count()  // 5
+> db.personas.find().sort( {apellido: 1} ).skip(1).limit(2).size()   // 2
+```
+
+
+### Ver un documento
 
 **db.*nombre_colección*.findOne( ... )**
 
@@ -307,100 +392,27 @@ A cada elemento insertado se le asigna de forma automática un identificador ún
 ```
 
 
-### Búsqueda condicional I
+### Modificar documentos
 
 ```bash
-> db.personas.find({nombre: "Elba"})
-> db.personas.find({pais: "España"})
-```
-
-
-### Búsqueda condicional II
-
-`$ne`: *not equal*
-
-`$gt`: *greater than*
-
-`$lt`: *less than*
-
-```bash
-> db.personas.find( { pais: {$ne: "España"} } )
-> db.personas.find( { edad: {$gt: 18} } )
-> db.personas.find( { edad: {$lt: 18} } )
-```
-
-
-### Consultar un número concreto de campos
-
-Vamos a mostrar un listado de los personas solo con los campos `nombre` y `edad`.
-
-```bash
-> db.personas.find({}, {nombre: 1, edad: 1, _id:0})
-```
-
-
-### Contar documentos
-
-```bash
-> db.personas.find().count()
-5
-```
-
-
-### Consultas ordenadas
-
-El valor `1` se utiliza para realizar una consulta en orden ascendente y el `-1` para descendente. 
-
-Con `limit()` se puede limitar el resultado a un número máximo de documentos.
-
-```bash
-> db.personas.find().sort( {apellido: -1} ).limit(4)
-```
-
-
-### La función `skip()`
-
-La función `skip()` permite "saltar" un número determinado de documentos de la consulta.
-
-```bash
-> db.personas.find().sort( {apellido: -1} ).skip(1).limit(2)
-```
-
-
-### La función `size()`
-
-A diferencia de `count()`, el método `size()` ofrece la cuenta de la consulta una vez filtrada con `skip()`, `limit()`, etc.
-
-```bash
-> db.personas.find().sort( {apellido: 1} ).skip(1).limit(2).count()
-5
-> 
-> db.personas.find().sort( {apellido: 1} ).skip(1).limit(2).size()
-2
-```
-
-
-### Edición de un documento con `update()`
-
-Vamos a modificar la edad de la persona cuyo nombre es `Encarna`.
-
-```bash
-> p = db.personas.findOne({nombre: "Encarna"})
+> p = db.personas.findOne({ nombre: "Encarna" })
 > p.edad = 18
-> db.personas.update({nombre: "Encarna"}, p)
+> db.personas.update({ nombre: "Encarna" }, p)
 ```
 
 
-### Edición de un documento con `update()` y `$set`
+### Modificar documentos
 
-De nuevo vamos a modificar la edad de `Encarna`.
+- `$set`: establece un valor  
 
 ```bash
-> db.personas.update( {nombre: "Encarna"}, {$set: {edad: 19} } )
+> db.personas.update( { nombre: "Encarna" }, { $set: { edad: 19 } } )
 ```
 
 
-### Edición de un documento con `save()`
+### Modificar documentos
+
+- `save()`:  
 
 ```bash
 > var persona = db.personas.findOne({ "_id" : ObjectId("58938745a70c3985de49a392")})
@@ -413,33 +425,33 @@ Note: Cuidado al guardar el documento en una variable. Hay que usar `findOne()` 
 
 ### Eliminar documentos
 
-Eliminar todas las personas cuyo atributo `pais` sea `España`.
-
 ```bash
 > db.personas.remove({pais: "España"})
 ```
 
 
 
-## Copias de seguridad
+## MongoDB: Copias de seguridad
 
 
-### Realizar copia de seguridad de una BD
+### Realizar copia de BD
 
 **mongodump  -d  *nombre_bd***
 
 - Se ejecuta desde el terminal de Linux, no desde la *shell* de MongoDB.
 - Se crea directorio `dump` y dentro el diretorio *nombre_bd*, en este caso `agenda`. 
-- Las colecciones de la base de datos en formato BSON. 
+- Las colecciones de la base de datos se guardan en formato BSON. 
 
 ```bash
 mongodump  -d  agenda
 ```
 
 
-### Restaurar copia de seguridad de una BD
+### Restaurar copia de BD
  
 **mongorestore  -d  *nombre_bd*  dump/*nombre_bd*** 
+
+- Se ejecuta desde el terminal de Linux, no desde la *shell* de MongoDB.
 
 ```bash
 mongorestore  -d  agenda  dump/agenda
