@@ -41,7 +41,7 @@ element: class="fragment" data-fragment-index="1"
 - Establecer mecanismos para asegurar las comunicaciones entre el cliente y el servidor.
 - Realizar los ajustes necesarios para la implantación de aplicaciones en el servidor Web.
 
- 
+
 
 ## Apache: Configuración
 
@@ -51,10 +51,10 @@ element: class="fragment" data-fragment-index="1"
 - Apache2 es el servidor web más usado actualmente.
 - Es **software libre**.
 - Tiene un **diseño modular**. 
-- Directorio de configuración principal: `/etc/apache2`.
-- Archivo de configuración principal: `apache2.conf`.
-- Módulos en `mods-available` (disponibles), `mods-enabled` (habilitados).
-- Sitios en `sites-available` (disponibles), `sites-enabled` (habilitados).
+- Directorio de configuración principal: **`/etc/apache2`**.
+- Archivo de configuración principal: **`apache2.conf`**.
+- Módulos en **`mods-available`** (disponibles), **`mods-enabled`** (habilitados).
+- Sitios en **`sites-available`** (disponibles), **`sites-enabled`** (habilitados).
 
 
 ### Archivos y carpetas
@@ -99,15 +99,15 @@ a2ensite   # Habilitar sitio
 ### Características
 
 - Apache2 permite tener varios sitios web compartiendo una dirección IP.
-- Sitio por defecto en `/var/www/html`.
-- Otros sitios virtuales en `/var/www/sitio1`, `/var/www/sitio2`, ...
+- Sitio por defecto en **`/var/www/html`**.
+- Otros sitios virtuales en **`/var/www/sitio1`**, **`/var/www/sitio2`**, ...
 - Por cada sitio virtual debe existir un archivo de configuración.
-- Dicho archivo debe alojarse en `/etc/apache2/sites-available`  
+- Dicho archivo debe alojarse en **`/etc/apache2/sites-available`**  
 
 
 ### Archivo de configuración
 
-**`/etc/apache2/sites-available/sitio`**
+**`/etc/apache2/sites-available/sitio.conf`**
 
 ```
 <VirtualHost *:80> 
@@ -200,20 +200,19 @@ Note: Ejecutar los comandos como usuario **root**.
 - Adicionalmente también permite autenciación si el certificado está firmado por una CA reconocida.
 - HTTPS = HTTP + SSL/TLS
 
-**IMPORTANTE**
-La negociación SSL es dependiente totalmente de la IP, así que no puedes servir distintos certificados en una misma IP**.
+Note: **IMPORTANTE**: La negociación SSL es dependiente totalmente de la IP, así que no puedes servir distintos certificados en una misma IP**.
 
 
 ### Obtener un certificado
 
-- `make-ssl-cert`
-- `openssl`
-- `xca`
+- **`make-ssl-cert`**
+- **`openssl`**
+- **`xca`**
 
 
 ### make-ssl-cert
 
-```
+```bash
 make-­ssl-­cert  /usr/share/ssl­-cert/ssleay.cnf  /etc/ssl/private/nombre­-sitio.pem
 ```
 
@@ -223,10 +222,10 @@ Note: El ejecutable `make-ssl-cert` viene en el paquete `ssl-cert`
 ### openssl
 
 ```bash
-## Generamos clave privada
+# Generamos clave privada
 openssl genrsa -out key 1024
 
-## Generamos CSR y firmamos con nuestra clave privada
+# Generamos CSR y firmamos con nuestra clave privada
 openssl req -new -key key -out csr
 openssl x509 -req -days 365 -in csr -signkey key -out crt
 
@@ -235,7 +234,7 @@ cat key crt > /etc/ssl/private/nombre-sitio.pem
 ```
 
 Note: CSR = Certificate Signing Request (solicitud de firma de certificado).
-  
+
 
 ### xca
 
@@ -247,7 +246,7 @@ Note: CSR = Certificate Signing Request (solicitud de firma de certificado).
 **`/etc/apache2/sites-available/default-ssl.conf`**
 
 ```
-<VirtualHost *:443> 
+<VirtualHost _default_:443> 
   ServerName nombre­-dominio-­sitio
   DocumentRoot /var/www/html
   
