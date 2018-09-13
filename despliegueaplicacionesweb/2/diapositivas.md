@@ -53,8 +53,12 @@ element: class="fragment" data-fragment-index="1"
 - Tiene un **diseño modular**. 
 - Directorio de configuración principal: **`/etc/apache2`**.
 - Archivo de configuración principal: **`apache2.conf`**.
-- Módulos en **`mods-available`** (disponibles), **`mods-enabled`** (habilitados).
-- Sitios en **`sites-available`** (disponibles), **`sites-enabled`** (habilitados).
+- Módulos en:
+  - **`mods-available`** (disponibles)
+  - **`mods-enabled`** (habilitados)
+- Sitios en:
+  - **`sites-available`** (disponibles)
+  - **`sites-enabled`** (habilitados)
 
 
 ### Archivos y carpetas
@@ -100,9 +104,11 @@ a2ensite   # Habilitar sitio
 
 - Apache2 permite tener varios sitios web compartiendo una dirección IP.
 - Sitio por defecto en **`/var/www/html`**.
-- Otros sitios virtuales en **`/var/www/sitio1`**, **`/var/www/sitio2`**, ...
+- Otros sitios virtuales en:
+  - **`/var/www/sitio1`**, **`/var/www/sitio2`**, ...
 - Por cada sitio virtual debe existir un archivo de configuración.
-- Dicho archivo debe alojarse en **`/etc/apache2/sites-available`**  
+- Dicho archivo debe alojarse en:
+  - **`/etc/apache2/sites-available`**  
 
 
 ### Archivo de configuración
@@ -133,7 +139,7 @@ service  apache2  restart  # Reinicia el servidor
 - Cuando escribimos una URL en el navegador, ésta debe ser traducida a una IP.
 - Este procedimiento se conoce como resolución de nombres.
 - Lo habitual es que se encargue el servicio DNS.
-- Pero una solución rápida, para pruebas es editar el archivo `/etc/hosts`.
+- Pero una solución rápida para pruebas, es editar el archivo **`/etc/hosts`**.
 
 ```
 192.168.1.135   www.misitio.com
@@ -150,7 +156,7 @@ service  apache2  restart  # Reinicia el servidor
 - El usuario debe identificarse para acceder a un sitio o carpeta.
 - Credenciales de usuario/contraseña.
 - La constraseña se guarda cifrada en un archivo al que tiene acceso Apache.
-- Para cifrar, usamos el comando `htpasswd`.
+- Para cifrar, usamos el comando **`htpasswd`**.
 - Indicamos mediante directivas el tipo de autenticación y usuarios permitidos.
 - El tráfico no viaja cifrado. No es un mecanismo muy seguro. 
 - Actualmente se usa poco.
@@ -200,7 +206,7 @@ Note: Ejecutar los comandos como usuario **root**.
 - Adicionalmente también permite autenciación si el certificado está firmado por una CA reconocida.
 - HTTPS = HTTP + SSL/TLS
 
-Note: **IMPORTANTE**: La negociación SSL es dependiente totalmente de la IP, así que no puedes servir distintos certificados en una misma IP**.
+Note: **IMPORTANTE**: La negociación SSL es dependiente totalmente de la IP, así que no puedes servir distintos certificados en una misma IP.
 
 
 ### Obtener un certificado

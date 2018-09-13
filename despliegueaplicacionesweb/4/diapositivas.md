@@ -39,3 +39,4 @@ element: class="fragment" data-fragment-index="1"
 - Utilizar el protocolo seguro de transferencia de archivos..
 
 
+Note: No confundir FTPS con SFTP. Este último es hace uso del servicio SSH para conexiones las conexiones remotas seguras.
