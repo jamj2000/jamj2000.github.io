@@ -38,3 +38,14 @@ element: class="fragment" data-fragment-index="1"
 - Realizar pruebas de funcionamiento y rendimiento de la aplicación Web desplegada.
 - Elaborar documentación relativa al despliegue de aplicaciones sobre el servidor de aplicaciones.
 
+
+
+
+
+En la aplicación J2EE, los módulos se empaquetan como JAR, WAR y EAR en función de su funcionalidad
+
+JAR: los módulos EJB que contienen enterprise java beans (archivos de clase) y el descriptor de despliegue EJB se empaquetan como archivos JAR con extensión .jar (Java Archive)
+
+WAR: los módulos web que contienen archivos de clase Servlet, archivos JSP, archivos compatibles, archivos GIF y HTML están empaquetados como archivo JAR con extensión .war (Web Archive)
+
+EAR: Todos los archivos anteriores (.jar y .war) se empaquetan como archivo JAR con extensión .ear (Enterprise Archive) y se implementan en Application Server.
