@@ -63,7 +63,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### Archivos y carpetas
 
-```bash
+```
 ├── apache2.conf
 ├── conf-available
 │   └── localized-error-pages.conf
@@ -93,6 +93,19 @@ a2enmod    # Habilitar módulo
 
 a2dissite  # Deshabilitar sitio
 a2ensite   # Habilitar sitio
+```
+
+
+### Gestión del servicio
+
+```bash
+systemctl  start   apache2  # service apache2 start
+systemctl  restart apache2  # service apache2 restart
+systemctl  stop    apache2  # service apache2 stop
+systemctl  status  apache2  # service apache2 status
+
+systemctl  enable  apache2  
+systemctl  disable apache2  
 ```
 
 
@@ -127,7 +140,7 @@ a2ensite   # Habilitar sitio
 
 ### Comandos
 
-```
+```bash
 a2dissite  sitio           # Deshabilita sitio
 a2ensite   sitio           # Habilita sitio
 service  apache2  restart  # Reinicia el servidor
