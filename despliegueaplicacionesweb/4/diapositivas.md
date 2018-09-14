@@ -21,7 +21,7 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
+- ### Introducción
 
 
 <!--- Note: Nota a pie de página. -->

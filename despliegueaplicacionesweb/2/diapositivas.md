@@ -21,11 +21,11 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### Apache: Configuración
-### Apache: Hosts virtuales
-### Apache: Autenticación básica
-### Apache: Servidor HTTPS 
+- ### Introducción
+- ### Apache: Configuración
+- ### Apache: Hosts virtuales
+- ### Apache: Autenticación básica
+- ### Apache: Servidor HTTPS 
 
 <!--- Note: Nota a pie de página. -->
 

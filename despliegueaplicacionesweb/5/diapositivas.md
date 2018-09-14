@@ -21,11 +21,11 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### DNS: Conceptos
-### DNS: Tipos de servidores
-### DNS: Resolución de nombres
-### DNS: Bind9
+- ### Introducción
+- ### DNS: Conceptos
+- ### DNS: Tipos de servidores
+- ### DNS: Resolución de nombres
+- ### DNS: Bind9
 
 <!--- Note: Nota a pie de página. -->
 
@@ -60,7 +60,6 @@ element: class="fragment" data-fragment-index="1"
 - [Archivo hosts](https://es.wikipedia.org/wiki/Archivo_hosts)
 
 
-
 ### FQDN
 
 - Fully Qualified Host/Domain Name (FQHN/FQDN) "nombre completo" de un equipo. 
@@ -77,26 +76,34 @@ element: class="fragment" data-fragment-index="1"
 
 ### Niveles
 
-![Niveles DNS](assets/dns-tree.png)
+![Niveles DNS](assets/dns-niveles.png)
 
 
-### gTLD y sTLD
+### gTLD
 
 **Generic Top Level Domains**
+
 - Dominios originales. P. ej: **.com**, **.org**, **.net**, ...
 - Nuevos dominios. P. ej: **.bar**, **.blog**, **.download**, ...
 
+
+### sTLD
+
 **Sponsored Top Level Domains**
 
-- [Dominios patrocinados por determinados colectivos](https://en.wikipedia.org/wiki/Sponsored_top-level_domain). 
+- Dominios patrocinados por determinados colectivos. 
 - P. ej: **.cat**,  **.museum**, **.aero**, ...
 
 
 ### ccTLD
+
 **Country Code Top Level Domains**
 
 - Dominios asociados a un país.
 - P. ej: **.es**, **.fr**, **.cn**, **.io**, ...
+
+
+### Lista de TLD
 
 - [Lista de TLD en Wikipedia](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains)
 - [Lista actualizada de todos los TLD](https://www.iana.org/domains/root/db)
@@ -104,6 +111,14 @@ element: class="fragment" data-fragment-index="1"
 
 ### Servidores raíz
 
+- También llamados TNS (Top Name Servers).
+- Son 13 en total. Pero tienen varias replicas
+- Se conocen como A, B, C, D, E, F, G, H, I, J, K, L y M.
+- Todos tienen la misma información.
+- Se reparten el trabajo de resolución.
+- Cada uno es una copia de seguridad del resto.
+
+[Root Servers](http://www.root-servers.org/)
 
 
 ## DNS: Tipos de servidores
@@ -203,10 +218,10 @@ dig  @8.8.8.8  -x 172.217.17.3
 ```
 
 
+
 ## DNS: Bind9
 
 Software usado en los servidores DNS. Versión 9.
-
 
 
 ### Configuración
@@ -230,7 +245,6 @@ zone "example.com" {
   type master;
   file "/var/lib/bind/db.example.com";
 };
-
 
 zone "16.172.in-addr.arpa" {
   type master;
@@ -298,6 +312,7 @@ $TTL 1d
 201.0      PTR pc01.example.com.
 202.0      PTR pc02.example.com.
 ```
+
 
 ### Herramientas de comprobación
 
