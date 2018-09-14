@@ -21,9 +21,9 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### Ciclo de vida del software
-### Lenguajes de programación
+- ### Introducción
+- ### Ciclo de vida del software
+- ### Lenguajes de programación
 
 <!--- Note: Nota a pie de página. -->
 

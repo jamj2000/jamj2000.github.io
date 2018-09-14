@@ -20,12 +20,12 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### Diagramas de casos de uso
-### Diagramas de secuencia
-### Diagramas de estados
-### Diagramas de actividades
-### Referencias
+- ### Introducción
+- ### Diagramas de casos de uso
+- ### Diagramas de secuencia
+- ### Diagramas de estados
+- ### Diagramas de actividades
+- ### Referencias
 <!--- Note: Nota a pie de página. -->
 
 

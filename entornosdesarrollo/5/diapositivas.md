@@ -20,13 +20,13 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### UML
-### **Diagramas de clases**
-### Diagramas de paquetes
-### Diagramas de componentes
-### Diagramas de implementación
-### Software
+- ### Introducción
+- ### UML
+- ### **Diagramas de clases**
+- ### Diagramas de paquetes
+- ### Diagramas de componentes
+- ### Diagramas de implementación
+- ### Software
 <!--- Note: Nota a pie de página. -->
 
 

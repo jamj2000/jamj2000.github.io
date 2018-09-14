@@ -20,10 +20,10 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### Pruebas
-### Integración
-### Calidad
+- ### Introducción
+- ### Pruebas
+- ### Integración
+- ### Calidad
 
 <!--- Note: Nota a pie de página. -->
 

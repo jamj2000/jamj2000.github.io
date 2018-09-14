@@ -20,9 +20,9 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### Herramientas básicas
-### Entornos integrados de desarrollo (IDE)
+- ### Introducción
+- ### Herramientas básicas
+- ### Entornos integrados de desarrollo (IDE)
 
 <!--- Note: Nota a pie de página. -->
 

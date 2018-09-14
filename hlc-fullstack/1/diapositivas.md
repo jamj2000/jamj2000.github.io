@@ -21,12 +21,12 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### Tecnologías para el backend
-### Tecnologías para el frontend
-### MVC: Modelo-Vista-Controlador
-### SPA: Single Page Application 
-### Persistencia de los datos
+- ### Introducción
+- ### Tecnologías para el backend
+- ### Tecnologías para el frontend
+- ### MVC: Modelo-Vista-Controlador
+- ### SPA: Single Page Application 
+- ### Persistencia de los datos
 
 <!--- Note: Nota a pie de página. -->
 

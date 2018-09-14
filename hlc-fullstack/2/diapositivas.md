@@ -21,11 +21,11 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### Bases de datos noSQL
-### MongoDB: Primeros pasos
-### MongoDB: Operaciones básicas
-### MongoDB: Copias de seguridad
+- ### Introducción
+- ### Bases de datos noSQL
+- ### MongoDB: Primeros pasos
+- ### MongoDB: Operaciones básicas
+- ### MongoDB: Copias de seguridad
 
 <!--- Note: Nota a pie de página. -->
 

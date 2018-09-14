@@ -20,10 +20,10 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### Optimización
-### Documentación
-### Control de versiones
+- ### Introducción
+- ### Optimización
+- ### Documentación
+- ### Control de versiones
 
 <!--- Note: Nota a pie de página. -->
 

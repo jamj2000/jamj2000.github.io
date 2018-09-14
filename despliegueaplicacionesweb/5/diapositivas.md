@@ -52,7 +52,11 @@ element: class="fragment" data-fragment-index="1"
 - Traduce nombres de equipos a direcciones IP y viceversa.
   - Nombre <----> Dirección IP. 
   - P. ej: www.google.es <----> 172.217.17.3
-- Dispone de una **base de datos distribuida** con información sobre equipos (hosts).
+
+
+### DNS 
+
+- Hace uso de una **base de datos distribuida** con información sobre equipos (hosts).
 - En los inicios de internet la información estaba centralizada.
   - Para ello se utilizaba un archivo **HOST.TXT**.
   - Estaba alojado en el Stanford Research Institute.
@@ -81,7 +85,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### gTLD
 
-**Generic Top Level Domains**
+**gTLD - Generic Top Level Domains**
 
 - Dominios originales. P. ej: **.com**, **.org**, **.net**, ...
 - Nuevos dominios. P. ej: **.bar**, **.blog**, **.download**, ...
@@ -89,7 +93,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### sTLD
 
-**Sponsored Top Level Domains**
+**sTLD - Sponsored Top Level Domains**
 
 - Dominios patrocinados por determinados colectivos. 
 - P. ej: **.cat**,  **.museum**, **.aero**, ...
@@ -97,7 +101,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### ccTLD
 
-**Country Code Top Level Domains**
+**ccTLD -Country Code Top Level Domains**
 
 - Dominios asociados a un país.
 - P. ej: **.es**, **.fr**, **.cn**, **.io**, ...
@@ -180,6 +184,9 @@ element: class="fragment" data-fragment-index="1"
 
 
 ## DNS: Resolución de nombres
+
+
+### Procedimiento
 
 ![Resolución DNS](assets/dns-resolucion.png)
 
@@ -322,7 +329,7 @@ named-checkzone  example.com  /var/lib/bind/db.example.com
 named-checkzone  16.172.in-addr.arpa  /var/lib/bind/db.172.16
 ```
 
-![named checkconf checkzone](named-checkconf-checkzone.png)
+![named checkconf checkzone](assets/named-checkconf-checkzone.png)
 
 
 ### Gestión del servicio
