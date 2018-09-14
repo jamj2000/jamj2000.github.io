@@ -83,7 +83,7 @@ element: class="fragment" data-fragment-index="1"
 ![Niveles DNS](assets/dns-niveles.png)
 
 
-### gTLD
+### Dominios de nivel superior
 
 **gTLD - Generic Top Level Domains**
 
@@ -91,7 +91,7 @@ element: class="fragment" data-fragment-index="1"
 - Nuevos dominios. P. ej: **.bar**, **.blog**, **.download**, ...
 
 
-### sTLD
+### Dominios de nivel superior
 
 **sTLD - Sponsored Top Level Domains**
 
@@ -99,7 +99,7 @@ element: class="fragment" data-fragment-index="1"
 - P. ej: **.cat**,  **.museum**, **.aero**, ...
 
 
-### ccTLD
+### Dominios de nivel superior
 
 **ccTLD -Country Code Top Level Domains**
 
