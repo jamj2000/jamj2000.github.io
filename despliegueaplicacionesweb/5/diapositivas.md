@@ -125,6 +125,7 @@ element: class="fragment" data-fragment-index="1"
 [Root Servers](http://www.root-servers.org/)
 
 
+
 ## DNS: Tipos de servidores
 
 - Servidor primario (maestro)
