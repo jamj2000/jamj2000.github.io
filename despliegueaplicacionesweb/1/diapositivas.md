@@ -21,11 +21,11 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice
 --- 
-### Introducción
-### El protocolo HTTP
-### Arquitecturas web
-### Plataformas web
-### Despliegue en Internet
+- ### Introducción
+- ### El protocolo HTTP
+- ### Arquitecturas web
+- ### Plataformas web
+- ### Despliegue en Internet
 
 <!--- Note: Nota a pie de página. -->
 
