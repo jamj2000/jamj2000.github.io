@@ -231,6 +231,21 @@ dig  @8.8.8.8  -x 172.217.17.3
 
 Software usado en los servidores DNS. Versión 9.
 
+**`apt  install  bind9`**
+
+
+### Gestión del servicio
+
+```bash
+systemctl  start   bind9  # service bind9 start
+systemctl  restart bind9  # service bind9 restart
+systemctl  stop    bind9  # service bind9 stop
+systemctl  status  bind9  # service bind9 status
+
+systemctl  enable  bind9  
+systemctl  disable bind9  
+```
+
 
 ### Configuración
 #### Directorios y Archivos
@@ -331,16 +346,3 @@ named-checkzone  16.172.in-addr.arpa  /var/lib/bind/db.172.16
 ```
 
 ![named checkconf checkzone](assets/named-checkconf-checkzone.png)
-
-
-### Gestión del servicio
-
-```bash
-systemctl  start   bind9  # service bind9 start
-systemctl  restart bind9  # service bind9 restart
-systemctl  stop    bind9  # service bind9 stop
-systemctl  status  bind9  # service bind9 status
-
-systemctl  enable  bind9  
-systemctl  disable bind9  
-```

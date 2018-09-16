@@ -22,7 +22,7 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 - ### Introducción
-- ### Apache: Configuración
+- ### Apache: Instalación
 - ### Apache: Hosts virtuales
 - ### Apache: Autenticación básica
 - ### Apache: Servidor HTTPS 
@@ -43,7 +43,9 @@ element: class="fragment" data-fragment-index="1"
 
 
 
-## Apache: Configuración
+## Apache: Instalación
+
+**`apt  install  apache2`**
 
 
 ### Características
@@ -85,17 +87,6 @@ element: class="fragment" data-fragment-index="1"
 ```
 
 
-### Comandos
-
-```bash 
-a2dismod   # Deshabilitar módulo 
-a2enmod    # Habilitar módulo
-
-a2dissite  # Deshabilitar sitio
-a2ensite   # Habilitar sitio
-```
-
-
 ### Gestión del servicio
 
 ```bash
@@ -108,6 +99,16 @@ systemctl  enable  apache2
 systemctl  disable apache2  
 ```
 
+
+### Comandos
+
+```bash 
+a2dismod   # Deshabilitar módulo 
+a2enmod    # Habilitar módulo
+
+a2dissite  # Deshabilitar sitio
+a2ensite   # Habilitar sitio
+```
 
 
 ## Apache: Hosts virtuales
