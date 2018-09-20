@@ -276,6 +276,17 @@ zone "16.172.in-addr.arpa" {
 ```
 
 
+### named.conf.options
+#### Ejemplo
+
+```
+    forwarders {
+                8.8.8.8;
+                8.8.4.4;
+         };
+```
+
+
 ### Registros de recursos (RR)
 
 - **A** = Address → correspondencia nombre - IPv4

@@ -99,7 +99,7 @@ Note: Al final de línea se muestra la versión más relevante actualmente.
 
 ### Frameworks del lado servidor 
 
-- PHP: **Laravel**, **Symphony**.
+- PHP: **Laravel**, **Symfony**.
 - JSP: **Spring**, **Struts**.
 - ASP: **ASP.NET**, **ASP.NET Core**.
 - Ruby: **Ruby on rails**.

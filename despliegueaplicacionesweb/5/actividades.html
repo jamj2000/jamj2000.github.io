@@ -57,34 +57,87 @@ united
 
 #<a name="cuestiones"></a>[Cuestiones](#indice) 
 
-1. Haz una clasificación del software.
+1. Explica qué es el servicio DNS.
 <hr>
 
-1. Describe la relación que existe entre los componentes hardware principales de un computador y el almacenamiento y ejecución del software.
+1. ¿Por qué decimos que el DNS hace uso de una base de datos distribuida?
 <hr>
 
-1. Define los siguientes conceptos:
-  - Código fuente.
-  - Código objeto.
-  - Codigo ejecutable.
+1. ¿Qué función tiene actualmente el archivo `hosts`? Según el sistema operativo, ¿en qué directorio se encuentra?
 <hr>
 
+1. ¿Qué es el FQDN? ¿Qué partes tiene?
+<hr>
+
+1. Pon 5 ejemplos de TLD genéricos.
+<hr>
+
+1. Pon 5 ejemplos de TLD de código de país.
+<hr>
+
+1. ¿Qué son los servidores raíz, cuántos hay y que nombre reciben?
+<hr>
+
+1. Tipos de servidores DNS según la función que realizan.
+<hr>
+
+1. Indica cuáles son los registros de recursos (RR) que corresponden a: 
+- Dirección IP asociada a un nombre
+- Nombre asociado a una dirección IP
+- Servidor de nombres
+- Servidor de correo 
+- Alias
+<hr>
+
+1. ¿Qué es la resolución directa? ¿Y la resolución inversa?
+<hr>
+
+1. ¿Cómo iniciamos, reiniciamos y detenemos el servidor `bind9`?
+<hr>
+
+1. ¿Cómo habilitamos y deshabilitamos el servidor `bind9` en el inicio?
+<hr>
+
+1. ¿Cuál es el archivo principal de configuración del servidor `bind9`?
 <pre>
 
+1. ¿En qué archivo indicamos los reenviadores?
+<hr>
+
+1. ¿Para qué sirve la utilidad `dig`? Pon un ejemplo de uso para resolución directa y otro para resolución inversa.
+<hr>
+
+1. ¿Para qué sirve la utilidad `named-checkconf`? ¿Y la utilidad `named-checkzone`?
+<hr>
 
 </pre>
 
 #<a name="practicas"></a>[Prácticas](#indice)
 
+Haz un listado de las IPs de los equipos de la clase.
+
 ## Práctica 1
 
+**Resolución directa de una zona.**
+
+- Configura el servidor DNS para resolver una zona definida por tí. 
+- Por ejemplo, *tunombre*.org, donde aparezca tu nombre sin tildes ni espacios en blanco.
+- Configura también los reenviadores para resolver el resto de dominios.
+- Da de alta todos los equipos del aula.
+- Comprueba la configuración con `named-checkconf` y `named-checkzone`.
+- Pide a un compañero que actue como cliente, y que utilice tu DNS para resolver nombres.
 
 
 ## Práctica 2
 
+**Resolución inversa de una zona.**
 
+- Configura el servidor DNS para hacer también resolución inversa.
+- Utiliza la misma zona de la práctica anterior.
+- Da de alta todos los equipos del aula.
+- Comprueba la configuración con `named-checkconf` y `named-checkzone`.
+- Pide a un compañero que actue como cliente, y que utilice tu DNS para resolver nombres.
 
-## Práctica 3
 
 
 <pre>
