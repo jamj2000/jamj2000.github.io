@@ -22,7 +22,10 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 - ### Introducción
-
+- ### Conceptos básicos
+- ### Tomcat
+- ### JBoss / WildFly
+- ### Contenedores Docker
 
 <!--- Note: Nota a pie de página. -->
 
@@ -40,12 +43,140 @@ element: class="fragment" data-fragment-index="1"
 
 
 
+## Conceptos básicos
 
 
-En la aplicación J2EE, los módulos se empaquetan como JAR, WAR y EAR en función de su funcionalidad
+### Ediciones de Java
 
-JAR: los módulos EJB que contienen enterprise java beans (archivos de clase) y el descriptor de despliegue EJB se empaquetan como archivos JAR con extensión .jar (Java Archive)
+- **Java Card**
+- Micro Edition (**ME**)
+- Standard Edition (**SE**)
+- Enterprise Edition (**EE**)
+- **JavaFX** 
 
-WAR: los módulos web que contienen archivos de clase Servlet, archivos JSP, archivos compatibles, archivos GIF y HTML están empaquetados como archivo JAR con extensión .war (Web Archive)
 
-EAR: Todos los archivos anteriores (.jar y .war) se empaquetan como archivo JAR con extensión .ear (Enterprise Archive) y se implementan en Application Server.
+###  Tipos de archivos
+
+- **JAR** (Java ARchive): Es un tipo de archivo que permite almacenar aplicaciones escritas en el lenguaje Java. Los archivos JAR están comprimidos con el formato ZIP y cambiada su extensión a .jar. 
+
+- **WAR** (Web Application aRchive): Es un archivo JAR (con la extensión WAR) usado para distribuir una colección de archivos JSP, servlets, clases Java, archivos XML y contenido web estático (HTML). En conjunto constituyen una aplicación Web.
+
+- **EAR** (Enterprise Application aRchive): Es un formato usado por Java EE para empaquetar en un sólo archivo varios módulos. Permite desplegar varios de esos módulos en un servidor de aplicaciones. Contiene archivos XML llamados descriptores de depliegue que describen cómo realizar dicha operación.
+
+
+
+## TOMCAT
+
+**Servidor web y Contenedor de servlets**
+
+![Tomcat](assets/tomcat.png)
+
+
+### Instalación
+
+```bash
+# En Ubuntu 16.04 y 18.04
+apt  install  tomcat8   tomcat8-admin
+
+# Opcionalmente puede instalarse también
+apt  install  tomcat8-docs  tomcat8-examples
+```
+
+Note: Tomcat estará disponible en **http://localhost:8080**
+
+
+### Configuración
+
+```bash
+/etc/tomcat8/
+/etc/tomcat8/tomcat-users.xml
+```
+
+
+### Configuración
+
+- Insertamos las siguientes líneas en `/etc/tomcat8/tomcat-users.xml`.
+
+```xml
+<role rolename="manager-gui"/>
+<role rolename="admin-gui"/>
+<user username="tomcat" password="tomcat" roles="manager-gui,admin-gui"/>
+```
+
+
+### Construir webapp
+
+- **Descargamos código fuente**
+- **Revisamos los siguientes archivos**
+
+  ```
+  <SOURCE>/pom.xml
+  <SOURCE>/src/main/resources/applicationContext.xml
+  ```
+
+
+### Construir webapp
+
+- **Construimos con maven**
+
+```bash
+mvn  clean  package
+```
+
+- **Revisamos los archivos generados**
+
+```
+<SOURCE>/target/<APP>.war 
+<SOURCE>/target/<APP>/  
+```
+
+
+### Desplegar en tomcat
+
+- **Accedemos a `http://localhost:8080/manager/html`**
+- **Seleccionamos archivo `.war` a desplegar.**
+- **Y pulsamos en botón desplegar.**
+
+
+###  Webapps
+
+```bash
+/var/lib/tomcat8/
+/var/lib/tomcat8/webapps/
+/var/lib/tomcat8/webapps/<APP>/WEB-INF/web.xml
+/var/lib/tomcat8/webapps/<APP>/WEB-INF/lib/
+/var/lib/tomcat8/webapps/<APP>/WEB-INF/classes/
+/var/lib/tomcat8/webapps/<APP>/WEB-INF/classes/applicationContext.xml
+```
+
+
+### Webapps
+
+ Directorio principal (raíz): Contendrá los ficheros estáticos (HTML, imágenes, etc...).
+
+-  Carpeta `WEB-INF` : contiene el fichero `web.xml` (descriptor de la aplicación), encargado de configurar la aplicación.
+    - Subcarpeta `classes` : contiene los ficheros compilados (servlets, beans).
+    - Subcarpeta `lib` : librerías adicionales.
+-  Resto de carpetas para ficheros estáticos.
+
+
+
+## JBOSS / WILDFLY
+
+**Servidor de aplicaciones**
+
+![WildFly](assets/wildfly.png)
+
+
+
+## Contenedores Docker
+
+
+### docker
+
+![Docker](assets/docker.png)
+
+
+### docker-compose
+
+![Docker compose](assets/docker-compose.png)
