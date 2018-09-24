@@ -49,19 +49,19 @@ element: class="fragment" data-fragment-index="1"
 ### Ediciones de Java
 
 - **Java Card**
-- Micro Edition (**ME**)
-- Standard Edition (**SE**)
-- Enterprise Edition (**EE**)
+- **Micro Edition** (**ME**)
+- **Standard Edition** (**SE**)
+- **Enterprise Edition** (**EE**)
 - **JavaFX** 
 
 
 ###  Tipos de archivos
 
-- **JAR** (Java ARchive): Es un tipo de archivo que permite almacenar aplicaciones escritas en el lenguaje Java. Los archivos JAR están comprimidos con el formato ZIP y cambiada su extensión a .jar. 
+- **JAR** (Java ARchive): Permite almacenar aplicaciones escritas en el lenguaje Java. Los archivos JAR están comprimidos con el formato ZIP y cambiada su extensión a .jar. 
 
-- **WAR** (Web Application aRchive): Es un archivo JAR (con la extensión WAR) usado para distribuir una colección de archivos JSP, servlets, clases Java, archivos XML y contenido web estático (HTML). En conjunto constituyen una aplicación Web.
+- **WAR** (Web Application aRchive): Es un archivo JAR (con la extensión WAR) para distribuir archivos JSP, servlets, clases Java, archivos XML y contenido web estático (HTML). En conjunto constituyen una aplicación Web.
 
-- **EAR** (Enterprise Application aRchive): Es un formato usado por Java EE para empaquetar en un sólo archivo varios módulos. Permite desplegar varios de esos módulos en un servidor de aplicaciones. Contiene archivos XML llamados descriptores de depliegue que describen cómo realizar dicha operación.
+- **EAR** (Enterprise Application aRchive): Formato usado por Java EE para empaquetar en un sólo archivo varios módulos y para desplegar en un servidor de aplicaciones. Contiene archivos XML llamados descriptores de depliegue que describen cómo realizar dicha operación.
 
 
 
@@ -82,7 +82,7 @@ apt  install  tomcat8   tomcat8-admin
 apt  install  tomcat8-docs  tomcat8-examples
 ```
 
-Note: Tomcat estará disponible en **http://localhost:8080**
+Una vez instalado, Tomcat estará disponible en **http://localhost:8080**
 
 
 ### Configuración
@@ -92,10 +92,7 @@ Note: Tomcat estará disponible en **http://localhost:8080**
 /etc/tomcat8/tomcat-users.xml
 ```
 
-
-### Configuración
-
-- Insertamos las siguientes líneas en `/etc/tomcat8/tomcat-users.xml`.
+Insertamos las siguientes líneas en **/etc/tomcat8/tomcat-users.xml**.
 
 ```xml
 <role rolename="manager-gui"/>
@@ -104,10 +101,10 @@ Note: Tomcat estará disponible en **http://localhost:8080**
 ```
 
 
-### Construir webapp
+### Construir webapp (I)
 
-- **Descargamos código fuente**
-- **Revisamos los siguientes archivos**
+1. Descargamos código fuente
+2. Revisamos los siguientes archivos
 
   ```
   <SOURCE>/pom.xml
@@ -115,30 +112,30 @@ Note: Tomcat estará disponible en **http://localhost:8080**
   ```
 
 
-### Construir webapp
+### Construir webapp (II)
 
-- **Construimos con maven**
+3. Construimos con maven
 
-```bash
-mvn  clean  package
-```
+  ```bash
+  mvn  clean  package
+  ```
 
-- **Revisamos los archivos generados**
+4. Revisamos los archivos generados
 
-```
-<SOURCE>/target/<APP>.war 
-<SOURCE>/target/<APP>/  
-```
+  ```
+  <SOURCE>/target/<APP>.war 
+  <SOURCE>/target/<APP>/  
+  ```
 
 
 ### Desplegar en tomcat
 
-- **Accedemos a `http://localhost:8080/manager/html`**
-- **Seleccionamos archivo `.war` a desplegar.**
-- **Y pulsamos en botón desplegar.**
+1. Accedemos a **http://localhost:8080/manager/html**
+2. Seleccionamos archivo **`.war`** a desplegar.
+3. Y pulsamos en botón **Desplegar**.
 
 
-###  Webapps
+###  Carpetas de una Webapp
 
 ```bash
 /var/lib/tomcat8/
@@ -150,14 +147,13 @@ mvn  clean  package
 ```
 
 
-### Webapps
+### Carpetas de una Webapp
 
- Directorio principal (raíz): Contendrá los ficheros estáticos (HTML, imágenes, etc...).
-
--  Carpeta `WEB-INF` : contiene el fichero `web.xml` (descriptor de la aplicación), encargado de configurar la aplicación.
-    - Subcarpeta `classes` : contiene los ficheros compilados (servlets, beans).
-    - Subcarpeta `lib` : librerías adicionales.
--  Resto de carpetas para ficheros estáticos.
+-Directorio principal (raíz): Contendrá los ficheros estáticos (HTML, imágenes, etc...).
+  - Carpeta **`WEB-INF`** : contiene el fichero **`web.xml`** (descriptor de la aplicación), encargado de configurar la aplicación.
+    - Subcarpeta **`classes`** : contiene los ficheros compilados (servlets, beans).
+    - Subcarpeta **`lib`** : librerías adicionales.
+  - Resto de carpetas para ficheros estáticos.
 
 
 
@@ -170,6 +166,11 @@ mvn  clean  package
 
 
 ## Contenedores Docker
+
+
+### VMs / Containers
+
+![VMs vs Containers](assets/vm-container.png)
 
 
 ### docker
