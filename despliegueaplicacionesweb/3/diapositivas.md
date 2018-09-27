@@ -57,7 +57,7 @@ element: class="fragment" data-fragment-index="1"
 
 ###  Tipos de archivos
 
-- **JAR** (Java ARchive): Permite almacenar aplicaciones escritas en el lenguaje Java. Los archivos JAR están comprimidos con el formato ZIP y cambiada su extensión a .jar. 
+- **JAR** (Java ARchive): Permite almacenar aplicaciones escritas en el lenguaje Java. Formato ZIP pero extensión .jar. 
 
 - **WAR** (Web Application aRchive): Es un archivo JAR (con la extensión WAR) para distribuir archivos JSP, servlets, clases Java, archivos XML y contenido web estático (HTML). En conjunto constituyen una aplicación Web.
 
@@ -103,7 +103,7 @@ Insertamos las siguientes líneas en **/etc/tomcat8/tomcat-users.xml**.
 
 ### Construir webapp (I)
 
-1. Descargamos código fuente
+1. Descargamos código fuente de aplicación
 2. Revisamos los siguientes archivos
 
   ```
@@ -164,13 +164,22 @@ Insertamos las siguientes líneas en **/etc/tomcat8/tomcat-users.xml**.
 ![WildFly](assets/wildfly.png)
 
 
+### Características
+
+- También conocido como **WildFly Application Server**
+- Servidor de aplicaciones de código abierto.
+- Implementa la especificación Java EE.
+- Anteriormente conocido como JBoss AS.
+- Escrito en Java. Desarrollado por RedHat.
+
+
 
 ## Contenedores Docker
 
 
 ### VMs / Containers
 
-![VMs vs Containers](assets/vm-container.png)
+![VMs vs Containers](assets/vm-container.jpg)
 
 
 ### docker
@@ -178,6 +187,87 @@ Insertamos las siguientes líneas en **/etc/tomcat8/tomcat-users.xml**.
 ![Docker](assets/docker.png)
 
 
+### Características de docker
+
+- Proyecto de código abierto.
+- Actualmente estándar de facto en contenedores. Otros sistemas son LXD, LXC, RKT, ...
+- Permite automatizar el despliegue de aplicaciones dentro de "contenedores".
+- Un contenedor empaqueta todo lo necesario para que una aplicación funcione: código y dependencias.
+- No hay que preocuparse de qué software ni versiones tiene nuestra máquina.
+- Un contenedor es un objeto portable, ligero y autosuficiente.
+
+
+### Ventajas de docker
+
+- Los contenedores se inician en pocos segundos.
+- Son fácilmente replicables.
+- Consumen menos recursos que las máquinas virtuales tradicionales.
+- Ocupan mucho menos espacio.
+- Permite aislar las dependencias de una aplicación de las instaladas en el host.
+- Existe un gran repositorio de imágenes ya creadas sobre miles de aplicaciones, que además
+pueden modificarse libremente. Es DockerHub (https://hub.docker.com)
+
+
+### Desventajas de docker
+
+- Los contenedores no están 100% aislados. Usan el kernel del anfitrión.
+- Mejor rendimiento en Linux que en otras plataformas.
+- Existe cierta curva de aprendizaje.
+
+
+### Comandos de docker
+
+```bash
+docker login
+docker logout
+docker pull
+docker push
+docker run ...
+docker exec ...
+docker images
+docker ps
+docker rmi ...
+docker rm ...
+```
+
+
 ### docker-compose
 
 ![Docker compose](assets/docker-compose.png)
+
+
+### Características de docker-compose
+
+- Permite definir y ejecutar aplicaciones de múltiples contenedores Docker. 
+- Usa un archivo YAML para configurar los servicios de la aplicación.
+- Dicho archivo se suele llamar `docker-compose.yml`. 
+- Con un solo comando, crea e inicia todos los servicios.
+
+
+### Ejemplo docker-compose.yml
+
+```yaml
+version: "2"
+services:
+    tomcat:
+        image: "tomcat:8.0-jre8"
+        ports:
+            - "8080:8080"
+        depends_on:
+            - sqlserver
+    sqlserver:
+        image: "microsoft/mssql-server-linux:2017-latest"
+        environment:
+            SA_PASSWORD: "Temporal22"
+            ACCEPT_EULA: "Y"
+        volumes:
+            ./docs/:/data
+  ```
+
+
+### Comandos de docker-compose
+
+  ```bash
+docker-compose up -d
+docker-compose down
+```

@@ -129,7 +129,7 @@ a2ensite   # Habilitar sitio
 
 **`/etc/apache2/sites-available/sitio.conf`**
 
-```
+```xml
 <VirtualHost *:80> 
   ServerName www.sitio.com
   ServerAdmin webmaster@sitio.com
@@ -190,7 +190,7 @@ Note: Ejecutar los comandos como usuario **root**.
 
 ### Directivas de autenticación
 
-```
+```xml
 <VirtualHost *:80> 
   ServerName www.sitio.com 
   ServerAdmin webmaster@localhost 
@@ -265,7 +265,7 @@ Note: CSR = Certificate Signing Request (solicitud de firma de certificado).
 
 **`/etc/apache2/sites-available/default-ssl.conf`**
 
-```
+```xml
 <VirtualHost _default_:443> 
   ServerName nombre­-dominio-­sitio
   DocumentRoot /var/www/html
