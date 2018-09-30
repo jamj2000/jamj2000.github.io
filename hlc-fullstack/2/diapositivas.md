@@ -238,7 +238,7 @@ Note: Aunque en el ejemplo aparecen 2 colecciones, a tí no debería aparecerte 
 
 ### Comparativa de operaciones
 
-CRUD      | Relacional  | noSQL
+CRUD      | Relacional  | MongoDB
 ----------|-------------|--------------
 CREATE    | INSERT      | insert
 READ      | SELECT      | find

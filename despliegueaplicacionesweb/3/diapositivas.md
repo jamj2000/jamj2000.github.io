@@ -61,7 +61,7 @@ element: class="fragment" data-fragment-index="1"
 
 - **WAR** (Web Application aRchive): Es un archivo JAR (con la extensión WAR) para distribuir archivos JSP, servlets, clases Java, archivos XML y contenido web estático (HTML). En conjunto constituyen una aplicación Web.
 
-- **EAR** (Enterprise Application aRchive): Formato usado por Java EE para empaquetar en un sólo archivo varios módulos y para desplegar en un servidor de aplicaciones. Contiene archivos XML llamados descriptores de depliegue que describen cómo realizar dicha operación.
+- **EAR** (Enterprise Application aRchive): Formato usado por Java EE para empaquetar en un sólo archivo varios módulos y para desplegar (mediante archivos XML llamados descriptores de depliegue) en un servidor de aplicaciones.
 
 
 
@@ -149,7 +149,7 @@ Insertamos las siguientes líneas en **/etc/tomcat8/tomcat-users.xml**.
 
 ### Carpetas de una Webapp
 
--Directorio principal (raíz): Contendrá los ficheros estáticos (HTML, imágenes, etc...).
+- Directorio principal (raíz): Contendrá los ficheros estáticos (HTML, imágenes, etc...).
   - Carpeta **`WEB-INF`** : contiene el fichero **`web.xml`** (descriptor de la aplicación), encargado de configurar la aplicación.
     - Subcarpeta **`classes`** : contiene los ficheros compilados (servlets, beans).
     - Subcarpeta **`lib`** : librerías adicionales.
@@ -169,8 +169,8 @@ Insertamos las siguientes líneas en **/etc/tomcat8/tomcat-users.xml**.
 - También conocido como **WildFly Application Server**
 - Servidor de aplicaciones de código abierto.
 - Implementa la especificación Java EE.
-- Anteriormente conocido como JBoss AS.
-- Escrito en Java. Desarrollado por RedHat.
+- Anteriormente conocido como **JBoss AS**.
+- Escrito en Java. Desarrollado por **RedHat**.
 
 
 
@@ -190,7 +190,7 @@ Insertamos las siguientes líneas en **/etc/tomcat8/tomcat-users.xml**.
 ### Características de docker
 
 - Proyecto de código abierto.
-- Actualmente estándar de facto en contenedores. Otros sistemas son LXD, LXC, RKT, ...
+- Actualmente es estándar de facto en contenedores. Otros sistemas son LXD, LXC, RKT, ...
 - Permite automatizar el despliegue de aplicaciones dentro de "contenedores".
 - Un contenedor empaqueta todo lo necesario para que una aplicación funcione: código y dependencias.
 - No hay que preocuparse de qué software ni versiones tiene nuestra máquina.
@@ -246,7 +246,7 @@ docker rm ...
 
 ### Ejemplo docker-compose.yml
 
-```yaml
+```yml
 version: "2"
 services:
     tomcat:
@@ -271,3 +271,5 @@ services:
 docker-compose up -d
 docker-compose down
 ```
+
+mvn wildfly:run
