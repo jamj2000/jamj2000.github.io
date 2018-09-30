@@ -246,7 +246,7 @@ docker rm ...
 
 ### Ejemplo docker-compose.yml
 
-```yml
+```yaml
 version: "2"
 services:
     tomcat:
@@ -271,5 +271,3 @@ services:
 docker-compose up -d
 docker-compose down
 ```
-
-mvn wildfly:run
