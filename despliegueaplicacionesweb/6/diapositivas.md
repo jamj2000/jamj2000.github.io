@@ -22,7 +22,8 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 - ### Introducción
-
+- ### Documentación con Markdown
+- ### Control de versiones con git
 
 <!--- Note: Nota a pie de página. -->
 
@@ -37,3 +38,80 @@ element: class="fragment" data-fragment-index="1"
 - Utilizar diferentes formatos para la documentación.
 - Utilizar herramientas colaborativas para la elaboración y mantenimiento de la documentación.
 - Instalar, configurar y utilizar un sistema de control de versiones.
+
+
+
+## Documentación con Markdown
+
+
+### Cabeceras
+
+```markdown
+# Esto es una cabecera de nivel 1
+## Esto es una cabecera de nivel 1
+###### Esto es una cabecera de nivel 6
+```
+
+
+### Listas sin orden
+
+```markdown
+* Item 1
+* Item 2
+ * Item 2a
+ * Item 2b
+```
+
+
+### Lista con orden
+
+```markdown
+1. Item 1
+2. Item 2
+3. Item 3
+ * Item 3a
+ * Item 3b
+```
+
+
+### Formato
+
+```markdown
+*Este texto se muestra en itálica*
+_Este también se mostrará en itálica_
+**Este texto se muestra en negrita**
+__Este también se mostrará en negrita__
+*Puedes **combinar** ambos formatos*
+```
+
+
+### Enlaces
+
+```markdown
+http://github.com - automático
+[GitHub](http://github.com)
+```
+
+
+### Imágenes
+
+```markdown
+![GitHub Logo](/images/logo.png)
+Formato: ![Texto alternativo](url)
+```
+
+
+### Citaciones
+
+```markdown
+Como dijo Grace Hopper:
+> I’ve always been more interested
+> in the future than in the past.
+```
+
+
+### Menciones de Github
+
+
+
+## Control de versiones con git
