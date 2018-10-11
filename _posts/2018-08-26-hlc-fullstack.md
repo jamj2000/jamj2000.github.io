@@ -11,20 +11,20 @@ article: yes
 ---
 # Diapositivas
 
-- [DAW - Conceptos generales](http://jamj2000.github.io/hlc-fullstack/1/diapositivas). 
-- [DAW - Bases de Datos noSQL](http://jamj2000.github.io/hlc-fullstack/2/diapositivas). 
+- [HLC - Conceptos generales](http://jamj2000.github.io/hlc-fullstack/1/diapositivas). 
+- [HLC - Bases de Datos noSQL](http://jamj2000.github.io/hlc-fullstack/2/diapositivas). 
 - [DAW - Introducción a Javascript](http://jamj2000.github.io/hlc-fullstack/3/diapositivas). 
-- [DAW - Backend con NodeJS y Express](http://jamj2000.github.io/hlc-fullstack/4/diapositivas). 
-- [DAW - Frontend con VanillaJS](http://jamj2000.github.io/hlc-fullstack/5/diapositivas). 
-- [DAW - Desarrollo para dispositivos móviles](http://jamj2000.github.io/hlc-fullstack/6/diapositivas). 
+- [HLC - Backend con NodeJS y Express](http://jamj2000.github.io/hlc-fullstack/4/diapositivas). 
+- [HLC - Frontend con VanillaJS](http://jamj2000.github.io/hlc-fullstack/5/diapositivas). 
+- [HLC - Desarrollo para dispositivos móviles](http://jamj2000.github.io/hlc-fullstack/6/diapositivas). 
    
 # Actividades
 
-- [DAW - Conceptos generales](http://jamj2000.github.io/hlc-fullstack/1/actividades). 
-- [DAW - Bases de Datos noSQL](http://jamj2000.github.io/hlc-fullstack/2/actividades). 
-- [DAW - Introducción a Javascript](http://jamj2000.github.io/hlc-fullstack/3/actividades). 
-- [DAW - Backend con NodeJS y Express](http://jamj2000.github.io/hlc-fullstack/4/actividades). 
-- [DAW - Frontend con VanillaJS](http://jamj2000.github.io/hlc-fullstack/5/actividades). 
-- [DAW - Desarrollo para dispositivos móviles](http://jamj2000.github.io/hlc-fullstack/6/actividades). 
+- [HLC - Conceptos generales](http://jamj2000.github.io/hlc-fullstack/1/actividades). 
+- [HLC - Bases de Datos noSQL](http://jamj2000.github.io/hlc-fullstack/2/actividades). 
+- [HLC - Introducción a Javascript](http://jamj2000.github.io/hlc-fullstack/3/actividades). 
+- [HLC - Backend con NodeJS y Express](http://jamj2000.github.io/hlc-fullstack/4/actividades). 
+- [HLC - Frontend con VanillaJS](http://jamj2000.github.io/hlc-fullstack/5/actividades). 
+- [HLC - Desarrollo para dispositivos móviles](http://jamj2000.github.io/hlc-fullstack/6/actividades). 
 
 
