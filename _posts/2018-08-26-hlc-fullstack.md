@@ -13,7 +13,7 @@ article: yes
 
 - [HLC - Conceptos generales](http://jamj2000.github.io/hlc-fullstack/1/diapositivas). 
 - [HLC - Bases de Datos noSQL](http://jamj2000.github.io/hlc-fullstack/2/diapositivas). 
-- [DAW - Introducción a Javascript](http://jamj2000.github.io/hlc-fullstack/3/diapositivas). 
+- [HLC - Introducción a Javascript](http://jamj2000.github.io/hlc-fullstack/3/diapositivas). 
 - [HLC - Backend con NodeJS y Express](http://jamj2000.github.io/hlc-fullstack/4/diapositivas). 
 - [HLC - Frontend con VanillaJS](http://jamj2000.github.io/hlc-fullstack/5/diapositivas). 
 - [HLC - Desarrollo para dispositivos móviles](http://jamj2000.github.io/hlc-fullstack/6/diapositivas). 
