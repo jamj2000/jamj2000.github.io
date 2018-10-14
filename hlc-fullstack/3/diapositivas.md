@@ -24,7 +24,7 @@ element: class="fragment" data-fragment-index="1"
 - ### Introducción
 - ### Javascript básico
 - ### Javascript intermedio
-
+- ### Apuntes y ejemplos
 
 <!--- Note: Nota a pie de página. -->
 
@@ -262,3 +262,9 @@ function mostrar(mensaje, msEspera) {
 
 mensajes();
 ```
+
+
+
+## Apuntes y ejemplos
+
+https://github.com/jamj2000/javascript
