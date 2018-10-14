@@ -27,7 +27,6 @@ element: class="fragment" data-fragment-index="1"
 - ### Accediendo a la BD
 - ### Comprobando la API
 
-
 <!--- Note: Nota a pie de página. -->
 
 
@@ -156,14 +155,12 @@ sudo npm  r  yarn     -g
 
 - No es necesario instalarlos.
 - Ya vienen con node.js.
-
-**Ejemplos:**
-
-- **fs**:  Sistema de archivos
-- **http**:  Servidor HTTP 
-- **os**:  Sistema operativo
-- **path**:  Rutas de archivos
-- ...
+- Ejemplos:
+  - **fs**:  Sistema de archivos
+  - **http**:  Servidor HTTP 
+  - **os**:  Sistema operativo
+  - **path**:  Rutas de archivos
+  - ...
 
 Mas info: https://www.w3schools.com/nodejs/ref_modules.asp
 
@@ -173,7 +170,7 @@ Mas info: https://www.w3schools.com/nodejs/ref_modules.asp
 
 - Node.js nos permite desarrollar un servidor web desde cero.
 - Para ello puede usarse el módulo incorporado `http`.
-- Sin embargo es más recomendable, por su sencillez, usar el framework `express`.
+- Sin embargo es más recomendable, por su sencillez, usar el **framework `express`**.
 
 
 ### Un servidor sencillo
@@ -182,8 +179,15 @@ Mas info: https://www.w3schools.com/nodejs/ref_modules.asp
 
 ```javascript
 var app  =  require('express')();
-app.get('/',               (req, res) => { res.send ('<h1>Hola mundo</h1>')  });
-app.get ('/hola/:usuario', (req, res) => { res.send (`<h1>Buenos días, ${req.params.usuario}</h1>`); });
+
+app.get ('/', (req, res) => { 
+    res.send ('<h1>Hola mundo</h1>') 
+});
+
+app.get ('/hola/:usuario', (req, res) => { 
+    res.send (`<h1>Buenos días, ${req.params.usuario}</h1>`); 
+});
+
 app.listen (3000);
 ```
 Para ejecutar:
@@ -260,7 +264,7 @@ module.exports =  {
 
 ### Operaciones CRUD
 
-| Operación CRUD  | Equivalente HTTP | Equivalente SQL | MongoDB        | Mongoose                                 |
+| CRUD            |  HTTP            |  SQL            | MongoDB        | Mongoose                                 |
 |-----------------|------------------|-----------------|----------------|------------------------------------------|
 | C (Create)      | POST             | INSERT          | insert         | objeto.save                              |
 | R (Read)        | GET              | SELECT          | find           | Modelo.find   / Modelo.findOne           |
@@ -387,11 +391,9 @@ fetch('/api/clientes', { method: 'GET' })
   .then ( res => res.json())
   .then ( data => console.log(data) );
 
-
 fetch('/api/clientes/5b4916cb2100bc25330b6ac9', { method: 'GET' })
   .then ( res => res.json())
   .then ( data => console.log(data) );
-
 
 fetch('/api/clientes/5b49b5e33808be1b00b982e2', { method: 'DELETE' })
   .then ( res => res.json())
@@ -399,25 +401,31 @@ fetch('/api/clientes/5b49b5e33808be1b00b982e2', { method: 'DELETE' })
 ```
 
 
-### DevTools del navegador (I)
+### DevTools del navegador (II)
 
 ```javascript
 var cliente = { nombre: "Isabel", apellidos: "López" };
 
 fetch('/api/clientes', {
   method: 'POST',
-  body: JSON.stringify(cliente), // data can be `string` or {object}!
+  body: JSON.stringify(cliente), 
   headers:{
     'Content-Type': 'application/json'
   }
 })
   .then(res => res.json())
   .then(data => console.log(data))
+```
 
+
+### DevTools del navegador (III)
+
+```javascript
+var cliente = { nombre: "Pepe", apellidos: "Pérez" };
 
 fetch('/api/clientes/5b4916cb2100bc25330b6ac9', {
   method: 'PUT',
-  body: JSON.stringify(cliente), // data can be `string` or {object}!
+  body: JSON.stringify(cliente), 
   headers:{
     'Content-Type': 'application/json'
   }
@@ -434,7 +442,7 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 
 ### Postman: Instalación
 
-- Descargar de la página oficial ( https://www.getpostman.com/apps )
+- Descargar de la página oficial: https://www.getpostman.com/apps
 - Descomprimir
 - Ejecutar `Postman/Postman`
 
