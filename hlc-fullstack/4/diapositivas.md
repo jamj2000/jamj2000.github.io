@@ -160,6 +160,7 @@ sudo npm  r  yarn     -g
   - **http**:  Servidor HTTP 
   - **os**:  Sistema operativo
   - **path**:  Rutas de archivos
+  - **process**:  Información y control del proceso actual
   - ...
 
 Mas info: https://www.w3schools.com/nodejs/ref_modules.asp
