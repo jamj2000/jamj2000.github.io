@@ -44,6 +44,8 @@ element: class="fragment" data-fragment-index="1"
 
 ## Javascript básico
 
+![Javascript](assets/javascript.png)
+
 
 ### Introducción
 

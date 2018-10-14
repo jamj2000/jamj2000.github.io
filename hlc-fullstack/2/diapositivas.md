@@ -74,6 +74,8 @@ element: class="fragment" data-fragment-index="1"
 
 ## MongoDB: Primeros pasos
 
+![Mongo DB](assets/mongodb.png)
+
 
 ### Instalación
 
