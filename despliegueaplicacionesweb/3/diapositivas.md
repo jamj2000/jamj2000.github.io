@@ -220,8 +220,8 @@ pueden modificarse libremente. Es DockerHub (https://hub.docker.com)
 ```bash
 docker login
 docker logout
-docker pull
-docker push
+docker pull ...
+docker push ...
 docker run ...
 docker exec ...
 docker images
@@ -231,6 +231,38 @@ docker rm ...
 ```
 
 
+### docker run
+
+- Nos permite ejecutar un contenedor a partir de una imagen.
+- Si no tenemos la imagen localmente, entonces la descarga.
+
+```bash
+docker  run  -d  -p 8090:80  -v /var/www/html:/usr/share/nginx/html  nginx
+```
+
+**Opciones**
+
+- `-d`, `--detach`:  libera el terminal, se ejecuta en segundo plano.
+- `-p ...`, `--publish=...`: puertos de red mapeados en localhost.
+- `-v ...`, `--volume=...`: directorios mapeados en localhost.
+
+
+### docker exec
+
+- Nos permite lanzar un ejecutable del interior del contenedor.
+- A menudo el comando a lanzar es `bash`, para trabajar dentro del contenedor.
+
+```bash
+docker  exec  -it  9a60b60be82d  bash
+```
+
+**Opciones**
+
+- `-i`, `--interactive`: mantiene STDIN abierta
+- `-t`, `--tty`: se reserva un terminal pseudo-TTY
+- `9a60b60be82d`: es el ID del contenedor, puede obtenerse con `docker ps`
+
+
 ### docker-compose
 
 ![Docker compose](assets/docker-compose.png)
@@ -238,9 +270,9 @@ docker rm ...
 
 ### Características de docker-compose
 
-- Permite definir y ejecutar aplicaciones de múltiples contenedores Docker. 
+- Permite definir y ejecutar aplicaciones multicontenedor. 
 - Usa un archivo YAML para configurar los servicios de la aplicación.
-- Dicho archivo se suele llamar `docker-compose.yml`. 
+- Dicho archivo por defecto se llama `docker-compose.yml`. 
 - Con un solo comando, crea e inicia todos los servicios.
 
 
@@ -268,6 +300,6 @@ services:
 ### Comandos de docker-compose
 
   ```bash
-docker-compose up -d
-docker-compose down
+docker-compose  up  -d
+docker-compose  down
 ```
