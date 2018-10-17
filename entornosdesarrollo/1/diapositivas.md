@@ -420,12 +420,12 @@ __Características__
 
 ### Historia simplificada
 
-[Historia simplificada](http://rigaux.org/language-study/diagram-light.png)
+[Historia simplificada](assets/simple-lang-tree.png)
 
 
-### Historia detallada
+### Historia completa
 
-[Historia detallada](http://rigaux.org/language-study/diagram.png)
+[Historia detallada](https://www.levenez.com/lang/lang.pdf)
 
 
 ### Criterios para la selección de un lenguaje
@@ -438,3 +438,4 @@ __Características__
 - Reusabilidad
 - Portabilidad
 - Imposición del cliente
+
