@@ -418,7 +418,7 @@ __Características__
 - Lenguajes orientados a objetos
 
 
-### Historia simplificada
+### Historia
 
 ![Historia simplificada](assets/simple-lang-tree.png)
 
