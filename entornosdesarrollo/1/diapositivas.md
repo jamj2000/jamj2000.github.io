@@ -420,12 +420,9 @@ __Características__
 
 ### Historia simplificada
 
-[Historia simplificada](assets/simple-lang-tree.png)
+![Historia simplificada](assets/simple-lang-tree.png)
 
-
-### Historia completa
-
-[Historia detallada](https://www.levenez.com/lang/lang.pdf)
+[Historia completa](https://www.levenez.com/lang/lang.pdf)
 
 
 ### Criterios para la selección de un lenguaje
