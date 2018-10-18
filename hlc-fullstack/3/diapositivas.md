@@ -198,6 +198,16 @@ setInterval(hola, 5000);
 **Ejemplo 2**
 
 ```javascript
+// Usando una función anónima.
+
+setTimeout ( function () { console.log ('Hola'); }, 5000);  
+setInterval( function () { console.log ('Hola'); }, 5000);  
+```
+
+
+**Ejemplo 3**
+
+```javascript
 function callback (pos) {
     console.log (pos.coords.latitude, pos.coords.longitude);
 }
@@ -210,13 +220,28 @@ if ("geolocation" in navigator) {
 ```
 
 
+**Ejemplo 4**
+
+```javascript
+// Usando una función anónima
+
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition (       
+      function (pos) { console.log (pos.coords.latitude, pos.coords.longitude); }
+    );
+} else {
+    console.log ("No hay soporte de GPS");
+}
+```
+
+
 ### Promesas
 
 Disponible a partir de ES6 (2015). 
 La estructura del código es más clara que el uso de callbacks.
 
 
-**Ejemplo**
+**Ejemplo 1**
 
 ```javascript
 var URL = 'https://api.github.com/users/jamj2000';
@@ -232,6 +257,33 @@ function error(err) {
 fetch(URL)
   .then(callback)
   .catch(error);
+```
+
+
+**Ejemplo 2**
+
+```javascript
+// Usando funciones anónimas
+var URL = 'https://api.github.com/users/jamj2000';
+
+fetch(URL)
+  .then(function (response) { console.log (response); } )
+  .catch(function (err) { console.log(`Error devuelto: ${err.code} - ${err.message}`); });
+```
+
+**Ejemplo 3**
+
+```javascript
+// Ejemplo completo
+// Usando funciones anónimas
+// Una vez recibidos la respuesta hacemos una conversión a JSON
+
+var URL = 'https://api.github.com/users/jamj2000';
+
+fetch(URL)
+  .then(function (response) { return response.json(); } )
+  .then(function (data) { console.log (data); } )
+  .catch(function (err) { console.log(`Error devuelto: ${err.code} - ${err.message}`); });
 ```
 
 

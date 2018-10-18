@@ -92,7 +92,7 @@ apt install mongodb  # se instala la versión 3.6.3
 #### Ubuntu 16.04 y 14.04
 
 - No instalaremos el paquete que viene en los repositorios.
-- Se instalará el paquete mongodb-org, con un versión más actualizada.
+- Se instalará el paquete mongodb-org, con una versión más actualizada.
 - Seguiremos los pasos indicados en https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/.
 
 
