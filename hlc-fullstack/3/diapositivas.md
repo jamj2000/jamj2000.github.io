@@ -99,8 +99,8 @@ typeof a;   // string
 
 ### Tipos compuestos
 
-- Arrays  `[   ]`
-- Objetos  `{   }`
+- Arrays:  `[   ]`
+- Objetos:  `{   }`
 
 
 **Ejemplos de arrays**
@@ -145,9 +145,9 @@ persona.altura   // 170
 ### Funciones nominadas
 
 ```javascript
-function suma (a, b) { return a + b; }     // Declaración o definición
+function suma (a, b) { return a + b; }  // Declaración o definición 
 
-suma (2, 3);                               // Llamada o invocación
+suma (2, 3);                            // Llamada o invocación                          
 
 typeof suma;  // "function"
 ```
@@ -156,12 +156,16 @@ typeof suma;  // "function"
 ### Funciones anónimas
 
 ```javascript
-// forma tradicional
-function (a, b) { return a + b; }  // ¿Cómo hago una llamada a esta función??     
+//// FORMATO TRADICIONAL
+// ¿Cómo hago una llamada a esta función?? 
+function (a, b) { return a + b; }      
 
-// forma de función flecha 
-(a, b) => { return a + b; }        // expresada en forma de función flecha
-(a, b) => a + b;                   // expresada en forma de función flecha, simplificando return
+//// FORMATO DE FUNCIÓN FLECHA 
+// expresada en forma de función flecha
+(a, b) => { return a + b; }    
+
+// expresada en forma de función flecha, simplificando return    
+(a, b) => a + b;                   
 ```
 
 
@@ -184,7 +188,8 @@ Un **callback** es una **función que es pasada como argumento a otra función**
 **Ejemplo 1**
 
 ```javascript
-// Función que usaremos para el callback. En este caso, NO es una función anónima.
+// Función que usaremos para el callback. 
+// En este caso, NO es una función anónima.
 function hola(){
   console.log ('Hola');
 }
@@ -276,7 +281,7 @@ fetch(URL)
 ```javascript
 // Ejemplo completo
 // Usando funciones anónimas
-// Una vez recibidos la respuesta hacemos una conversión a JSON
+// Una vez recibida la respuesta hacemos una conversión a JSON
 
 var URL = 'https://api.github.com/users/jamj2000';
 
