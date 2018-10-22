@@ -57,7 +57,25 @@ united
 
 #<a name="cuestiones"></a>[Cuestiones](#indice) 
 
-1. Busca información en Internet acerca de las características, ventajas y desventajas de las bases de datos noSQL.
+1. ¿Qué significan las siglas PWA?
+<hr>
+
+1. Busca informacción en Internet acerca de las PWA y las características que deben poseer.
+<hr>
+
+1. ¿Para que sirve el archivo `manifest.json` de una PWA?
+<hr>
+
+1. ¿En qué directorio debe alojarse el archivo `manifest.json`?
+<hr>
+
+1. ¿Qué es la app shell? ¿Qué archivos debería formar parte de ella? Explica la respuesta.
+<hr>
+
+1. ¿Qué es un `service worker`? ¿Cuál es su finalidad?
+<hr>
+
+1. ¿Cuáles son los eventos básicos que atiente el `service worker`? Explica la respuesta.
 <hr>
 
 <pre>
@@ -67,29 +85,38 @@ united
 
 #<a name="practicas"></a>[Prácticas](#indice) 
 
+Siguiendo el desarrollo de la aplicación iniciada en los temas anteriores, realiza la adaptación del frontend a dispositivos móviles.
+Los requisitos a tener en cuenta son:
+
+- La aplicación deberá funcionar en dispositivos móviles.
+- La aplicación podrá instalarse en dispositivos móviles como si de una app nativa se tratase.
+- 
+- El rendimiento será equiparable al de una app nativa.
+
+
 ## Práctica 1
 
-Instala y verifica el correcto funcionamiento del **SGBD MongoDB**.
+**Progressive Web App**.
 
- - Instala mongodb en tu computadora.
- - Verifica las versiones instaladas tanto del servidor como del cliente.
- - Verifica el estado del servicio.
- - Reinicia el servicio.
- - Habilita el servicio para que se inicie al arrancar el equipo.
- - Crea una base de datos llamada `agenda` con los datos de 10 `personas`.
- - Todas ellas deben tener un domicilio compuesto de 3 propiedades: calle, número y localidad. 
+ - Genera el archivo de manifiesto oportuno, indicando colores e iconos de aplicación.
+ - Determina los archivos que serán cacheados como parte de la app shell.
+ - Implementa el cacheo de la app shell para gestionar las conexiones offline.
+ - Genera el código correspondiente del `Service Worker`.
+ - Realiza las pruebas correspondientes para comprobar el adecuado funcionamiento.
+ 
 
 ## Práctica 2
 
-Crea una base de datos `blog` y dentro una colección `entradas`. La base de datos guardará todos los posts que han sido enviados a nuestro blog, así como los comentarios en cada post.
+**Despliegue en Heroku + mLab**
 
- - Inserta 4 entradas.
- - Cada entrada debe tener al menos 2 comentarios.
- - Las propiedades de cada entrada son: titulo, contenido, fecha y comentarios.
- - Las propiedades de cada comentario son: autor, fecha y votos.
+ - Crea una cuenta gratuita en Heroku y otra en mLab. 
+ - Crea una base de datos MongoDB en mLab y apunta los parámetros que se te indican.
+ - Crea una aplicación en Heroku y configura las variables de entorno necesarias.
+ - Edita la configuración dependiendo de si la aplicación es desplegada en un entorno de desarrollo o en un entorno de producción. 
+ - Despliega la aplicación en Heroku.
+ - Realiza las pruebas para comprobar el correcto funcionamiento y su adaptación a dispositivos móviles.
 
-
-<pre>
+ <pre>
 
 
 </pre>

@@ -77,6 +77,13 @@ united
 - `os.userInfo()`
 <hr>
 
+1. Inicia `node` y ejecuta las siguientes métodos del módulo `process`:
+- `process.`   y pulsamos tabulador 2 veces
+- `process.env`
+- `procces.pid`
+- `procces.ppid`
+- `procces.uptime()`
+<hr>
 
 <pre>
 
@@ -85,26 +92,36 @@ united
 
 #<a name="practicas"></a>[Prácticas](#indice) 
 
+Las prácticas de este tema y los siguientes están destinadas a que el alumno/a desarrolle una aplicación fullstack con las características que se piden.
+
+- La aplicación se realizará enteramente en Javascript, tanto en el backend como en el frontend, pudiéndose utilizar también HTML, CSS y los frameworks relacionados que se consideren oportunos.
+- La aplicación permitirá las 4 operaciones CRUD sobre la base de datos.
+- Cada alumno/a realizará su propia aplicación de forma independiente, eligiendo cada uno una temática distinta. Ejemplos:
+  - Gestión de un instituto de secundaria.
+  - Gestión de un taller.
+  - Gestión de jardines.
+  - etc
+
+
 ## Práctica 1
 
-Instala y verifica el correcto funcionamiento del **SGBD MongoDB**.
+**Diseño de la Base de Datos**.
 
- - Instala mongodb en tu computadora.
- - Verifica las versiones instaladas tanto del servidor como del cliente.
- - Verifica el estado del servicio.
- - Reinicia el servicio.
- - Habilita el servicio para que se inicie al arrancar el equipo.
- - Crea una base de datos llamada `agenda` con los datos de 10 `personas`.
- - Todas ellas deben tener un domicilio compuesto de 3 propiedades: calle, número y localidad. 
+ - Deberás elegir el nombre de la base de datos.
+ - Deberás crear al menos 2 colecciones, cada una con un mínimo de 4 campos.
+ - Inserta al menos 10 documentos en cada colección.
+ - Realiza las pruebas oportunas para comprobar el correcto funcionamiento.
 
 ## Práctica 2
 
-Crea una base de datos `blog` y dentro una colección `entradas`. La base de datos guardará todos los posts que han sido enviados a nuestro blog, así como los comentarios en cada post.
+**Servicio API RESTful**
 
- - Inserta 4 entradas.
- - Cada entrada debe tener al menos 2 comentarios.
- - Las propiedades de cada entrada son: titulo, contenido, fecha y comentarios.
- - Las propiedades de cada comentario son: autor, fecha y votos.
+ - Crea un servidor que atienda las peticiones de los clientes en el puerto 3000.
+ - Al iniciar el servidor, esté deberá realizar la conexión a la base de datos de la práctica anterior.
+ - Define los modelos de datos.
+ - Define las rutas necesarias para acceder a los datos.
+ - El servicio de datos se realizará en formato JSON.
+ - Realiza las pruebas necesarias (con postman, curl o similar) para comprobar la correcta funcionalidad de la API.
 
 
 <pre>
