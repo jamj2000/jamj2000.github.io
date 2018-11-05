@@ -204,8 +204,8 @@ Insertamos las siguientes líneas en **/etc/tomcat8/tomcat-users.xml**.
 - Consumen menos recursos que las máquinas virtuales tradicionales.
 - Ocupan mucho menos espacio.
 - Permite aislar las dependencias de una aplicación de las instaladas en el host.
-- Existe un gran repositorio de imágenes ya creadas sobre miles de aplicaciones, que además
-pueden modificarse libremente. Es DockerHub (https://hub.docker.com)
+- Existe un gran repositorio de imágenes ya creadas, que además
+pueden modificarse libremente. Es DockerHub: https://hub.docker.com
 
 
 ### Desventajas de docker
@@ -293,7 +293,7 @@ services:
             SA_PASSWORD: "Temporal22"
             ACCEPT_EULA: "Y"
         volumes:
-            ./docs/:/data
+            ./docs:/data
   ```
 
 

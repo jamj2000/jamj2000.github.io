@@ -59,7 +59,7 @@ element: class="fragment" data-fragment-index="1"
 ### Clientes y servidores
 
 - Clientes:
-  - ftp  (terminal)
+  - **ftp**  (terminal)
   - gftp
   - **filezilla**
   - navegador web (`ftp://servidor`)
@@ -196,7 +196,7 @@ echo "/bin/false" >> /etc/shells
 - Podemos utilizar el que viene en Ubuntu
   - /etc/ssl/private/ssl-cert-snakeoil.key  ( clave privada )
   - /etc/ssl/certs/ssl-cert-snakeoil.pem    ( certificado )
-- O podemos generar uno nostros.
+- O podemos generar uno nosotros.
 
 ```bash
 # Generamos clave privada y certificado en un único archivo
