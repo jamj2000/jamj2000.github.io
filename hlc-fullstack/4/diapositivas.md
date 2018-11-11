@@ -408,9 +408,12 @@ app.listen (config.port,
   - **Postman**
 
 
-### curl
+### curl (I)
 
 Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, **PUT**, **DELETE**, y muchas otras, de forma directa desde **terminal de texto**.
+
+
+### curl (II)
 
 ```bash
 # GET
@@ -436,6 +439,11 @@ curl -H 'Content-Type: application/json' \
 
 ### DevTools del navegador (I)
 
+Mediante código javascript podemos realizar peticiones HTTP de tipo **POST**, **GET**, **PUT**, **DELETE**, y alguna otra. Si el servidor no tiene habilitado `CORS`, deberemos tener abierta en el navegador alguna página del dominio para realizar peticiones desde el mismo origen.
+
+
+### DevTools del navegador (II)
+
 ```javascript
 fetch('/api/clientes', { method: 'GET' })
   .then ( res => res.json())
@@ -451,7 +459,7 @@ fetch('/api/clientes/5b49b5e33808be1b00b982e2', { method: 'DELETE' })
 ```
 
 
-### DevTools del navegador (II)
+### DevTools del navegador (III)
 
 ```javascript
 var cliente = { nombre: "Isabel", apellidos: "López" };
