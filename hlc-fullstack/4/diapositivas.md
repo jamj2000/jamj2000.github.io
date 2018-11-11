@@ -121,9 +121,9 @@ npm  init  -y  # La opción -y crea un archivo package.json sin hacer preguntas
 ### Instalación de módulos
 
 ```bash
-     npm  install  express  -S  # -S: anotar en package.json como dependencia de aplicación
-     npm  install  nodemon  -D  # -D: anotar en package.json como dependencia de desarrollo
-sudo npm  install  yarn     -g  # -g: instala en el sistema de forma global
+     npm  install  express  -S  
+     npm  install  nodemon  -D  
+sudo npm  install  yarn     -g  
 ```
 
 o de forma más corta
@@ -134,13 +134,18 @@ o de forma más corta
 sudo npm  i  yarn     -g
 ```
 
+Note:
+  -S: anotar en package.json como dependencia de aplicación
+  -D: anotar en package.json como dependencia de desarrollo
+  -g: instala en el sistema de forma global
+
 
 ### Desinstalación de módulos
 
 ```bash
-     npm  remove  express  -S  # -S: quitar de package.json como dependencia de aplicación
-     npm  remove  nodemon  -D  # -D: quitar de package.json como dependencia de desarrollo
-sudo npm  remove  yarn     -g  # -g: desinstala del sistema de forma global
+     npm  remove  express  -S 
+     npm  remove  nodemon  -D 
+sudo npm  remove  yarn     -g 
 ```   
 o de forma más corta
 
@@ -149,6 +154,11 @@ o de forma más corta
      npm  r  nodemon  -D  
 sudo npm  r  yarn     -g
 ```
+
+Note:
+  -S: anotar en package.json como dependencia de aplicación
+  -D: anotar en package.json como dependencia de desarrollo
+  -g: instala en el sistema de forma global
 
 
 ### Módulos incorporados (built-in)
@@ -245,16 +255,18 @@ mongoose.connect('mongodb://localhost:27017/tienda', { useNewUrlParser: true })
 
 
 ### El modelo de datos
-
-- Necesitamos indicar a la aplicación la estructura de los datos.
-
 **models.js**
 
 ```bash
 const mongoose = require('mongoose');
 
-const Cliente  = mongoose.model('Cliente',  { nombre: String, apellidos: String });
-const Articulo = mongoose.model('Articulo', { nombre: String, precio: Number });
+const Cliente  = mongoose.model('Cliente',  { 
+                                   nombre: String, 
+                                   apellidos: String  });
+
+const Articulo = mongoose.model('Articulo', { 
+                                   nombre: String, 
+                                   precio: Number });
 
 module.exports =  {
     Cliente,
@@ -273,16 +285,23 @@ module.exports =  {
 | D (Delete)      | DELETE           | DELETE          | remove         | Modelo.remove / Modelo.findOneAndRemove  |
 
 
-### Acceso a la BD
-
+### Acceso a la BD (I)
 **routes.js**
+#### Importación de módulos
 
 ```javascript
 const express = require('express');
 const { Cliente, Articulo } = require('./models');
 
 const router = express.Router();
+```
 
+
+### Acceso a la BD (II)
+**routes.js**
+#### Lectura de datos
+
+```javascript
 // ver todos los Clientes
 router.get('/clientes', (req, res) => {  
   Cliente.find( ... );  
@@ -292,20 +311,43 @@ router.get('/clientes', (req, res) => {
 router.get('/clientes/:id', (req, res) => {  
   Cliente.findOne( ... ); 
 });
+```
 
+
+### Acceso a la BD (III)
+**routes.js**
+#### Eliminación de datos
+
+```javascript
 // eliminar un Cliente
 router.delete('/clientes/:id', (req, res) => { 
   Cliente.findOneAndRemove( ... ); 
 });
+```
 
+
+### Acceso a la BD (IV)
+**routes.js**
+#### Modificación de datos
+
+```javascript
 // actualizar un Cliente
 router.put('/clientes/:id', (req, res) => {
   Cliente.findOneAndUpdate( ... ); 
 });
+```
 
+
+### Acceso a la BD (V)
+**routes.js**
+#### Inserción de datos
+
+```javascript
 // insertar un Cliente
 router.post('/clientes', (req, res) => {
-    const cliente = new Cliente({ nombre: req.body.nombre, apellidos: req.body.apellidos });
+    const cliente = new Cliente({ 
+                          nombre: req.body.nombre, 
+                          apellidos: req.body.apellidos });
     cliente.save( ... );
 });
 ``` 
@@ -342,8 +384,8 @@ module.exports = {
 
 - En el archivo **`server.js`** utilizamos las variables anteriores en lugar de constantes.
 - Si importamos el objeto como config, entonces tenemos:
-  - config.port
-  - config.db_uri
+  - `config.port`
+  - `config.db_uri`
 
 ```javascript
 const config = require('./config');
@@ -352,7 +394,8 @@ mongoose.connect(config.db_uri, { useNewUrlParser: true })
   .then(db   => console.log ('Conexión correcta a la BD'))
   .catch(err => console.log ('Error en la conexión a la BD'));
 
-app.listen (config.port, () => console.log(`Servidor iniciado en puerto ${config.port}`));
+app.listen (config.port, 
+            () => console.log(`Servidor iniciado en puerto ${config.port}`));
 ```
 
 
@@ -372,16 +415,22 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 ```bash
 # GET
 curl  http://localhost:3000/api/articulos
-curl -H 'Content-Type: application/json' -X GET http://localhost:3000/api/articulos
+curl -H 'Content-Type: application/json' \
+     -X GET http://localhost:3000/api/articulos
 
 # POST
-curl -H 'Content-Type: application/json' -X POST -d '{"nombre": "Botas de invierno","precio": 99.99}' http://localhost:3000/api/articulos
+curl -H 'Content-Type: application/json' \
+     -X POST -d '{"nombre": "Botas de invierno","precio": 99.99}' \
+     http://localhost:3000/api/articulos
 
 # PUT
-curl -H 'Content-Type: application/json' -X PUT -d '{"nombre": "Paraguas","precio": 100.20}' http://localhost:3000/api/articulos/5b609c52c60bd6656205e3d7
+curl -H 'Content-Type: application/json' \
+     -X PUT -d '{"nombre": "Paraguas","precio": 100.20}' \
+     http://localhost:3000/api/articulos/5b609c52c60bd6656205e3d7
 
 # DELETE
-curl -H 'Content-Type: application/json' -X DELETE http://localhost:3000/api/articulos/5b609c52c60bd6656205e3d7
+curl -H 'Content-Type: application/json' \
+     -X DELETE http://localhost:3000/api/articulos/5b609c52c60bd6656205e3d7
 ```
 
 
