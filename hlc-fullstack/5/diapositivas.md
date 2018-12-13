@@ -38,3 +38,12 @@ element: class="fragment" data-fragment-index="1"
 - Gestionar distintos tipos de eventos.
 - Realizar peticiones asíncronas de datos.
 
+---
+- El lenguaje de programación Javascript.
+- Frameworks disponibles para el lado cliente: Angular, React, Vue.
+- Desarrollo sin uso de frameworks.
+- El Modelo de Objetos del Documento (DOM).
+- Gestión de eventos.
+- Realización de peticiones asíncronas.
+- Edición y depuración de código.
+---

@@ -64,26 +64,97 @@ united
 <hr>
 
 1. Inicia `node` y ejecuta las siguientes métodos del módulo `os`:
-- `os.`   y pulsamos tabulador 2 veces
-- `os.type()`
-- `os.platform()`
-- `os.arch()`
-- `os.release()`
-- `os.cpus()`
-- `os.totalmem()`
-- `os.freemem()`
-- `os.uptime()`
-- `os.networkInterfaces()`
-- `os.userInfo()`
+
+  - `os.`   y pulsamos tabulador 2 veces
+  - `os.type()`
+  - `os.platform()`
+  - `os.arch()`
+  - `os.release()`
+  - `os.cpus()`
+  - `os.totalmem()`
+  - `os.freemem()`
+  - `os.uptime()`
+  - `os.networkInterfaces()`
+  - `os.userInfo()`
 <hr>
 
 1. Inicia `node` y ejecuta las siguientes métodos del módulo `process`:
-- `process.`   y pulsamos tabulador 2 veces
-- `process.env`
-- `procces.pid`
-- `procces.ppid`
-- `procces.uptime()`
+
+  - `process.`   y pulsamos tabulador 2 veces
+  - `process.env`
+  - `procces.pid`
+  - `procces.ppid`
+  - `procces.uptime()`
 <hr>
+
+1. ¿Qué pasos debemos seguir para iniciar un nuevo proyecto de NodeJS? Pon un ejemplo.
+<hr>
+
+1. ¿Cómo instalamos módulos para un proyecto de NodeJS? Pon un ejemplo.
+<hr>
+
+1. Para que sirve el archivo `package.json`?
+<hr>
+
+1. Explica qué hacen las siguientes sentencias:
+
+  ```node 
+  const express  = require('express');
+  const mongoose = require('mongoose');
+  const routes   = require('./routes');
+  const config   = require('./config');
+  ```
+<hr>
+
+1. Explica qué hace la siguiente sentencia:
+
+  ```node 
+  module.exports = router;
+  ```
+<hr>
+
+1. Explica qué hace la siguiente sentencia:
+
+  ```node 
+  module.exports =  {
+    Cliente,
+    Articulo
+  };
+  ```
+<hr>
+
+1. Explica qué hace la siguiente sentencia:
+
+  ```node 
+  module.exports = {
+    ip         : process.env.HOST   || '0.0.0.0',
+    port       : process.env.PORT   || 3000,
+    db_uri     : process.env.DB_URI || 'mongodb://localhost:27017/tienda'
+  };
+  ```
+<hr>
+
+1. Busca información en Internet acerca del Middleware para Express. ¿Cuál es la función del middleware? ¿Qué módulos existen para Express?
+<hr>
+
+1. ¿Para que se utiliza el método app.use() de express?
+<hr>
+
+1. Pon un ejemplo de uso de app.use (express.static( )).
+<hr>
+
+1. Pon un ejemplo de uso de app.listen ( ).
+<hr>
+
+1. ¿Para que se utilizan los métodos router.get(), router.post(), router.put() y router.delete()  de express?
+<hr>
+
+1. Pon un ejemplo de uso de router.get ().
+<hr>
+
+1. Pon un ejemplo de uso de mongoose.connect ().
+<hr>
+
 
 <pre>
 
@@ -101,7 +172,20 @@ Las prácticas de este tema y los siguientes están destinadas a que el alumno/a
   - Gestión de un taller.
   - Gestión de jardines.
   - etc
-
+- Se proponen las siguientes temáticas:
+  1. Almacen de productos
+  2. Taller mecánico
+  3. Mercería
+  4. Vivero de plantas
+  5. Mensajería
+  6. Meteorología
+  7. Concesionario de coches
+  8. Gestión del olivar
+  9. Supermercado
+  10. Instituto de educación secundaria
+  11. Hospital
+  12. Ganadería
+  13. Gestión de eventos: conciertos, conferencias, exposiciones, ...
 
 ## Práctica 1
 

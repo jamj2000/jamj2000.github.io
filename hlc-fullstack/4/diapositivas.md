@@ -25,6 +25,7 @@ element: class="fragment" data-fragment-index="1"
 - ### Node.js
 - ### El servidor web
 - ### Accediendo a la BD
+- ### Ajustes finales
 - ### Comprobando la API
 
 <!--- Note: Nota a pie de página. -->
@@ -90,8 +91,10 @@ Note: **npm** =  **N**ode **P**ackage **M**anager
 mkdir  nombre-proyecto
 cd     nombre-proyecto
 
-npm  init  -y  # La opción -y crea un archivo package.json sin hacer preguntas
+npm  init  -y 
 ```
+
+Note: La opción -y (--yes) de `npm init` crea un archivo package.json con opciones por defecto, sin solicitar al usuario.
 
 
 ### Archivo package.json
@@ -134,10 +137,9 @@ o de forma más corta
 sudo npm  i  yarn     -g
 ```
 
-Note:
-  -S: anotar en package.json como dependencia de aplicación
-  -D: anotar en package.json como dependencia de desarrollo
-  -g: instala en el sistema de forma global
+Note: -S: anotar en package.json como dependencia de aplicación.
+Note: -D: anotar en package.json como dependencia de desarrollo.
+Note: -g: instala en el sistema de forma global.
 
 
 ### Desinstalación de módulos
@@ -155,10 +157,9 @@ o de forma más corta
 sudo npm  r  yarn     -g
 ```
 
-Note:
-  -S: anotar en package.json como dependencia de aplicación
-  -D: anotar en package.json como dependencia de desarrollo
-  -g: instala en el sistema de forma global
+Note: -S: anotar en package.json como dependencia de aplicación.
+Note: -D: anotar en package.json como dependencia de desarrollo.
+Note: -g: instala en el sistema de forma global.
 
 
 ### Módulos incorporados (built-in)
@@ -213,20 +214,20 @@ node  server1
 **server2.js**
 
 ```javascript
+// --- IMPORTACIONES
 const path     = require('path');
 const express  = require('express');
 const morgan   = require('morgan');
 
 const app      = express();
 
-// Archivos estáticos
-// Deberás crear un archivo public/index.html para ver el resultado
+// --- MIDDLEWARE
+// Archivos estáticos. Deberás crear un archivo public/index.html para ver el resultado
 app.use(express.static(path.join(__dirname , 'public')));
-
-// Middleware
+// Logger
 app.use(morgan('dev'));
 
-// Servidor
+// --- PUERTO DE ESCUCHA
 app.listen (3000, () => console.log('Servidor iniciado en puerto 3000'));
 ```
 
@@ -304,41 +305,76 @@ const router = express.Router();
 ```javascript
 // ver todos los Clientes
 router.get('/clientes', (req, res) => {  
-  Cliente.find( ... );  
+  Cliente.find( ... ver más abajo ... );  
 });
+```
 
-// ver un Cliente
-router.get('/clientes/:id', (req, res) => {  
-  Cliente.findOne( ... ); 
-});
+```javascript
+    Cliente.find({}, (err, data) => {
+        if (err) res.json({ error: err });
+        else     res.json(data);
+    });
 ```
 
 
 ### Acceso a la BD (III)
+**routes.js**
+#### Lectura de datos
+
+```javascript
+// ver un Cliente
+router.get('/clientes/:id', (req, res) => {  
+  Cliente.findOne( ... ver más abajo ... ); 
+});
+```
+
+```javascript
+    Cliente.findOne({ _id: req.params.id }, (err, data) => {
+        if (err) res.json({ error: err });
+        else     res.json(data);
+    });
+```
+
+
+### Acceso a la BD (IV)
 **routes.js**
 #### Eliminación de datos
 
 ```javascript
 // eliminar un Cliente
 router.delete('/clientes/:id', (req, res) => { 
-  Cliente.findOneAndRemove( ... ); 
+  Cliente.findOneAndRemove( ... ver más abajo ... ); 
 });
 ```
 
+```javascript
+    Cliente.findOneAndRemove({ _id: req.params.id }, (err, data) => {
+        if (err) res.json({ error: err });
+        else     res.json(data);
+    });
+```
 
-### Acceso a la BD (IV)
+
+### Acceso a la BD (V)
 **routes.js**
 #### Modificación de datos
 
 ```javascript
 // actualizar un Cliente
 router.put('/clientes/:id', (req, res) => {
-  Cliente.findOneAndUpdate( ... ); 
+  Cliente.findOneAndUpdate( ... ver más abajo ... ); 
 });
 ```
 
+```javascript
+    Cliente.findOneAndUpdate({ _id: req.params.id }, { $set: { nombre: req.body.nombre, apellidos: req.body.apellidos } }, (err, data) => {
+        if (err) res.json({ error: err });
+        else     res.json(data);
+    });
+```
 
-### Acceso a la BD (V)
+
+### Acceso a la BD (VI)
 **routes.js**
 #### Inserción de datos
 
@@ -348,9 +384,20 @@ router.post('/clientes', (req, res) => {
     const cliente = new Cliente({ 
                           nombre: req.body.nombre, 
                           apellidos: req.body.apellidos });
-    cliente.save( ... );
+    cliente.save( ... ver más abajo ... );
 });
 ``` 
+
+```javascript
+    cliente.save((err, data) => {
+        if (err) res.json({ error: err });
+        else     res.json(data);
+    });
+```
+
+
+
+## Ajustes finales
 
 
 ### Estableciendo las rutas 

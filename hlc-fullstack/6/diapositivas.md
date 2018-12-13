@@ -39,3 +39,17 @@ element: class="fragment" data-fragment-index="1"
 - Comprobar el correcto cacheo de los datos.
 - Desplegar la aplicación.
 
+
+---
+- Estudio de arternativas.
+  * Aplicaciones nativas
+  * Aplicaciones híbridas
+  * Aplicaciones web progresivas (PWA)
+- Diseño de web adaptativas (responsive)
+  * Frameworks CSS (bootstrap, materialize)
+- PWA: Archivo manifest.json
+- PWA: Archivos que forman la App Shell.
+- PWA: Service Workers
+- PWA: Cacheo de datos.
+- PWA: Instalación en dispositivos móviles.
+---
