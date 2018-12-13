@@ -282,12 +282,12 @@ module.exports =  {
 
 ### Operaciones CRUD
 
-| CRUD        |  HTTP    |  SQL      | MongoDB   | Mongoose                     |
-|-------------|----------|-----------|-----------|------------------------------|
-| C (Create)  | POST     | INSERT    | insert    | objeto.save                  |
-| R (Read)    | GET      | SELECT    | find      | Modelo.find / Modelo.findOne |
-| U (Update)  | PUT      | UPDATE    | update    | Modelo.findOneAndUpdate      |
-| D (Delete)  | DELETE   | DELETE    | remove    | Modelo.findOneAndRemove      |
+| CRUD     |  HTTP    |  SQL      | MongoDB   | Mongoose                     |
+|----------|----------|-----------|-----------|------------------------------|
+| Create   | POST     | INSERT    | insert    | objeto.save                  |
+| Read     | GET      | SELECT    | find      | Modelo.find / Modelo.findOne |
+| Update   | PUT      | UPDATE    | update    | Modelo.findOneAndUpdate      |
+| Delete   | DELETE   | DELETE    | remove    | Modelo.findOneAndRemove      |
 
 
 ### Acceso a la BD (I)
