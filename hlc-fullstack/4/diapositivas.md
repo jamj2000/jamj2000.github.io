@@ -138,7 +138,9 @@ sudo npm  i  yarn     -g
 ```
 
 Note: -S: anotar en package.json como dependencia de aplicación.
+
 Note: -D: anotar en package.json como dependencia de desarrollo.
+
 Note: -g: instala en el sistema de forma global.
 
 
@@ -158,7 +160,9 @@ sudo npm  r  yarn     -g
 ```
 
 Note: -S: anotar en package.json como dependencia de aplicación.
+
 Note: -D: anotar en package.json como dependencia de desarrollo.
+
 Note: -g: instala en el sistema de forma global.
 
 
