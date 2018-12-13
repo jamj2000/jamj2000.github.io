@@ -286,8 +286,8 @@ module.exports =  {
 |-----------------|------------------|-----------------|----------------|------------------------------------------|
 | C (Create)      | POST             | INSERT          | insert         | objeto.save                              |
 | R (Read)        | GET              | SELECT          | find           | Modelo.find   / Modelo.findOne           |
-| U (Update)      | PUT              | UPDATE          | update         | Modelo.update / Modelo.findOneAndUpdate  |
-| D (Delete)      | DELETE           | DELETE          | remove         | Modelo.remove / Modelo.findOneAndRemove  |
+| U (Update)      | PUT              | UPDATE          | update         | Modelo.findOneAndUpdate  |
+| D (Delete)      | DELETE           | DELETE          | remove         | Modelo.findOneAndRemove  |
 
 
 ### Acceso a la BD (I)
