@@ -371,7 +371,9 @@ router.put('/clientes/:id', (req, res) => {
 ```
 
 ```javascript
-    Cliente.findOneAndUpdate({ _id: req.params.id }, { $set: { nombre: req.body.nombre, apellidos: req.body.apellidos } }, (err, data) => {
+    Cliente.findOneAndUpdate({ _id: req.params.id }, 
+                             { $set: { nombre: req.body.nombre, apellidos: req.body.apellidos } }, 
+                             (err, data) => {
         if (err) res.json({ error: err });
         else     res.json(data);
     });
