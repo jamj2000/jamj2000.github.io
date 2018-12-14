@@ -228,6 +228,8 @@ const app      = express();
 // --- MIDDLEWARE
 // Archivos estáticos. Deberás crear un archivo public/index.html para ver el resultado
 app.use(express.static(path.join(__dirname , 'public')));
+// Soporte de JSON
+app.use(express.json());
 // Logger
 app.use(morgan('dev'));
 
