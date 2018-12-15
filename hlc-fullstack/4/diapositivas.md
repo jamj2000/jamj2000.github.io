@@ -374,8 +374,8 @@ router.put('/clientes/:id', (req, res) => {
 
 ```javascript
     Cliente.findOneAndUpdate (
-      { _id: req.params.id }, 
-      { $set: { nombre: req.body.nombre, apellidos: req.body.apellidos } }, 
+      {_id: req.params.id}, 
+      {$set: { nombre: req.body.nombre, apellidos :req.body.apellidos }}, 
       (err, data) => {
         if (err) res.json({ error: err });
         else     res.json(data);
@@ -405,6 +405,17 @@ router.post('/clientes', (req, res) => {
 ```
 
 
+### Acceso a la BD (VII)
+**routes.js**
+#### Exportamos enrutador
+
+```javascript
+...  código anterior ... 
+
+module.exports = router;
+```
+
+
 
 ## Ajustes finales
 
@@ -420,11 +431,9 @@ const routes = require('./routes');
 app.use ('/api', routes);
 ```
 
-
 ### Parámetros de configuración
 
-- Para facilitar el mantenimiento y despliegue de la aplicación, situamos todos los parámetros de configuración en el archivo **`config.js`**
-
+- Para facilitar el mantenimiento y despliegue de la aplicación, situamos todos los parámetros de configuración en el archivo **`config.js`*
 ```javascript
 // El primer valor es el de PRODUCCIÓN. El valor alternativo es el de DESARROLLO
 
