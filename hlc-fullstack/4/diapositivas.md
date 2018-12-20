@@ -137,11 +137,10 @@ o de forma más corta
 sudo npm  i  yarn     -g
 ```
 
-Note: -S: anotar en package.json como dependencia de aplicación.
-
-Note: -D: anotar en package.json como dependencia de desarrollo.
-
-Note: -g: instala en el sistema de forma global.
+Note: 
+-S: anotar en package.json como dependencia de aplicación.
+-D: anotar en package.json como dependencia de desarrollo.
+-g: instala en el sistema de forma global.
 
 
 ### Desinstalación de módulos
@@ -159,11 +158,10 @@ o de forma más corta
 sudo npm  r  yarn     -g
 ```
 
-Note: -S: anotar en package.json como dependencia de aplicación.
-
-Note: -D: anotar en package.json como dependencia de desarrollo.
-
-Note: -g: instala en el sistema de forma global.
+Note: 
+-S: anotar en package.json como dependencia de aplicación.
+-D: anotar en package.json como dependencia de desarrollo.
+-g: instala en el sistema de forma global.
 
 
 ### Módulos incorporados (built-in)
@@ -431,9 +429,11 @@ const routes = require('./routes');
 app.use ('/api', routes);
 ```
 
+
 ### Parámetros de configuración
 
 - Para facilitar el mantenimiento y despliegue de la aplicación, situamos todos los parámetros de configuración en el archivo **`config.js`*
+
 ```javascript
 // El primer valor es el de PRODUCCIÓN. El valor alternativo es el de DESARROLLO
 
