@@ -136,7 +136,7 @@ Los más usados actualmente (Enero 2018)
 
 [Wikipedia en inglés](https://en.wikipedia.org/wiki/Vue.js)
 
-[Características de Vue](https://www.genbeta.com/desarrollo/por-que-elegir-vuejs-5-razones-para-considerarlo-nuestro-proximo-framework-de-referencia))
+[Características de Vue](https://www.genbeta.com/desarrollo/por-que-elegir-vuejs-5-razones-para-considerarlo-nuestro-proximo-framework-de-referencia)
 
 
 
@@ -302,6 +302,7 @@ function modificar(coleccion, id, objeto) {
 
 }
 ```
+
 
 ### Javascript (V)
 
