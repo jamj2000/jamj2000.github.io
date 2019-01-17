@@ -325,3 +325,4 @@ function eliminar(coleccion, id) {
         });
     // }
 }
+```
