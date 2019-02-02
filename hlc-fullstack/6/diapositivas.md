@@ -25,7 +25,6 @@ element: class="fragment" data-fragment-index="1"
 - ### Desarrollo para móvil
 - ### Aplicaciones Web Progresivas (PWA)
 
-
 <!--- Note: Nota a pie de página. -->
 
 
