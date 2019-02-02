@@ -23,11 +23,8 @@ element: class="fragment" data-fragment-index="1"
 --- 
 - ### Introducción
 - ### Desarrollo para móvil
-- ### PWA: Manifest.json
-- ### PWA: App Shell
-- ### PWA: Service Worker
-- ### PWA: Despliegue en internet
-- ### PWA: Instalación en PC y móvil
+- ### Aplicaciones Web Progresivas (PWA)
+
 
 <!--- Note: Nota a pie de página. -->
 
@@ -38,7 +35,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Estudiar la tecnología de aplicación web progresiva (PWA).
+- Valorar la tecnología de aplicación web progresiva (PWA).
 - Crear el archivo `manifest.json` e idenficar los archivos que conforman el `App Shell`.
 - Generar el `Service Worker` y comprobar sus eventos asociados.
 - Comprobar el correcto cacheo de los datos.
@@ -75,63 +72,117 @@ element: class="fragment" data-fragment-index="1"
 - Suele usarse algún framework como Cordova, Angular Ionic o React Native.
 
 
-### Aplicaciones web progresivas
+### Aplicaciones Web Progresivas I
 
 - Desarrollo más sencillo.
 - Buen rendimiento, equiparable a una aplicación nativa.
 - Mínimo coste de desarrollo.
-- Desarrollo multiplaforma real: Web, Escritorio y Móvil.
-- Uso de "responsive web design", para adaptar a distintos tamaños de pantalla.
-- Es necesario adaptar la aplicación no solo a pantalla de móviles, sino también para PC.
+- **Desarrollo multiplaforma real: Web, Escritorio y Móvil**.
+- Uso de "**responsive web design**", para adaptar a distintos tamaños de pantalla.
+- Necesidad de adaptar la aplicación a pantalla de móviles y también de PC.
 - Todo el desarrollo se realiza en HTML5, JS y CSS.
-- 
+- Deben funcionar sobre **HTTPS**.
+
+
+### Aplicaciones Web Progresivas II
+
+- No hay necesidad de una tienda de aplicaciones. 
+- Pueden instalarse desde el sitio web de la aplicación.
+- Una vez instaladas, aparecen en la pantalla de inicio del usuario.
+- Ofrecen una experiencia de pantalla completa inmersiva.
+- Fidelización de usuarios al ofrecer notificaciones push.
+
+
+### Aplicaciones Web Progresivas III
+
+#### Características
+
+- **Confiable** (Reliable). Carga instantánea incluso con condiciones de red inciertas.
+- **Rápida** (Fast). Respuesta rápida a la intereacción con el usuario con animaciones suaves.
+- **Atractiva** (Engaging). Experiencia de usuario inmersiva.
+
+https://developers.google.com/web/progressive-web-apps/
+
 
 ### Diseño responsive (web adaptativas)
 
 - Framework CSS **Bootstrap**
 - Framework CSS **Materialize**
+- CSS puro. Mediante el empleo de **media queries**.
+
+
+### ¿Qué puede hacerse con tecnologías web?
+
+https://whatwebcando.today/
+
+
+### Un pequeño listado de PWA
+https://pwa.rocks/
+
+![PWA lista](assets/pwa-list.png)
 
 
 
-## PWA: manifest.json
+## Aplicaciones Web Progresivas (PWA)
 
-**manifest.json**
-```json
-
-```
-
-## PWA: App Shell
-
-## PWA: Service Worker
-
-## PWA: Despliegue en internet
-
-## PWA: Instalación en PC y móvil
+- Archivo **manifes.json**
+- **App Shell**
+- **Service Worker**
+- **Push Notifications**
 
 
+### PWA: manifest.json
+
+- Archivo en formato JSON.
+- Indica la apariencia de la aplicación y cómo se inicia.
+- Puede especificar:
+  - los iconos de la pantalla de inicio
+  - la página que se cargará cuando se inicie la aplicación
+  - la orientación de la pantalla
+  - e incluso si desea mostrar o no el navegador Chrome.
+
+https://app-manifest.firebaseapp.com/
 
 
-### Características de las PWA
-
-- **Confiable (Reliable)**. Carga instantánea incluso con condiciones de red inciertas.
-- **Rápida (Fast)**. Respuesta rápida a la intereacción con el usuario con animaciones suaves.
-- **Compromiso (Engaging)**. Experiencia de usuario inmersiva.
-
-Note: https://developers.google.com/web/progressive-web-apps/
+### PWA: App Shell
 
 
-Un Service Worker es como un proxy del lado del cliente y le pone en control de la memoria caché y cómo responder a las solicitudes de recursos. Al pre-almacenar en caché los recursos clave, puede eliminar la dependencia de la red, asegurando una experiencia instantánea y confiable para sus usuarios.
 
-- No hay necesidad de una tienda de aplicaciones. 
-- Las aplicaciones web progresivas son instalables y aparecen en la pantalla de inicio del usuario.
-- Ofrecen una experiencia de pantalla completa inmersiva.
-- Con la ayuda de un archivo de manifiesto de la aplicación web e incluso pueden volver a comprometer a los usuarios con notificaciones push.
+### PWA: Service Worker
+
+- Es como un proxy del lado del cliente.
+- Controla la memoria caché y responde a las solicitudes de recursos por parte del cliente. 
+- Al pre-almacenar en caché los recursos clave, puede eliminar la dependencia de la red, asegurando una experiencia instantánea y confiable para sus usuarios.
 
 
-El archivo manifest.json de la aplicación permite controlar la apariencia de la aplicación y cómo se inicia. Puede especificar los iconos de la pantalla de inicio, la página que se cargará cuando se inicie la aplicación, la orientación de la pantalla e incluso si desea mostrar o no el navegador Chrome.
+### PWA: Push Notifications I
 
-Una notificación web push debe ser:
+- Es un mensaje que aparece en un dispositivo móvil. 
+- El publicador de la aplicación puede enviarlas en cualquier momento.
+- Los usuarios no tienen que estar en la aplicación o usar sus dispositivos para recibirlas.
+- Son similares a mensajes de texto SMS y alertas móviles, pero solo llegan a los usuarios que han instalado la aplicación.
 
+
+### PWA: Push Notifications II
+
+#### Usos más habituales
+
+- Últimas noticias y resultados deportivos en el momento del evento.
+- Mensajes de utilidad como el tráfico o el clima.
+- Registro de vuelos, cambios, cancelaciones, ...
+
+
+### PWA: Push Notifications III
+
+#### Características
+
+- Precisa
 - Oportuna
 - Relevante
-- y Precisa
+
+
+### PWA: Despliegue en internet
+
+
+### PWA: Instalación en PC y móvil
+
