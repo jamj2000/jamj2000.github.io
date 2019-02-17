@@ -107,8 +107,8 @@ https://developers.google.com/web/progressive-web-apps/
 
 #### Ejemplo
 
-- [https://tiendaw.herokuapp.com/](Demo de Tiendaw en Heroku)
-- [https://github.com/jamj2000/tiendaw](Código fuente de Tiendaw en GitHub)
+- [Demo de Tiendaw en Heroku](https://tiendaw.herokuapp.com/)
+- [Código fuente de Tiendaw en GitHub](https://github.com/jamj2000/tiendaw)
 
 
 ### Diseño responsive (web adaptativas)
