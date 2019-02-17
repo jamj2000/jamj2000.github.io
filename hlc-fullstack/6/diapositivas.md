@@ -103,6 +103,14 @@ element: class="fragment" data-fragment-index="1"
 https://developers.google.com/web/progressive-web-apps/
 
 
+### Aplicaciones Web Progresivas IV
+
+#### Ejemplo
+
+- [https://tiendaw.herokuapp.com/](Demo de **Tiendaw en Heroku**)
+- [https://github.com/jamj2000/tiendaw](Código fuente de **Tiendaw en GitHub**)
+
+
 ### Diseño responsive (web adaptativas)
 
 - Framework CSS **Bootstrap**
@@ -145,6 +153,10 @@ https://app-manifest.firebaseapp.com/
 
 ### PWA: App Shell
 
+- Es la mínima cantidad de **HTML, CSS y JavaScript** requeridos para activar la interfaz de usuario. Es el esqueleto de tu IU.
+- Contiene los componentes principales necesarios para poner en marcha tu app.
+- Probablemente no contenga los datos.
+- Cuando se almacena en caché sin conexión puede asegurar un rendimiento instantáneo y de alta confiabilidad.
 
 
 ### PWA: Service Worker
@@ -182,6 +194,37 @@ https://app-manifest.firebaseapp.com/
 
 ### PWA: Despliegue en internet
 
+#### Instrucciones
+
+- [Instrucciones para desplegar en Heroku+mLab la aplicación Tiendaw](https://github.com/jamj2000/tiendaw#despliegue-en-heroku--mlab)
+
+
+#### A tener en cuenta
+
+![env heroku](assets/env-heroku.png)
+
+
+#### A tener en cuenta
+
+**config.js**
+```javascript
+// El primer valor es para PRODUCCIÓN, el alternativo para DESARROLLO
+
+module.exports = {
+  ip         : process.env.HOST   || '0.0.0.0',
+  port       : process.env.PORT   || 3000,
+  db_uri     : process.env.DB_URI || 'mongodb://localhost:27017/tiendaw'
+};
+```
+
 
 ### PWA: Instalación en PC y móvil
 
+#### Ejemplo para PC
+
+![PWA en PC](assets/pwa-pc.png)
+
+
+#### Ejemplo para Móvil
+
+![PWA en móvil](assets/pwa-movil.png)
