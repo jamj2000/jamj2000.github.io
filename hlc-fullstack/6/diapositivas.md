@@ -132,7 +132,7 @@ https://pwa.rocks/
 
 ## Aplicaciones Web Progresivas (PWA)
 
-- Archivo **manifes.json**
+- Archivo **manifest.json**
 - **App Shell**
 - **Service Worker**
 - **Push Notifications**
