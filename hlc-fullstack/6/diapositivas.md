@@ -35,7 +35,7 @@ element: class="fragment" data-fragment-index="1"
 ### En esta Unidad aprenderemos a
 
 - Valorar la tecnología de aplicación web progresiva (PWA).
-- Crear el archivo `manifest.json` e idenficar los archivos que conforman el `App Shell`.
+- Crear el archivo `manifest.json` e identificar los archivos que conforman la `App Shell`.
 - Generar el `Service Worker` y comprobar sus eventos asociados.
 - Comprobar el correcto cacheo de los datos.
 - Desplegar la aplicación.
