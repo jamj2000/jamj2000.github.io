@@ -213,7 +213,7 @@ Note: A fecha Diciembre 2017
   diff, tag, submodule
 ```
 
-[CheatSheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+[CheatSheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 
 ### Sitios que soportan GIT
