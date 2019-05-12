@@ -94,6 +94,15 @@ Los más utilizados son:
 ![Clase con compartimentos](assets/class-compartments-impl.png)
 
 
+### Interfaces
+
+![Interface](assets/class-interface.png)
+
+![Interface con compartimentos](assets/class-interface-compartments.png)
+
+- **`<<estereotipo>>`**: los estereotipos permiten tomar elementos propios del UML y convertirlos en otros que se ajusten a las necesidades. Se usan cuando no existe tal elemento en UML. 
+
+
 ### Objetos
 
 - No aparecen en los diagramas de clases.
@@ -104,18 +113,9 @@ Los más utilizados son:
 ![Objeto](assets/object-named-slots-value.png)
 
 
-### Interfaces
-
-![Interface](assets/class-interface.png)
-
-![Interface con compartimentos](assets/class-interface-compartments.png)
-
-- **`<<estereotipo>>`**: los estereotipos permiten tomar elementos propios del UML y convertirlos en otros que se ajusten a las necesidades. Se usan cuando no existe tal elemento en UML. 
-
-
 ### Relaciones
 
-**TIPOS DE RELACIONES**
+TIPOS DE RELACIONES
 
 - **Asociación**
     - **Agregación**
@@ -140,13 +140,13 @@ Los más utilizados son:
 
 ![Nota](assets/core-comment-note.png)
 
-- Es posible agrugar **notas** al diagrama. Para ello se dibuja una hoja con la esquina superior derecha doblada.
+- Es posible agregar **notas**: hoja con la esquina superior derecha doblada.
 
 
 #### Agregación
 
 - La clase "padre" es contenedor no exclusivo de la clase "hija".
-- **Si eliminamos la clase "padre" NO se elimina la clase "hija"**.
+- **Si eliminamos la instancia de la clase "padre" NO se elimina la instancia de la clase "hija"**.
 
 ![Agregación](assets/shared-aggregation.png)
 
@@ -156,7 +156,7 @@ Note: Aquí los términos "padre" e "hija" no tienen ninguna relación con la he
 #### Composición
 
 - La clase "padre" es contenedor exclusivo de la clase "hija".
-- **Si eliminamos la clase "padre" SÍ se elimina la clase "hija"**.
+- **Si eliminamos la instancia de la clase "padre" SÍ se elimina la instancia de la clase "hija"**.
 
 ![Composición](assets/class-composition.png)
 
