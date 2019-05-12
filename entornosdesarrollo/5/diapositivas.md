@@ -78,6 +78,15 @@ Los más utilizados son:
 ## Diagramas de clases
 
 
+### Elementos
+
+- **Clases**
+- **Relaciones**
+  - Nombre
+  - Multiplicidad
+  - Roles
+
+
 ### Clases
 
 ![Clase](assets/class-no-compartments.png)
@@ -86,6 +95,9 @@ Los más utilizados son:
 
 
 ### Objetos
+
+- **No aparecen en los diagramas de clases**
+- **Aparecen en los diagramas de objetos y en diagramas de comportamiento**
 
 ![Objeto anónimo](assets/object-anonymous.png)
 
@@ -98,18 +110,29 @@ Los más utilizados son:
 
 ![Interface con compartimentos](assets/class-interface-compartments.png)
 
+- **<<estereotipo>>**: los estereotipos permiten tomar elementos propios del UML y convertirlos en otros que se ajusten a las necesidades. Se usan cuando uno existe tal elemento en UML. 
+
 
 ### Relaciones
 
-- Asociación
-    - Agregación
-    - Composición
-- Dependencia
-- Generalización
-- Realización
+**TIPOS DE RELACIONES**
+
+- **Asociación**
+    - **Agregación**
+    - **Composición**
+- **Dependencia**
+- **Generalización / Especialización**
+- **Realización**
 
 
-#### Asociación
+#### Asociación (I)
+
+- Es el vínculo (conector) entre 2 clases que necesitan comunicarse entre sí.
+- Se puede representar mediante una línea con una flecha que indica la dirección de navegación.
+- En el caso de que la flecha esté en ambos lados, la asociación tiene asociación bidireccional. 
+
+
+#### Asociación (II)
 
 ![Asociación](assets/association.png)
 
@@ -117,17 +140,29 @@ Los más utilizados son:
 
 ![Nota](assets/core-comment-note.png)
 
+- Es posible agrugar **notas** al diagrama. Para ello se dibuja una hoja con la esquina superior derecha doblada.
+
 
 #### Agregación
 
+- La clase "padre" es contenedor no exclusivo de la clase "hija".
+- **Si eliminamos la clase "padre" NO se elimina la clase "hija"**.
+
 ![Agregación](assets/shared-aggregation.png)
+
+Note: Aquí los términos "padre" e "hija" no tienen ninguna relación con la herencia.
 
 
 #### Composición
 
+- La clase "padre" es contenedor exclusivo de la clase "hija".
+- **Si eliminamos la clase "padre" SÍ se elimina la clase "hija"**.
+
 ![Composición](assets/class-composition.png)
 
 ![Composición opcional](assets/class-composition-optional.png)
+
+Note: Aquí los términos "padre" e "hija" no tienen ninguna relación con la herencia.
 
 
 #### Dependencia
@@ -139,18 +174,22 @@ Los más utilizados son:
 ![Dependencia de uso de paquete](assets/use-package.png)
 
 
-#### Generalización/Espcialización (herencia)
+#### Generalización / Especialización
+
+**HERENCIA**
 
 ![Generalización separada](assets/class-generalizaion-separate.png)
 
 ![Generalización compartida](assets/class-generalizaion-shared.png)
 
 
-#### Realización (implementación de interfaces)
+#### Realización
 
-![Realización bola](assets/class-interface-realization-ball.png)
+**IMPLEMENTACIÓN DE INTERFACES**
 
 ![Realización](assets/class-interface-realization.png)
+
+![Realización bola](assets/class-interface-realization-ball.png)
 
 
 ### Ejemplos
