@@ -68,7 +68,7 @@ En esta Unidad aprenderemos a:
 
 Los más utilizados son:
 
-- Diagramas de clases
+- **Diagramas de clases**
 - Diagramas de paquetes
 - Diagramas de componentes
 - Diagramas de implementación
@@ -76,9 +76,6 @@ Los más utilizados son:
 
 
 ## Diagramas de clases
-
-
-![Diagrama introductorio](assets/class-diagram-domain-overview.png)
 
 
 ### Clases
@@ -142,7 +139,7 @@ Los más utilizados son:
 ![Dependencia de uso de paquete](assets/use-package.png)
 
 
-#### Generalización (herencia)
+#### Generalización/Espcialización (herencia)
 
 ![Generalización separada](assets/class-generalizaion-separate.png)
 
@@ -157,6 +154,8 @@ Los más utilizados son:
 
 
 ### Ejemplos
+
+![Diagrama introductorio](assets/class-diagram-domain-overview.png)
 
 
 #### Karts
