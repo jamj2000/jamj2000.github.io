@@ -110,7 +110,7 @@ Los más utilizados son:
 
 ![Interface con compartimentos](assets/class-interface-compartments.png)
 
-- **\<<estereotipo\>>**: los estereotipos permiten tomar elementos propios del UML y convertirlos en otros que se ajusten a las necesidades. Se usan cuando uno existe tal elemento en UML. 
+- **`<<estereotipo>>`**: los estereotipos permiten tomar elementos propios del UML y convertirlos en otros que se ajusten a las necesidades. Se usan cuando no existe tal elemento en UML. 
 
 
 ### Relaciones
