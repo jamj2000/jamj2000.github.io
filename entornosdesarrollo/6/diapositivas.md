@@ -21,8 +21,8 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 - ### Introducción
-- ### Diagramas de casos de uso
-- ### Diagramas de secuencia
+- ### **Diagramas de casos de uso**
+- ### **Diagramas de secuencia**
 - ### Diagramas de estados
 - ### Diagramas de actividades
 - ### Referencias
@@ -45,8 +45,8 @@ En esta Unidad aprenderemos a:
 
 Los más utilizados son:
 
-- Diagramas de casos de uso
-- Diagramas de secuencia (es un diagrama de interacción)
+- **Diagramas de casos de uso**
+- **Diagramas de secuencia** 
 - Diagramas de estados
 - Diagramas de actividades
 
@@ -59,9 +59,9 @@ Los más utilizados son:
 
 ### Elementos
 
-- Actores
-- Casos de uso
-- Relaciones
+- **Actores**
+- **Casos de uso**
+- **Relaciones**
 
 
 ### Ejemplo 1
@@ -81,6 +81,8 @@ Los más utilizados son:
 
 
 ## Diagramas de secuencia
+
+**Es un diagrama de interacción**
 
 ![Diagrama de secuencia](assets/sequence-diagram-overview.png)
 
