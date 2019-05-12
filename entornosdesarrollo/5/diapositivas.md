@@ -96,8 +96,8 @@ Los más utilizados son:
 
 ### Objetos
 
-- **No aparecen en los diagramas de clases**
-- **Aparecen en los diagramas de objetos y en diagramas de comportamiento**
+- No aparecen en los diagramas de clases.
+- Aparecen en los diagramas de objetos y en diagramas de comportamiento.
 
 ![Objeto anónimo](assets/object-anonymous.png)
 
@@ -110,7 +110,7 @@ Los más utilizados son:
 
 ![Interface con compartimentos](assets/class-interface-compartments.png)
 
-- **<<estereotipo>>**: los estereotipos permiten tomar elementos propios del UML y convertirlos en otros que se ajusten a las necesidades. Se usan cuando uno existe tal elemento en UML. 
+- **\<<estereotipo\>>**: los estereotipos permiten tomar elementos propios del UML y convertirlos en otros que se ajusten a las necesidades. Se usan cuando uno existe tal elemento en UML. 
 
 
 ### Relaciones
