@@ -192,6 +192,11 @@ Note: Aquí los términos "padre" e "hija" no tienen ninguna relación con la he
 ![Realización bola](assets/class-interface-realization-ball.png)
 
 
+#### Resumen de relaciones
+
+![Relaciones UML](assets/relaciones-uml.png)
+
+
 ### Ejemplos
 
 ![Diagrama introductorio](assets/class-diagram-domain-overview.png)
