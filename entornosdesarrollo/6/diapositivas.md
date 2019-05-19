@@ -241,11 +241,12 @@ Los más utilizados son:
 ## Diagramas de actividades
 
 - Muestra el **flujo de control** o el flujo de objetos con énfasis en la secuencia y las condiciones del flujo.
-- Las acciones coordinadas por los modelos de actividad pueden iniciarse porque otras acciones terminan de ejecutarse, porque los objetos y los datos están disponibles, o porque se producen algunos eventos externos al flujo.
+
 
 ### Elementos
 
 - **Actividades**
+- **Nodos**
   - **Nodo inicial**
   - **Nodo final**
   - **Nodo de decisión**
@@ -253,11 +254,12 @@ Los más utilizados son:
   - **Nodo de bifurcación**
   - **Nodo de unión**
 
+
 ### Actividad
 
 - La actividad es un comportamiento parametrizado representado como **flujo coordinado de acciones**.
 
-- El flujo de ejecución se modela como nodos de actividad conectados por bordes de actividad.
+- Una **acción** es un elemento con nombre que representa un solo paso atómico dentro de la actividad, es decir, que no se descompone más dentro de la actividad.
 
 ![Actividad](assets/activity.png)
 
