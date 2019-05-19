@@ -322,10 +322,7 @@ También pueden usarse iconos personalizados.
 ![Manifestación](assets/manifestation.png)
 
 
-### Ejemplos
-
-![Diagrama de implementación. Manifestación](assets/deployment-diagram-overview-manifestation.png)
-
+### Ejemplo
 
 ![Diagrama de implementación](assets/deployment-diagram-overview-specification.png)
 
