@@ -225,11 +225,11 @@ Note: Aquí los términos "padre" e "hija" no tienen ninguna relación con la he
 
 ## Diagramas de paquetes
 
-Un **paquete** es **un espacio de nombres** que se usa **para agrupar elementos** que están relacionados semánticamente.
+- Un **paquete** es **un espacio de nombres** que se usa **para agrupar elementos** que están relacionados semánticamente.
 
-Si un paquete se elimina de un modelo, también lo son todos los elementos que pertenecen al paquete. 
+- **Si se elimina un paquete, también los elementos** que pertenecen al paquete. 
 
-El paquete por sí mismo es un elemento que se puede empaquetar, por lo que cualquier paquete también podría ser miembro de otros paquetes.
+- **Un paquete a su vez se puede empaquetar**, por lo que cualquier paquete también podría ser miembro de otros paquetes.
 
 ![Paquete](assets/package.png)
 
@@ -242,7 +242,7 @@ El paquete por sí mismo es un elemento que se puede empaquetar, por lo que cual
 
 ## Diagramas de componentes
 
-Un **componente** es una clase que representa una **parte modular de un sistema**.
+- Un **componente** es una clase que representa una **parte modular de un sistema**.
 
 ![Componente 1](assets/component-1.png)
 
@@ -251,11 +251,11 @@ Un **componente** es una clase que representa una **parte modular de un sistema*
 
 ### Interfaces
 
-Un componente tiene su comportamiento definido en términos de las **interfaces proporcionadas** y las **interfaces requeridas** (potencialmente expuestas a través de **puertos**).
+- Un componente tiene su comportamiento definido en términos de las **interfaces proporcionadas** y las **interfaces requeridas** (potencialmente expuestas a través de **puertos**).
 
 ![Interface proporcionada](assets/component-provided-interface.png)
 
-![Interface requerida](assets/component-required-interface.png.png)
+![Interface requerida](assets/component-required-interface.png)
 
 
 ### Ejemplo
@@ -266,12 +266,14 @@ Un componente tiene su comportamiento definido en términos de las **interfaces 
 
 ## Diagramas de despliegue (deployment)
 
-Muestra la arquitectura del sistema como despliegue (distribución) de **artefactos de software** a destinos de despliegue (**nodos**).
+- Muestra la arquitectura del sistema como despliegue (distribución) de **artefactos de software** a destinos de despliegue (**nodos**).
 
 
 ### Artefactos
 
-Los **artefactos** representan elementos concretos en el mundo físico que son el resultado de un proceso de desarrollo. Ejemplos de artefactos son **archivos ejecutables**, **bibliotecas**, **archivos**, **esquemas de base de datos**, **archivos de configuración**, etc.
+- Los **artefactos** representan **elementos concretos en el mundo físico** que son el resultado de un proceso de desarrollo. 
+
+- Ejemplos de artefactos son **archivos ejecutables**, **bibliotecas**, **archivos**, **esquemas de base de datos**, **archivos de configuración**, etc.
 
 
 ### Ejemplos de artefactos
@@ -285,21 +287,21 @@ También pueden usarse iconos personalizados.
 
 ### Nodos (I)
 
-El **destino de la implementación** suele estar representado por un **nodo** que es un **dispositivo de hardware** o algún **entorno de ejecución de software**. 
+- El **destino de la implementación** suele estar representado por un **nodo** que es un **dispositivo de hardware** o algún **entorno de ejecución de software**. 
 
 ![Nodo](assets/deployment-node.png)
 
 
 ### Nodos (II)
 
-**Un nodo puede contener en su interior otros nodos**
+- **Un nodo puede contener en su interior otros nodos**
 
 ![Nodo compuesto](assets/deployment-node-composition-nested.png)
 
 
 ### Nodos (III)
 
-Los **nodos pueden conectarse a través de vías de comunicación** para crear sistemas en red de complejidad arbitraria.
+- Los **nodos pueden conectarse a través de vías de comunicación** para crear sistemas en red de complejidad arbitraria.
 
 ![Comunicación entre nodos](assets/deployment-communication-protocol.png)
 
@@ -315,7 +317,7 @@ También pueden usarse iconos personalizados.
 
 ### Manifiestación de componentes
 
-En UML 2.x, los artefactos se implementan en los nodos, y **los artefactos podrían manifestar (implementar) componentes**. Los componentes se implementan en los nodos indirectamente a través de artefactos.
+- En UML 2.x, los artefactos se implementan en los nodos, y **los artefactos podrían manifestar (implementar) componentes**. Los componentes se implementan en los nodos indirectamente a través de artefactos.
 
 ![Manifestación](assets/manifestation.png)
 
