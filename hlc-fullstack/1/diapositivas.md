@@ -183,11 +183,6 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 
 ### Bases de datos relacionales
 
-![BBDD relacionales](assets/SQL.png)
-
-
-### Bases de datos relacionales
-
 - SQL Server 
 - Oracle
 - MySQL
@@ -196,9 +191,9 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 - SQLite
 
 
-### Bases de datos no relacionales (noSQL)
+### Bases de datos relacionales
 
-![BBDD relacionales](assets/noSQL.png)
+![BBDD relacionales](assets/SQL.png)
 
 
 ### Bases de datos no relacionales (noSQL)
@@ -207,3 +202,8 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 - MongoDB
 - Redis
 - CouchDB
+
+
+### Bases de datos no relacionales (noSQL)
+
+![BBDD relacionales](assets/noSQL.png)
