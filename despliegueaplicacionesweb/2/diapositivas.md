@@ -156,8 +156,8 @@ service  apache2  restart  # Reinicia el servidor
 - Pero una solución rápida para pruebas, es editar el archivo **`/etc/hosts`**.
 
 ```
-192.168.1.135   www.misitio.com
-192.168.1.135   www.mimoodle.com
+192.168.1.135   www.sitio.com
+192.168.1.135   www.moodle.com
 ```
 
 
@@ -228,6 +228,7 @@ Note: **IMPORTANTE**: La negociación SSL es dependiente totalmente de la IP, as
 - **`make-ssl-cert`**
 - **`openssl`**
 - **`xca`**
+- **`cerbot`**
 
 
 ### make-ssl-cert
@@ -297,3 +298,11 @@ service  apache2  restart
 ### Resultado
 
 ![https](assets/https.png)
+
+
+### certbot
+
+- Bot para la gestión de certificados de Let's Encrypt
+- Es necesario disponer de un dominio registrado
+- https://certbot.eff.org/
+
