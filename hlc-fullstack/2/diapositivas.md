@@ -41,6 +41,7 @@ element: class="fragment" data-fragment-index="1"
 - Distinguir los conceptos de base de datos, colección y documento.
 - Realizar consultas de lectura y modificación de datos.
 - Realizar y restaurar copias de seguridad de los datos.
+- Diferenciar objectos Javascript de documentos JSON
 
 
 
