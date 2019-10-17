@@ -277,7 +277,7 @@ video/H264            | Video con codificación H.264
 
 - **Apache**
 - **nginx**
-- **IIS** (Internet Information Server de Microsoft)
+- **IIS** (Internet Information Services de Microsoft)
 - **Tomcat** (servidor orientado a desarrollo Java)
 
 
