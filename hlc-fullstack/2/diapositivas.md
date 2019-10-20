@@ -133,9 +133,13 @@ MongoDB shell version: 3.2.21
 
 ### Listar BBDD
 
-**show databases**
+**show dbs**
 
 ```bash
+> show dbs
+admin  0.000GB
+local  0.000GB
+
 > show databases;
 admin  0.000GB
 local  0.000GB
