@@ -33,7 +33,7 @@ element: class="fragment" data-fragment-index="1"
 
 En esta Unidad aprenderemos a:
 
-- Instalar entornos de desarrollo, propietarios y libres.
+- Instalar entornos de desarrollo.
 - Personalizar y automatizar el entorno de desarrollo.
 - Generar ejecutables a partir de código fuente.
 - Identificar las características comunes y específicas de diversos entornos de desarrollo.
