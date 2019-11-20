@@ -150,10 +150,10 @@ Note: __API__ = Interfaz de Programación de Aplicaciones
 ### Construir (Build) (IV) 
 #### __Comparativa para Java__
 
-ant         | maven       | gradle
-------------|-------------|--------------
-objetivos   | metas       | tareas
-**targets** | **goals**   | **tasks**
+*Herramienta:*    | ant         | maven       | gradle
+------------------|-------------|-------------|--------------
+*Tipo de regla:*  | objetivos   | metas       | tareas
+*Type of rule:*   | **targets** | **goals**   | **tasks**
 
 ![ant-maven-gradle](assets/ant-maven-gradle.png)
 
