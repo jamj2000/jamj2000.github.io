@@ -140,14 +140,14 @@ sudo npm  i  yarn     -g
 
 ### Opciones
 
-### -S,  --save
-- dependencia de aplicación. Añade a archivo package.json.
+**-S,  --save**
+- dependencia de aplicación. Añade a archivo `package.json`.
 - En las últimas versiones de `npm` no es necesaria esta opción.
 
-### -D,  --save-dev
-- dependencia de desarrollo. Añade a archivo package.json.
+**-D,  --save-dev**
+- dependencia de desarrollo. Añade a archivo `package.json`.
 
-### -g,  --global
+**-g,  --global**
 - instala en el sistema de forma global. Se usa normalmente para paquetes ejecutables.
 
 
