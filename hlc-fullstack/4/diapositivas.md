@@ -47,7 +47,7 @@ element: class="fragment" data-fragment-index="1"
 ### Aplicación de ejemplo
 
 - Existe una aplicación funcional de ejemplo.
-- El código está disponible en [`https://github.com/jamj2000/tienda0`](https://github.com/jamj2000/tienda0)
+- El código está disponible en [`https://github.com/jamj2000/tiendaw`](https://github.com/jamj2000/tiendaw)
 - Los archivos usados para el backend son:
   - **package.json**
   - **server.js**
