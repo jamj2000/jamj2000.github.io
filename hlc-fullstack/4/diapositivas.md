@@ -169,6 +169,7 @@ sudo npm  r  yarn     -g
 
 ### npx (I)
 
+- Herramienta de ejecución de paquetes que viene con **npm 5.2+**.
 - **Ejecuta** paquetes ejecutables de `node.js` sin necesidad de instalarlos.
 - Es más cómodo que usar `sudo npm install -g ...`
 - Ejemplo:
