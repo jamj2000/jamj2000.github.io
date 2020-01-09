@@ -141,11 +141,10 @@ sudo npm  i  yarn     -g
 ### Opciones
 
 **-S,  --save**
-- dependencia de aplicación. Añade a archivo `package.json`.
-- En las últimas versiones de `npm` no es necesaria esta opción.
+- dependencia de aplicación. Añade entrada en archivo `package.json`. En las últimas versiones de `npm` no es necesaria esta opción.
 
 **-D,  --save-dev**
-- dependencia de desarrollo. Añade a archivo `package.json`.
+- dependencia de desarrollo. Añade entrada en archivo `package.json`.
 
 **-g,  --global**
 - instala en el sistema de forma global. Se usa normalmente para paquetes ejecutables.
@@ -172,13 +171,13 @@ sudo npm  r  yarn     -g
 - Herramienta de ejecución de paquetes que viene con **npm 5.2+**.
 - **Ejecuta** paquetes ejecutables de `node.js` sin necesidad de instalarlos.
 - Es más cómodo que usar `sudo npm install -g ...`
-- Ejemplo:
-  - Con `sudo npm install -g ...`:
+- Ejemplo (lanzar servidor web):
+  - Usando `sudo npm install -g ...`:
   ```
   sudo npm  install  -g  http-server
   http-server
   ```
-  - Con `npx  ...`:
+  - Usando `npx  ...`:
   ```
   npx  http-server
   ```
@@ -231,7 +230,7 @@ Mas info: https://www.w3schools.com/nodejs/ref_modules.asp
 var app  =  require('express')();
 
 app.get ('/', (req, res) => { 
-    res.send ('<h1>Hola mundo</h1>') 
+    res.send ('Hola mundo') 
 });
 
 app.get ('/hola/:usuario', (req, res) => { 
