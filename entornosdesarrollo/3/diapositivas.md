@@ -78,7 +78,7 @@ Se realizan sin ejecutar el código de la aplicación. Se examina el código fue
 ### Estrategias de prueba
 
 - __Caja negra:__
-Se estudia el sistema desde fuera. Son pruebas funcionales.
+Se estudia el sistema desde fuera. Son pruebas de funcionalidad.
 
 - __Caja blanca:__
 Se examina el código fuente y su ejecución. Son pruebas estructurales.
