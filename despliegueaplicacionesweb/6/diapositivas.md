@@ -79,8 +79,10 @@ element: class="fragment" data-fragment-index="1"
 ```markdown
 *Este texto se muestra en itálica*
 _Este también se mostrará en itálica_
+
 **Este texto se muestra en negrita**
 __Este también se mostrará en negrita__
+
 *Puedes **combinar** ambos formatos*
 ```
 
@@ -89,6 +91,7 @@ __Este también se mostrará en negrita__
 
 ```markdown
 http://github.com - automático
+
 [GitHub](http://github.com)
 ```
 
@@ -97,6 +100,7 @@ http://github.com - automático
 
 ```markdown
 ![GitHub Logo](/images/logo.png)
+
 Formato: ![Texto alternativo](url)
 ```
 
@@ -105,6 +109,7 @@ Formato: ![Texto alternativo](url)
 
 ```markdown
 Como dijo Grace Hopper:
+
 > I’ve always been more interested
 > in the future than in the past.
 ```
@@ -114,25 +119,24 @@ Como dijo Grace Hopper:
 
 <pre>
 ```javascript
-var s = "JavaScript syntax highlighting";
+var s = "Lenguaje javascript. Se realizará coloreado de sintaxis.";
 alert(s); 
 ```
 
 ```python
-s = "Python syntax highlighting"
+s = "Lenguaje Python. Se realizará coloreado de sintaxis."
 print s
 ```
 
 ```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
+No se indica lenguaje. No se realizará coloreado de sintaxis. 
 ```
 </pre>
 
 
 ### Menciones y Referencias
-
 - Menciones a usuarios:  ** @usuario **
+
 - Referencias a Issues y Pull request:  **  #numero ** 
 
 
