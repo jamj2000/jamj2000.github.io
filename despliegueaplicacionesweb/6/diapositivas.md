@@ -112,22 +112,22 @@ Como dijo Grace Hopper:
 
 ### Código fuente
 
-```markdown
-> ```javascript
-> var s = "JavaScript syntax highlighting";
-> alert(s); 
-> ```
-> 
-> ```python
-> s = "Python syntax highlighting"
-> print s
-> ```
-> 
-> ```
-> No language indicated, so no syntax highlighting. 
-> But let's throw in a <b>tag</b>.
-> ```
+<pre>
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s); 
 ```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a <b>tag</b>.
+```
+</pre>
 
 
 ### Menciones y Referencias
@@ -142,14 +142,14 @@ Como dijo Grace Hopper:
 
 ### Instalación de git
 
-```
+```bash
 sudo  apt  install  git
 ```
 
 
 ### Configuración de git
 
-```console
+```bash
 git  config  --global  user.name   "Nombre y Apellidos"
 git  config  --global  user.email  "nombre@mail.com"
 ```
@@ -157,7 +157,7 @@ git  config  --global  user.email  "nombre@mail.com"
 
 ### Iniciar repositorio local
 
-```console
+```bash
 git  init
 ```
 
@@ -166,7 +166,7 @@ git  init
 
 ### Comandos básicos
 
-```console
+```bash
 git  status
 git  add .
 git  commit -m  "Mensaje"
@@ -175,7 +175,7 @@ git  commit -m  "Mensaje"
 
 ### Clonar repositorio remoto 
 
-```console
+```bash
 git  clone   https://github.com/usuario/repositorio.git
 git  clone   git@github.com:usuario/repositorio.git
 ```
@@ -183,7 +183,7 @@ git  clone   git@github.com:usuario/repositorio.git
 
 ### Vincular y desvincular repositorio remoto
 
-```console
+```bash
 git  remote  -v
 git  remote  add  origin  https://github.com/usuario/repositorio.git
 git  remote  rm   origin
@@ -192,7 +192,7 @@ git  remote  rm   origin
 
 ### Bajar y subir contenido a repositorio remoto
 
-```console
+```bash
 git  pull  origin  master  // bajar commits
 git  push  origin  master  // subir commits
 ```
@@ -200,7 +200,7 @@ git  push  origin  master  // subir commits
 
 ###  Trabajo con ramas
 
-```console
+```bash
 git  branch    -va        // listado verbose, all (local y remoto)
 
 git  branch    nuevo      // creación de rama
@@ -214,20 +214,20 @@ git  checkout  -b nuevo   // equivalente a las 2 sentencias anteriores
 
 - El comando **`checkout`** de `git` sirve para **cambiar de rama**.
 
-```console
+```bash
 git  checkout  rama
 ```
 
 - También sirve para **cambiar de commit dentro de una rama**.
 
-```console
+```bash
 git  checkout  0f82
 ```
 
 
 ### Etiquetas de anotación
 
-```console
+```bash
 git tag -l                          // Listado
 git tag -a v1.0 -m "Version 1.0"    // Añadir etiqueta
 git tag -d v1.0                     // Eliminar etiqueta
@@ -235,6 +235,6 @@ git tag -d v1.0                     // Eliminar etiqueta
 
 - Las etiquetas deben enviarse explícitamente al repositorio remoto:
 
-```console
+```bash
 git  push  --tags
 ```
