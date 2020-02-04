@@ -101,7 +101,7 @@ Formato: ![Texto alternativo](url)
 ```
 
 
-### Citaciones
+### Citas
 
 ```markdown
 Como dijo Grace Hopper:
@@ -110,8 +110,131 @@ Como dijo Grace Hopper:
 ```
 
 
-### Menciones de Github
+### Código fuente
+
+```markdown
+> ```javascript
+> var s = "JavaScript syntax highlighting";
+> alert(s); 
+> ```
+> 
+> ```python
+> s = "Python syntax highlighting"
+> print s
+> ```
+> 
+> ```
+> No language indicated, so no syntax highlighting. 
+> But let's throw in a <b>tag</b>.
+> ```
+```
+
+
+### Menciones y Referencias
+
+- Menciones a usuarios:  ** @usuario **
+- Referencias a Issues y Pull request:  **  #numero ** 
 
 
 
 ## Control de versiones con git
+
+
+### Instalación de git
+
+```
+sudo  apt  install  git
+```
+
+
+### Configuración de git
+
+```console
+git  config  --global  user.name   "Nombre y Apellidos"
+git  config  --global  user.email  "nombre@mail.com"
+```
+
+
+### Iniciar repositorio local
+
+```console
+git  init
+```
+
+- Es recomendable crear un archivo `.gitignore` con listado de carpetas y archivos a los que no se realizará seguimiento.
+
+
+### Comandos básicos
+
+```console
+git  status
+git  add .
+git  commit -m  "Mensaje"
+```
+
+
+### Clonar repositorio remoto 
+
+```console
+git  clone   https://github.com/usuario/repositorio.git
+git  clone   git@github.com:usuario/repositorio.git
+```
+
+
+### Vincular y desvincular repositorio remoto
+
+```console
+git  remote  -v
+git  remote  add  origin  https://github.com/usuario/repositorio.git
+git  remote  rm   origin
+```
+
+
+### Bajar y subir contenido a repositorio remoto
+
+```console
+git  pull  origin  master  // bajar commits
+git  push  origin  master  // subir commits
+```
+
+
+###  Trabajo con ramas
+
+```console
+git  branch    -va        // listado verbose, all (local y remoto)
+
+git  branch    nuevo      // creación de rama
+git  checkout  nuevo      // cambiar a dicha rama
+
+git  checkout  -b nuevo   // equivalente a las 2 sentencias anteriores
+```
+
+
+### Checkout
+
+- El comando **`checkout`** de `git` sirve para **cambiar de rama**.
+
+```console
+git  checkout  rama
+```
+
+- También sirve para **cambiar de commit dentro de una rama**.
+
+```console
+git  checkout  0f82
+```
+
+
+### Etiquetas de anotación
+
+```console
+git tag -l                          // Listado
+git tag -a v1.0 -m "Version 1.0"    // Añadir etiqueta
+git tag -d v1.0                     // Eliminar etiqueta
+```
+
+- Las etiquetas deben enviarse explícitamente al repositorio remoto:
+
+```console
+git  push  --tags
+```
