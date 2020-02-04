@@ -33,7 +33,7 @@ element: class="fragment" data-fragment-index="1"
 
 En esta Unidad aprenderemos a:
 
-- Instalar entornos de desarrollo, propietarios y libres.
+- Instalar entornos de desarrollo.
 - Personalizar y automatizar el entorno de desarrollo.
 - Generar ejecutables a partir de código fuente.
 - Identificar las características comunes y específicas de diversos entornos de desarrollo.
@@ -148,6 +148,18 @@ Note: __API__ = Interfaz de Programación de Aplicaciones
 
 
 ### Construir (Build) (IV) 
+#### __Comparativa para Java__
+
+*Herramienta:*    | ant           | maven       | gradle
+------------------|---------------|-------------|--------------
+*Buildfile:*      | **build.xml** | **pom.xml** | **build.gradle**
+*Tipo de regla:*  | objetivos     | metas       | tareas
+*Type of rule:*   | **targets**   | **goals**   | **tasks**
+
+![ant-maven-gradle](assets/ant-maven-gradle.png)
+
+
+### Construir (Build) (V) 
 #### __Generadores de _buildfiles_ __
 
 - __Herramienta y archivo asociado__
@@ -155,7 +167,7 @@ Note: __API__ = Interfaz de Programación de Aplicaciones
   - Meson: meson.build  
 
 
-### Construir (Build) (V) 
+### Construir (Build) (VI) 
 #### __Servidores de construcción__
 
 - __Integración continua (CI)__

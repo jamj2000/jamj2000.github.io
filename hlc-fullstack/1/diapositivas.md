@@ -140,13 +140,18 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 
 
 
-## Modelo-Vista-Controlador
+## MVC
+
+#### Modelo-Vista-Controlador
 
 ![Modelo Vista Controlador](assets/MVC.png)
 
 
-## Modelo-Vista-Controlador
+## MVC
 
+#### Modelo-Vista-Controlador
+
+- patrón de diseño arquitectónico
 - se ejecuta casi toda la lógica de aplicación en el backend. 
 - el servidor sirve múltiples vistas, cada vista es una página HTML. 
 - es una aplicación de múltiples páginas (MPA). 
@@ -183,11 +188,6 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 
 ### Bases de datos relacionales
 
-![BBDD relacionales](assets/SQL.png)
-
-
-### Bases de datos relacionales
-
 - SQL Server 
 - Oracle
 - MySQL
@@ -196,9 +196,9 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 - SQLite
 
 
-### Bases de datos no relacionales (noSQL)
+### Bases de datos relacionales
 
-![BBDD relacionales](assets/noSQL.png)
+![BBDD relacionales](assets/SQL.png)
 
 
 ### Bases de datos no relacionales (noSQL)
@@ -207,3 +207,8 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 - MongoDB
 - Redis
 - CouchDB
+
+
+### Bases de datos no relacionales (noSQL)
+
+![BBDD relacionales](assets/noSQL.png)

@@ -41,6 +41,7 @@ element: class="fragment" data-fragment-index="1"
 - Distinguir los conceptos de base de datos, colección y documento.
 - Realizar consultas de lectura y modificación de datos.
 - Realizar y restaurar copias de seguridad de los datos.
+- Diferenciar objectos Javascript de documentos JSON
 
 
 
@@ -85,15 +86,6 @@ element: class="fragment" data-fragment-index="1"
 apt update 
 apt install mongodb  # se instala la versión 3.6.3
 ``` 
-
-
-### Instalación
-
-#### Ubuntu 16.04 y 14.04
-
-- No instalaremos el paquete que viene en los repositorios.
-- Se instalará el paquete mongodb-org, con una versión más actualizada.
-- Seguiremos los pasos indicados en https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/.
 
 
 ### Servicio
@@ -141,9 +133,13 @@ MongoDB shell version: 3.2.21
 
 ### Listar BBDD
 
-**show databases**
+**show dbs**
 
 ```bash
+> show dbs
+admin  0.000GB
+local  0.000GB
+
 > show databases;
 admin  0.000GB
 local  0.000GB
@@ -295,6 +291,15 @@ DELETE    | DELETE      | remove
 
 ```bash
 > db.personas.find()  // equivale a `SELECT * FROM personas` en BD relacional
+```
+
+
+### Ver documentos con sangría
+
+**db.*nombre_colección*.find( ... ).pretty()**
+
+```bash
+> db.personas.find().pretty()
 ```
 
 

@@ -25,7 +25,7 @@ element: class="fragment" data-fragment-index="1"
 - ### **Diagramas de clases**
 - ### Diagramas de paquetes
 - ### Diagramas de componentes
-- ### Diagramas de implementación
+- ### Diagramas de despliegue
 - ### Software
 <!--- Note: Nota a pie de página. -->
 

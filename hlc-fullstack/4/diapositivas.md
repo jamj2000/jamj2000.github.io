@@ -47,7 +47,7 @@ element: class="fragment" data-fragment-index="1"
 ### Aplicación de ejemplo
 
 - Existe una aplicación funcional de ejemplo.
-- El código está disponible en [`https://github.com/jamj2000/tienda0`](https://github.com/jamj2000/tienda0)
+- El código está disponible en [`https://github.com/jamj2000/tiendaw`](https://github.com/jamj2000/tiendaw)
 - Los archivos usados para el backend son:
   - **package.json**
   - **server.js**
@@ -94,7 +94,7 @@ cd     nombre-proyecto
 npm  init  -y 
 ```
 
-Note: La opción -y (--yes) de `npm init` crea un archivo package.json con opciones por defecto, sin solicitar al usuario.
+Note: La opción -y (--yes) de `npm init` crea un archivo **package.json** con opciones por defecto, sin hacer preguntas al usuario.
 
 
 ### Archivo package.json
@@ -137,31 +137,65 @@ o de forma más corta
 sudo npm  i  yarn     -g
 ```
 
-Note: 
--S: anotar en package.json como dependencia de aplicación.
--D: anotar en package.json como dependencia de desarrollo.
--g: instala en el sistema de forma global.
+
+### Opciones
+
+**-S,  --save**
+- dependencia de aplicación. Añade entrada en archivo `package.json`. En las últimas versiones de `npm` no es necesaria esta opción.
+
+**-D,  --save-dev**
+- dependencia de desarrollo. Añade entrada en archivo `package.json`.
+
+**-g,  --global**
+- instala en el sistema de forma global. Se usa normalmente para paquetes ejecutables.
 
 
 ### Desinstalación de módulos
 
 ```bash
-     npm  remove  express  -S 
+     npm  remove  express
      npm  remove  nodemon  -D 
 sudo npm  remove  yarn     -g 
 ```   
 o de forma más corta
 
 ```bash
-     npm  r  express  -S  
+     npm  r  express 
      npm  r  nodemon  -D  
 sudo npm  r  yarn     -g
 ```
 
-Note: 
--S: anotar en package.json como dependencia de aplicación.
--D: anotar en package.json como dependencia de desarrollo.
--g: instala en el sistema de forma global.
+
+### npx (I)
+
+- Herramienta de ejecución de paquetes que viene con **npm 5.2+**.
+- **Ejecuta** paquetes ejecutables de `node.js` sin necesidad de instalarlos.
+- Es más cómodo que usar `sudo npm install -g ...`
+- Ejemplo (lanzar servidor web):
+  - Usando `sudo npm install -g ...`:
+  ```
+  sudo npm  install  -g  http-server
+  http-server
+  ```
+  - Usando `npx  ...`:
+  ```
+  npx  http-server
+  ```
+
+
+### npx (II)
+
+#### Ejemplos
+
+```
+npx  serve                                      # Inicia un servidor web
+npx  http-server                                # Inicia otro servidor web
+
+npx  @angular/cli  new         nombre-proyecto  # Iniciar proyecto de Angular 
+npx  create-react-app          nombre-proyecto  # Iniciar proyecto de React 
+npx  @vue/cli  create          nombre-proyecto  # Iniciar proyecto de Vue
+npx  degit  sveltejs/template  nombre-proyecto  # Iniciar proyecto de Svelte   
+```
 
 
 ### Módulos incorporados (built-in)
@@ -170,7 +204,8 @@ Note:
 - Ya vienen con node.js.
 - Ejemplos:
   - **fs**:  Sistema de archivos
-  - **http**:  Servidor HTTP 
+  - **http**:  Servidor HTTP
+  - **https**:  Servidor HTTPS
   - **os**:  Sistema operativo
   - **path**:  Rutas de archivos
   - **process**:  Información y control del proceso actual
@@ -195,7 +230,7 @@ Mas info: https://www.w3schools.com/nodejs/ref_modules.asp
 var app  =  require('express')();
 
 app.get ('/', (req, res) => { 
-    res.send ('<h1>Hola mundo</h1>') 
+    res.send ('Hola mundo') 
 });
 
 app.get ('/hola/:usuario', (req, res) => { 
