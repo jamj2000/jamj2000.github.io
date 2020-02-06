@@ -240,7 +240,9 @@ fetch(url + documento._id, { method: "DELETE" })
 
 ## Componentes web
 
-**Definición: Un componente web es una parte de una aplicación web que encapsula código HTML, CSS y JavaScript**
+### Definición de componente web
+
+**Parte de una aplicación web que encapsula código HTML, CSS y JavaScript**
 
 
 ### Similitudes
