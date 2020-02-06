@@ -11,7 +11,7 @@ element: class="fragment" data-fragment-index="1"
 ## HLC - Fullstack
 ---
 ![HLC-Fullstack](http://jamj2000.github.io/hlc-fullstack/hlc-fullstack.png)
-<small> 2018-19 - IES Luis Vélez de Guevara - Écija - Spain </small>
+<small> 2019-20 - IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
 ## Frontend con VanillaJS
@@ -24,7 +24,8 @@ element: class="fragment" data-fragment-index="1"
 - ### Introducción
 - ### Frameworks
 - ### VanillaJS
-- ### Ejemplo
+- ### Componentes web
+- ### Svelte
 
 <!--- Note: Nota a pie de página. -->
 
@@ -73,21 +74,33 @@ element: class="fragment" data-fragment-index="1"
 
 ### Aplicación de ejemplo
 
-- Versión de estudio:
+**Frontend**
 
-  - [TiendaW - Código](https://github.com/jamj2000/tiendaw)
-  - [TiendaW - Demo](http://tiendaw.herokuapp.com)
+- [TiendaFrontend - Código](https://github.com/jamj2000/tiendafrontend)
+- [TiendaFrontend - Demo](http://tiendafrontend.now.sh)
 
-- Otra versión:
+**Backend (API RESTful)**
 
-  - [Tienda0 - Código](https://github.com/jamj2000/tienda0)
-  - [Tienda0 - Demo](http://tienda0.herokuapp.com)
+- [TiendaBackend - Código](https://github.com/jamj2000/tiendabackend)
+- [TiendaBackend - Demo](http://tiendabackend.herokuapp.com)
 
+
+### Otras aplicaciones de ejemplo
+
+**TiendaW (fullstack)**
+
+- [TiendaW - Código](https://github.com/jamj2000/tiendaw)
+- [TiendaW - Demo](http://tiendaw.herokuapp.com)
+
+**Tienda0 (fullstack)**
+
+- [Tienda0 - Código](https://github.com/jamj2000/tienda0)
+- [Tienda0 - Demo](http://tienda0.herokuapp.com)
 
 
 ## Frameworks
 
-Los más usados actualmente (Enero 2018)
+Los más usados actualmente (Febrero 2020)
 
 - **Angular** (Google) 
 - **React** (Facebook)
@@ -158,171 +171,199 @@ Los más usados actualmente (Enero 2018)
 - Puedes descargarlo desde http://vanilla-js.com/ 
 
 
+## Uso de API Fetch
 
-## Ejemplo
-
-**Archivos**
-
-- **index.html**
-- **style.css**
-- **app.js**
+- Javascript ya incorpora de serie la posibilidad de **realizar peticiones asíncronas de datos a un servidor**.
+- Esta técnica también se conoce como **AJAX**.
+- Tradicionalmente se ha usado el objeto **XMLHttpRequest**.
+- Una forma más cómoda es usar la moderna **[API Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Utilizando_Fetch)**.
 
 
-### HTML
+### Fetch - GET ALL
 
-**index.html**
+```javascript
+fetch(url, { method: "GET" })
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+### Fetch - GET
+
+```javascript
+fetch(url + documento._id, { method: "GET" })
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+### Fetch - POST
+
+```javascript
+fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(documento)
+})
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+### Fetch - PUT
+
+```javascript
+fetch(url + documento._id, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(documento)
+})
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+### Fetch - DELETE
+
+```javascript
+fetch(url + documento._id, { method: "DELETE" })
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+
+## Componentes web
+
+**Definición: Un componente web es una parte de una aplicación web que encapsula código HTML, CSS y JavaScript**
+
+
+### Similitudes
+
+![similitud](assets/similitud.png)
+
+
+### Desarrollo por componentes (I)
+
+![App](assets/app.png)
+
+
+### Desarrollo por componentes (II)
+
+![Articulos](assets/articulos.png)
+
+
+### Desarrollo por componentes (III)
+
+![Clientes](assets/clientes.png)
+
+
+## Svelte
+
+- Compilador / Framework  para frontend
+- Sintaxis sencilla
+- Menos líneas de código.
+- Ejecución muy eficiente y rápida.
+- Pequeño peso de la aplicación final
+- Facilita la programación reactiva.
+
+[Apuntes: Frontend con Svelte](https://github.com/jamj2000/tiendafrontend/blob/master/README.md)
+
+
+### Creación de proyecto
+
+```console
+npx  degit  sveltejs/template   nombre-proyecto
+cd  nombre-proyecto
+tree
+
+├── package.json
+├── public
+│   ├── favicon.png
+│   ├── global.css
+│   └── index.html
+├── README.md
+├── rollup.config.js
+└── src
+    ├── App.svelte
+    └── main.js
+```
+
+
+### Estructura de un componente
 
 ```html
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Tienda</title>
-    </head>
+<script>
 
-    <body>
-    <nav>
-        <input name="menu-opcion" type="radio" id="menu-inicio" checked>
-        <label for="menu-inicio" id="menu-inicio-label"> <span> 🏠 </span></label>
-        <input name="menu-opcion" type="radio" id="menu-articulos">
-        <label for="menu-articulos" id="menu-articulos-label"> <span> 🛒 </span></label>
-        <input name="menu-opcion" type="radio" id="menu-clientes">
-        <label for="menu-clientes" id="menu-clientes-label"> <span> 👤 </span></label>
-    </nav>
+</script>
 
-    <main id="contenido">
-        <div class="seccion" id="inicio"></div>
-        <div class="seccion" id="articulos"></div>
-        <div class="seccion" id="clientes"></div>
-    </main>
+<style>
 
-    <div id="OK"> 😊 </div>
-    <div id="KO"> 😟 </div>
+</style>
 
-    <script src="app.js"></script> <!-- Interfaz de interacción con el usuario -->
-    </body>
-    </html>
+<!-- Nuestros elementos HTML y componentes web -->
 ```
 
 
-### Javascript (I)
+### Enrutamiento en el cliente
 
-**app.js**
+- Svelte no tiene un módulo de enrutamiento oficial.
+- Tenemos varios no oficiales.
+- Usaremos el módulo de **`svelte-routing`**
 
-```javascript
-window.addEventListener('load', function () {
-    // Inicialización ...
 
-    // Establecemos los escuchadores de eventos
-    document.getElementById('menu-inicio').addEventListener('click', function (e) {
-       // ...
-    });
+#### App.svelte
 
-    document.getElementById('menu-articulos').addEventListener('click', function (e) {
-       // ...
-    });
+```html
+<script>
+  import { Router } from "svelte-routing";
+</script>
 
-    document.getElementById('menu-clientes').addEventListener('click', function (e) {
-       // ...
-    });
-}
+<Router>
+  <Nav />
+  <Contenido />
+</Router>
 ```
 
 
-### Javascript (II)
+#### Nav.svelte
 
-**app.js**
+```html
+<script>
+  import { Link } from "svelte-routing";
+</script>
 
-```javascript
-//  OPERACION CRUD - CREATE
-function insertar(coleccion, objeto) {
-    if (Object.values(objeto).every(x => (x !== null && x !== ''))) {
-    
-        fetch(`/api/${coleccion}`,
-            {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(objeto)
-            })
-            .then(res => res.json())
-            .then(data => {
-               // ...
-            })
-            .catch(err => {
-               // ...
-            });
-
-    }
-}
+<nav>
+    <Link to="/">🛒 Inicio</Link>
+    <Link to="/articulos">🎁 Artículos</Link>
+    <Link to="/clientes">👥 Clientes</Link>
+</nav>
 ```
 
 
-### Javascript (III)
+#### Contenido.svelte
 
-**app.js**
+```html
+<script>
+  import { Route }  from "svelte-routing";
+  import Inicio     from "./Inicio.svelte";
+  import Articulos  from "./Articulos.svelte";
+  import Clientes   from "./Clientes.svelte";
+</script>
 
-```javascript
-//  OPERACION CRUD - READ
-
-function verDocumentos(coleccion) {
-    fetch(`/api/${coleccion}`,
-        {
-            method: 'GET'
-        })
-        .then(res => res.json())
-        .then(data => {
-            document.getElementById(`${coleccion}`).innerHTML
-                = json2table(coleccion, data, "table-responsive-full sort-table")
-        })
-}
+<main id="contenido">
+  <Route path="/"          component={Inicio} />
+  <Route path="/articulos" component={Articulos} />
+  <Route path="/clientes"  component={Clientes} />
+</main>
 ```
 
 
-### Javascript (IV)
+### Código en GitHub
 
-**app.js**
-
-```javascript
-//  OPERACION CRUD - UPDATE
-function modificar(coleccion, id, objeto) {
-    // let objeto = { nombre: campo1, precio: campo2 };
-
-    fetch(`/api/${coleccion}/${id}`,
-        {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(objeto)
-        })
-        .then(res => res.json())
-        .then(data => {
-               // ...
-        })
-        .catch(err => {
-               // ...
-        });
-
-}
-```
-
-
-### Javascript (V)
-
-**app.js**
-
-```javascript
-//  OPERACION CRUD - DELETE
-function eliminar(coleccion, id) {
-    // if (confirm("El documento para " + documento.nombre + " va a ser eliminado. ¿Está seguro?")) {
-    fetch(`/api/${coleccion}/${id}`,
-        {
-            method: 'DELETE'
-        })
-        .then(res => res.json())
-        .then(data => {
-               // ...
-        })
-        .catch(err => {
-               // ...
-        });
-    // }
-}
-```
+- https://github.com/jamj2000/tiendafrontend
