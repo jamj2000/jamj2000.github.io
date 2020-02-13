@@ -467,7 +467,7 @@ app.use ('/api', routes);
 
 ### Parámetros de configuración
 
-- Para facilitar el mantenimiento y despliegue de la aplicación, situamos todos los parámetros de configuración en el archivo **`config.js`*
+- Para facilitar el mantenimiento y despliegue de la aplicación, situamos todos los parámetros de configuración en el archivo **`config.js`**
 
 ```javascript
 // El primer valor es el de PRODUCCIÓN. El valor alternativo es el de DESARROLLO
