@@ -188,8 +188,9 @@ sudo npm  r  yarn     -g
 #### Ejemplos
 
 ```
-npx  serve                                      # Inicia un servidor web
-npx  http-server                                # Inicia otro servidor web
+npx  serve                     # Inicia un servidor web
+npx  http-server               # Inicia otro servidor web
+npx  live-server               # Inicia otro servidor web con recarga de archivos modificados
 
 npx  @angular/cli  new         nombre-proyecto  # Iniciar proyecto de Angular 
 npx  create-react-app          nombre-proyecto  # Iniciar proyecto de React 
