@@ -164,6 +164,7 @@ https://app-manifest.firebaseapp.com/
 - Es como un proxy del lado del cliente.
 - Controla la memoria caché y responde a las solicitudes de recursos por parte del cliente. 
 - Al pre-almacenar en caché los recursos clave, puede eliminar la dependencia de la red, asegurando una experiencia instantánea y confiable para sus usuarios.
+- [Gestiona el offline](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook?hl=es)
 
 
 ### PWA: Push Notifications I
