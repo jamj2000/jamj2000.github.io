@@ -124,17 +124,17 @@ Note: La opción -y (--yes) de `npm init` crea un archivo **package.json** con o
 ### Instalación de módulos
 
 ```bash
-     npm  install  express  -S  
-     npm  install  nodemon  -D  
-sudo npm  install  yarn     -g  
+     npm  install  express      -S  
+     npm  install  nodemon      -D  
+sudo npm  install  json-server  -g  
 ```
 
 o de forma más corta
 
 ```bash
-     npm  i  express  -S  
-     npm  i  nodemon  -D  
-sudo npm  i  yarn     -g
+     npm  i  express     -S  
+     npm  i  nodemon     -D  
+sudo npm  i  json-server -g
 ```
 
 
@@ -154,15 +154,15 @@ sudo npm  i  yarn     -g
 
 ```bash
      npm  remove  express
-     npm  remove  nodemon  -D 
-sudo npm  remove  yarn     -g 
+     npm  remove  nodemon     -D 
+sudo npm  remove  json-server -g 
 ```   
 o de forma más corta
 
 ```bash
      npm  r  express 
-     npm  r  nodemon  -D  
-sudo npm  r  yarn     -g
+     npm  r  nodemon     -D  
+sudo npm  r  json-server -g
 ```
 
 
@@ -191,6 +191,7 @@ sudo npm  r  yarn     -g
 npx  serve                     # Inicia un servidor web
 npx  http-server               # Inicia otro servidor web
 npx  live-server               # Inicia otro servidor web con recarga de archivos modificados
+npx  json-server               # Inicia un servidor JSON (API REST). Consultar https://www.npmjs.com/package/json-server
 
 npx  @angular/cli  new         nombre-proyecto  # Iniciar proyecto de Angular 
 npx  create-react-app          nombre-proyecto  # Iniciar proyecto de React 
