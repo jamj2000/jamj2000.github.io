@@ -11,7 +11,7 @@ element: class="fragment" data-fragment-index="1"
 ## Despliegue de aplicaciones web
 ---
 ![Despliegue de aplicaciones web](http://jamj2000.github.io/despliegueaplicacionesweb/despliegueaplicacionesweb.png)
-<small> 2019-20 - IES Luis Vélez de Guevara - Écija - Spain </small>
+<small> IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
 ## Servidores de aplicaciones

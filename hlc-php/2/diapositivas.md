@@ -8,15 +8,15 @@ slide: data-background="#ff0000"
 element: class="fragment" data-fragment-index="1"
 -->
 
-## HLC - Fullstack
+## HLC - PHP
 ---
-![HLC-Fullstack](http://jamj2000.github.io/hlc-fullstack/hlc-fullstack.png)
-<small> 2019-20 - IES Luis Vélez de Guevara - Écija - Spain </small>
+![HLC - PHP](http://jamj2000.github.io/hlc-php/hlc-php.png)
+<p><small> IES Luis Vélez de Guevara - Écija - Spain </small></p>
 
 
-## Bases de Datos noSQL
+## Programación orientada a objetos
 
-[![cc-by-sa](http://jamj2000.github.io/hlc-fullstack/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![cc-by-sa](http://jamj2000.github.io/hlc-php/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
 ## Índice

@@ -8,24 +8,24 @@ slide: data-background="#ff0000"
 element: class="fragment" data-fragment-index="1"
 -->
 
-## HLC - Fullstack
+## HLC - PHP
 ---
-![HLC-Fullstack](http://jamj2000.github.io/hlc-fullstack/hlc-fullstack.png)
-<small> 2019-20 - IES Luis Vélez de Guevara - Écija - Spain </small>
+![HLC - PHP](http://jamj2000.github.io/hlc-php/hlc-php.png)
+<p><small> IES Luis Vélez de Guevara - Écija - Spain </small></p>
 
 
-## Conceptos generales
+## Programación estructurada
 
-[![cc-by-sa](http://jamj2000.github.io/hlc-fullstack/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![cc-by-sa](http://jamj2000.github.io/hlc-php/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
 ## Índice
 --- 
 - ### Introducción
-- ### Tecnologías para el backend
-- ### Tecnologías para el frontend
-- ### MVC: Modelo-Vista-Controlador
-- ### SPA: Single Page Application 
+- ### Algoritmos y ordinogramas
+- ### 
+- ### 
+- ###  
 - ### Persistencia de los datos
 
 <!--- Note: Nota a pie de página. -->
@@ -37,15 +37,15 @@ element: class="fragment" data-fragment-index="1"
 
 ### En esta Unidad aprenderemos a
 
-- Identificar las tecnologías base de la web.
-- Identfificar los lenguajes y frameworks usados en el lado del servidor.
-- Identfificar los lenguajes y frameworks usados en el lado del cliente.
-- Reconocer el patrón MVC.
-- Distinguir entre MPA y SPA.
-- Valorar la importancia de la persistencia de los datos.
+- Diferenciar algoritmo y programa.
+- Identificar mediante ordinograma un algoritmo.
+- Reconocer los tipos de datos básicos.
+- Trabajar con variables y constantes.
+- Trabajar con estructuras de control alternativas y repetitivas.
+- Trabajar con funciones.
 
 
-### La base de la web
+### Algoritmos y ordinogramas
 
 ![HTML CSS Javascript](assets/html-css-js.png)
 

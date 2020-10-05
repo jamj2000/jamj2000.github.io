@@ -10,7 +10,7 @@ element: class="fragment" data-fragment-index="1"
 ## Entornos de desarrollo
 ---
 ![Entornos de desarrollo](http://jamj2000.github.io/entornosdesarrollo/entornosdesarrollo.png)
-<small> 2017-18 - IES Luis Vélez de Guevara - Écija - Spain </small>
+<small> IES Luis Vélez de Guevara - Écija - Spain </small>
 
 
 ## Optimización y documentación
