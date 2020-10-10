@@ -283,18 +283,60 @@ Pizarra kanban
 ![Pizarra kanban](assets/kanban-board.png)
 
 
-#### __Scrum (I)__
+#### __Scrum: Conceptos__
 
 - Modelo de desarrollo incremental.
-- Iteraciones (__sprint__) regulares cada 2 a 4 semanas.
+- Iteraciones (__sprint__) **regulares** cada 2, 3 o 4 semanas.
 - Al principio de cada iteración se establecen sus __objetivos priorizados__ (__sprint backlog__).
 - Al finalizar cada iteración se obtiene una __entrega parcial utilizable por el cliente__.
 - Existen reuniones diarias para tratar la marcha del _sprint_.
 
 
-#### __Scrum (II)__
+#### __Scrum: Proceso__
 
 ![Proceso SCRUM](assets/scrum.png)
+
+
+#### __Scrum: Roles principales__
+
+**Product Owner**
+Es "la voz del cliente". Define criterios de aceptación y asegura de que se cumplan.
+
+**Scrum Master**
+Asegura que se sigue la metodología Scrum. Motiva y facilita el trabajo del equipo. 
+
+**Team**
+Equipo de desarrollo auto-organizado y multifuncional. Entre 6 y 10 miembros.
+
+
+#### __Scrum: Artefactos__
+
+**Product Backlog**
+Lista ordenada con los requisitos del producto
+
+**Sprint Backlog**
+Lista de requisitos sacados del backlog para su desarrollo durante el sprint
+
+**Incremento**
+Estado del producto después de cada sprint
+
+
+#### __Scrum: Eventos__
+
+**Sprint**
+Evento principal, que contiene al resto de eventos. Duracción máxima: 1 mes.
+
+**Sprint Planning**
+Reunión inicial donde se planifica el trabajo del Sprint. Duración máxima: 8 horas.
+
+**Daily Scrum**
+Reunión diaria de puesta en común sobre la marcha del sprint. Duración máxima: 15 minutos.
+
+**Scrum Review**
+Reunión final para evaluar el incremento obtenido. Duración máxima: 4 horas.
+
+**Scrum Retrospective**
+Reunión final para evaluar la correcta aplicación de la metodología Scrum. Duración máxima: 3 horas.
 
 
 #### __XP (Programación extrema) (I)__
