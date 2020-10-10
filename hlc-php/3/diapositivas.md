@@ -121,6 +121,83 @@ else {
 ```
 
 
+### PHP 2
+
+```php
+<?php
+
+// COLORES BÁSICOS
+define ('NEGRO',    0);
+define ('ROJO',     1);
+define ('VERDE',    2);
+define ('AMARILLO', 3);
+define ('AZUL',     4);
+define ('MAGENTA',  5);
+define ('CIAN',     6);
+define ('BLANCO',   7);
+
+
+// FORMATO DE TEXTO
+define ('NORMAL',      0);
+define ('BRILLANTE',   1);
+define ('NEGRITA',     2);
+define ('CURSIVA',     3);
+define ('SUBRAYADO',   4);
+define ('PARPADEO',    5);
+
+
+function borrar_pantalla () {
+    echo "\033[H\033[J";
+    echo "\033[3J";       // borramos buffer anterior
+}
+
+function color_texto (int $color) {
+    echo "\033[" . (30 + $color) . "m";
+}
+
+
+function color_fondo (int $color) {
+    echo "\033[" . (40 + $color) . "m";
+}
+
+
+function color_texto_RGB (int $rojo, int $verde, int $azul) {
+    if ( ( $rojo >= 0 and $rojo <= 255 ) and  ( $verde >= 0 and $verde <= 255 ) and ( $azul >= 0 and $azul <= 255 ) ) {
+        echo "\033[38;2;$rojo;$verde;$azul" . "m";
+    }
+}
+
+function color_fondo_RGB (int $rojo, int $verde, int $azul) {
+    if ( ( $rojo >= 0 and $rojo <= 255 ) and  ( $verde >= 0 and $verde <= 255 ) and ( $azul >= 0 and $azul <= 255 ) ) {
+        echo "\033[48;2;$rojo;$verde;$azul" . "m";
+    }
+}
+
+function formato_texto (array  $formato) {
+    echo "\033[m"; // Borramos formato anterior.
+
+    foreach ($formato as $f) {
+        switch ($f) {
+            case NORMAL:    echo "\033[0m"; return;  // Borramos el resto de formatos y no los tenemos en cuenta
+            case BRILLANTE: echo "\033[1m"; break;
+            case NEGRITA:   echo "\033[2m"; break;
+            case CURSIVA:   echo "\033[3m"; break;
+            case SUBRAYADO: echo "\033[4m"; break;
+            case PARPADEO:  echo "\033[5m"; break;
+            default:
+        }
+    }
+}
+
+
+function texto (string $mensaje, int $linea, int $columna) {
+    echo "\033[$linea;$columna" . "H";
+    echo $mensaje;
+}
+?>
+```
+
+
 ### Tipos compuestos
 
 - Arrays:  `[   ]`
