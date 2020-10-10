@@ -124,6 +124,7 @@ else {
 ### PHP 2
 
 ```php
+
 <?php
 
 // COLORES BÁSICOS
@@ -194,6 +195,7 @@ function texto (string $mensaje, int $linea, int $columna) {
     echo "\033[$linea;$columna" . "H";
     echo $mensaje;
 }
+
 ?>
 ```
 
