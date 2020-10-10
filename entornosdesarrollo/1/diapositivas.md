@@ -339,9 +339,7 @@ Reunión final para evaluar el incremento obtenido. Duración máxima: 4 horas.
 Reunión final para evaluar la correcta aplicación de la metodología Scrum. Duración máxima: 3 horas.
 
 
-#### __XP (Programación extrema) (I)__
-
-__Valores__
+#### __XP (Programación extrema): Valores__
 
 - Simplicidad
 - Comunicación
@@ -350,9 +348,7 @@ __Valores__
 - Respeto o humildad 
 
 
-#### __XP (Programación extrema) (II)__
-
-__Características__
+#### __XP (Programación extrema): Características__
 
 - Diseño sencillo
 - Pequeñas mejoras continuas
