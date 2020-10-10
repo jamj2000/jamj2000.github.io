@@ -11,7 +11,7 @@ element: class="fragment" data-fragment-index="1"
 ## HLC - Fullstack
 ---
 ![HLC-Fullstack](http://jamj2000.github.io/hlc-fullstack/hlc-fullstack.png)
-<small> IES Luis Vélez de Guevara - Écija - Spain </small>
+<p><small> IES Luis Vélez de Guevara - Écija - Spain </small></p>
 
 
 ## Desarrollo para dispositivos móviles
