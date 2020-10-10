@@ -97,6 +97,30 @@ typeof a;   // string
 ```
 
 
+### PHP
+
+```php
+<?php
+
+echo "Introduzca un número: ";
+$n1 =  (int)  fgets (STDIN);
+
+echo "Introduzca otro número: ";
+$n2 =  (int)  fgets (STDIN);
+
+$suma = $n1 + $n2;
+
+if ( $suma > 0 ) {
+  echo "La suma ES mayor que 0\n";
+}
+else {
+  echo "La suma NO ES mayor que 0\n";
+}
+
+?>
+```
+
+
 ### Tipos compuestos
 
 - Arrays:  `[   ]`
