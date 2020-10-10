@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Horas de Libre Configuración - Fullstack 
+title: H. de Libre Configuración - Fullstack 
 img: hlc-fullstack.png
 alt: hlc-fullstack
 date: 2018-08-26
