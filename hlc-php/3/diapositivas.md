@@ -124,7 +124,6 @@ else {
 ### PHP 2
 
 ```php
-
 <?php
 
 // COLORES BÁSICOS
