@@ -19,14 +19,16 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](http://jamj2000.github.io/hlc-php/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
-## Índice
+## Índice (I)
 --- 
 - ### Introducción
 - ### Algoritmos y ordinogramas
-- ### 
-- ### 
-- ###  
-- ### Persistencia de los datos
+- ### Entorno de desarrollo
+- ### Entrada y salida
+- ### Tipos de datos
+- ### Estructuras alternativas
+- ### Estructuras repetitivas
+- ### Funciones 
 
 <!--- Note: Nota a pie de página. -->
 
@@ -45,170 +47,260 @@ element: class="fragment" data-fragment-index="1"
 - Trabajar con funciones.
 
 
-### Algoritmos y ordinogramas
 
-![HTML CSS Javascript](assets/html-css-js.png)
+## Algoritmos y ordinogramas
 
-- **HTML**: Estructura del documento. `HTML5`. 
-- **CSS**: Formato/apariencia del documento. `CSS3`.
-- **Javascript**: Funcionalidad del documento. `ECMAScript6`.
+**Algoritmo**
+Secuencia de pasos para resolver un determinado problema.
 
-Note: Al final de línea se muestra la versión más relevante actualmente.
+**Ordinograma**
+Representación gráfica de un algoritmo.
 
 
-### Partes de una aplicación web
+### Algoritmos
 
-![Backend-Frontend](assets/frontend-backend.png)
+- Son independiente del lenguaje de programación.
+- Deben trasladarse a un lenguaje de programación.
+- Se pueden representar mediante:
+  - Pseudocódigo
+  - Ordinogramas
 
 
-### Partes de una aplicación web
+### Tipos de datos
 
-- **Backend**: parte que se ejecuta en el servidor.
-  - Se encarga de atender las peticiones de los clientes.
-  - Suele tener soporte de almacenamiento de datos.
-  - También se denomina capa de acceso a datos
-- **Frontend**: parte que se ejecuta en el cliente.
-  - Se encarga de la experiencia del usuario (UX).
-  - Puede tener soporte de cache de datos.
-  - También se denomina capa de presentación.
+- Simples
+- Compuestos
 
+**Ejemplos de datos simples**
 
+- **ENTEROS**:  -3, 0, 994
+- **REALES**:   -3.01, 3.14  0.001
+- **LÓGICOS o BOOLEANOS**: Verdadero, Falso
+- **CARÁCTER**:  'A', '2', '@', '-'
+- **CADENA**:  "C/ Nueva, 1"
 
-## Tecnologías para el backend
 
+## Constantes y Variables
 
-### Lenguajes del lado del servidor
+**Constante** 
+Dato guardado en memoria que no cambia de valor.
 
-![Backend Languages](assets/backend-languages.png)
+**Variable**
+Dato guardado en memoria que puede cambiar de valor.
 
 
-### Lenguajes del lado del servidor
+### Símbolos de un Ordinograma
 
-- **PHP**: PHP Hypertext Preprocessor. Uno de los lenguajes más utilizados para la creación de todo tipo de CMS.
-- **JSP**: JavaServer Pages. Es la propuesta de Java, y uno de los más demandados.
-- **ASP**: Active Server Pages. Es el lenguaje de desarrollo web de Microsoft. 
-- **Ruby**: es un lenguaje de programación interpretado, reflexivo y orientado a objetos.
-- **Python**: es un lenguaje de programación multiparadigma que hace hincapié en el código legible. 
-- **Javascript (Node.js)**: cada vez más popular puesto que se usa también en el lado cliente.
+![Símbolos](assets/simbolos_ordinogramas.gif)
 
 
-### Frameworks del lado servidor 
+### Ejemplo de un ordinograma
 
-![Backend Frameworks](assets/backend-frameworks.png)
+![Símbolos](assets/ejemplo_ordinograma.gif)
 
 
-### Frameworks del lado servidor 
+### Primitivas básicas
 
-- PHP: **Laravel**, **Symfony**.
-- JSP: **Spring**, **Struts**.
-- ASP: **ASP.NET**, **ASP.NET Core**.
-- Ruby: **Ruby on rails**.
-- Python: **Django**.
-- Node.js: **Express**. 
+**Asignación**
+![Asignación](assets/asignacion.gif)
 
-https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador 
+**Entrada**
+![Entrada](assets/entrada.gif)
 
+**Salida**
+![Salida](assets/salida.gif)
 
-### Resumen
 
-![Desarrollo Backend](assets/back-end-development.png)
+### Expresiones aritméticas
 
+- Es aquella cuyo valor es un número entero o real.
+- Ejemplos:
+  - 3 + 5
+  - 2.01 * 3
+  - (2.1 - 10)/2
 
 
-## Tecnologías para el frontend
+### Operadores aritméticos
 
+![Operadores aritméticos](assets/prioridad_operadores_aritmeticos.gif)
 
-### Lenguajes del lado del cliente
 
-- **Javascript**: 
+### Expresiones lógicas
 
-![Desarrollo Backend](assets/javascript.png)
+- Es aquella cuyo valor es *Verdadero* o *Falso*.
+- Está compuesta de datos y **operadores relacionales y lógicos**
+- Ejemplos:
+  - 3 > 5
+  - (5 > 2) y (3 >= 1)
+  - ((5 > 2) y (3 >= 1)) o (0 <> 1)
 
 
-### Frameworks del lado cliente 
+### Operadores relacionales
 
-- **React**
-- **Angular**
-- **Vue**
+También llamados **operadores de comparación**
 
-![Desarrollo Backend](assets/react-angular-vue.png)
+- **>** Mayor que
+- **>=** Mayor o igual que
+- **<** Menor que
+- **<=** Menor o igual que
+- **==** Igual que
+- **<>**  **!=** Distinto que
 
 
-### Resumen
+### Operadores lógicos
 
-![Desarrollo Frontend](assets/front-end-development.png)
+- **y**
+- **o**
+- **no**
 
 
+### Operadores relacionales y lógicos
 
-## MVC
+![Operadores relacionales y lógicos](assets/prioridad_relacionales_y_logicos.gif)
 
-#### Modelo-Vista-Controlador
 
-![Modelo Vista Controlador](assets/MVC.png)
+### Prioridad de los operadores
 
+![Prioridad operadores](assets/prioridad_operadores.gif)
 
-## MVC
 
-#### Modelo-Vista-Controlador
 
-- patrón de diseño arquitectónico
-- se ejecuta casi toda la lógica de aplicación en el backend. 
-- el servidor sirve múltiples vistas, cada vista es una página HTML. 
-- es una aplicación de múltiples páginas (MPA). 
+## Entorno de desarrollo
 
+- S.O. LUbuntu
+- Lenguaje PHP
 
-## Single Page Application
 
-![Aplicación de Página Única](assets/SPA.png)
+### Instalación de PHP
 
+- Para instalar el lenguaje PHP, ejecutamos:
 
-## Single Page Application
+```bash
+sudo  apt  install  php
+```
 
-- se ejecuta gran parte de la lógica de la aplicación en el frontend. 
-- el servidor sirve datos mediante una API web. 
-- principalmente se usan 2 formatos para el intercambio de datos:
-  - **XML**
-  - **JSON** 
+Note:  php es el intérprete para los programas escritos en este lenguaje.
 
 
-## MVC vs SPA
+### Ejecutar sentencias en modo interactivo
 
-![MVC vs SPA](assets/mvc-spa.png)
+```bash
+php  -a
+```
 
+```php
+php > echo "Hola mundo";
+```
 
 
-## Persistencia de los datos
+### Ejecutar sentencias en un script
 
-- Uso de archivos
-- Bases de datos relacionales
-  - Subtipo importante: **BBDD objeto-relacionales**.
-- Bases de datos no relacionales
-  - Subtipo importante: **BBDD noSQL**.
+```php
+<?php
+// holamundo.php
 
+echo "Hola mundo\n";
 
-### Bases de datos relacionales
+?>
+```
 
-- SQL Server 
-- Oracle
-- MySQL
-- MariaDB
-- PostgreSQL
-- SQLite
+```bash
+php  holamundo.php
+```
 
 
-### Bases de datos relacionales
+### Comentarios
 
-![BBDD relacionales](assets/SQL.png)
+- **Los comentarios no se ejecutan**
+- **Sólo sirven para hacer más entendible el código fuente**
+- **Existen 2 tipos**
 
+**De una sola línea**
+```php
+echo "Hola\n";  // Un mensaje por pantalla
+echo "Hola\n";  # El mismo mensaje por pantalla
 
-### Bases de datos no relacionales (noSQL)
+```
 
-- Cassandra
-- MongoDB
-- Redis
-- CouchDB
+**De varias líneas**
+```php
+/*
+Programa super corto.
+Muestra un mensaje por pantalla.
+*/
+echo "Hola\n";
+```
 
 
-### Bases de datos no relacionales (noSQL)
+## Entrada y salida
 
-![BBDD relacionales](assets/noSQL.png)
+- **PHP es un lenguaje para programación web**.
+- La principal sentencia para la **salida** de datos es **echo**
+- El principal método para la **entrada** de datos es el uso de **Formularios HTML**
+
+
+### Salida de datos (I)
+
+- Las principales sentencias para salida de datos son:
+  - **echo**  (permite varios argumentos separados por comas)
+  - **print** (solo permite un argumento)
+
+**Ejemplos**
+```php
+echo  "Hola", 32, "Adiós", true;
+print "Hola";
+```
+
+
+### Salida de datos (II)
+
+- También existen 2 funciones:
+  - **print_r**  (información escueta)
+  - **var_dump** (información detallada)
+- Suelen usarse para mostrar datos compuestos como los arrays.
+
+**Ejemplos**
+```php
+$frutas = ["manzana", "naranja", "fresa"];
+
+print_r  ($frutas);
+var_dump ($frutas);
+```
+
+
+### Entrada de datos
+
+- La entrada de datos mediante **el uso de formularios HTML se verá en el Bloque temático de Programación web**.
+- Aunque es poco conocido y usado, **PHP también permite la entrada de datos desde el terminal de texto**.
+- Para realizar entrada por terminal usamos la función **fgets**
+
+**Ejemplo de fgets**
+```php
+
+echo "Introduce tu edad: ";
+$edad = (int) fgets (STDIN);
+```
+
+Note: STDIN es la entrada estándar, es decir el teclado.
+
+
+
+## Tipos de datos
+
+
+### Constantes
+
+
+### Variables
+
+
+
+## Estructuras alternativas
+
+
+
+## Estructuras repetitivas
+
+
+
+## Funciones 
