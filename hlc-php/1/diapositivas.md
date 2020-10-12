@@ -70,15 +70,14 @@ Representación gráfica de un algoritmo.
 ### Tipos de datos
 
 - Simples
+  - **ENTEROS**:  ```-3    0    994```
+  - **REALES**:   -```3.01   3.14    0.001```
+  - **LÓGICOS o BOOLEANOS**: ```Verdadero    Falso```
+  - **CARÁCTER**:  ```'A'    '2'    '@'    '-' ```
+  - **CADENA**:  ```"C/ Nueva, 1"```
 - Compuestos
-
-**Ejemplos de datos simples**
-
-- **ENTEROS**:  ```-3   0   994```
-- **REALES**:   -```3.01  3.14   0.001```
-- **LÓGICOS o BOOLEANOS**: ```Verdadero   Falso```
-- **CARÁCTER**:  ```'A'   '2'   '@'   '-' ```
-- **CADENA**:  ```"C/ Nueva, 1"```
+  - **ARRAY**
+  - **OBJETO**
 
 
 ## Constantes y Variables
@@ -105,12 +104,15 @@ Dato guardado en memoria que puede cambiar de valor.
 ### Primitivas básicas
 
 **Asignación**
+
 ![Asignación](assets/asignacion.gif)
 
 **Entrada**
+
 ![Entrada](assets/entrada.gif)
 
 **Salida**
+
 ![Salida](assets/salida.gif)
 
 
