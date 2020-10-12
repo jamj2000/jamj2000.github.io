@@ -296,7 +296,6 @@ echo "Hola\n";
   - **echo**  (permite varios argumentos separados por comas)
   - **print** (solo permite un argumento)
 
-**Ejemplos**
 ```php
 echo  "Hola", 32, "Adiós", true;
 print "Hola";
@@ -310,7 +309,6 @@ print "Hola";
   - **var_dump** (información detallada)
 - Suelen usarse para mostrar datos compuestos como los arrays.
 
-**Ejemplos**
 ```php
 $frutas = ["manzana", "naranja", "fresa"];
 
@@ -325,7 +323,6 @@ var_dump ($frutas);
 - Aunque es poco conocido y usado, **PHP también permite la entrada de datos desde el terminal de texto**.
 - Para realizar entrada por terminal usamos la función **fgets**
 
-**Ejemplo de fgets**
 ```php
 
 echo "Introduce tu edad: ";
@@ -344,7 +341,6 @@ Note: STDIN es la entrada estándar, es decir el teclado.
   - **float** o **double**: reales
   - **string**: texto
 
-**Ejemplos**
 ```php
 // Declaración de variables
 
@@ -361,7 +357,6 @@ $nombre = "Ana López";
   - **array**: lista de varios valores
   - **object**: objeto (se verán el el Bloque de Programación orientada a objetos)
 
-**Ejemplos**
 ```php
 $frutas = ["manzana", "naranja", "fresa"];
 
@@ -384,7 +379,6 @@ $pepe = new Persona ("José", "García");
 
 - Podemos ver el tipo de una variable o constante mediante la función **gettype**
 
-**Ejemplo**
 ```php 
 echo gettype ($abierto);  // boolean
 echo gettype ($edad);     // integer
@@ -400,7 +394,6 @@ echo gettype ($pepe);     // object
 - Para eliminar una variable usamos la función **unset**
 - Para comprobar si una variable existe usamos la función **isset**
 
-**Ejemplo**
 ```php
 unset ($edad);
 
@@ -417,7 +410,6 @@ else
 - En PHP hay que usar la función **define**
 - Una vez inicializada, su valor no puede cambiarse.
 
-**Ejemplos**
 ```php
 define ("ABIERTO", true); 
 define ("PI", 3.14);
@@ -590,7 +582,6 @@ for ($contador = 1; $contador <= 10; $contador++)
 
 - Se utiliza para recorrer arrays.
 
-**Ejemplo**
 ```php
 $frutas = ["manzana", "naranja", "fresa"];
 
