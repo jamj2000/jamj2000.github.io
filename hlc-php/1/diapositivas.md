@@ -21,7 +21,6 @@ element: class="fragment" data-fragment-index="1"
 
 ## Índice (I)
 --- 
-- ### Introducción
 - ### Algoritmos y ordinogramas
 - ### Entorno de desarrollo
 - ### Entrada y salida
@@ -51,9 +50,11 @@ element: class="fragment" data-fragment-index="1"
 ## Algoritmos y ordinogramas
 
 **Algoritmo**
+
 Secuencia de pasos para resolver un determinado problema.
 
 **Ordinograma**
+
 Representación gráfica de un algoritmo.
 
 
@@ -73,19 +74,21 @@ Representación gráfica de un algoritmo.
 
 **Ejemplos de datos simples**
 
-- **ENTEROS**:  -3, 0, 994
-- **REALES**:   -3.01, 3.14  0.001
-- **LÓGICOS o BOOLEANOS**: Verdadero, Falso
-- **CARÁCTER**:  'A', '2', '@', '-'
-- **CADENA**:  "C/ Nueva, 1"
+- **ENTEROS**:  ```-3   0   994```
+- **REALES**:   -```3.01  3.14   0.001```
+- **LÓGICOS o BOOLEANOS**: ```Verdadero   Falso```
+- **CARÁCTER**:  ```'A'   '2'   '@'   '-' ```
+- **CADENA**:  ```"C/ Nueva, 1"```
 
 
 ## Constantes y Variables
 
 **Constante** 
+
 Dato guardado en memoria que no cambia de valor.
 
 **Variable**
+
 Dato guardado en memoria que puede cambiar de valor.
 
 
@@ -144,7 +147,7 @@ También llamados **operadores de comparación**
 - **<** Menor que
 - **<=** Menor o igual que
 - **==** Igual que
-- **<>**  **!=** Distinto que
+- **<>**,  **!=** Distinto que
 
 
 ### Operadores lógicos
@@ -162,6 +165,54 @@ También llamados **operadores de comparación**
 ### Prioridad de los operadores
 
 ![Prioridad operadores](assets/prioridad_operadores.gif)
+
+
+### Estructuras alternativas
+
+- Permiten **ejecutar código dependiendo de si se cumple o no una condición**.
+- Las principales estructuras son:
+  - **Alternativa doble**
+  - **Alternativa simple**
+  - **Alternativa múltiple**
+
+
+#### Alternativa doble
+
+![Alternativa doble](assets/alternativa_doble.gif)
+
+
+#### Alternativa simple
+
+![Alternativa simple](assets/alternativa_simple.gif)
+
+
+#### Alternativa múltiple
+
+![Alternativa multiple](assets/alternativa_multiple.gif)
+
+
+### Estructuras repetitivas
+
+- Permiten **ejecutar código varias veces**.
+- Las principales estructuras son:
+  - **Repetitiva mientras**
+  - **Repetitiva hacer ... mientras**
+  - **Repetitiva para**
+
+
+#### Repetitiva mientras
+
+![Repetitiva mientras](assets/repetitiva_mientras.gif)
+
+
+#### Repetitiva hacer ... mientras
+
+![Repetitiva hacer mientras](assets/repetitiva_hacer_mientras.gif)
+
+
+#### Repetitiva para
+
+![Repetitiva para](assets/repetitiva_para.gif)
 
 
 
@@ -211,9 +262,9 @@ php  holamundo.php
 
 ### Comentarios
 
-- **Los comentarios no se ejecutan**
-- **Sólo sirven para hacer más entendible el código fuente**
-- **Existen 2 tipos**
+- Los comentarios **no se ejecutan**.
+- Sólo sirven para hacer más entendible el código fuente.
+- Existen **2 tipos**
 
 **De una sola línea**
 ```php
@@ -282,24 +333,270 @@ $edad = (int) fgets (STDIN);
 ```
 
 Note: STDIN es la entrada estándar, es decir el teclado.
+(int) es un *casting* para convertir la entrada en formato texto a entero.
 
 
+## Tipos de datos (I)
 
-## Tipos de datos
+- Los principales tipos de datos en PHP son:
+  - **boolean**: *true*, *false*
+  - **integer** o **int**:  enteros
+  - **float** o **double**: reales
+  - **string**: texto
+
+**Ejemplos**
+```php
+// Declaración de variables
+
+$abierto = true; 
+$edad = 15;
+$altura = 1.62;
+$nombre = "Ana López";
+```
+
+
+## Tipos de datos (II)
+
+- Los tipos de datos compuestos son:
+  - **array**: lista de varios valores
+  - **object**: objeto (se verán el el Bloque de Programación orientada a objetos)
+
+**Ejemplos**
+```php
+$frutas = ["manzana", "naranja", "fresa"];
+
+class Persona {
+  // Propiedades
+  private $nombre    = null;
+  private $apellidos = null;
+  
+  // Constructor:
+  function __construct($nombre, $apellidos) {
+    $this->nombre    = $nombre;
+    $this->apellidos = $apellidos;
+  }
+}
+$pepe = new Persona ("José", "García");
+```
+
+
+## Tipos de datos (III)
+
+- Podemos ver el tipo de una variable o constante mediante la función **gettype**
+
+**Ejemplo**
+```php 
+echo gettype ($abierto);  // boolean
+echo gettype ($edad);     // integer
+echo gettype ($altura);   // double
+echo gettype ($nombre);   // string
+echo gettype ($frutas);   // array
+echo gettype ($pepe);     // object 
+```
+
+
+## Tipos de datos (IV)
+
+- Para eliminar una variable usamos la función **unset**
+- Para comprobar si una variable existe usamos la función **isset**
+
+**Ejemplo**
+```php
+unset ($edad);
+
+if (isset($edad)) 
+  echo "La variable existe"; 
+else 
+  echo "La variable no existe"; // se muestra este mensaje
+```
 
 
 ### Constantes
 
+- Por convención **se escriben en MAYÚSCULAS**
+- En PHP hay que usar la función **define**
+- Una vez inicializada, su valor no puede cambiarse.
 
-### Variables
+**Ejemplos**
+```php
+define ("ABIERTO", true); 
+define ("PI", 3.14);
+define ("SALUDO", "Buenos días");
+
+echo gettype (ABIERTO);
+echo gettype (PI);
+echo gettype (SALUDO);
+
+echo 2*PI;
+```
 
 
 
 ## Estructuras alternativas
 
 
+### Alternativa doble (I)
+
+**Ordinograma**
+
+![Alternativa doble](assets/nota_alternativa_doble.gif)
+
+
+### Alternativa doble (II)
+
+**Script PHP**
+```php
+<?php
+
+echo "Introduzca nota: ";
+$nota = (double) fgets (STDIN);
+
+if ($nota >= 5)   
+  echo "APROBADO" . "\n";
+else
+  echo "SUSPENDIDO" . "\n";
+
+?>
+```
+
+
+### Alternativa simple (I)
+
+**Ordinograma**
+
+![Alternativa simple](assets/nota_alternativa_simple.gif)
+
+
+### Alternativa simple (II)
+
+**Script PHP**
+```php
+<?php
+
+echo "Introduzca nota: ";
+$nota = (double) fgets (STDIN);
+
+if ($nota >= 5)   
+  echo "APROBADO" . "\n";
+
+?>
+```
+
+
+### Alternativa múltiple (I)
+
+**Ordinograma**
+
+![Alternativa múltiple](assets/dia_alternativa_multiple.gif)
+
+
+### Alternativa múltiple (II)
+
+**Script PHP**
+```php
+<?php
+
+echo "Introduzca día de la semana (1 - 7): ";
+$dia = (int) fgets (STDIN);
+
+switch ($dia) {
+  case 1:  echo "Lunes\n";     break;
+  case 2:  echo "Martes\n";    break;
+  case 3:  echo "Miércoles\n"; break;
+  case 4:  echo "Jueves\n";    break;
+  case 5:  echo "Viernes\n";   break;
+  case 6:  echo "Sábado\n";    break;
+  case 7:  echo "Domingo\n";   break;
+  default: echo "ERROR: Día incorrecto\n"; 
+}
+ 
+?>
+```
+
+
 
 ## Estructuras repetitivas
+
+
+### Repetitiva while (I)
+
+**Ordinograma**
+
+![Contador mientras](assets/contador_mientras.gif)
+
+
+### Repetitiva while (II)
+
+**Script PHP**
+```php
+<?php
+
+$contador = 1;
+
+while ($contador <= 10) {
+  echo $contador . "\n";
+  $contador++;
+}
+
+?>
+```
+
+
+### Repetitiva do ... while (I)
+
+**Ordinograma**
+
+![Contador hacer mientras](assets/contador_hacer_mientras.gif)
+
+
+### Repetitiva do ... while (II)
+
+**Script PHP**
+```php
+<?php
+
+$contador = 1;
+
+do {
+  echo $contador . "\n";
+  $contador++;
+} while ($contador <= 10)
+
+?>
+```
+
+
+### Repetitiva for (I)
+
+**Ordinograma**
+
+![Contador para](assets/contador_para.gif)
+
+
+### Repetitiva para (II)
+
+**Script PHP**
+```php
+<?php
+
+for ($contador = 1; $contador <= 10; $contador++) 
+  echo $contador . "\n";
+
+?>
+```
+
+
+### Repetitiva foreach
+
+- Se utiliza para recorrer arrays.
+
+**Ejemplo**
+```php
+$frutas = ["manzana", "naranja", "fresa"];
+
+foreach ($frutas as $fruta)
+  echo $fruta . "\n";
+```
 
 
 
