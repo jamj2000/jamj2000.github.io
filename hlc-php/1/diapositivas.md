@@ -434,7 +434,7 @@ echo 2*PI;
 
 - **+** Suma
 - **-** Resta
-- ** * ** Multiplicación
+- ** \* ** Multiplicación
 - **/** Cociente
 - **%** Resto (también llamado módulo)
 - ** \*\* ** Exponenciación
