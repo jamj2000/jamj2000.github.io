@@ -285,6 +285,7 @@ echo "Hola\n";
 ```
 
 
+
 ## Entrada y salida
 
 - **PHP es un lenguaje para programación web**.
@@ -335,9 +336,13 @@ Note: STDIN es la entrada estándar, es decir el teclado.
 (int) es un *casting* para convertir la entrada en formato texto a entero.
 
 
-## Tipos de datos (I)
 
-- Los principales tipos de datos en PHP son:
+## Tipos de datos
+
+
+### Variables (I)
+
+- Los principales tipos de datos para variables y constantes en PHP son:
   - **boolean**: *true*, *false*
   - **integer** o **int**:  enteros
   - **float** o **double**: reales
@@ -353,7 +358,7 @@ $nombre = "Ana López";
 ```
 
 
-## Tipos de datos (II)
+### Variables (II)
 
 - Los tipos de datos compuestos son:
   - **array**: lista de varios valores
@@ -377,7 +382,7 @@ $pepe = new Persona ("José", "García");
 ```
 
 
-## Tipos de datos (III)
+### Variables (III)
 
 - Podemos ver el tipo de una variable o constante mediante la función **gettype**
 
@@ -391,7 +396,7 @@ echo gettype ($pepe);     // object
 ```
 
 
-## Tipos de datos (IV)
+### Variables (IV)
 
 - Para eliminar una variable usamos la función **unset**
 - Para comprobar si una variable existe usamos la función **isset**
@@ -423,6 +428,37 @@ echo gettype (SALUDO);
 
 echo 2*PI;
 ```
+
+
+### Operadores aritméticos
+
+- **+** Suma
+- **-** Resta
+- ** * ** Multiplicación
+- **/** Cociente
+- **%** Resto (también llamado módulo)
+- ** \*\* ** Exponenciación
+
+
+### Operadores relacionales
+
+También llamados **operadores de comparación**
+
+- **>** Mayor que
+- **>=** Mayor o igual que
+- **<** Menor que
+- **<=** Menor o igual que
+- **==** Igual valor que (igualdad)
+- **===** Igual valor y tipo que (identidad)
+- **<>**,  **!=** Distinto valor que (desigualdad)
+- **!==** Distinto valor y tipo que (no identidad)
+
+
+### Operadores lógicos
+
+- **and**, **&&**  
+- **or**, **||**
+- **!**
 
 
 
@@ -594,3 +630,16 @@ foreach ($frutas as $fruta)
 
 
 ## Funciones 
+
+
+### Funciones matemáticas
+
+
+### Funciones de cadenas
+
+
+### Funciones definidas por el usuario
+
+
+### Programación modular
+
