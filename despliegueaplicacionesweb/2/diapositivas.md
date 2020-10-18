@@ -220,7 +220,7 @@ Note: Ejecutar los comandos como usuario **root**.
 - Adicionalmente también permite autenciación si el certificado está firmado por una CA reconocida.
 - HTTPS = HTTP + SSL/TLS
 
-Note: Actualmente, mediante **SNI** (https://es.wikipedia.org/wiki/Server_Name_Indication), es posible que un servidor utilice múltiples certificados en una misma dirección IP y número de puerto.
+Note: Actualmente, mediante **[SNI](https://es.wikipedia.org/wiki/Server_Name_Indication)** , es posible que un servidor utilice múltiples certificados en una misma dirección IP y número de puerto.
 
 
 ### Archivo de configuración
