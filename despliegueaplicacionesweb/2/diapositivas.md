@@ -280,7 +280,7 @@ Note: El ejecutable `make-ssl-cert` viene en el paquete `ssl-cert`
 
 ### openssl
 
-```terminal
+```bash
 # Generamos clave privada
 openssl genrsa -out key 1024
 
