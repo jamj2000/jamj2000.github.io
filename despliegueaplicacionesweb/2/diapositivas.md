@@ -292,9 +292,7 @@ openssl x509 -req -days 365 -in csr -signkey key -out crt
 cat key crt > /etc/ssl/private/nombre-sitio.pem
 ```
 
-Note: CSR = Certificate Signing Request (solicitud de firma de certificado).
-
-Note: Las palabras `key`, `csr` y `crt` representan aquí nombres de archivo que he escogido para simplificar.
+Note: CSR = Certificate Signing Request (solicitud de firma de certificado). Las palabras `key`, `csr` y `crt` representan aquí nombres de archivo que he escogido para simplificar.
 
 
 ### xca (I)
