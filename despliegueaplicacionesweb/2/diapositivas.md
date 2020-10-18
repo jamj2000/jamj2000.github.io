@@ -273,7 +273,7 @@ systemctl  restart  apache2  # Reiniciamos Apache
 
 ```bash
 make-­ssl-­cert  /usr/share/ssl­-cert/ssleay.cnf   \
-               /etc/ssl/private/nombre­-sitio.pem
+               /etc/ssl/certs/nombre­-sitio.pem
 ```
 
 Note: El ejecutable `make-ssl-cert` viene en el paquete `ssl-cert`
