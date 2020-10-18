@@ -302,7 +302,48 @@ service  apache2  restart
 
 ### certbot
 
-- Bot para la gestión de certificados de Let's Encrypt
-- Es necesario disponer de un dominio registrado
+- **Bot para la gestión de certificados de Let's Encrypt**
+- **Es necesario disponer de un dominio registrado**
 - https://certbot.eff.org/
 
+
+#### Preliminares (I)
+
+- Si usamos instancias EC2 de AWS podemos crear un par de claves pública-privada.
+- La descargamos a nuestro PC. 
+
+![aws-private-key](assets/aws-private-key.png)
+
+
+#### Preliminares (II)
+
+- Y realizaremos una conexión SSH usando la clave privada descargada a nuestro PC.
+
+![aws-ssh](assets/aws-ssh.png)
+
+
+#### Instalación de certbot
+
+https://certbot.eff.org/instructions
+
+![certbot-instructions](assets/certbot-instructions.png)
+
+
+#### Ejecución de certbot
+
+![certbot-run](assets/certbot-run.png)
+
+
+#### Paso 1: activación HTTPS
+
+![certbot-activate-https](assets/certbot-activate-https.png)
+
+
+#### Paso 2: redirección HTTP a HTTPS
+
+![certbot-redirect-to-https](assets/certbot-redirect-to-https.png)
+
+
+#### Paso 3: felicidades
+
+![certbot-congratulations](assets/certbot-congratulations.png)
