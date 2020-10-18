@@ -212,54 +212,15 @@ Note: Ejecutar los comandos como usuario **root**.
 
 ### Características
 
-- Necesita de un certificado X.509.
+- Necesita de un **certificado X.509**.
 - Dos tipos de certificados:
-  - Autofirmados.
-  - Firmados por una CA (Autoridad de Certificación).
+  - **Autofirmados**.
+  - **Firmados por una CA** (Autoridad de Certificación).
 - Permite que el tráfico viaje cifrado.
 - Adicionalmente también permite autenciación si el certificado está firmado por una CA reconocida.
 - HTTPS = HTTP + SSL/TLS
 
 Note: **IMPORTANTE**: La negociación SSL es dependiente totalmente de la IP, así que no puedes servir distintos certificados en una misma IP.
-
-
-### Obtener un certificado
-
-- **`make-ssl-cert`**
-- **`openssl`**
-- **`xca`**
-- **`cerbot`**
-
-
-### make-ssl-cert
-
-```bash
-make-­ssl-­cert  /usr/share/ssl­-cert/ssleay.cnf  /etc/ssl/private/nombre­-sitio.pem
-```
-
-Note: El ejecutable `make-ssl-cert` viene en el paquete `ssl-cert`
-
-
-### openssl
-
-```bash
-# Generamos clave privada
-openssl genrsa -out key 1024
-
-# Generamos CSR y firmamos con nuestra clave privada
-openssl req -new -key key -out csr
-openssl x509 -req -days 365 -in csr -signkey key -out crt
-
-# Copiamos clave y certificado en el destino
-cat key crt > /etc/ssl/private/nombre-sitio.pem
-```
-
-Note: CSR = Certificate Signing Request (solicitud de firma de certificado).
-
-
-### xca
-
-![xca](assets/xca.png)
 
 
 ### Archivo de configuración
@@ -291,13 +252,62 @@ a2enmod   ssl
 a2dissite default-ssl
 a2ensite  default-ssl
 
-service  apache2  restart
+systemctl  restart  apache2
 ```
 
 
-### Resultado
+### Obtener un certificado X.509
 
-![https](assets/https.png)
+**Podemos emplear al menos 4 formas**
+
+- **`make-ssl-cert`** (**muy básica**, terminal de texto)
+- **`openssl`** (**potente**, terminal de texto)
+- **`xca`** (**cómoda**, aplicación gráfica)
+- **`cerbot`** (**moderna**, permite certificados firmados por una CA)
+
+
+### make-ssl-cert
+
+```bash
+make-­ssl-­cert  /usr/share/ssl­-cert/ssleay.cnf  /etc/ssl/private/nombre­-sitio.pem
+```
+
+Note: El ejecutable `make-ssl-cert` viene en el paquete `ssl-cert`
+
+
+### openssl
+
+```terminal
+# Generamos clave privada
+openssl genrsa -out key 1024
+
+# Generamos CSR y firmamos con nuestra clave privada
+openssl req -new -key key -out csr
+openssl x509 -req -days 365 -in csr -signkey key -out crt
+
+# Copiamos clave y certificado en el destino
+cat key crt > /etc/ssl/private/nombre-sitio.pem
+```
+
+Note: CSR = Certificate Signing Request (solicitud de firma de certificado).
+
+Note: Las palabras `key`, `csr` y `crt` representan aquí nombres de archivo que he escogido para simplificar.
+
+
+### xca (I)
+
+- Es una aplicación gráfica que nos permite la creación de certificados digitales.
+
+![xca](assets/xca.png)
+
+
+### xca (II)
+
+**Instrucciones de uso para crear un certificado autofirmado**
+
+0. Crear una base de datos que guardará las claves y los certificados.
+1. Crear un par de claves pública-privada.
+2. Crear un certificado digital y firmar con la clave privada.
 
 
 ### certbot
@@ -328,8 +338,14 @@ https://certbot.eff.org/instructions
 
 ![certbot-instructions](assets/certbot-instructions.png)
 
+- Seleccionamos la plataforma del servidor.
+- Seguiremos las instrucciones de instalación.
+
 
 #### Ejecución de certbot
+
+- Previamente debemos haber configurado nuestros sitios virtuales.
+- En este ejemplo aparecen dos sitios virtuales.
 
 ![certbot-run](assets/certbot-run.png)
 
