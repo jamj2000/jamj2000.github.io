@@ -220,7 +220,7 @@ Note: Ejecutar los comandos como usuario **root**.
 - Adicionalmente también permite autenciación si el certificado está firmado por una CA reconocida.
 - HTTPS = HTTP + SSL/TLS
 
-Note: **IMPORTANTE**: La negociación SSL es dependiente totalmente de la IP, así que no puedes servir distintos certificados en una misma IP.
+Note: Actualmente, mediante **SNI** (https://es.wikipedia.org/wiki/Server_Name_Indication), es posible que un servidor utilice múltiples certificados en una misma dirección IP y número de puerto.
 
 
 ### Archivo de configuración
@@ -233,7 +233,9 @@ Note: **IMPORTANTE**: La negociación SSL es dependiente totalmente de la IP, as
   DocumentRoot /var/www/html
   
   SSLEngine on
-  SSLCertificateFile  /etc/ssl/private/nombre-­sitio.pem
+
+  SSLCertificateFile  /etc/ssl/certs/nombre-­sitio.pem
+  # SSLCertificateKeyFile /etc/ssl/private/nombre-sitio.key
   ...
   
   <Directory /var/www/html> 
@@ -243,16 +245,17 @@ Note: **IMPORTANTE**: La negociación SSL es dependiente totalmente de la IP, as
 </VirtualHost>
 ```
 
+Note: Es posible almacenar tanto el certificado como la clave privada en el mismo archivo. 
+
 
 ### Comandos
 
 ```bash
-a2enmod   ssl
+a2enmod   ssl                # Habilitamos módulo SSL
+ 
+a2ensite  default-ssl        # Habilitamos sitio default-ssl
 
-a2dissite default-ssl
-a2ensite  default-ssl
-
-systemctl  restart  apache2
+systemctl  restart  apache2  # Reiniciamos Apache
 ```
 
 
