@@ -49,11 +49,11 @@ element: class="fragment" data-fragment-index="1"
 
 ![HTML CSS Javascript](assets/html-css-js.png)
 
-- **HTML**: Estructura del documento. `HTML5`. 
-- **CSS**: Formato/apariencia del documento. `CSS3`.
-- **Javascript**: Funcionalidad del documento. `ECMAScript6`.
+- **HTML**: Estructura del documento. `HTML5`. `2014`
+- **CSS**: Formato/apariencia del documento. `CSS3`. 
+- **Javascript**: Funcionalidad del documento. `ECMAScript6`. `2015`
 
-Note: Al final de línea se muestra la versión más relevante actualmente.
+Note: Al final de línea se muestra la versión más relevante actualmente y el año de su aparición oficial.
 
 
 ### Partes de una aplicación web
