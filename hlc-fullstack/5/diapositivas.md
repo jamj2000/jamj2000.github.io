@@ -14,7 +14,7 @@ element: class="fragment" data-fragment-index="1"
 <p><small> IES Luis Vélez de Guevara - Écija - Spain </small></p>
 
 
-## Frontend con VanillaJS
+## Frontend con Svelte
 
 [![cc-by-sa](http://jamj2000.github.io/hlc-fullstack/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
@@ -171,7 +171,7 @@ Los más usados actualmente (Febrero 2020)
 - Puedes descargarlo desde http://vanilla-js.com/ 
 
 
-## Uso de API Fetch
+### Uso de API Fetch
 
 - Javascript ya incorpora de serie la posibilidad de **realizar peticiones asíncronas de datos a un servidor**.
 - Esta técnica también se conoce como **AJAX**.
@@ -179,7 +179,7 @@ Los más usados actualmente (Febrero 2020)
 - Una forma más cómoda es usar la moderna **[API Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Utilizando_Fetch)**.
 
 
-### Fetch - GET ALL
+#### Fetch - GET ALL
 
 ```javascript
 fetch(url, { method: "GET" })
@@ -189,7 +189,7 @@ fetch(url, { method: "GET" })
 ```
 
 
-### Fetch - GET
+#### Fetch - GET
 
 ```javascript
 fetch(url + documento._id, { method: "GET" })
@@ -199,7 +199,7 @@ fetch(url + documento._id, { method: "GET" })
 ```
 
 
-### Fetch - POST
+#### Fetch - POST
 
 ```javascript
 fetch(url, {
@@ -213,7 +213,7 @@ fetch(url, {
 ```
 
 
-### Fetch - PUT
+#### Fetch - PUT
 
 ```javascript
 fetch(url + documento._id, {
@@ -227,7 +227,7 @@ fetch(url + documento._id, {
 ```
 
 
-### Fetch - DELETE
+#### Fetch - DELETE
 
 ```javascript
 fetch(url + documento._id, { method: "DELETE" })
@@ -265,6 +265,7 @@ fetch(url + documento._id, { method: "DELETE" })
 ![Clientes](assets/clientes.png)
 
 
+
 ## Svelte
 
 - Compilador / Framework  para frontend
@@ -277,23 +278,70 @@ fetch(url + documento._id, { method: "DELETE" })
 [Apuntes: Frontend con Svelte](https://github.com/jamj2000/tiendafrontend/blob/master/README.md)
 
 
-### Creación de proyecto
+### Crear el proyecto
 
 ```console
-npx  degit  sveltejs/template   nombre-proyecto
-cd  nombre-proyecto
-tree
-
+# npx  degit  sveltejs/template   nombre-proyecto
+mkdir  nombre-proyecto  &&  cd  nombre-proyecto
+npm  init  svelte@next
+git  init
+tree -a  -I .git
+.
+├── .gitignore
 ├── package.json
-├── public
-│   ├── favicon.png
-│   ├── global.css
-│   └── index.html
 ├── README.md
-├── rollup.config.js
-└── src
-    ├── App.svelte
-    └── main.js
+├── snowpack.config.js
+├── src
+│   ├── app.html
+│   ├── components
+│   │   └── Counter.svelte
+│   └── routes
+│       └── index.svelte
+├── static
+│   ├── favicon.ico
+│   └── robots.txt
+└── svelte.config.js
+```
+
+
+### Inicializar el proyecto
+
+- Ejecutamos el siguiente comando:
+
+```console
+npm i              # npm  install
+```
+
+- Esto instala los módulos indicados en `package.json` y genera archivo de bloqueo `package-lock.json`
+- Se instalan las dependencias de desarrollo  (`devDependencies`)
+- Si existiesen, se instalararían las dependencias de la aplicación (`dependencies`)
+
+
+### Desarrollar la aplicación
+
+**npm  run  dev**
+
+
+### Construir la aplicación
+
+**npm  run  build**
+
+
+#### src/app.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	%svelte.head%
+</head>
+<body>
+	%svelte.body%
+</body>
+</html>
 ```
 
 
@@ -308,64 +356,123 @@ tree
 
 </style>
 
-<!-- Nuestros elementos HTML y componentes web -->
+<!-- Nuestros elementos HTML y otros componentes web -->
 ```
 
 
-### Enrutamiento en el cliente
-
-- Svelte no tiene un módulo de enrutamiento oficial.
-- Tenemos varios no oficiales.
-- Usaremos el módulo de **`svelte-routing`**
-
-
-#### App.svelte
+#### src/components/Nav.svelte
 
 ```html
-<script>
-  import { Router } from "svelte-routing";
-</script>
-
-<Router>
-  <Nav />
-  <Contenido />
-</Router>
-```
-
-
-#### Nav.svelte
-
-```html
-<script>
-  import { Link } from "svelte-routing";
-</script>
-
 <nav>
-    <Link to="/">🛒 Inicio</Link>
-    <Link to="/articulos">🎁 Artículos</Link>
-    <Link to="/clientes">👥 Clientes</Link>
+    <!-- ... ver código fuente en GitHub -->
+    <a href="/">🛒 Inicio</a>
+    <a href="/articulos">🎁 Artículos</a>
+    <a href="/clientes">👥 Clientes</a>
 </nav>
+
+<style>
+ /* ... ver código fuente en GitHub */
+</style>
 ```
 
 
-#### Contenido.svelte
+### src/routes/$layout.svelte
 
 ```html
 <script>
-  import { Route }  from "svelte-routing";
-  import Inicio     from "./Inicio.svelte";
-  import Articulos  from "./Articulos.svelte";
-  import Clientes   from "./Clientes.svelte";
+	import Nav from '$components/Nav.svelte';
 </script>
 
-<main id="contenido">
-  <Route path="/"          component={Inicio} />
-  <Route path="/articulos" component={Articulos} />
-  <Route path="/clientes"  component={Clientes} />
+<main>
+  <Nav />
+  <slot></slot>   <!-- IMPORTANTE -->
+
+	<!-- ... ver código fuente en GitHub  -->
 </main>
+
+<style>
+/* ... ver código fuente en GitHub */
+</style>
+```
+
+
+#### src/routes/index.svelte
+
+```html
+<script>
+	import Inicio from '$components/Inicio.svelte';
+</script>
+	
+<Inicio />
+```
+
+
+#### src/routes/articulos.svelte
+
+```html
+<script>
+  import Articulos from '$components/Articulos.svelte';
+</script>
+
+<Articulos />
+```
+
+
+#### src/routes/clientes.svelte
+
+```html
+<script>
+  import Clientes from '$components/Clientes.svelte';
+</script>
+
+<Clientes />
+```
+
+
+### Lista de archivos
+
+```console
+tree -a -I 'node_modules|.git|.svelte'
+.
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+├── snowpack.config.js
+├── src
+│   ├── app.html
+│   ├── components
+│   │   ├── Articulos.svelte
+│   │   ├── Articulo.svelte
+│   │   ├── Boton.svelte
+│   │   ├── Buscar.svelte
+│   │   ├── Clientes.svelte
+│   │   ├── Cliente.svelte
+│   │   ├── Inicio.svelte
+│   │   ├── Nav.svelte
+│   │   └── store.js
+│   └── routes
+│       ├── $layout.svelte
+│       ├── articulos.svelte
+│       ├── clientes.svelte
+│       └── index.svelte
+├── static
+│   ├── favicon.ico
+│   └── robots.txt
+└── svelte.config.js
 ```
 
 
 ### Código en GitHub
 
-- https://github.com/jamj2000/tiendafrontend
+[jamj2000/tiendafrontend](https://github.com/jamj2000/tiendafrontend)
+
+
+### Componentes sveltekit
+
+[SVELTEKIT](https://sveltekit.now.sh)
+
+
+### Rich Harris
+
+[Rich Harris: Futuristic Web Development](https://youtu.be/qSfdtmcZ4d0)

@@ -27,6 +27,7 @@ element: class="fragment" data-fragment-index="1"
 - ### Tipos de datos
 - ### Estructuras alternativas
 - ### Estructuras repetitivas
+- ### Arrays
 - ### Funciones 
 
 <!--- Note: Nota a pie de página. -->
@@ -629,13 +630,162 @@ foreach ($frutas as $fruta)
 
 
 
+## Arrays
+
+**Dato compuesto por una lista de elementos**
+
+**PHP permite que los elementos tengan distinto tipo**
+
+
+### Declaración de un array
+
+```php
+$numeros = array(1, 3, 5);
+
+$cosas   = array("hola", 4, true); 
+```
+
+Forma simplificada
+```php
+$numeros = [1, 3, 5];
+
+$cosas   = ["hola", 4, true]; 
+```
+
+
+### Mostrar un array completo 
+
+- Usamos las funciones **`print_r`** y **`var_dump`**
+- La función `var_dump` muestra más información. Muestra el tipo de cada elemento.
+
+```php
+print_r ($cosas);
+var_dump ($cosas);
+```
+
+
+### Acceso a un elemento del array
+
+- Podemos ver y modificar un elemento concreto del array.
+- Para ello accedemos a través del índice dentro del array.
+- **El primer elemento tiene un índice 0**
+
+```php
+// Para mostrar un elemento del array
+echo  $cosas[0];      // Muestra hola
+echo  $cosas[1];      // Muestra 4
+
+// Para modificar un elemento del array
+$cosas[0] = "Adiós"; 
+$cosas[1] = "Pepe";
+``` 
+
+
+### Recorrido de un array
+
+- El bucle más adecuado para recorrer un array es el `foreach`.
+
+```php
+foreach ($cosas as $cosa) {
+  echo $cosa;
+  echo "\n";
+} 
+```
+
+- Aunque también podemos utilizar el bucle `for`.
+```php
+for ($i = 0; $i < count($cosas);  $i++) {
+  echo $cosas[$i];
+  echo "\n";
+}
+```
+
+
+### Tipos de arrays
+
+- **Indexados**. Los vistos anteriormente.
+- **Asociativos**. 
+- **Multidimensionales**. 
+
+
+### Array asociativo
+
+**Se accede a cada elemento mediante una clave en lugar de usar un índice.**
+
+```php
+$capitales = ["España" => "Madrid", "Francia" => "París", "Italia" => "Roma" ];
+
+// Accedemos a cada elemento por una clave, en lugar de usar un índice
+echo $capitales["España"];  // Madrid
+echo $capitales["Francia"]; // París
+echo $capitales["Italia"];  // Roma
+
+// Podemos recorrer con foreach
+foreach ($capitales as $capital) 
+  echo "$capital, ";  // Madrid, París, Roma
+
+foreach ($capitales as $clave => $valor) 
+  echo "$clave : $valor. ";  // España : Madrid. Francia : París. Italia : Roma.
+```
+
+
+### Array multidimensional
+
+**Permite que cada elemento sea a su vez un array.**
+
+```php
+// Lista de coches y sus precios
+$coches = array (
+  array("Volvo", 32000),
+  array("BMW", 40000),
+  array("Dacia", 10000)
+);
+
+echo $coches[0][0];  // Marca del primer coche
+echo $coches[0][1];  // Precio del primer coche
+
+echo $coches[1][0];  // Marca del segundo coche
+echo $coches[1][1];  // Precio del segundo coche
+```
+
+
+### Strings y Arrays
+
+- Las cadenas tipo `string` pueden considerarse un array de caracteres.
+- Podemos acceder y cambiar un caracter de un string como si fuese un array.
+
+```php
+$nombre = "Federico";
+echo $nombre[0];    // F
+echo $nombre[1];    // e
+```
+
+- Pero no podemos utilizar el bucle `foreach` para recorrer los caracteres que tiene el `string`.
+- Para `string` debemos usar un bucle `for`.
+
+```php
+// ERROR
+foreach ($nombre as $letra) 
+  echo $letra;
+
+// CORRECTO
+for ($i=0; $i < strlen($nombre); $i++) 
+  echo $nombre[$i] . "\n";
+```
+
+
+
 ## Funciones 
 
 
 ### Funciones matemáticas
 
+**Operaciones con números**
+
 
 ### Funciones de cadenas
+
+**Operaciones con texto**
 
 
 ### Funciones definidas por el usuario
