@@ -371,9 +371,6 @@ npm i      # npm  install
 ```
 
 
-#### Componentes
-
-
 **src/components/Nav.svelte**
 
 ```html
@@ -390,9 +387,6 @@ npm i      # npm  install
 ```
 
 
-#### Rutas
-
-
 **src/routes/$layout.svelte**
 
 ```html
@@ -404,11 +398,11 @@ npm i      # npm  install
   <Nav />
   <slot></slot>   <!-- IMPORTANTE -->
 
-	<!-- ... ver código fuente en GitHub  -->
+  <!-- ... ver código fuente en GitHub  -->
 </main>
 
 <style>
-/* ... ver código fuente en GitHub */
+  /* ... ver código fuente en GitHub */
 </style>
 ```
 
@@ -417,7 +411,7 @@ npm i      # npm  install
 
 ```html
 <script>
-	import Inicio from '$components/Inicio.svelte';
+  import Inicio from '$components/Inicio.svelte';
 </script>
 	
 <Inicio />
