@@ -285,6 +285,12 @@ fetch(url + documento._id, { method: "DELETE" })
 mkdir  nombre-proyecto  &&  cd  nombre-proyecto
 npm  init  svelte@next
 git  init
+```
+
+
+### Archivos del proyecto
+
+```bash
 tree -a  -I .git
 .
 ├── .gitignore
