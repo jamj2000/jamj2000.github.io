@@ -25,6 +25,10 @@ element: class="fragment" data-fragment-index="1"
 - ### Entorno de desarrollo
 - ### Entrada y salida
 - ### Tipos de datos
+
+
+## Índice (II)
+--- 
 - ### Estructuras alternativas
 - ### Estructuras repetitivas
 - ### Arrays
@@ -782,11 +786,42 @@ for ($i=0; $i < strlen($nombre); $i++)
 
 **Operaciones con números**
 
+```php
+$num1    = -12.349;
+$num2    =  12.349;
+$numeros = [3.14, 4, 9, 0, -5];
+
+echo abs  ($num1);     // 12.349  (valor absoluto)
+echo round($num1);     // -12     (redondeo)
+echo round($num1, 2);  // -12.35  (redondeo a 2 decimales)
+echo floor($num1);     // -13     (número entero por abajo)
+echo floor($num2);     // 12      (número entero por abajo)
+echo ceil ($num1);     // -12     (número entero por encima)
+echo ceil ($num2);     // 13      (número entero por encima)
+echo sqrt ($num2);     // 3.51... (raíz cuadrada)
+
+echo rand();          // (número aleatorio 0 .. muchos millones)
+echo rand(10,100);    // (numero aleatorio 10 .. 100)
+
+echo min($numeros);   // -5       (mínimo número de un array)
+echo max($numeros);   // 9        (máximo número de un array)
+```
+
 
 ### Funciones de cadenas
 
 **Operaciones con texto**
 
+```php
+
+ltrim
+rtrim
+trim
+
+strlen
+strtolower
+strtoupper
+```
 
 ### Funciones definidas por el usuario
 
