@@ -79,7 +79,7 @@ element: class="fragment" data-fragment-index="1"
 - [TiendaFrontend - Código](https://github.com/jamj2000/tiendafrontend)
 - [TiendaFrontend - Demo](http://tiendafrontend.now.sh)
 
-**Backend (API RESTful)**
+**Backend (API REST)**
 
 - [TiendaBackend - Código](https://github.com/jamj2000/tiendabackend)
 - [TiendaBackend - Demo](http://tiendabackend.herokuapp.com)
@@ -280,7 +280,7 @@ fetch(url + documento._id, { method: "DELETE" })
 
 ### Crear el proyecto
 
-```console
+```bash
 # npx  degit  sveltejs/template   nombre-proyecto
 mkdir  nombre-proyecto  &&  cd  nombre-proyecto
 npm  init  svelte@next
@@ -308,8 +308,8 @@ tree -a  -I .git
 
 - Ejecutamos el siguiente comando:
 
-```console
-npm i              # npm  install
+```bash
+npm i      # npm  install
 ```
 
 - Esto instala los módulos indicados en `package.json` y genera archivo de bloqueo `package-lock.json`
@@ -327,7 +327,7 @@ npm i              # npm  install
 **npm  run  build**
 
 
-#### src/app.html
+**src/app.html**
 
 ```html
 <!DOCTYPE html>
@@ -360,7 +360,7 @@ npm i              # npm  install
 ```
 
 
-#### src/components/Nav.svelte
+**src/components/Nav.svelte**
 
 ```html
 <nav>
@@ -376,7 +376,7 @@ npm i              # npm  install
 ```
 
 
-### src/routes/$layout.svelte
+**src/routes/$layout.svelte**
 
 ```html
 <script>
@@ -396,7 +396,7 @@ npm i              # npm  install
 ```
 
 
-#### src/routes/index.svelte
+**src/routes/index.svelte**
 
 ```html
 <script>
@@ -407,7 +407,7 @@ npm i              # npm  install
 ```
 
 
-#### src/routes/articulos.svelte
+**src/routes/articulos.svelte**
 
 ```html
 <script>
@@ -418,7 +418,7 @@ npm i              # npm  install
 ```
 
 
-#### src/routes/clientes.svelte
+**src/routes/clientes.svelte**
 
 ```html
 <script>
@@ -429,9 +429,9 @@ npm i              # npm  install
 ```
 
 
-### Lista de archivos
+### Lista de archivos (I)
 
-```console
+```bash
 tree -a -I 'node_modules|.git|.svelte'
 .
 ├── .gitignore
@@ -439,6 +439,12 @@ tree -a -I 'node_modules|.git|.svelte'
 ├── package-lock.json
 ├── README.md
 ├── snowpack.config.js
+```
+
+
+### Lista de archivos (II)
+
+```bash
 ├── src
 │   ├── app.html
 │   ├── components
@@ -456,6 +462,12 @@ tree -a -I 'node_modules|.git|.svelte'
 │       ├── articulos.svelte
 │       ├── clientes.svelte
 │       └── index.svelte
+```
+
+
+### Lista de archivos (III)
+
+```bash
 ├── static
 │   ├── favicon.ico
 │   └── robots.txt
