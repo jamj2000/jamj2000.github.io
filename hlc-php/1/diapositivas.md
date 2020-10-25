@@ -250,6 +250,8 @@ php  -a
 php > echo "Hola mundo";
 ```
 
+Note: Pulsar `Ctrl+D` para salir del intérprete.
+
 
 ### Ejecutar sentencias en un script
 
@@ -614,8 +616,9 @@ do {
 ```php
 <?php
 
-for ($contador = 1; $contador <= 10; $contador++) 
+for ($contador = 1; $contador <= 10; $contador++) {
   echo $contador . "\n";
+}
 
 ?>
 ```
@@ -626,19 +629,24 @@ for ($contador = 1; $contador <= 10; $contador++)
 - Se utiliza para recorrer arrays.
 
 ```php
+<?php
+
 $frutas = ["manzana", "naranja", "fresa"];
 
-foreach ($frutas as $fruta)
+foreach ($frutas as $fruta) {
   echo $fruta . "\n";
+}
+
+?>
 ```
 
 
 
 ## Arrays
 
-**Dato compuesto por una lista de elementos**
-
-**PHP permite que los elementos tengan distinto tipo**
+- **Dato compuesto por una lista de elementos**
+- **PHP permite que los elementos tengan distinto tipo**
+- Los Objetos son otro tipo de dato compuesto que se verán en el Bloque temático de Programación Orientada a Objetos.
 
 
 ### Declaración de un array
@@ -660,7 +668,7 @@ $cosas   = ["hola", 4, true];
 ### Mostrar un array completo 
 
 - Usamos las funciones **`print_r`** y **`var_dump`**
-- La función `var_dump` muestra más información. Muestra el tipo de cada elemento.
+- La función `var_dump` muestra más información ya que muestra el tipo de cada elemento.
 
 ```php
 print_r ($cosas);
@@ -687,7 +695,7 @@ $cosas[1] = "Pepe";
 
 ### Recorrido de un array
 
-- El bucle más adecuado para recorrer un array es el `foreach`.
+El bucle más adecuado para recorrer un array es el bucle `foreach`
 
 ```php
 foreach ($cosas as $cosa) {
@@ -696,7 +704,8 @@ foreach ($cosas as $cosa) {
 } 
 ```
 
-- Aunque también podemos utilizar el bucle `for`.
+Aunque también podemos utilizar el bucle `for`
+
 ```php
 for ($i = 0; $i < count($cosas);  $i++) {
   echo $cosas[$i];
@@ -753,7 +762,7 @@ echo $coches[1][1];  // Precio del segundo coche
 ```
 
 
-### Strings y Arrays
+### Strings y Arrays (I)
 
 - Las cadenas tipo `string` pueden considerarse un array de caracteres.
 - Podemos acceder y cambiar un caracter de un string como si fuese un array.
@@ -763,6 +772,9 @@ $nombre = "Federico";
 echo $nombre[0];    // F
 echo $nombre[1];    // e
 ```
+
+
+### Strings y Arrays (I)
 
 - Pero no podemos utilizar el bucle `foreach` para recorrer los caracteres que tiene el `string`.
 - Para `string` debemos usar un bucle `for`.
