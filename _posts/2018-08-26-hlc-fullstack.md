@@ -15,7 +15,7 @@ article: yes
 - [HLC - Bases de Datos noSQL](http://jamj2000.github.io/hlc-fullstack/2/diapositivas). 
 - [HLC - Introducción a Javascript](http://jamj2000.github.io/hlc-fullstack/3/diapositivas). 
 - [HLC - Backend con NodeJS y Express](http://jamj2000.github.io/hlc-fullstack/4/diapositivas). 
-- [HLC - Frontend con VanillaJS](http://jamj2000.github.io/hlc-fullstack/5/diapositivas). 
+- [HLC - Frontend con Svelte](http://jamj2000.github.io/hlc-fullstack/5/diapositivas). 
 - [HLC - Desarrollo para dispositivos móviles](http://jamj2000.github.io/hlc-fullstack/6/diapositivas). 
    
 # Actividades
@@ -24,7 +24,7 @@ article: yes
 - [HLC - Bases de Datos noSQL](http://jamj2000.github.io/hlc-fullstack/2/actividades). 
 - [HLC - Introducción a Javascript](http://jamj2000.github.io/hlc-fullstack/3/actividades). 
 - [HLC - Backend con NodeJS y Express](http://jamj2000.github.io/hlc-fullstack/4/actividades). 
-- [HLC - Frontend con VanillaJS](http://jamj2000.github.io/hlc-fullstack/5/actividades). 
+- [HLC - Frontend con Svelte](http://jamj2000.github.io/hlc-fullstack/5/actividades). 
 - [HLC - Desarrollo para dispositivos móviles](http://jamj2000.github.io/hlc-fullstack/6/actividades). 
 
 
