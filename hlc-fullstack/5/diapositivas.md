@@ -333,25 +333,9 @@ npm i      # npm  install
 **npm  run  build**
 
 
-**src/app.html**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<link rel="icon" href="/favicon.ico">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	%svelte.head%
-</head>
-<body>
-	%svelte.body%
-</body>
-</html>
-```
-
-
 ### Estructura de un componente
+
+**Tiene extensión `.svelte`**
 
 ```html
 <script>
@@ -364,6 +348,30 @@ npm i      # npm  install
 
 <!-- Nuestros elementos HTML y otros componentes web -->
 ```
+
+
+### Archivos de ejemplo
+
+
+**src/app.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  %svelte.head%
+</head>
+<body>
+  %svelte.body%
+</body>
+</html>
+```
+
+
+#### Componentes
 
 
 **src/components/Nav.svelte**
@@ -380,6 +388,9 @@ npm i      # npm  install
  /* ... ver código fuente en GitHub */
 </style>
 ```
+
+
+#### Rutas
 
 
 **src/routes/$layout.svelte**
