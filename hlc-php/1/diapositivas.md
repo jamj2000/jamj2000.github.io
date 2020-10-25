@@ -835,6 +835,7 @@ strtolower
 strtoupper
 ```
 
+
 ### Funciones definidas por el usuario
 
 
