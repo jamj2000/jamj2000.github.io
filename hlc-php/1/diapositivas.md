@@ -654,14 +654,14 @@ foreach ($frutas as $fruta) {
 ```php
 $numeros = array(1, 3, 5);
 
-$cosas   = array("hola", 4, true); 
+$cosas   = array("hola", 4, 2.5); 
 ```
 
 Forma simplificada
 ```php
 $numeros = [1, 3, 5];
 
-$cosas   = ["hola", 4, true]; 
+$cosas   = ["hola", 4, 2.5]; 
 ```
 
 
@@ -691,6 +691,45 @@ echo  $cosas[1];      // Muestra 4
 $cosas[0] = "Adiós"; 
 $cosas[1] = "Pepe";
 ``` 
+
+
+### Añadir un elemento a un array
+
+```php
+$cosas[] = "Coche";   // Añade el elemento al final del array
+
+print_r ($cosas);       
+```
+
+Se muestra
+```
+Array
+(
+    [0] => Adiós
+    [1] => Pepe
+    [2] => 2.5
+    [3] => Coche
+)
+```
+
+
+### Eliminar un elemento de un array
+
+```php
+unset ($cosas[2]);
+
+print_r ($cosas);
+```
+
+Se muestra
+```
+Array
+(
+    [0] => Adiós
+    [1] => Pepe
+    [3] => Coche
+)
+```
 
 
 ### Recorrido de un array
