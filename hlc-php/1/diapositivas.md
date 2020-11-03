@@ -372,9 +372,9 @@ $nombre = "Ana López";
   - **object**: objeto (se verán el el Bloque de Programación orientada a objetos)
 
 ```php
-$frutas = ["manzana", "naranja", "fresa"];
+$frutas = ["manzana", "naranja", "fresa"];  // ARRAY
 
-class Persona {
+class Persona {                             // CLASE ("Plantilla de objeto")
   // Propiedades
   private $nombre    = null;
   private $apellidos = null;
@@ -385,7 +385,7 @@ class Persona {
     $this->apellidos = $apellidos;
   }
 }
-$pepe = new Persona ("José", "García");
+$pepe = new Persona ("José", "García");     // OBJETO
 ```
 
 
@@ -671,7 +671,7 @@ $cosas   = ["hola", 4, 2.5];
 - La función `var_dump` muestra más información ya que muestra el tipo de cada elemento.
 
 ```php
-print_r ($cosas);
+print_r  ($cosas);
 var_dump ($cosas);
 ```
 
@@ -879,8 +879,6 @@ echo strrev    ($texto2);  // "nif" (invierte la cadena)
 
 echo ucfirst   ($texto3);  // "Hola mundo" (Upper Case First)
 echo ucwords   ($texto3);  // "Hola Mundo" (Upper Case Words)
-
-
 ```
 
 
@@ -889,14 +887,20 @@ echo ucwords   ($texto3);  // "Hola Mundo" (Upper Case Words)
 ```php
 $palabras = ["Hello", "World"];
 
-echo substr($texto3, 5, 3);       // "mun" (devuelve a partir de la posición 5, 3 caracteres)
-echo substr_count($texto3, "ll");  // 1 (cuantas veces aparece un substring)
+// "mun" (devuelve a partir de la posición 5, 3 caracteres)
+echo substr($texto3, 5, 3);      
+
+// 1 (cuantas veces aparece un substring) 
+echo substr_count($texto3, "ll");  
 
 // "hola Raimundo"  (sustituye a partir de la posición 5, 0 caracteres con Rai, es decir inserta)
 echo substr_replace($texto3, "Rai", 5, 0);
 
-echo     implode(" ", $palabras);  // "Hello World"      (convierte array a string)
-print_r (explode(" ", $texto3));   // ["Hello", "World"] (convierte string a array)  
+// "Hello World"      (convierte array a string)
+echo     implode(" ", $palabras);  
+
+// ["Hello", "World"] (convierte string a array)  
+print_r (explode(" ", $texto3));  
 ```
 
 - Más funciones para cadenas en https://www.php.net/manual/es/book.strings.php
@@ -1024,9 +1028,11 @@ function  resta  ($a, $b) {
 - Ejemplo de **llamada a funciones** aritméticas:
 
 ```php
-include "funciones.php";  // indicamos que vamos a hacer uso de funciones.php
+// indicamos que vamos a hacer uso de funciones.php
+include "funciones.php";  
  
-echo suma (2, 3);   //  2 y 3 son parámetros reales (también llamados argumentos)
+//  2 y 3 son parámetros reales (también llamados argumentos)
+echo suma (2, 3);  
 echo resta (2, 3);
 ```
 
