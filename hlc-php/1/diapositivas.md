@@ -1052,13 +1052,15 @@ echo resta (2, 3);
 **Ejemplos**
 
 ```php
-include "funciones.php";  // si funciones.php no existe, no se produce error
-require "funciones.php";  // si funciones.php no existe, se produce error
+// si funciones.php no existe, no se produce error
+include "funciones.php";  
+// si funciones.php no existe, se produce error
+require "funciones.php"; 
  
 // Las siguientes sentencias, son iguales a las anteriores,
 // salvo que el archivo se incluye una sola vez.
-// Es muy útil en proyectos muy grandes, donde la inclusión de un archivo
-// podría producirse en varios sitios. 
+// Es muy útil en proyectos muy grandes, donde 
+// la inclusión de un archivo podría producirse en varios sitios. 
 include_once "funciones.php";  
 require_once "funciones.php";  
 ```
