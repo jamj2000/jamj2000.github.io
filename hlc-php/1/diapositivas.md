@@ -859,24 +859,200 @@ echo max($numeros);   // 9        (máximo número de un array)
 ```
 
 
-### Funciones de cadenas
+### Funciones de cadenas (I)
 
 **Operaciones con texto**
 
 ```php
+$texto1 = "  hola  ";
+$texto2 = "fin";
+$texto3 = "hola mundo";
 
-ltrim
-rtrim
-trim
+echo ltrim     ($texto1);  // "hola  " (elimina espacios por la izquierda)
+echo rtrim     ($texto1);  // "  hola" (elimina espacios por la derecha)
+echo trim      ($texto1);  // "hola"   (elimina espacios a derecha e izquierda)
 
-strlen
-strtolower
-strtoupper
+echo strlen    ($texto2);  // 3     (longitud del string)
+echo strtolower($texto2);  // "fin" (pone en minúsculas)
+echo strtoupper($texto2);  // "FIN" (pone en mayúsculas)
+echo strrev    ($texto2);  // "nif" (invierte la cadena)
+
+echo ucfirst   ($texto3);  // "Hola mundo" (Upper Case First)
+echo ucwords   ($texto3);  // "Hola Mundo" (Upper Case Words)
+
+
 ```
 
 
-### Funciones definidas por el usuario
+### Funciones de cadenas (II)
+
+```php
+$palabras = ["Hello", "World"];
+
+echo substr($texto3, 5, 3);       // "mun" (devuelve a partir de la posición 5, 3 caracteres)
+echo substr_count($texto3, "ll");  // 1 (cuantas veces aparece un substring)
+
+// "hola Raimundo"  (sustituye a partir de la posición 5, 0 caracteres con Rai, es decir inserta)
+echo substr_replace($texto3, "Rai", 5, 0);
+
+echo     implode(" ", $palabras);  // "Hello World"      (convierte array a string)
+print_r (explode(" ", $texto3));   // ["Hello", "World"] (convierte string a array)  
+```
+
+- Más funciones para cadenas en https://www.php.net/manual/es/book.strings.php
 
 
-### Programación modular
+### Funciones de fecha y hora (I)
 
+**Formatos**
+
+``` 
+l    Día de la semana
+d    Día del mes
+m    Mes en número
+F    Mes en texto
+M    Mes en texto (3 primeras letras)
+y    Año (2 cifras)
+Y    Año (4 cifras)
+h    Hora, formato 12h
+H    Hora, formato 24h
+i    Minutos
+s    Segundos
+
+e    Zona horaria
+P    Diferencia de zona respecto a Greenwich
+```
+
+- Más formatos en https://www.php.net/manual/es/function.date.php
+
+
+### Funciones de fecha y hora (II)
+
+**Ejemplos**
+
+```php
+echo time ();           // Tiempo en segundos desde 1 Enero 1970
+echo strtotime ("now"); // Igual al anterior 
+
+echo date ("l d F Y  H:i:s e P");         // Fecha y hora actual
+echo date ("l d F Y  H:i:s e P", time()); // Igual al anterior
+
+echo date ("l d F Y  H:i:s", strtotime("+1 week 2 days 4 hours 2 seconds"));  
+echo date ("l", strtotime("10 September 2000"));
+echo date ("l d F Y", strtotime("next Thursday"));
+echo date ("l d F Y", strtotime("last Monday"));
+```
+
+
+### Funciones de trabajo con archivos (I)
+
+**Funciones básicas**
+
+```
+fopen     Abrir archivo
+fclose    Cerrar archivo
+
+feof      End Of File
+
+fgets     Leer línea de texto del archivo
+fputs     Escribir línea de texto del archivo
+```
+
+
+### Funciones de trabajo con archivos (II)
+
+**Ejemplo: Escribir en archivo de texto**
+
+```php
+// Escribir en archivo de texto
+$archivo = fopen("test.txt","w");  // w: Sólo escritura
+
+fputs($archivo, "Primera línea\n");
+fputs($archivo, "Segunda línea\n");
+
+fclose($archivo);
+```
+
+
+### Funciones de trabajo con archivos (III)
+
+**Ejemplo: Leer de archivo de texto**
+
+```php 
+// Leer de archivo de texto
+$archivo = fopen("test.txt", "r");  // r: Sólo lectura
+
+// Mostrar líneas hasta End Of File
+while(! feof($archivo)) {
+  $linea = fgets($archivo);
+  echo $linea;
+}
+
+fclose($archivo);
+```
+
+
+### Otras funciones
+
+```php
+sleep(3);        // parada de 3 segundos
+usleep(3000000); // parada de 3 segundos (3000000 microsegundos)
+```
+
+
+### Funciones definidas por el usuario (I)
+
+- También podemos **definir nuestras propias funciones**.
+- Ejemplo de **definición de funciones** aritméticas:
+
+```php
+// Archivo   funciones.php
+function  suma  ($a, $b) {  // $a y $b son parámetros formales
+  return  $a + $b;
+}
+
+function  resta  ($a, $b) {
+  return  $a - $b;
+}
+// ...
+```
+
+
+### Funciones definidas por el usuario (II)
+
+- Luego, podemos **usar las funciones definidas** previamente.
+- Ejemplo de **llamada a funciones** aritméticas:
+
+```php
+include "funciones.php";  // indicamos que vamos a hacer uso de funciones.php
+ 
+echo suma (2, 3);   //  2 y 3 son parámetros reales (también llamados argumentos)
+echo resta (2, 3);
+```
+
+
+### Programación modular (I)
+
+- Permite tener variables, constantes y funciones en varios archivos.
+- Para hacer uso de ellas debemos indicarlo mediante una de las siguientes opciones:
+  - `include`
+  - `require`
+  - `include_once`
+  - `require_once`
+
+
+### Programación modular (II)
+
+**Ejemplos**
+
+```php
+include "funciones.php";  // si funciones.php no existe, no se produce error
+require "funciones.php";  // si funciones.php no existe, se produce error
+ 
+// Las siguientes sentencias, son iguales a las anteriores,
+// salvo que el archivo se incluye una sola vez.
+// Es muy útil en proyectos muy grandes, donde la inclusión de un archivo
+// podría producirse en varios sitios. 
+include_once "funciones.php";  
+require_once "funciones.php";  
+```
