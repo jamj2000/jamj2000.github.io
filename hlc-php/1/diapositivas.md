@@ -1037,6 +1037,77 @@ echo resta (2, 3);
 ```
 
 
+### Ámbito de las variables
+
+- Se entiende por **ámbito** el “alcance” de las variables, es decir, dónde se pueden usar dentro del código. 
+- Hay tres ámbitos: 
+  - **local**
+  - **global**
+  - **estático**
+
+
+### Ámbito local
+
+- Una variable declarada dentro de una función es una variable local y solo se puede acceder dentro de esa función.
+
+```php
+<?php 
+$a = 1;     // variable global
+
+function mostrar() {
+  $a = 5;   // variable local
+  echo $a;
+}
+
+mostrar();  // 5
+echo $a;    // 1
+?>
+```
+
+
+### Ámbito global
+
+- Una variable declarada fuera de una función es una variable global y se puede acceder a ella desde cualquier parte del script global.
+- Pero a diferencia de otros lenguajes de programación, una variable global no puede ser llamada desde dentro de una función.
+
+```php
+<?php 
+$a = 1;       // variable global
+
+// INCORRECTO
+function mostrar1() {    
+  echo $a;   // $a no está definida aquí. 
+}
+
+// CORRECTO
+function mostrar2() {
+  global $a;   
+  echo $a;   // $a se refiere a la variable global 
+}
+
+mostrar1();  // ERROR
+mostrar2();  // 1
+?>
+```
+
+
+### Ámbito estático
+
+- Las variables estáticas se declaran dentro de una función y guardan su valor para futuras llamadas a la función.
+
+```php
+function mostrar() {
+  static $a = 0;
+  echo $a;
+  $a++;
+}
+
+mostrar(); // 0
+mostrar(); // 1
+mostrar(); // 2
+```
+
+
 ### Programación modular (I)
 
 - Permite tener variables, constantes y funciones en varios archivos.
