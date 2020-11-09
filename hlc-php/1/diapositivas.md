@@ -1068,10 +1068,9 @@ echo $a;    // 1
 ### Ámbito global
 
 - Una variable declarada fuera de una función es una variable global y se puede acceder a ella desde cualquier parte del script global.
-- Pero a diferencia de otros lenguajes de programación, una variable global no puede ser llamada desde dentro de una función.
+- Para usar una variable global dentro de una función debemos indicarlo con `global`.
 
 ```php
-<?php 
 $a = 1;       // variable global
 
 // INCORRECTO
@@ -1087,7 +1086,6 @@ function mostrar2() {
 
 mostrar1();  // ERROR
 mostrar2();  // 1
-?>
 ```
 
 
