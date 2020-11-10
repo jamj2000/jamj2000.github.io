@@ -891,7 +891,7 @@ $palabras = ["Hello", "World"];
 echo substr($texto3, 5, 3);      
 
 // 1 (cuantas veces aparece un substring) 
-echo substr_count($texto3, "ll");  
+echo substr_count($texto3, "do");  
 
 // "hola Raimundo"  (sustituye a partir de la posición 5, 0 caracteres con Rai, es decir inserta)
 echo substr_replace($texto3, "Rai", 5, 0);
@@ -899,7 +899,7 @@ echo substr_replace($texto3, "Rai", 5, 0);
 // "Hello World"      (convierte array a string)
 echo     implode(" ", $palabras);  
 
-// ["Hello", "World"] (convierte string a array)  
+// ["hola", "mundo"] (convierte string a array)  
 print_r (explode(" ", $texto3));  
 ```
 
@@ -968,12 +968,14 @@ fputs     Escribir línea de texto del archivo
 **Ejemplo: Escribir en archivo de texto**
 
 ```php
-// Escribir en archivo de texto
+// Abrimos archivo de texto en modo escritura
 $archivo = fopen("test.txt","w");  // w: Sólo escritura
 
+// Escribimos las siguientes cadenas en el archivo
 fputs($archivo, "Primera línea\n");
 fputs($archivo, "Segunda línea\n");
 
+// Cerramos el archivo
 fclose($archivo);
 ```
 
@@ -983,15 +985,16 @@ fclose($archivo);
 **Ejemplo: Leer de archivo de texto**
 
 ```php 
-// Leer de archivo de texto
+// Abrimos archivo de texto en modo lectura
 $archivo = fopen("test.txt", "r");  // r: Sólo lectura
 
-// Mostrar líneas hasta End Of File
+// Leemos y mostramos líneas hasta End Of File
 while(! feof($archivo)) {
   $linea = fgets($archivo);
   echo $linea;
 }
 
+// Cerramos el archivo
 fclose($archivo);
 ```
 
