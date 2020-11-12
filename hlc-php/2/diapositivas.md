@@ -260,14 +260,14 @@ $juan = new Persona ("Juan Carlos", 30);
 
 ## Herencia
 
+![Herencia](assets/herencia.png)
+
 
 ### Conceptos
 
 - La herencia nos permite la **reutilización de clases**.
 - Podemos crear clases derivadas a partir de una **clase base**, también llamada **superclase**.
 - Las clases derivadas se denominan **clases hija**. Estas clases *extienden* la funcionalidad de la clase base. 
-
-![Herencia](assets/herencia.png)
 
 
 ### Creación de una clase hija 
