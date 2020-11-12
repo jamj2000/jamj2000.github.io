@@ -57,10 +57,13 @@ element: class="fragment" data-fragment-index="1"
 - La POO pretende utilizar abstracciones más próximas a la forma de pensar del ser humano. 
 
 
-### Clases y objetos
+### Clases y objetos (I)
 
 - Una **clase** es una *plantilla* que representa una categoría de la realidad.
 - Los **objetos** son instancias de alguna clase, es decir, concreciones de una categoría.
+
+
+### Clases y objetos (II)
 
 ![clases y objetos](assets/clases-objetos.png)
 
