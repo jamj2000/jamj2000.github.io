@@ -26,8 +26,6 @@ element: class="fragment" data-fragment-index="1"
 - ### Encapsulación
 - ### Propiedades y métodos
 - ### Herencia
-- ### Namespaces
-- ### Serialización
 
 <!--- Note: Nota a pie de página. -->
 
@@ -44,7 +42,6 @@ element: class="fragment" data-fragment-index="1"
 - El concepto de encapsulación y los distintos tipos de modificadores de acceso.
 - Trabajar con propiedades y métodos.
 - El concepto de herencia.
-- Serializar objetos.
 
 
 
@@ -122,11 +119,10 @@ class Clase {
 ## Propiedades y métodos
 
 
-### Definición de clase
-
-**Ejemplo**
+### Definición de clase (Ejemplo)
 
 ```php
+// Archivo Persona.php
 class Persona {
   // Propiedades (define el estado)
   private $nombre = null;
@@ -151,7 +147,7 @@ class Persona {
 ### Métodos especiales
 
 - **Constructor**: Inicializa el objeto.
-- **Destructor**: Libera el objeto.
+- **Destructor**: Libera recursos del objeto.
 
 ```php
   public function __construct ($nombre, $edad) {
@@ -209,6 +205,41 @@ class Persona {
 ```
 
 
+### Namespaces
+
+- Para **organizar el código** usamos `namespaces`.
+- Un `namespace` es algo semejante a un paquete en Java.
+- Ejemplo:
+
+```php
+<?php
+namespace Colegio\Gestion;
+
+class Persona {
+  // ...
+}
+?>
+```
+
+
+### Usando nuestra clase
+
+- En proyectos con muchos archivos usamos `include_once` para no incluir un mismo archivo múltiples veces.
+- Hacemos uso de sentencia `use ...` para usar la clase deseada.
+- Ejemplo:
+
+```php
+<?php
+// Archivo colegio.php
+include_once "Persona.php";
+
+use Colegio\Gestion\Persona;
+
+$pepe = new Persona ("José Antonio", 40);
+?>
+```
+
+
 ### Instanciación de objetos
 
 - Un objeto se instancia con el operador `new` ...
@@ -227,9 +258,35 @@ $juan = new Persona ("Juan Carlos", 30);
 ## Herencia
 
 
+### Conceptos
 
-## namespaces
+- La herencia nos permite la **reutilización de clases**.
+- Podemos crear clases derivadas a partir de una **clase base**, también llamada **superclase**.
+- Las clases derivadas se denominan **clases hija**. Estas clases *extienden* la funcionalidad de la clase base. 
+
+![Herencia](assets/herencia.png)
 
 
+### Creación de una clase hija 
 
-## Serialización
+- Usamos la palabra clave `extends`
+- Ejemplo:
+
+```php
+<?php
+// Archivo Estudiante.php
+include_once "Persona.php";
+
+use Colegio\Gestion\Persona;
+
+class Estudiante extends Persona {
+  private $curso = null;
+
+  function __construct($nombre, $edad, $curso)
+  {
+    parent::__construct($nombre, $edad);
+    $this->curso = $curso;
+  } 
+}
+?>
+```
