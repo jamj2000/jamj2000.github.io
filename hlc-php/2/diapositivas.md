@@ -180,7 +180,7 @@ Note: Las **propiedades** suelen tener acceso **privado**. Los **métodos** suel
   }
 ```
 
-- Dentro de la clase usamos `$this->lo_que_sea` para acceder a propiedades y métodos de dicha clase.
+- Dentro de la clase usamos **`$this->lo_que_sea`** para acceder a sus propiedades y métodos.
 - Su uso no es obligatorio.
 - Suele usarse con propiedades, cuando queremos distinguir éstas de un párametro con el mismo nombre.
 
@@ -219,7 +219,7 @@ class Persona  {
 }
 ```
 
-Note: Dentro de la clase usamos `$self::lo_que_sea` para acceder a propiedades y métodos **estáticos** de una clase.
+- Dentro de la clase usamos **`$self::lo_que_sea`** para acceder a propiedades y métodos **estáticos**.
 
 
 ### Propiedades y métodos estáticos (II)
@@ -287,6 +287,7 @@ class Estudiante extends Persona {
 }
 ?>
 ```
+- Para llamar a un método de la clase padre, hacemos **`parent::lo_que_sea`**.
 
 
 ### Usando nuestra clase
