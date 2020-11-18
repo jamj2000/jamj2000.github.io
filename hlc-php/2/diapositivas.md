@@ -133,10 +133,6 @@ class Persona {
     $this->nombre = $nombre;
   }
 
-  public function __toString () {
-    return "\nNombre: $this->nombre, Edad: $this->edad \n";
-  }
-
   public function saluda (){
     echo "Hola, me llamo $this->nombre\n";
   }
@@ -147,9 +143,9 @@ Note: Las **propiedades** suelen tener acceso **privado**. Los **métodos** suel
 
 ### Métodos especiales
 
-- **Constructor**: Inicializa el objeto.
-- **Destructor**: Libera recursos del objeto.
-- ***__toString***: Muestra información de un objeto.
+- **__construct**: **Constructor**. Inicializa el objeto.
+- **__destruct**: **Destructor**. Libera recursos del objeto.
+- **__toString**: Muestra información de un objeto.
 
 ```php
   public function __construct ($nombre, $edad) {
@@ -184,13 +180,14 @@ Note: Las **propiedades** suelen tener acceso **privado**. Los **métodos** suel
   }
 ```
 
-Note: Dentro de la clase usamos `$this->lo_que_sea` para acceder a propiedades y métodos de dicha clase, aunque no es obligatorio. Suele usarse con propiedades, cuando queremos distinguir éstas de un párametro con el mismo nombre.
+- Dentro de la clase usamos `$this->lo_que_sea` para acceder a propiedades y métodos de dicha clase.
+- Su uso no es obligatorio.
+- Suele usarse con propiedades, cuando queremos distinguir éstas de un párametro con el mismo nombre.
 
 
 ### Otros métodos
 
 - Cualquier otro método que nosotros definamos para proporcionar comportamiento a la clase.
-- Ejemplos:
 
 ```php
   public function saluda (){
@@ -207,7 +204,6 @@ Note: Dentro de la clase usamos `$this->lo_que_sea` para acceder a propiedades y
 
 - Se indican con la palabra reservada **`static`**
 - Los métodos estáticos sólo pueden hacer uso de propiedades estáticas.
-- Ejemplo:
 
 ```php
 class Persona  {
@@ -229,7 +225,6 @@ Note: Dentro de la clase usamos `$self::lo_que_sea` para acceder a propiedades y
 ### Propiedades y métodos estáticos (II)
 
 - No es necesario crear objetos para poder usarlos.
-- Ejemplo:
 
 ```php
 // colegio.php
@@ -273,7 +268,6 @@ class Persona {
 ### Creación de una clase hija 
 
 - Usamos la palabra clave `extends`
-- Ejemplo:
 
 ```php
 <?php
@@ -295,21 +289,19 @@ class Estudiante extends Persona {
 ```
 
 
-
 ### Usando nuestra clase
 
 - En proyectos con muchos archivos usamos `include_once` para no incluir un mismo archivo múltiples veces.
 - Hacemos uso de sentencia `use ...` para usar la clase deseada.
-- Ejemplo:
 
 ```php
 <?php
 // Archivo colegio.php
-include_once "Persona.php";
+include_once "Estudiante.php";
 
-use Colegio\Gestion\Persona;
+use Colegio\Gestion\Estudiante;
 
-$pepe = new Persona ("José Antonio", 40);
+$ana = new Estudiante ("Ana María", 12, "2º ESO A");
 ?>
 ```
 
@@ -339,4 +331,3 @@ $ana     = new Estudiante ("Ana María", 12, "2º ESO A");
 echo $pepe; // muestra el texto devuelto por __toString
 echo $ana;  // muestra el texto devuelto por __toString 
 ```
-
