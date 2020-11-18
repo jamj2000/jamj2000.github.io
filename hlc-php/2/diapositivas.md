@@ -26,6 +26,7 @@ element: class="fragment" data-fragment-index="1"
 - ### Encapsulación
 - ### Propiedades y métodos
 - ### Herencia
+- ### Instanciación
 
 <!--- Note: Nota a pie de página. -->
 
@@ -74,9 +75,9 @@ element: class="fragment" data-fragment-index="1"
 
 ### Conceptos
 
-- Mediante la **encapsulación** hacemos que todos los datos y funciones relacionadas se guarden en un único lugar. Dicho lugar es la **clase** y sus instanncias: los **objetos**.
+- Mediante la **encapsulación** hacemos que todos los datos y funciones relacionadas se guarden en un único lugar. Dicho lugar es la **clase**.
 - **Los datos almacenan el estado, y las funciones proporcionan el comportamiento**.
-- Se oculta el estado, es decir, los datos solo son accesibles mediante las funciones definidas.
+- Se oculta el estado, es decir, los datos solo son accesibles a través de las funciones.
 - El aislamiento protege a los datos contra su modificación involuntaria.
 
 
@@ -113,10 +114,6 @@ class Clase {
   - **protected**: se puede acceder a la propiedad o método dentro de la clase y mediante clases derivadas de esa clase
   - **private**: SOLO se puede acceder a la propiedad o al método dentro de la clase
 
-- USO HABITUAL:
-  - **Las propiedades suelen tener acceso privado**
-  - **Los métodos suelen tener acceso público**
-
 
 
 ## Propiedades y métodos
@@ -145,12 +142,14 @@ class Persona {
   }
 }
 ```
+Note: Las **propiedades** suelen tener acceso **privado**. Los **métodos** suelen tener acceso **público**
 
 
 ### Métodos especiales
 
 - **Constructor**: Inicializa el objeto.
 - **Destructor**: Libera recursos del objeto.
+- ***__toString***: Muestra información de un objeto.
 
 ```php
   public function __construct ($nombre, $edad) {
@@ -174,22 +173,18 @@ class Persona {
 - Métodos **setter**: dan valor a una propiedad
 
 ```php
-  public function setNombre ($nombre) {
-    $this->nombre = $nombre;
-  }
-
-  public function setEdad ($edad) {
-    $this->edad = $edad;
-  }
-
+  // MÉTODO GETTER
   public function getNombre () {
     return $this->nombre;
   }
 
-  public function getEdad () {
-    return $this->edad;
+  // MÉTODO SETTER
+  public function setNombre ($nombre) {
+    $this->nombre = $nombre;
   }
 ```
+
+Note: Dentro de la clase usamos `$this->lo_que_sea` para acceder a propiedades y métodos de dicha clase, aunque no es obligatorio. Suele usarse con propiedades, cuando queremos distinguir éstas de un párametro con el mismo nombre.
 
 
 ### Otros métodos
@@ -208,11 +203,48 @@ class Persona {
 ```
 
 
+### Propiedades y métodos estáticos (I)
+
+- Se indican con la palabra reservada **`static`**
+- Los métodos estáticos sólo pueden hacer uso de propiedades estáticas.
+- Ejemplo:
+
+```php
+class Persona  {
+  private static $cantidad = 0; 
+
+  public function __construct ($nombre, $edad) {
+    self::$cantidad++;
+  }
+
+  public static function getCantidad(){
+    return self::$cantidad;
+  }
+}
+```
+
+Note: Dentro de la clase usamos `$self::lo_que_sea` para acceder a propiedades y métodos **estáticos** de una clase.
+
+
+### Propiedades y métodos estáticos (II)
+
+- No es necesario crear objetos para poder usarlos.
+- Ejemplo:
+
+```php
+// colegio.php
+echo "\nHay " . Persona::getCantidad() . " persona(s)\n";
+```
+
+Note: Fuera de la clase usamos `$Clase::lo_que_sea` para acceder a propiedades y métodos **estáticos** de una clase, siempre que sean públicos.
+
+
 ### Namespaces
 
 - Para **organizar el código** usamos `namespaces`.
-- Un `namespace` es algo semejante a un paquete en Java.
-- Ejemplo:
+- Un `namespace` es algo semejante a un paquete en Java y define un contexto.
+- Evita que haya colisiones de nombres cuando un mismo nombre de clase aparece en distintos contextos.
+- Ejemplo de namespace:
 
 ```php
 <?php
@@ -222,38 +254,6 @@ class Persona {
   // ...
 }
 ?>
-```
-
-
-### Usando nuestra clase
-
-- En proyectos con muchos archivos usamos `include_once` para no incluir un mismo archivo múltiples veces.
-- Hacemos uso de sentencia `use ...` para usar la clase deseada.
-- Ejemplo:
-
-```php
-<?php
-// Archivo colegio.php
-include_once "Persona.php";
-
-use Colegio\Gestion\Persona;
-
-$pepe = new Persona ("José Antonio", 40);
-?>
-```
-
-
-### Instanciación de objetos
-
-- Un objeto se instancia con el operador `new` ...
-- ... y el constructor de la clase con los parámetros definidos.
-- El constructor inicializa el objeto: establece un estado inicial.
-- Ejemplos:
-
-```php
-$pepe = new Persona ("José Antonio", 40);
-$ana  = new Persona ("Ana María", 20);
-$juan = new Persona ("Juan Carlos", 30);
 ```
 
 
@@ -293,3 +293,50 @@ class Estudiante extends Persona {
 }
 ?>
 ```
+
+
+
+### Usando nuestra clase
+
+- En proyectos con muchos archivos usamos `include_once` para no incluir un mismo archivo múltiples veces.
+- Hacemos uso de sentencia `use ...` para usar la clase deseada.
+- Ejemplo:
+
+```php
+<?php
+// Archivo colegio.php
+include_once "Persona.php";
+
+use Colegio\Gestion\Persona;
+
+$pepe = new Persona ("José Antonio", 40);
+?>
+```
+
+
+
+## Instanciación
+
+
+### Conceptos
+
+- instanciación de objetos = creación de objetos.
+- Un objeto se instancia con el operador `new` ...
+- ... y el constructor de la clase.
+- El constructor inicializa el objeto, es decir, establece un estado inicial.
+
+
+### Ejemplos
+
+```php
+$pepe = new Persona ("José Antonio", 40);
+$ana  = new Persona ("Ana María", 20);
+$juan = new Persona ("Juan Carlos", 30);
+
+$roberto = new Profesor ("Roberto", 30, "Lengua");
+$ana     = new Estudiante ("Ana María", 12, "2º ESO A");
+
+echo $pepe; // muestra el texto devuelto por __toString
+echo $ana;  // muestra el texto devuelto por __toString 
+```
+
