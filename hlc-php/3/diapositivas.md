@@ -19,12 +19,17 @@ element: class="fragment" data-fragment-index="1"
 [![cc-by-sa](http://jamj2000.github.io/hlc-php/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
-## Índice
+## Índice (I)
 --- 
 - ### Introducción
 - ### Protocolo HTTP
 - ### Instalación de servidor web
 - ### Estructura de una página HTML
+
+
+## Índice (II)
+--- 
+- ### Variables superglobales
 - ### Formularios
 - ### Cookies
 - ### Sesiones
@@ -51,18 +56,56 @@ element: class="fragment" data-fragment-index="1"
 
 ## Protocolo HTTP
 
+![arquitectura HTTP](assets/arquitectura-http.png)
+
+- Es un protocolo Cliente-Servidor.
+- Es un protocolo Petición-Respuesta.
+- Es un protocolo sin estado.
+  - No se guarda información de peticiones anteriores.  
 
 
-## Protocolo HTTP
+### Generación de HTML con PHP
+
+![arquitectura PHP](assets/arquitectura-php.png)
+
+- **El código PHP se ejecuta en el servidor**.
 
 
 
 ## Instalación de servidor web
 
+- Instalación de servidor web **Apache2 con soporte PHP**
+
+```bash
+apt  install  apache2  libapache2-mod-php
+```
+
+
+### Alternativa a Apache2
+
+- Para pequeños proyectos podemos usar el servidor que proporciona PHP.
+- Para ello, ejecutamos
+
+```bash
+php  -S localhost:8000  -t .
+```
 
 
 ## Estructura de una página HTML
 
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento HTML</title>
+</head>
+<body>
+    <!-- Aquí va el cuerpo HTML -->
+</body>
+</html>
+```
 
 
 ## Formularios
