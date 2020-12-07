@@ -56,7 +56,7 @@ element: class="fragment" data-fragment-index="1"
 
 ## Protocolo HTTP
 
-![arquitectura HTTP](assets/arquitectura-http.png)
+![arquitectura HTTP](assets/arquitectura-http.jpg)
 
 - Es un protocolo Cliente-Servidor.
 - Es un protocolo Petición-Respuesta.
@@ -80,15 +80,6 @@ element: class="fragment" data-fragment-index="1"
 apt  install  apache2  libapache2-mod-php
 ```
 
-
-### Alternativa a Apache2
-
-- Para pequeños proyectos podemos usar el servidor que proporciona PHP.
-- Para ello, ejecutamos
-
-```bash
-php  -S localhost:8000  -t .
-```
 
 
 ## Estructura de una página HTML
