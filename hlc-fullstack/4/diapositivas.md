@@ -7,6 +7,7 @@ Ejemplos de inserción de videos
 slide: data-background="#ff0000" 
 element: class="fragment" data-fragment-index="1"
 -->
+<!--- Note: Nota a pie de página. -->
 
 ## HLC - Fullstack
 ---
@@ -23,12 +24,9 @@ element: class="fragment" data-fragment-index="1"
 --- 
 - ### Introducción
 - ### Node.js
-- ### El servidor web
-- ### Accediendo a la BD
+- ### Rutas, Controladores y Modelos
 - ### Ajustes finales
 - ### Comprobando la API
-
-<!--- Note: Nota a pie de página. -->
 
 
 
@@ -44,16 +42,22 @@ element: class="fragment" data-fragment-index="1"
 - Definir el modelo de datos y acceder a la base de datos desde el código de la aplicación.
 
 
-### Aplicación de ejemplo
+### Aplicación de ejemplo (I)
 
 - Existe una aplicación funcional de ejemplo.
-- El código está disponible en [`https://github.com/jamj2000/tiendaw`](https://github.com/jamj2000/tiendaw)
+- El código está disponible en [`https://github.com/jamj2000/tiendabackend`](https://github.com/jamj2000/tiendabackend)
 - Los archivos usados para el backend son:
   - **package.json**
   - **server.js**
-  - **models.js**
   - **routes.js**
-  - **config.js**
+  - **controllers.js**
+  - **models.js**
+  - **.env**
+
+
+### Aplicación de ejemplo (II)
+
+![tiendabackend](assets/tiendabackend.png)
 
 
 
@@ -66,7 +70,7 @@ element: class="fragment" data-fragment-index="1"
 
 ![v8 engine](assets/v8-engine.png)
 
-Node.js® es un entorno de ejecución para JavaScript construido con el **motor de JavaScript V8 de Chrome**.
+Node.js® es un **entorno de ejecución** para JavaScript construido con el **motor de JavaScript V8 de Chrome**.
 
 
 ### Instalación
@@ -88,8 +92,8 @@ Note: **npm** =  **N**ode **P**ackage **M**anager
 ### Inicio de un proyecto
 
 ```bash
-mkdir  nombre-proyecto
-cd     nombre-proyecto
+mkdir  proyecto-node
+cd     proyecto-node
 
 npm  init  -y 
 ```
@@ -101,15 +105,15 @@ Note: La opción -y (--yes) de `npm init` crea un archivo **package.json** con o
 
 ```json
 {
-  "name": "hola",
+  "name": "proyecto-node",
   "version": "1.0.0",
-  "description": "",
+  "description": "nodejs backend app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "jamj2000",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
@@ -123,7 +127,7 @@ Note: La opción -y (--yes) de `npm init` crea un archivo **package.json** con o
 
 ### Instalación de módulos
 
-```bash
+```
      npm  install  express      -S  
      npm  install  nodemon      -D  
 sudo npm  install  json-server  -g  
@@ -131,7 +135,7 @@ sudo npm  install  json-server  -g
 
 o de forma más corta
 
-```bash
+```
      npm  i  express     -S  
      npm  i  nodemon     -D  
 sudo npm  i  json-server -g
@@ -152,14 +156,14 @@ sudo npm  i  json-server -g
 
 ### Desinstalación de módulos
 
-```bash
+```
      npm  remove  express
      npm  remove  nodemon     -D 
 sudo npm  remove  json-server -g 
 ```   
 o de forma más corta
 
-```bash
+```
      npm  r  express 
      npm  r  nodemon     -D  
 sudo npm  r  json-server -g
@@ -231,7 +235,7 @@ Mas info: https://www.w3schools.com/nodejs/ref_modules.asp
 ```javascript
 var app  =  require('express')();
 
-app.get ('/', (req, res) => { 
+app.get ('/hola', (req, res) => { 
     res.send ('Hola mundo') 
 });
 
@@ -241,7 +245,8 @@ app.get ('/hola/:usuario', (req, res) => {
 
 app.listen (3000);
 ```
-Para ejecutar:
+
+Ejecutar:
 
 ```bash
 node  server1
@@ -263,24 +268,19 @@ const app      = express();
 // --- MIDDLEWARE
 // Archivos estáticos. Deberás crear un archivo public/index.html para ver el resultado
 app.use(express.static(path.join(__dirname , 'public')));
-// Soporte de JSON
-app.use(express.json());
-// Logger
-app.use(morgan('dev'));
 
-// --- PUERTO DE ESCUCHA
+app.use(express.json()); // Soporte de JSON
+app.use(morgan('dev'));  // Logger
+
+// --- INICIAR SERVIDOR
 app.listen (3000, () => console.log('Servidor iniciado en puerto 3000'));
 ```
 
-Para ejecutar:
+Ejecutar:
 
 ```bash
 node  server2
 ```
-
-
-
-## Accediendo a la BD
 
 
 ### Conexión a la BD
@@ -290,30 +290,69 @@ node  server2
 ```javascript
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/tienda', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/basedatos', { useNewUrlParser: true })
   .then(db   => console.log ('Conexión correcta a la BD'))
   .catch(err => console.log ('Error en la conexión a la BD'));
 ```
 
 
-### El modelo de datos
+
+## Rutas, Controladores y Modelos
+
+
+### Los modelos
+
 **models.js**
 
-```bash
+```javascript
 const mongoose = require('mongoose');
 
-const Cliente  = mongoose.model('Cliente',  { 
-                                   nombre: String, 
-                                   apellidos: String  });
+const Cliente = mongoose.model('Cliente',
+  new mongoose.Schema({ nombre: String, apellidos: String })
+);
 
-const Articulo = mongoose.model('Articulo', { 
-                                   nombre: String, 
-                                   precio: Number });
+const Articulo = mongoose.model('Articulo',
+  new mongoose.Schema({ nombre: String, precio: Number })
+);
 
-module.exports =  {
-    Cliente,
-    Articulo
-};
+module.exports =  { Cliente, Articulo };
+```
+
+
+### Las rutas
+
+**routes.js**
+
+```
+const express = require("express");
+const controller = require("./controllers.js");
+
+const router = express.Router();
+
+router.get    ("/clientes",      , controller.readClientes);   // Read All
+router.get    ("/clientes/:id",  , controller.readCliente);    // Read
+router.delete ("/clientes/:id",  , controller.deleteCliente);  // Delete
+router.put    ("/clientes/:id",  , controller.updateCliente);  // Update
+router.post   ("/clientes",      , controller.createCliente);  // Create
+
+module.exports = router;
+```
+
+
+### Los controladores
+
+**controllers.js**
+
+```javascript
+const { Cliente, Articulo } = require("./models.js");
+
+exports.readClientes   = (req, res) => Cliente.find             ( ... );
+exports.readCliente    = (req, res) => Cliente.findOne          ( ... );
+exports.deleteCliente  = (req, res) => Cliente.findOneAndDelete ( ... );
+exports.updateCliente  = (req, res) => Cliente.findOneAndUpdate ( ... );
+exports.createCliente  = (req, res) => new Cliente({ nombre: req.body.nombre, apellidos: req.body.apellidos })
+                                           .save ( ... );
+
 ```
 
 
@@ -327,28 +366,7 @@ module.exports =  {
 | Delete   | DELETE   | remove    | Modelo.findOneAndRemove      |
 
 
-### Acceso a la BD (I)
-**routes.js**
-#### Importación de módulos
-
-```javascript
-const express = require('express');
-const { Cliente, Articulo } = require('./models');
-
-const router = express.Router();
-```
-
-
-### Acceso a la BD (II)
-**routes.js**
-#### Lectura de datos
-
-```javascript
-// ver todos los Clientes
-router.get('/clientes', (req, res) => {  
-  Cliente.find( ... ver más abajo ... );  
-});
-```
+### Ejemplo find
 
 ```javascript
     Cliente.find({}, (err, data) => {
@@ -358,16 +376,7 @@ router.get('/clientes', (req, res) => {
 ```
 
 
-### Acceso a la BD (III)
-**routes.js**
-#### Lectura de datos
-
-```javascript
-// ver un Cliente
-router.get('/clientes/:id', (req, res) => {  
-  Cliente.findOne( ... ver más abajo ... ); 
-});
-```
+### Ejemplo findOne
 
 ```javascript
     Cliente.findOne({ _id: req.params.id }, (err, data) => {
@@ -377,16 +386,7 @@ router.get('/clientes/:id', (req, res) => {
 ```
 
 
-### Acceso a la BD (IV)
-**routes.js**
-#### Eliminación de datos
-
-```javascript
-// eliminar un Cliente
-router.delete('/clientes/:id', (req, res) => { 
-  Cliente.findOneAndRemove( ... ver más abajo ... ); 
-});
-```
+### Ejemplo findOneAndDelete
 
 ```javascript
     Cliente.findOneAndRemove({ _id: req.params.id }, (err, data) => {
@@ -396,16 +396,7 @@ router.delete('/clientes/:id', (req, res) => {
 ```
 
 
-### Acceso a la BD (V)
-**routes.js**
-#### Modificación de datos
-
-```javascript
-// actualizar un Cliente
-router.put('/clientes/:id', (req, res) => {
-  Cliente.findOneAndUpdate( ... ver más abajo ... ); 
-});
-```
+### Ejemplo findOneAndUpdate
 
 ```javascript
     Cliente.findOneAndUpdate (
@@ -418,36 +409,14 @@ router.put('/clientes/:id', (req, res) => {
 ```
 
 
-### Acceso a la BD (VI)
-**routes.js**
-#### Inserción de datos
+### Ejemplo save
 
 ```javascript
-// insertar un Cliente
-router.post('/clientes', (req, res) => {
-    const cliente = new Cliente({ 
-                          nombre: req.body.nombre, 
-                          apellidos: req.body.apellidos });
-    cliente.save( ... ver más abajo ... );
-});
-``` 
-
-```javascript
-    cliente.save((err, data) => {
+    new Cliente({ nombre: req.body.nombre, apellidos: req.body.apellidos })
+    .save((err, data) => {
         if (err) res.json({ error: err });
         else     res.json(data);
     });
-```
-
-
-### Acceso a la BD (VII)
-**routes.js**
-#### Exportamos enrutador
-
-```javascript
-...  código anterior ... 
-
-module.exports = router;
 ```
 
 
@@ -467,37 +436,37 @@ app.use ('/api', routes);
 ```
 
 
-### Parámetros de configuración
+### Variables de configuración
 
-- Para facilitar el mantenimiento y despliegue de la aplicación, situamos todos los parámetros de configuración en el archivo **`config.js`**
+- Para facilitar el mantenimiento y despliegue de la aplicación, situamos todos los parámetros de configuración en el archivo **`.env`**
+- El archivo `.env` contiene variables de entorno (`environment variables`)
+- El archivo `.env` debe añadirse a `.gitignore` para evitar añadirlo al repositorio.
+- El archivo `.env` puede contener URLs, nombres de usuarios, contraseñas, ...
 
-```javascript
-// El primer valor es el de PRODUCCIÓN. El valor alternativo es el de DESARROLLO
-
-module.exports = {
-  ip         : process.env.HOST   || '0.0.0.0',
-  port       : process.env.PORT   || 3000,
-  db_uri     : process.env.DB_URI || 'mongodb://localhost:27017/tienda'
-};
+- Ejemplo:
+```
+DB_URI=mongodb://localhost:27017/basedatos
+PORT=3000
 ```
 
 
-### Uso de parámetros
+### Acceso a las variables
 
-- En el archivo **`server.js`** utilizamos las variables anteriores en lugar de constantes.
-- Si importamos el objeto como config, entonces tenemos:
-  - `config.port`
-  - `config.db_uri`
+- En el archivo **`server.js`** leemos las variables anteriores.
+- Para ello necesitamos hacer uso del módulo `dotenv`.
 
 ```javascript
-const config = require('./config');
+require('dotenv').config();
 
-mongoose.connect(config.db_uri, { useNewUrlParser: true })
+const PORT = process.env.PORT || 3000;
+const DB_URI = process.env.DB_URI;
+
+mongoose.connect(DB_URI, { useNewUrlParser: true })
   .then(db   => console.log ('Conexión correcta a la BD'))
   .catch(err => console.log ('Error en la conexión a la BD'));
 
-app.listen (config.port, 
-            () => console.log(`Servidor iniciado en puerto ${config.port}`));
+app.listen (PORT, 
+            () => console.log(`Servidor iniciado en puerto ${PORT}`));
 ```
 
 
