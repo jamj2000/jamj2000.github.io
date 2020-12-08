@@ -23,8 +23,7 @@ element: class="fragment" data-fragment-index="1"
 --- 
 - ### Introducción
 - ### Protocolo HTTP
-- ### Instalación de servidor web
-- ### Estructura de una página HTML
+- ### Servidor web
 
 
 ## Índice (II)
@@ -60,29 +59,33 @@ element: class="fragment" data-fragment-index="1"
 
 - Es un protocolo Cliente-Servidor.
 - Es un protocolo Petición-Respuesta.
-- Es un protocolo sin estado.
-  - No se guarda información de peticiones anteriores.  
+- Es un protocolo sin estado: no se guarda información de peticiones anteriores.  
 
 
-### Generación de HTML con PHP
+### Ejecución de PHP
+
+- El código PHP siempre se ejecuta en un **servidor web**.
+- El cliente no ve el código PHP, sólo HTML.
 
 ![arquitectura PHP](assets/arquitectura-php.png)
 
-- **El código PHP se ejecuta en el servidor**.
 
 
+## Servidor web
 
-## Instalación de servidor web
+Usaremos Apache2 como servidor web.
+
+
+### Instalación de servidor web
 
 - Instalación de servidor web **Apache2 con soporte PHP**
 
 ```bash
-apt  install  apache2  libapache2-mod-php
+sudo  apt  install  apache2  libapache2-mod-php
 ```
 
 
-
-## Estructura de una página HTML
+### Estructura de una página HTML
 
 ```html
 <!DOCTYPE html>
@@ -99,7 +102,50 @@ apt  install  apache2  libapache2-mod-php
 ```
 
 
+
+## Variables superglobales
+
+Son variables internas que están disponibles siempre en todos los ámbitos del script, incluso dentro de las funciones.
+
+
+### Lista de variables
+
+- `$_SERVER`: información sobre parámetros del servidor (nombre del servidor, puerto del usuario,
+etc.).
+- `$_GET`: datos recibidos desde un formulario por el método GET.  
+- **`$_POST`**: datos recibidos desde un formulario por el método POST.
+- `$_REQUEST`: datos recibidos desde un formulario (ya sea GET o POST).
+- **`$_COOKIE`**: datos guardados por el servidor en el PC del usuario.
+- **`$_SESSION`**: datos guardados para su uso a través de múltiples páginas.
+- `$_FILES`: ficheros recibidos después de un envío.
+
+
+
 ## Formularios
+
+- Los formularios HTML **permiten introducir datos** y enviarlos a un servidor web.
+- El servidor se encarga de procesar dichos datos. Para ello usa PHP, JSP, Python u otro lenguaje de servidor.
+- 
+
+
+### Ejemplo de formulario (cliente)
+
+
+```html
+<form action='action.php' method='post'>
+    <input type='text'   name='dato'/>
+    <input type='submit' name='boton' value='Enviar'/>
+</form>
+``` 
+
+
+### Ejemplo de acción (servidor)
+
+```php
+<?php 
+  echo "El dato recibido es " . $_POST['dato'] ;
+?>
+```
 
 
 
