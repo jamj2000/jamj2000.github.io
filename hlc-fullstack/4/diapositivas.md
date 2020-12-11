@@ -57,7 +57,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### Aplicación de ejemplo (II)
 
-![tiendabackend](assets/tiendabackend.png)
+![tiendabackend](assets/backend.png)
 
 
 
