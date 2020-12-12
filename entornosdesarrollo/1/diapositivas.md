@@ -39,6 +39,7 @@ element: class="fragment" data-fragment-index="1"
 - Reconocer la relación de los programas con los componentes del sistema informático.
 - Diferenciar código fuente, objeto y ejecutable.
 - Identificar las fases de desarrollo de una aplicación informática.
+- Diferenciar los distintos modelos de desarrollo.
 - Clasificar los lenguajes de programación.
 
 
