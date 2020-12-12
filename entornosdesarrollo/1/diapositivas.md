@@ -6,6 +6,7 @@ Ejemplos de inserción de videos
 
 slide: data-background="#ff0000" 
 element: class="fragment" data-fragment-index="1"
+
 -->
 
 ## Entornos de desarrollo
