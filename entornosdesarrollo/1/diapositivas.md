@@ -22,7 +22,9 @@ element: class="fragment" data-fragment-index="1"
 ## Índice
 --- 
 - ### Introducción
+- ### Conceptos básicos
 - ### Ciclo de vida del software
+- ### Modelos de desarrollo
 - ### Lenguajes de programación
 
 <!--- Note: Nota a pie de página. -->
@@ -38,6 +40,10 @@ element: class="fragment" data-fragment-index="1"
 - Diferenciar código fuente, objeto y ejecutable.
 - Identificar las fases de desarrollo de una aplicación informática.
 - Clasificar los lenguajes de programación.
+
+
+
+## Conceptos básicos
 
 
 ### Tipos de software 
@@ -159,6 +165,10 @@ recoge nuevos datos desde la entrada, se muestran los resultados, se leen/guarda
 - PRUEBAS del sistema: __Sistema aceptado__
 - Documentación: __Documentación técnica y de usuario__ 
 - MANTENIMIENTO: __Informes de errores y control de cambios__
+
+
+
+## Modelos de desarrollo
 
 
 ### Modelos de desarrollo de software
