@@ -181,8 +181,8 @@ https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks
   - Una entrada conocida  --> Una salida esperada 
 
 - Por ejemplo:
-  - suma (2,3)  -->  5
-  - resta(2,3)  --> -1
+  - `suma (2,3)  -->  5`
+  - `resta(2,3)  --> -1`
 
 http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
 
