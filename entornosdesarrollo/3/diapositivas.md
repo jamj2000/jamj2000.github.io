@@ -177,26 +177,43 @@ https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks
 
 ### Caso de prueba
 
-- precondición --> postcondición
-- Una entrada conocida  --> Una salida esperada 
+- Un caso de prueba se compone de:
+  - Una entrada conocida  --> Una salida esperada 
+
+- Por ejemplo:
+  - suma (2,3)  -->  5
+  - resta(2,3)  --> -1
 
 http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
 
 
-### JUnit4/5 - Anotaciones
+### JUnit4/5 - Anotaciones I
 
-- @BeforeClass / @BeforeAll
-- @Before / @BeforeEach
-- @Test
-- @After / @AfterEach
-- @AfterClass / @AfterAll
-- @Ignore
+Las anotaciones JUnit se anteponen a la definición del método de prueba. Son:
+
+JUnit 4          | JUnit 5
+-----------------|----------------------
+@BeforeClass     | @BeforeAll
+@Before          | @BeforeEach
+@Test            | @Test
+@After           | @AfterEach
+@AfterClass      | @AfterAll
+@Ignore          | @Ignore
+
+
+### JUnit4 - Anotaciones II
+
+- **@BeforeClass**: el método es invocado antes de iniciar todos los tests. Sólo puede haber un método con esta anotación.
+- **@AfterClass**: el método es invocado después de finalizar todos los tests. Sólo puede haber un método con esta anotación.
+- **@Before**: Se ejecuta antes de de cada test.
+- **@After**: Se ejecuta después de cada test.
+- **@Ignore**: Los métodos marcados con esta anotación no serán ejecutados.
+- **@Test**: Representa un test que se debe ejecutar. 
 
 
 ### JUnit - Aserciones
 
 ```java
-import org.junit.Test;
 import static org.junit.Assert.*;
 
 // ... 
@@ -261,20 +278,6 @@ Note: CI=Continuous Integration / CD=Continuous Delivery.
 - Si es del 100% entonces se ha ejecutado todo el código fuente durante las pruebas.
 - Si es menor del 100% entonces existe código fuente que no se ha ejecutado durante las pruebas.
 - Es posible realizar la cobertura tanto desde el IDE como desde un servicio web apropiado.
-- Un servidor web que proporciona cobertura de código es CODECOV.IO
-
-
-#### Codecov
-
-[ ![codecov](assets/codecov.png)  ](https://codecov.io)
-
-- Más de 20 lenguajes soportados
-- Precio/Mes:
-  - Plan Free: 0 $
-  - Plan Team: 2,50 $ por repositorio
-  - Plan Enterprise: 20 $ por usuario
-
-Note: A fecha Diciembre 2017
 
 
 
