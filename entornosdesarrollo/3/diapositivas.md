@@ -182,7 +182,6 @@ https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks
 
 - Por ejemplo:
   - `suma (2,3)  -->  5`
-  - `resta(2,3)  --> -1`
 
 http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
 
@@ -232,6 +231,28 @@ assertNotSame(objeto_esperado,objeto_real)
 ```
 
 http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
+
+
+### Ejemplo
+
+```java
+// ...
+    @BeforeClass
+    public static void setUpClass(){
+        Aritmetica a = new Aritmetica();
+    }
+    
+    @Test
+    public void testSuma() {
+        assertEquals( 5,  Aritmetica.suma( 2, 3));
+    }
+
+    @Ignore
+    public void testResta() {
+        assertEquals(-1,  Aritmetica.resta( 2, 3));
+    }
+// ...
+```
 
 
 ### TDD
