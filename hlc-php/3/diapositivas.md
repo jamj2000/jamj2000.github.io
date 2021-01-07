@@ -129,7 +129,6 @@ etc.).
 
 
 ### Ejemplo de formulario (cliente)
-
 ```html
 <form action='script.php' method='post'>
     <input type='text'   name='dato'/>
