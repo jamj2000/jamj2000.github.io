@@ -105,38 +105,40 @@ sudo  apt  install  apache2  libapache2-mod-php
 
 ## Variables superglobales
 
-Son variables internas que están disponibles siempre en todos los ámbitos del script, incluso dentro de las funciones.
+- Son variables internas que están disponibles siempre en todos los ámbitos del script, incluso dentro de las funciones.
+- Proporcionan información relevante en la comunicación cliente-servidor.
 
 
 ### Lista de variables
 
-- `$_SERVER`: información sobre parámetros del servidor (nombre del servidor, puerto del usuario,
+- **$_SERVER**: información sobre parámetros del servidor (nombre del servidor, puerto del usuario,
 etc.).
-- `$_GET`: datos recibidos desde un formulario por el método GET.  
-- **`$_POST`**: datos recibidos desde un formulario por el método POST.
-- `$_REQUEST`: datos recibidos desde un formulario (ya sea GET o POST).
-- **`$_COOKIE`**: datos guardados por el servidor en el PC del usuario.
-- **`$_SESSION`**: datos guardados para su uso a través de múltiples páginas.
-- `$_FILES`: ficheros recibidos después de un envío.
+- **$_GET**: datos recibidos desde un formulario por el método GET.  
+- **$_POST**: datos recibidos desde un formulario por el método POST.
+- **$_REQUEST**: datos recibidos desde un formulario (ya sea GET o POST).
+- **$_COOKIE**: datos guardados por el servidor en el PC del usuario.
+- **$_SESSION**: datos guardados para su uso a través de múltiples páginas.
+- **$_FILES**: ficheros recibidos después de un envío.
 
 
 
 ## Formularios
 
 - Los formularios HTML **permiten introducir datos** y enviarlos a un servidor web.
-- El servidor se encarga de procesar dichos datos. Para ello usa PHP, JSP, Python u otro lenguaje de servidor.
-- 
+- **El servidor se encarga de procesar dichos datos**. Para ello puede usar **PHP**, JSP, Python u otro lenguaje de servidor.
 
 
 ### Ejemplo de formulario (cliente)
 
-
 ```html
-<form action='action.php' method='post'>
+<form action='script.php' method='post'>
     <input type='text'   name='dato'/>
     <input type='submit' name='boton' value='Enviar'/>
 </form>
 ``` 
+- El atributo **action** del elemento FORM indica la página a la que se le enviarán los datos del
+formulario. En nuestro caso se tratará de un script PHP.
+- El atributo **method** especifica el método usado para enviar la información. Normalmente será el método post.
 
 
 ### Ejemplo de acción (servidor)
@@ -146,7 +148,8 @@ etc.).
   echo "El dato recibido es " . $_POST['dato'] ;
 ?>
 ```
-
+- Este código PHP se ejecuta en el servidor web. 
+- El cliente, es decir el navegador web, no ve el código PHP, sólo código HTML.
 
 
 ## Cookies
