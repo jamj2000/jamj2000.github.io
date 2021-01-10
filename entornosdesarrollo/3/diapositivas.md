@@ -204,7 +204,7 @@ JUnit 4          | JUnit 5
 
 - **@BeforeClass**: el método es invocado antes de iniciar todos los tests. Sólo puede haber un método con esta anotación.
 - **@AfterClass**: el método es invocado después de finalizar todos los tests. Sólo puede haber un método con esta anotación.
-- **@Before**: Se ejecuta antes de de cada test.
+- **@Before**: Se ejecuta antes de cada test.
 - **@After**: Se ejecuta después de cada test.
 - **@Ignore**: Los métodos marcados con esta anotación no serán ejecutados.
 - **@Test**: Representa un test que se debe ejecutar. 
@@ -257,7 +257,7 @@ http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
 
 ### TDD
 
-- Desarrollo guiado por pruebas de software, o Test-Driven Development (TDD) 
+- Desarrollo guiado por pruebas de software, o **Test-Driven Development** (TDD) 
   - Escribir las pruebas primero (Test First Development).
   - Refactorización (Refactoring).
 
@@ -271,7 +271,7 @@ http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
 - Integración Big bang
 - Integración Descendente
 - Integración Ascendente
-- Integración Continua (CI)
+- Integración Continua (**CI**)
 
 
 ### Servidores de integración continua
@@ -295,7 +295,7 @@ Note: CI=Continuous Integration / CD=Continuous Delivery.
 ### Cobertura del código
 
 - Es una medida que indica el porcentaje de código que ha sido ejecutado durante las pruebas.
-- Es aconsejable que sea del 100%.
+- Es aconsejable que sea lo más cercano a 100%.
 - Si es del 100% entonces se ha ejecutado todo el código fuente durante las pruebas.
 - Si es menor del 100% entonces existe código fuente que no se ha ejecutado durante las pruebas.
 - Es posible realizar la cobertura tanto desde el IDE como desde un servicio web apropiado.
@@ -307,27 +307,58 @@ Note: CI=Continuous Integration / CD=Continuous Delivery.
 
 ### Control de calidad
 
-Medición de la calidad de un producto --> Pruebas
+- Para lograr una
+  - Medición de la calidad de un producto
+- necesitamos realizar
+  - Pruebas
 
 
 ### Calidad del proceso/producto (QA/QC)
 
-- QA es un conjunto de actividades para garantizar la __calidad en los procesos__ mediante los cuales se desarrollan los productos. 
+- **QA** es un conjunto de actividades para garantizar la __calidad en los procesos__ mediante los cuales se desarrollan los productos. 
 - QC es un conjunto de actividades para garantizar __la calidad de los productos__. Las actividades se centran en identificar defectos en los productos reales producidos.
 
 Note: QA = Quality Assurance / QC = Quality Control
 
 
-### Factores de calidad
+### Factores de calidad (I)
+
+- El **modelo de calidad de McCall** define **11 factores de calidad**.
+- Estos factores se agrupan en **3 ámbitos**
+  - Operación del producto
+  - Revisión del producto
+  - Transición del producto
+
+
+### Factores de calidad (II)
+
+#### Operación del producto
 
 - Corrección
 - Fiabilidad
 - Eficiencia
 - Seguridad
 - Facilidad de uso
+
+
+### Factores de calidad (III)
+
+#### Revisión del producto
+
 - Mantenibilidad
 - Flexibilidad
 - Facilidad de prueba
+
+
+### Factores de calidad (IV)
+
+#### Transición del producto
+
 - Portabilidad
 - Reusabilidad
 - Interoperatividad
+
+
+### Factores de calidad (V)
+
+![McCall](assets/mccall.jpg)
