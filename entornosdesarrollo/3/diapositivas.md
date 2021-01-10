@@ -125,8 +125,8 @@ Evaluan aspectos adicionales como rendimiento, seguridad, ...
 - Pruebas unitarias (o de unidad)
 - Pruebas de regresión
 - Pruebas de integración 
-- Pruebas del sistema
 - Pruebas de humo (smoke test)
+- Pruebas del sistema
 - Pruebas alfa y beta
 - Pruebas de aceptación (validación por parte del cliente)
 
