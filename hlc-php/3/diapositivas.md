@@ -151,9 +151,90 @@ formulario. En nuestro caso se tratará de un script PHP.
 - El cliente, es decir el navegador web, no ve el código PHP, sólo código HTML.
 
 
+
 ## Cookies
+
+
+### Introducción
+
+- Las cookies es un método que permite **guardar información en el ordenador del cliente** para recuperarla en el futuro.
+
+- Las cookies permiten que páginas distintas puedan acceder a una variable común, el array asociativo $_COOKIE.
+
+
+### Crear una cookie
+
+
+setcookie( *nombre de cookie*, *valor la cookie*, *fecha de expiración*, *carpeta del servidor*);
+
+
+- Ejemplo:
+
+```php
+setcookie("color", "#ff0000", time()+60*60*24*365, "/");
+```
+
+
+### Usar la cookie
+
+$_COOKIE['*nombre de cookie*']
+
+- Ejemplo:
+
+```php
+echo $_COOKIE['color'];
+```
+
+
+### Eliminar la cookie
+
+setcookie( *nombre de cookie*, *valor la cookie*, *fecha expirada*, *carpeta del servidor*);
+
+- Ejemplo:
+
+```php
+setcookie("color", "#ff0000", time()-1000, "/");
+```
 
 
 
 ## Sesiones
 
+
+### Introducción
+
+- Las sesiones son un método que permite **guardar información en el servidor** para recuperarla en el futuro.
+  
+- Las sesiones permiten que páginas distintas puedan acceder a una variable común, el array asociativo $_SESSION.
+
+
+### Crear una variable de sesión
+
+session_start();
+$_SESSION['*nombre de variable*'] = *valor de la variable*;
+
+- Ejemplo:
+
+```php
+session_start();
+$_SESSION['usuario']=$_REQUEST['campousuario'];
+$_SESSION['clave']  =$_REQUEST['campoclave'];
+```
+
+
+### Usar la variable de sesión
+
+session_start();
+ ...
+
+echo $_SESSION['*nombre de variable*'];
+
+
+- Ejemplo:
+
+```php
+session_start();
+// ...
+
+echo $_SESSION['usuario'];
+```
