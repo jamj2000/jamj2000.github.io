@@ -222,7 +222,7 @@ $_SESSION['clave']  =$_REQUEST['campoclave'];
 
 ### Usar la variable de sesión
 
-echo $_SESSION['*nombre de variable*'];
+$_SESSION['*nombre de variable*'];
 
 ```php
 session_start();
