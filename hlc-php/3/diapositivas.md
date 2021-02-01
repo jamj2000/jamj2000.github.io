@@ -164,11 +164,7 @@ formulario. En nuestro caso se tratará de un script PHP.
 
 ### Crear una cookie
 
-
 setcookie( *nombre de cookie*, *valor la cookie*, *fecha de expiración*, *carpeta del servidor*);
-
-
-- Ejemplo:
 
 ```php
 setcookie("color", "#ff0000", time()+60*60*24*365, "/");
@@ -179,8 +175,6 @@ setcookie("color", "#ff0000", time()+60*60*24*365, "/");
 
 $_COOKIE['*nombre de cookie*']
 
-- Ejemplo:
-
 ```php
 echo $_COOKIE['color'];
 ```
@@ -189,8 +183,6 @@ echo $_COOKIE['color'];
 ### Eliminar la cookie
 
 setcookie( *nombre de cookie*, *valor la cookie*, *fecha expirada*, *carpeta del servidor*);
-
-- Ejemplo:
 
 ```php
 setcookie("color", "#ff0000", time()-1000, "/");
@@ -208,12 +200,18 @@ setcookie("color", "#ff0000", time()-1000, "/");
 - Las sesiones permiten que páginas distintas puedan acceder a una variable común, el array asociativo $_SESSION.
 
 
+### Antes de su uso
+
+- En PHP, se deseamos trabajar con variables de sesión, debemos poner al principio de página, antes de cualquier etiqueta HTML, la siguiente sentencia:
+
+```php
+session_start();
+```
+
+
 ### Crear una variable de sesión
 
-session_start();
 $_SESSION['*nombre de variable*'] = *valor de la variable*;
-
-- Ejemplo:
 
 ```php
 session_start();
@@ -224,13 +222,7 @@ $_SESSION['clave']  =$_REQUEST['campoclave'];
 
 ### Usar la variable de sesión
 
-session_start();
- ...
-
 echo $_SESSION['*nombre de variable*'];
-
-
-- Ejemplo:
 
 ```php
 session_start();
