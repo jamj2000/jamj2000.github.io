@@ -230,3 +230,136 @@ session_start();
 
 echo $_SESSION['usuario'];
 ```
+
+
+
+## Extensiones de PHP
+
+
+### Introducción
+
+- PHP es un lenguaje que ofrece funciones para un amplio rango de aplicaciones.
+- Estas funciones se distribuyen en extensiones de PHP.
+- En Linux es necesario instalar dichas extensiones por separado.
+- Algunas extensiones importantes son:
+  - **mysql** : para trabajar con SGBD MySQL
+  - **gd** : para manejo de imágenes
+  - **zip** : para manejo de archivos comprimidos
+  - **curl** : para servicios web y red
+
+
+### Extensiones instaladas
+
+Podemos ver las extensiones instaladas
+
+- desde el terminal con **php -m** 
+
+- desde página web con  **phpinfo()** 
+
+
+### Instalar extensiones
+
+**sudo apt  install  php-mysql**
+
+**sudo apt  install  php-gd**
+
+**sudo apt  install  php-zip**
+
+**sudo apt  install  php-curl**
+
+
+### GD: Funciones frecuentes
+
+- ImageCreate
+- ImageColorAllocate
+- ImageFill
+- ImageLine
+- ImageRectangle
+- ImageString
+- ImageJPEG
+- ImagePNG
+- ImageDestroy
+
+[Referencia de funciones](https://www.php.net/manual/es/book.image.php)
+
+
+### GD: Ejemplo de uso
+
+```php
+<?php
+$ancho=140; 
+$alto=30;
+$imagen=ImageCreate($ancho,$alto);
+
+// Generamos fondo amarillo
+$amarillo=ImageColorAllocate($imagen,255,255,0);
+ImageFill($imagen,0,0,$amarillo);
+
+// Dibujamos número con color rojo
+$rojo=ImageColorAllocate($imagen,255,0,0);
+ImageString($imagen, 5, 25, 5, "Hola Mundo", $rojo);
+
+// Dibujamos rectángulo con color verde 
+$verde=ImageColorAllocate($imagen,0,255,0);
+ImageRectangle($imagen, 0, 0, $ancho-1, $alto-1, $verde);
+
+// Enviamos imagen al navegador
+Header ("Content-type: image/jpeg");
+ImageJPEG ($imagen);
+ImageDestroy($imagen);
+?> 
+```
+
+
+### MySQL: Métodos frecuentes
+
+- $conexion  = mysqli (...)
+- $resultado = $conexion->query ($sql)
+- $registro  = $resultado->fetch_assoc()
+- $conexion->errno
+- $conexion->error
+- $resultado->free () 
+- $conexion->close ()
+
+[Referencia de funciones](https://www.php.net/manual/es/book.mysqli.php)
+
+
+### MySQL: Ejemplo de uso
+
+```php
+<?php
+define ("HOST",  "127.0.0.1");
+define ("USER",  "root");
+define ("PASS",  "root");
+define ("DB",    "mysql");
+define ("TABLE", "user");
+
+// Conectando, seleccionando la base de datos
+$conexion = new mysqli(HOST, USER, PASS, DB);
+if ($conexion->connect_errno) {
+    echo "Error: " . $conexion->connect_errno . " - " . $conexion->connect_error . "\n";
+    exit;
+}
+
+// Realizar una consulta MySQL
+$sql = "SELECT User, Password, plugin FROM " . TABLE;
+if (!$resultado = $conexion->query($sql)) {
+    echo "Error: " . $conexion->connect_errno . " - " . $conexion->connect_error . "\n";
+    exit;
+}
+
+// Imprimir los resultados en HTML
+echo "<table>\n";
+echo "<tr><th>Usuario</th><th>Contraseña</th><th>Plugin</th></tr>\n";
+while ($registro = $resultado->fetch_assoc()) {
+    echo "\t<tr>\n";
+    foreach ($registro as $campo)  echo "\t\t<td>$campo</td>\n";
+    echo "\t</tr>\n";
+}
+echo "</table>\n";
+
+$resultado->free(); // Liberar resultados
+$conexion->close();  // Cerrar la conexión
+?>
+```
+
