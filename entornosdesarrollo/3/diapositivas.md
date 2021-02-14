@@ -197,7 +197,7 @@ JUnit 4          | JUnit 5
 @Test            | @Test
 @After           | @AfterEach
 @AfterClass      | @AfterAll
-@Ignore          | @Ignore
+@Ignore          | @Disabled
 
 
 ### JUnit4 - Anotaciones II
