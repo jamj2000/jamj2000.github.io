@@ -26,6 +26,7 @@ element: class="fragment" data-fragment-index="1"
 - ### VanillaJS
 - ### Componentes web
 - ### Svelte
+- ### Svelte@next
 
 <!--- Note: Nota a pie de página. -->
 
@@ -278,10 +279,122 @@ fetch(url + documento._id, { method: "DELETE" })
 [Apuntes: Frontend con Svelte](https://github.com/jamj2000/tiendafrontend/blob/master/README.md)
 
 
+### Creación de proyecto
+
+```console
+npx  degit  sveltejs/template   nombre-proyecto
+cd  nombre-proyecto
+tree
+
+├── package.json
+├── public
+│   ├── favicon.png
+│   ├── global.css
+│   └── index.html
+├── README.md
+├── rollup.config.js
+└── src
+    ├── App.svelte
+    └── main.js
+```
+
+
+### Estructura de un componente
+
+```html
+<script>
+
+</script>
+
+<style>
+
+</style>
+
+<!-- Nuestros elementos HTML y componentes web -->
+```
+
+
+### Enrutamiento en el cliente
+
+- Svelte no tiene un módulo de enrutamiento oficial.
+- Tenemos varios no oficiales.
+- Usaremos el módulo de **`svelte-routing`**
+
+
+#### App.svelte
+
+```html
+<script>
+  import { Router } from "svelte-routing";
+</script>
+
+<Router>
+  <Nav />
+  <Contenido />
+</Router>
+```
+
+
+#### Nav.svelte
+
+```html
+<script>
+  import { Link } from "svelte-routing";
+</script>
+
+<nav>
+    <Link to="/">🛒 Inicio</Link>
+    <Link to="/articulos">🎁 Artículos</Link>
+    <Link to="/clientes">👥 Clientes</Link>
+</nav>
+```
+
+
+#### Contenido.svelte
+
+```html
+<script>
+  import { Route }  from "svelte-routing";
+  import Inicio     from "./Inicio.svelte";
+  import Articulos  from "./Articulos.svelte";
+  import Clientes   from "./Clientes.svelte";
+</script>
+
+<main id="contenido">
+  <Route path="/"          component={Inicio} />
+  <Route path="/articulos" component={Articulos} />
+  <Route path="/clientes"  component={Clientes} />
+</main>
+```
+
+
+### Código en GitHub
+
+- https://github.com/jamj2000/tiendafrontend
+
+
+
+## Svelte@next
+
+- El 19 de Octubre de 2020, Rich Harris (el principal desarrollador de svelte) hace público el video que se enlaza más abajo.
+- En él establece las directices para la próxima versión de svelte.
+
+[Rich Harris: Futuristic Web Development](https://youtu.be/qSfdtmcZ4d0)
+
+
+### Principales novedades
+
+- El framework Sapper no tendrá continuación. Se pretende unificar el proceso de desarrollo.
+- Se utiliza **snowpack** en lugar de **rollup** como empaquetador.
+- No es necesario usar *routing*. En lugar de ello se dispone de una ruta **$layout.svelte**.
+- Nueva forma de crear un proyecto.
+- Estructura de carpetas más coherente.
+- Otras novedades.
+
+
 ### Crear el proyecto
 
 ```bash
-# npx  degit  sveltejs/template   nombre-proyecto
 mkdir  nombre-proyecto  &&  cd  nombre-proyecto
 npm  init  svelte@next
 git  init
@@ -488,14 +601,4 @@ tree -a -I 'node_modules|.git|.svelte'
 
 ### Código en GitHub
 
-[jamj2000/tiendafrontend](https://github.com/jamj2000/tiendafrontend)
-
-
-### Componentes sveltekit
-
-[SVELTEKIT](https://sveltekit.now.sh)
-
-
-### Rich Harris
-
-[Rich Harris: Futuristic Web Development](https://youtu.be/qSfdtmcZ4d0)
+[jamj2000/tiendafrontend](https://github.com/jamj2000/tiendafrontend/tree/next)
