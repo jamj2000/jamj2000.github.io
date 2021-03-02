@@ -605,9 +605,27 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 
 ## Despliegue
 
-- **API REST**: Heroku
 - **BD Mongo**: Mongo DB Atlas
+- **API REST**: Heroku
 
 
-### 
+### MongoDB Atlas (I)
+
+![mongo user](assets/mongodb-user.png)
+
+
+### MongoDB Atlas (II)
+
+![mongo ip](assets/mongodb-ip.png)
+
+
+### MongoDB Atlas (III)
+
+- **Clusters > CONNECT > Connect your application**
+![mongo uri](assets/mongodb-uri.png)
+
+
+### Heroku
+
+![heroku env](assets/heroku-env.png)
 
