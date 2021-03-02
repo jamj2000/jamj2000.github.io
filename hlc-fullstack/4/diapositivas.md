@@ -624,6 +624,7 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 ### MongoDB Atlas (III)
 
 **URI de la BD**
+
 **Clusters > CONNECT > Connect your application**
 ![mongo uri](assets/mongodb-uri.png)
 
@@ -632,6 +633,8 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 
 - No hay que crear la BD.
 - **La Base de Datos se crea automáticamente** según la URI que indicaremos en nuestra app (nodejs, python, ...)
+- Por ejemplo, en nodejs, en el archivo `.env` declararemos una variable de entorno similar a la siguiente:
+  - DB_URI=mongodb+srv://`usuario`:`contraseña`@cluster0.hhmhj.mongodb.net/`nombrebd`?retryWrites=true&w=majority
 
 
 ### Heroku
