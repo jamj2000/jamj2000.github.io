@@ -635,9 +635,11 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 - **La Base de Datos se crea automáticamente**
 - Para ello indicamos la URI en nuestra app (nodejs, python, ...)
 - Por ejemplo, en nodejs, en el archivo `.env`:
-  ```
-  DB_URI=mongodb+srv://usuario:contraseña@cluster0.hhmhj.mongodb.net/nombrebasedatos?retryWrites=true&w=majority
-  ```
+
+```
+DB_URI=mongodb+srv://usuario:contraseña@cluster0.hhmhj.mongodb.net/nombrebasedatos?retryWrites=true&w=majority
+```
+
 
 ### Heroku
 
