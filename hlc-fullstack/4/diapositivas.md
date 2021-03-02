@@ -605,8 +605,8 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 
 ## Despliegue
 
-- **Base de datos**: [Mongo DB Atlas]()
-- **API REST**: [Heroku]()
+- **Base de datos**: [Mongo DB Atlas](https://www.mongodb.com/cloud/atlas)
+- **API REST**: [Heroku](https://heroku.com)
 
 
 ### MongoDB Atlas (I)
