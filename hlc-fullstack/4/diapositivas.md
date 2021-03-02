@@ -27,6 +27,7 @@ element: class="fragment" data-fragment-index="1"
 - ### Rutas, Controladores y Modelos
 - ### Ajustes finales
 - ### Comprobando la API
+- ### Despliegue
 
 
 
@@ -599,3 +600,14 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 ###  Postman: PUT Body
 
 ![Postman](assets/postman-put-body.png)
+
+
+
+## Despliegue
+
+- **API REST**: Heroku
+- **BD Mongo**: Mongo DB Atlas
+
+
+### 
+

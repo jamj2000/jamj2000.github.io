@@ -105,8 +105,13 @@ https://developers.google.com/web/progressive-web-apps/
 
 ### Aplicaciones Web Progresivas IV
 
-#### Ejemplo
+#### Ejemplos
 
+**tiendafronted**
+- [Demo de tiendafrontend en Vercel](https://tiendafrontend.now.sh/)
+- [Código fuente de Tiendaw en GitHub](https://github.com/jamj2000/tiendafrontend)
+
+**tiendaw**
 - [Demo de Tiendaw en Heroku](https://tiendaw.herokuapp.com/)
 - [Código fuente de Tiendaw en GitHub](https://github.com/jamj2000/tiendaw)
 
@@ -197,26 +202,7 @@ https://app-manifest.firebaseapp.com/
 
 #### Instrucciones
 
-- [Instrucciones para desplegar en Heroku+mLab la aplicación Tiendaw](https://github.com/jamj2000/tiendaw#despliegue-en-heroku--mlab)
-
-
-#### A tener en cuenta
-
-![env heroku](assets/env-heroku.png)
-
-
-#### A tener en cuenta
-
-**config.js**
-```javascript
-// El primer valor es para PRODUCCIÓN, el alternativo para DESARROLLO
-
-module.exports = {
-  ip         : process.env.HOST   || '0.0.0.0',
-  port       : process.env.PORT   || 3000,
-  db_uri     : process.env.DB_URI || 'mongodb://localhost:27017/tiendaw'
-};
-```
+- https://github.com/jamj2000/tiendafrontend#despliegue-en-la-web
 
 
 ### PWA: Instalación en PC y móvil
