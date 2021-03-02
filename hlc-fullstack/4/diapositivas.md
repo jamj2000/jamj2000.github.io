@@ -605,27 +605,37 @@ Aplicación que nos permite realizar peticiones HTTP de tipo **POST**, **GET**, 
 
 ## Despliegue
 
-- **BD Mongo**: Mongo DB Atlas
-- **API REST**: Heroku
+- **Base de datos**: [Mongo DB Atlas]()
+- **API REST**: [Heroku]()
 
 
 ### MongoDB Atlas (I)
 
+**USUARIO CON ACCESO A LA BD**
 ![mongo user](assets/mongodb-user.png)
 
 
 ### MongoDB Atlas (II)
 
+**IPs CON ACCESO A LA BD**
 ![mongo ip](assets/mongodb-ip.png)
 
 
 ### MongoDB Atlas (III)
 
-- **Clusters > CONNECT > Connect your application**
+**URI de la BD**
+**Clusters > CONNECT > Connect your application**
 ![mongo uri](assets/mongodb-uri.png)
+
+
+### MongoDB Atlas (IV)
+
+- No hay que crear la BD.
+- **La Base de Datos se crea automáticamente** según la URI que indicaremos en nuestra app (nodejs, python, ...)
 
 
 ### Heroku
 
+**VARIABLES DE ENTORNO**
 ![heroku env](assets/heroku-env.png)
 
