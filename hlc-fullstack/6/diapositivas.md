@@ -130,7 +130,7 @@ https://whatwebcando.today/
 
 ### Un pequeño listado de PWA
 
-[PWA Rocks])(https://connorjclark.github.io/pwa.rocks/)
+[PWA Rocks](https://connorjclark.github.io/pwa.rocks/)
 
 ![PWA lista](assets/pwa-list.png)
 
