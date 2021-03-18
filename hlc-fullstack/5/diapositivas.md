@@ -602,3 +602,13 @@ tree -a -I 'node_modules|.git|.svelte'
 ### Código en GitHub
 
 [jamj2000/tiendafrontend](https://github.com/jamj2000/tiendafrontend/tree/next)
+
+
+
+## EXTRA
+
+**APIs interesantes con las que practicar**
+
+- [JSON Place Holder: Fake API](https://jsonplaceholder.typicode.com/)
+- [GitHub API](https://api.github.com)
+- [Programmable Web: Directorio de APIs](https://www.programmableweb.com/apis/directory)
