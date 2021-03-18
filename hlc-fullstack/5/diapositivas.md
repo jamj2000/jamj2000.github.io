@@ -610,5 +610,5 @@ tree -a -I 'node_modules|.git|.svelte'
 **APIs interesantes con las que practicar**
 
 - [JSON Place Holder: Fake API](https://jsonplaceholder.typicode.com/)
-- [GitHub API](https://api.github.com)
+- [GitHub API: Documentación](https://docs.github.com/es/rest)
 - [Programmable Web: Directorio de APIs](https://www.programmableweb.com/apis/directory)
