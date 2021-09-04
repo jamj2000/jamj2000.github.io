@@ -63,7 +63,7 @@ Establecer **Aula Virtual** para el profesorado/alumnado del centro con **Moodle
 
 ### INFORMACIÓN Y COMUNICACIÓN
 
-Promover el uso de los canales oficiales de comunicación. Los canales oficiales son Séneca, Pasen y web oficial tanto de PC como en aplicación móvil. 
+Promover el uso de los **canales oficiales de comunicación**. Los canales oficiales son Séneca, Pasen y web oficial tanto de PC como en aplicación móvil. 
 
 
 ### PROCESOS DE ENSEÑANZA APRENDIZAJE
@@ -73,15 +73,26 @@ Incorporar plenamente el uso de las TIC al proceso de enseñanza-aprendizaje. Us
 BYOD (Bring Your Own Device)
 
 
-### Identificador Educativo Andaluz
+### Identificador Educativo Andaluz (I)
 
 - Las credenciales **IdEA** (Identificador Educativo Andaluz) de cualquier miembro de la comunidad educativa de Andalucía están formadas por nombre de usuario y clave/contraseña.
-- El usuario tiene el formato 
-- Se usa en Portal Docente, Séneca, Pasen ...
+- Ejemplo de usuario IdEA: ***mlopgar789*** 
+  - **M**aría Isabel **Lóp**ez **Gar**cía. DNI: 12456**789**
+
+
+### Identificador Educativo Andaluz (II)
+
+- **Se usa en Portal Docente, Séneca, Pasen ...**
+- Solicitar activación al Equipo Directivo.
 
 
 
 ## Portal Docente - DIPA
+
+
+### DIPA
+
+![DIPA](assets/dipa.png)
 
 
 
@@ -90,6 +101,7 @@ BYOD (Bring Your Own Device)
 
 
 ## Séneca y Pasen
+
 
 - **Séneca**: Faltas de asistencia, Evaluaciones, Mensajes.
 - **Pasen**: Información del alumno/a para las familias.
