@@ -107,7 +107,7 @@ BYOD (Bring Your Own Device)
 
 
 ## Moodle Centros (Sevilla)
-  
+
 
 ![Moodle Centros](assets/moodle-centros.png)
 
@@ -127,6 +127,7 @@ BYOD (Bring Your Own Device)
 
 ### Séneca
 
+- Introducir el horario
 - Faltas de asistencia del alumnado
 - Evaluaciones 
 - Mensajes
