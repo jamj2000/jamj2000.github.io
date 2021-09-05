@@ -107,7 +107,7 @@ BYOD (Bring Your Own Device)
 
 
 ## Moodle Centros (Sevilla)
-
+  
 
 ![Moodle Centros](assets/moodle-centros.png)
 
