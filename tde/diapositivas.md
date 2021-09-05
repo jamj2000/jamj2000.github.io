@@ -90,7 +90,17 @@ BYOD (Bring Your Own Device)
 ## Portal Docente - DIPA
 
 
+### Portal Docente
+
+- Permite consultar la nómina.
+- Permite consultar los nombramientos.
+- Permite consultar los trienios y sexenios.
+- Permite realizar numerosos trámites administrativos. 
+
+
 ### DIPA
+
+- Documento que permite firmar digitalmente en Séneca. 
 
 ![DIPA](assets/dipa.png)
 
@@ -99,14 +109,28 @@ BYOD (Bring Your Own Device)
 ## Moodle Centros (Sevilla)
 
 
+![Moodle Centros](assets/moodle-centros.png)
+
+
+### Características
+
+- **Aula Virtual** muy potente y completa.
+- Disponible para todos los centros de Andalucía.
+- Se recomienda hacer uso de ella para el proceso E/A.
+- Se puede hacer copia de seguridad de los cursos creados (**aulas**)  
+- Se puede restaurar dicha copia en cualquier plataforma Moodle.
+
+
 
 ## Séneca y Pasen
 
 
-- **Séneca**: Faltas de asistencia, Evaluaciones, Mensajes.
-- **Pasen**: Información del alumno/a para las familias.
+### Séneca
 
-- Versiones para móvil: **iSéneca**, **iPasen**
+- Faltas de asistencia del alumnado
+- Evaluaciones 
+- Mensajes
+- Versión para móvil: **iSéneca**,
 
 
 ### iSéneca
@@ -114,6 +138,12 @@ BYOD (Bring Your Own Device)
 **Versión para móvil**
 
 ![iSeneca](assets/iseneca.png)
+
+
+### Pasen
+
+- Información del alumno/a para las familias.
+- Versión para móvil:  **iPasen**
 
 
 ### iPasen
@@ -127,3 +157,20 @@ BYOD (Bring Your Own Device)
 ## Google Drive 
 
 
+### Características
+
+- Alojamiento de cualquier tipo de archivo en la nube.
+- Unos 15GB de almacenamiento.
+- Si tienes cuenta de GMail, sólo hay que activarlo.
+- También sirve como suite ofimática on-line.
+- Su uso es muy recomendable.
+
+
+
+## FIN
+
+**¡¡ Muchas gracias por vuestra atención !!**
+
+***¿Alguna pregunta?***
+
+![logo](assets/velez.png)
