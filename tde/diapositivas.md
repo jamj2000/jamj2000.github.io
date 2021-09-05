@@ -154,6 +154,18 @@ BYOD (Bring Your Own Device)
 - Se puede restaurar dicha copia en cualquier plataforma Moodle.
 
 
+### Contenido del curso (aula)
+
+- **Recursos**
+  - Etiquetas
+  - Archivos (es posible arrastrar y soltar)
+- **Actividades**
+  - Tareas
+  - Cuestionarios (exámenes)
+
+***NOTA: Existen muchos más tipos de recursos y actividades. Se muestran aquí sólo los que tienen un uso más frecuente.***
+
+
 
 ## Google Drive 
 
