@@ -22,8 +22,8 @@ element: class="fragment" data-fragment-index="1"
 
 - ### Introducción
 - ### Portal Docente - DIPA
-- ### Moodle Centros (Sevilla)
 - ### Séneca y Pasen
+- ### Moodle Centros (Sevilla)
 - ### Google Drive 
 
 <!--- Note: Nota a pie de página. -->
