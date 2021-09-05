@@ -106,22 +106,6 @@ BYOD (Bring Your Own Device)
 
 
 
-## Moodle Centros (Sevilla)
-
-
-![Moodle Centros](assets/moodle-centros.png)
-
-
-### Características
-
-- **Aula Virtual** muy potente y completa.
-- Disponible para todos los centros de Andalucía.
-- Se recomienda hacer uso de ella para el proceso E/A.
-- Se puede hacer copia de seguridad de los cursos creados (**aulas**)  
-- Se puede restaurar dicha copia en cualquier plataforma Moodle.
-
-
-
 ## Séneca y Pasen
 
 
@@ -152,6 +136,22 @@ BYOD (Bring Your Own Device)
 **Versión para móvil**
 
 ![iPasen](assets/ipasen.jpg)
+
+
+
+## Moodle Centros (Sevilla)
+
+
+![Moodle Centros](assets/moodle-centros.png)
+
+
+### Características
+
+- **Aula Virtual** muy potente y completa.
+- Disponible para todos los centros de Andalucía.
+- Se recomienda hacer uso de ella para el proceso E/A.
+- Se puede hacer copia de seguridad de los cursos creados (**aulas**)  
+- Se puede restaurar dicha copia en cualquier plataforma Moodle.
 
 
 
