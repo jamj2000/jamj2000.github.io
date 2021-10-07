@@ -80,11 +80,11 @@ element: class="fragment" data-fragment-index="1"
 
 ### Instalación
 
-#### Ubuntu 18.04
+#### Ubuntu
 
 ```bash
 apt update 
-apt install mongodb  # se instala la versión 3.6.3
+apt install mongodb  
 ``` 
 
 
@@ -119,7 +119,7 @@ mongo   --version
 ```bash
 $ mongo 
 connecting to: test
-MongoDB shell version: 3.2.21
+MongoDB shell version: 3.6.8
 ```
 
 **mongo   *nombre_bd***
@@ -127,7 +127,7 @@ MongoDB shell version: 3.2.21
 ```bash
 $ mongo local
 connecting to: local
-MongoDB shell version: 3.2.21
+MongoDB shell version: 3.6.8
 ```
 
 
