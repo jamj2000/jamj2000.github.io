@@ -266,7 +266,7 @@ systemctl  restart  apache2  # Reiniciamos Apache
 - **`make-ssl-cert`** (**muy básica**, terminal de texto)
 - **`openssl`** (**potente**, terminal de texto)
 - **`xca`** (**cómoda**, aplicación gráfica)
-- **`cerbot`** (**moderna**, permite certificados firmados por una CA)
+- **`certbot`** (**moderna**, permite certificados firmados por una CA)
 
 
 ### make-ssl-cert
