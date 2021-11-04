@@ -314,7 +314,7 @@ video/H264            | Video con codificación H.264
 
 - **IaaS**. Infraestructura como Servicio. 
 - **PaaS**. Plataforma como Servicio.
-- **SaaS**. Servicio como Servicio. 
+- **SaaS**. Software como Servicio. 
 
 [Diferencias entre IaaS, PaaS y SaaS](https://www.genbeta.com/desarrollo/entendiendo-la-nube-el-significado-de-saas-paas-y-iaas)
 
