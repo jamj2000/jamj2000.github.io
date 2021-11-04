@@ -417,8 +417,24 @@ DELETE    | DELETE      | remove
 ```
 
 
+### Incrementar o decrementar valores
+
+- `$inc`: incrementa o decrementa un valor  
+
+**Incrementar en 1 la edad**
+```bash
+> db.personas.update( { nombre: "Encarna" }, { $inc: { edad: 1 } } )
+```
+
+**Decrementar en 2 la edad**
+```bash
+> db.personas.update( { nombre: "Encarna" }, { $inc: { edad: -2 } } )
+```
+
+
 ### Modificar documentos
 
+**Otra forma de modificar documentos**
 - `save()`:  
 
 ```bash
