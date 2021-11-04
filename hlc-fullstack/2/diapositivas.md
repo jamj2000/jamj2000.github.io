@@ -399,7 +399,7 @@ DELETE    | DELETE      | remove
 ```
 
 
-### Modificar documentos
+### Modificar un documento
 
 ```bash
 > p = db.personas.findOne({ nombre: "Encarna" })
@@ -412,8 +412,14 @@ DELETE    | DELETE      | remove
 
 - `$set`: establece un valor  
 
+**Modificar un documento, el primero encontrado**
 ```bash
-> db.personas.update( { nombre: "Encarna" }, { $set: { edad: 19 } } )
+> db.personas.update( { pais: "España" }, { $set: { pais: "Francia" } } )
+```
+
+**Modificar todos los documentos encontrados**
+```bash
+> db.personas.update( { pais: "España" }, { $set: { pais: "Francia" } }, {multi: true} )
 ```
 
 
@@ -432,7 +438,7 @@ DELETE    | DELETE      | remove
 ```
 
 
-### Modificar documentos
+### Guardar documentos
 
 **Otra forma de modificar documentos**
 - `save()`:  
