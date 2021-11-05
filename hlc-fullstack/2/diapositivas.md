@@ -421,6 +421,10 @@ DELETE    | DELETE      | remove
 ```bash
 > db.personas.update( { pais: "España" }, { $set: { pais: "Francia" } }, {multi: true} )
 ```
+**o**
+```bash
+> db.personas.updateMany( { pais: "España" }, { $set: { pais: "Francia" } } )
+```
 
 
 ### Incrementar o decrementar valores
