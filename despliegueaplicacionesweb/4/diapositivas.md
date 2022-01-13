@@ -143,8 +143,8 @@ anonymous_enable=YES
 # Directorio por defecto
 anon_root=/srv/ftp/
 
-# Puede acceder sólo a archivos legibles por todo el mundo
-anon_world_readable_only=YES
+# Permitir conexión cifrada para usuario anonimo
+allow_anon_ssl=YES
 ```
 
 
@@ -232,6 +232,4 @@ rsa_private_key_file=/etc/ssl/private/vsftpd.pem
 ```bash
 # FTP explícito (FTPES)
 implicit_ssl=NO
-listen_port=21
-require_ssl_reuse=NO
 ```
