@@ -62,7 +62,7 @@ element: class="fragment" data-fragment-index="1"
   - **ftp**  (terminal)
   - gftp
   - **filezilla**
-  - navegador web (`ftp://servidor`)
+  - ~~navegador web (`ftp://servidor`)~~
 - Servidores
   - **vsftpd**
   - proftpd
