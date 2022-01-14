@@ -219,7 +219,8 @@ ssl_sslv3=YES
 
 # Cifrado. 
 # El cifrado (DES-CBC3-SHA) por defecto no es soportado por filezilla.
-ssl_ciphers=DEFAULT
+# ssl_ciphers=DEFAULT
+ssl_ciphers=HIGH
 
 # Se especifica la ubicación del certificado generado y la clave priva
 rsa_cert_file=/etc/ssl/private/vsftpd.pem
