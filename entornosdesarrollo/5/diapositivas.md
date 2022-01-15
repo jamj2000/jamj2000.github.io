@@ -148,7 +148,7 @@ TIPOS DE RELACIONES
 - La clase "padre" es contenedor no exclusivo de la clase "hija".
 - **Si eliminamos la instancia de la clase "padre" NO se elimina la instancia de la clase "hija"**.
 
-![Agregación](assets/shared-aggregation.png)
+![Agregación](assets/agregacion.png)
 
 Note: Aquí los términos "padre" e "hija" no tienen ninguna relación con la herencia.
 
@@ -158,9 +158,7 @@ Note: Aquí los términos "padre" e "hija" no tienen ninguna relación con la he
 - La clase "padre" es contenedor exclusivo de la clase "hija".
 - **Si eliminamos la instancia de la clase "padre" SÍ se elimina la instancia de la clase "hija"**.
 
-![Composición](assets/class-composition.png)
-
-![Composición opcional](assets/class-composition-optional.png)
+![Composición](assets/composicion.png)
 
 Note: Aquí los términos "padre" e "hija" no tienen ninguna relación con la herencia.
 
