@@ -385,7 +385,7 @@ tree
 ### Principales novedades
 
 - El framework Sapper no tendrá continuación. Se pretende unificar el proceso de desarrollo.
-- Se utiliza **snowpack** en lugar de **rollup** como empaquetador.
+- Se utiliza **vite** en lugar de **rollup** como empaquetador.
 - No es necesario usar *routing*. En lugar de ello se dispone de una ruta **$layout.svelte**.
 - Nueva forma de crear un proyecto.
 - Estructura de carpetas más coherente.
