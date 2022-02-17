@@ -1,108 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-	<title>Tienda Frontend</title>
-	<link rel="icon" href="/favicon.png">
-	<meta charset="utf-8">
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
 
-	<meta name="description" content="Fullstack example">
-	<meta name="keywords" content="Frontend, PWA, Svelte, JavaScript">
-	<meta name="author" content="José Antonio Muñoz Jiménez">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tienda Fronteend</title>
 
-	<!-- PWA: Para habilitar Progressive Web Application -->
-	<link rel="manifest" href="manifest.json">
+	<link rel='icon' type='image/png' href='/tiendafrontend/favicon.png'>
+	<link rel='stylesheet' href='/tiendafrontend/global.css'>
+	<link rel='stylesheet' href='/tiendafrontend/build/bundle.css'>
 
-	<!-- PWA: Añadir a pantalla de inicio para Safari en iOS -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="Tienda">
-	<link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
-	<meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
-	<meta name="msapplication-TileColor" content="#fdebc9">
-
-	<!-- PWA: Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#fdebc9">
-
-       
-
-<style data-svelte>undefined</style>
-
-<link rel="modulepreload" href="/_app/index.js">
-			<link rel="modulepreload" href="/_app/start.js">
-			<link rel="stylesheet" href="/_app/index.css">
-			<link rel="stylesheet" href="/_app/start.css">
-
-
-		<script type="module">
-			import { start } from "/./_app/tiendafrontend.es.js";
-			start({
-				target: document.querySelector("#svelte"),
-				host: location.host,
-				paths: {"base":"","assets":"/."},
-				status: 200,
-				error: null,
-				session: void 0
-			});
-		</script>
+	<script defer src='/tiendafrontend/build/bundle.js'></script>
 </head>
 
 <body>
-  <noscript>
-	<p> Este sitio necesita Javascript para funcionar. </p>
-  </noscript>
-  <script>
-	// Si está soportado serviceWorker por el navegador
-	if ('serviceWorker' in navigator) {
-		window.addEventListener('load', () => {
-			navigator.serviceWorker
-				.register('./service-worker.js')
-				.then(reg => console.log('[Service Worker] * Registrado.'))
-				.catch(err => console.log(`[Service Worker] * Error: ${err}`));
-		});
-	}
-  </script>
-
-  <script src="service-worker.js"></script> <!-- Gestión de eventos del ServiceWorker -->
-
-  <div id="svelte">
-
-
-<main><nav class="svelte-12gbzok"><ul class="menu svelte-12gbzok"><li class="logo svelte-12gbzok"><a href="/" class="svelte-12gbzok"><span class="inicio svelte-12gbzok">🛒</span></a></li>
-    <li class="item active svelte-12gbzok"><a href="/articulos" class="svelte-12gbzok"><span class="articulos svelte-12gbzok">🎁</span></a></li>
-    <li class="item active svelte-12gbzok"><a href="/clientes" class="svelte-12gbzok"><span class="clientes svelte-12gbzok">👥</span></a></li></ul></nav>
-
-
-  <div class="container svelte-j83lgu"><h1 class="svelte-j83lgu">Tienda Frontend</h1>
-<p class="svelte-j83lgu"><small><b>Progressive Web App (PWA)</b></small></p>
-<p class="svelte-j83lgu"><small>Backend en
-	<a href="https://tiendabackend.herokuapp.com">https://tiendabackend.herokuapp.com
-	</a></small></p>
-<p class="svelte-j83lgu">Esta SPA (Single Page Application) ofrece 3 opciones:</p>
-
-<div class="bloque svelte-j83lgu"><a><div class="resumen svelte-j83lgu"><span class="opcion svelte-j83lgu">🛒 Inicio</span>
-	  <span class="descripcion svelte-j83lgu">Esta página de información.</span></div></a>
-
-  <a href="/articulos"><div class="resumen svelte-j83lgu"><span class="opcion svelte-j83lgu">🎁 Artículos</span>
-	  <span class="descripcion svelte-j83lgu">Operaciones CRUD de artículos en una BD.
-	  </span></div></a>
-
-  <a href="/clientes"><div class="resumen svelte-j83lgu"><span class="opcion svelte-j83lgu">👥 Clientes</span>
-	  <span class="descripcion svelte-j83lgu">Operaciones CRUD de clientes en una BD.
-	  </span></div></a></div>
-<p class="svelte-j83lgu"><small><b>Código fuente en
-	  <a href="https://github.com/jamj2000/tiendafrontend">https://github.com/jamj2000/tiendafrontend
-	  </a></b></small></p>
-
-</div>
-	</main>
-<div id="OK">😊</div>
-<div id="KO">😟</div>
-
-
-
-	
-</div>
-
 </body>
 </html>
