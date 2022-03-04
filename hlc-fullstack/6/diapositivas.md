@@ -156,6 +156,8 @@ https://whatwebcando.today/
 
 https://app-manifest.firebaseapp.com/
 
+https://www.simicart.com/manifest-generator.html/
+
 
 ### PWA: App Shell
 
