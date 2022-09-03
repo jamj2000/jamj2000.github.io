@@ -22,6 +22,7 @@ element: class="fragment" data-fragment-index="1"
 
 
 - ### Introducción
+- ### Wifi del Centro - Andared_Corporativo
 - ### Portal Docente - DIPA
 - ### Séneca y Pasen
 - ### Moodle Centros (Sevilla)
@@ -64,14 +65,14 @@ Establecer **Aula Virtual** para el profesorado/alumnado del centro con **Moodle
 
 ### INFORMACIÓN Y COMUNICACIÓN
 
-Promover el uso de los **canales oficiales de comunicación**. Los canales oficiales son Séneca, Pasen y web oficial tanto de PC como en aplicación móvil. 
+Promover el uso de los **canales oficiales de comunicación**. 
+Los canales oficiales son **Séneca**, **Pasen** y **Web oficial**. 
 
 
 ### PROCESOS DE ENSEÑANZA APRENDIZAJE
 
-Incorporar plenamente el uso de las TIC al proceso de enseñanza-aprendizaje. Uso de portátiles, proyectores, ... 
-
-BYOD (Bring Your Own Device)
+Incorporar plenamente el uso de las TIC al proceso de enseñanza-aprendizaje. 
+Uso de portátiles (tenemos 5 carritos), proyectores, ... 
 
 
 ### Identificador Educativo Andaluz (I)
@@ -83,8 +84,33 @@ BYOD (Bring Your Own Device)
 
 ### Identificador Educativo Andaluz (II)
 
-- **Se usa en Portal Docente, Séneca, Pasen ...**
-- Solicitar activación al Equipo Directivo.
+Se usa en 
+
+- **Andared_Corporativo**
+- **Portal Docente**
+- **Séneca**
+- **Pasen**
+- ...
+
+
+
+## Wifi del Centro - Andared_Corporativo
+
+
+### Andared_Corporativo (I)
+
+- **A final de Septiembre de 2022 se da de baja la wifi Andared**
+- Se sustituye por la wifi **Andared_Corporativo**
+- Es obligatoria la autenticación con credendiales IdEA
+- El alumnado podrá usar 1 dispositivo como máximo
+- **El profesorado podrá usar 3 dispositivos como máximo**.
+
+
+### Andared_Corporativo (II)
+
+- Guía de conexión disponible en Sala del Profesorado en Plataforma Moodle.
+
+![Andared_Corporativo](assets/andared_corporativo.png)
 
 
 
