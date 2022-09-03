@@ -22,7 +22,7 @@ element: class="fragment" data-fragment-index="1"
 
 
 - ### Introducción
-- ### Wifi del Centro - Andared_Corporativo
+- ### Wifi Andared_Corporativo
 - ### Portal Docente - DIPA
 - ### Séneca y Pasen
 - ### Moodle Centros (Sevilla)
@@ -94,7 +94,7 @@ Se usa en
 
 
 
-## Wifi del Centro - Andared_Corporativo
+## Wifi Andared_Corporativo
 
 
 ### Andared_Corporativo (I)
