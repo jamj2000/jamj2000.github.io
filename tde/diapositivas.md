@@ -16,6 +16,7 @@ element: class="fragment" data-fragment-index="1"
 
 ---
 <p>José Antonio Muñoz Jiménez (coordinador TDE)</p>
+<p>Antonio José Negro Lozano (coordinador CompDigEdu)</p>
 **tic@iesluisvelez.org**
 <p></p>
 <p><small> IES Luis Vélez de Guevara - Écija </small></p>
@@ -26,7 +27,7 @@ element: class="fragment" data-fragment-index="1"
 - ### Portal Docente - DIPA
 - ### Séneca y Pasen
 - ### Moodle Centros (Sevilla)
-- ### Google Drive 
+- ### Otras plataformas 
 
 <!--- Note: Nota a pie de página. -->
 
@@ -37,9 +38,10 @@ element: class="fragment" data-fragment-index="1"
 
 ### TRANSFORMACIÓN DIGITA EDUCATIVA
 
-- Implantada en el curso 2020/21 en toda Andalucía.
+- Implantada en el curso 2020-21 en toda Andalucía.
 - Sustituye a Centros TIC y Escuela 2.0. 
-- Pretende facilitar la adquisición y desarrollo de competencias digitales. 
+- **Pretende facilitar la adquisición y desarrollo de competencias digitales.** 
+- A partir del curso 2022-23 se crea también la figura del Coordinador CompDigEdu.
 
 
 ### COMPETENCIA DIGITAL
@@ -108,7 +110,7 @@ Se usa en
 
 ### Andared_Corporativo (II)
 
-- Guía de conexión disponible en Sala del Profesorado en Plataforma Moodle.
+- Guía de conexión disponible en Sala del Profesorado en Plataforma Moodle Centros.
 
 ![Andared_Corporativo](assets/andared_corporativo.png)
 
@@ -172,7 +174,7 @@ Se usa en
 
 Asuntos **administrativos**.
 
-Cursos de Claustro, Tutorías, TDE, ...
+Cursos de Claustro, Tutorías, ...
 
 
 ## Moodle Centros (Sevilla)
@@ -181,7 +183,7 @@ Cursos de Claustro, Tutorías, TDE, ...
 
 Asuntos **académicos**.
 
-Cursos de ESO, Bachillerato y FP.
+Cursos de ESO, Bachillerato y FP (incluida FCT).
 
 
 ![Moodle Centros](assets/moodle-centros.png)
@@ -209,16 +211,43 @@ Cursos de ESO, Bachillerato y FP.
 
 
 
-## Google Drive 
+## Otras plataformas 
 
 
-### Características
+### GSuite y Office365
 
-- Alojamiento de cualquier tipo de archivo en la nube.
-- Unos 15GB de almacenamiento.
-- Si tienes cuenta de GMail, sólo hay que activarlo.
-- También sirve como suite ofimática on-line.
-- Su uso es muy recomendable.
+- La Junta de Andalucia ha realizado acuerdos con 
+  - Google (plataforma GSuite). **google.com**
+  - Microsoft (plataforma Office 365). **office.com**
+- Estos acuerdos se renuevan cada cierto tiempo.
+- Existe riesgo de discontinuación, si no se renuevan los acuerdos.
+- El profesorado puede gestionar su cuenta en Séneca -> Utilidades -> Cuentas corporativas.
+
+
+### GSuite (google.com)
+
+- Usuario:  *usuario_idea* **@g.educaand.es**
+- Contraseña: *contraseña_idea*
+
+**Aplicaciones más interesantes**
+
+- Cuenta de correo
+- Suite ofimática online
+- Drive (almacenamiento en la nube)
+- Meet (videoconferencias)
+
+
+### Office 365 (office.com)
+
+- Usuario:  *usuario_idea* **@m.educaand.es**
+- Contraseña: *contraseña_idea*
+
+**Aplicaciones más interesantes**
+
+- Cuenta de correo
+- Suite ofimática online
+- OneDrive (almacenamiento en la nube)
+- Teams (videoconferencias)
 
 
 
