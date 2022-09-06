@@ -236,7 +236,7 @@ Cursos de ESO, Bachillerato y FP (incluida FCT).
 ### GSuite (google.com)
 
 - Credenciales:
-  - *usuario_IdDA* **@g.educaand.es**
+  - *usuario_IdEA* **@g.educaand.es**
   - *contraseña_IdEA*
 
 **Aplicaciones más interesantes**
@@ -250,7 +250,7 @@ Cursos de ESO, Bachillerato y FP (incluida FCT).
 ### Office 365 (office.com)
 
 - Credenciales:
-  - *usuario_IdDA* **@m.educaand.es**
+  - *usuario_IdEA* **@m.educaand.es**
   - *contraseña_IdEA*
 
 **Aplicaciones más interesantes**
