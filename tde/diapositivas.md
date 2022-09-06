@@ -178,6 +178,8 @@ Asuntos **administrativos**.
 
 Cursos de Claustro, Tutorías, ...
 
+Plataforma a extinguir.
+
 
 ## Moodle Centros (Sevilla)
 
