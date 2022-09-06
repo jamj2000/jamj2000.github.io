@@ -67,7 +67,7 @@ element: class="fragment" data-fragment-index="1"
 
 ### ORGANIZACIÓN DEL CENTRO
 
-Establecer **Aula Virtual** para el profesorado/alumnado del centro con **Moodle Centros**.
+Fomentar el uso del **Aula Virtual** para el profesorado/alumnado del centro con **Moodle Centros**.
 
 
 ### INFORMACIÓN Y COMUNICACIÓN
