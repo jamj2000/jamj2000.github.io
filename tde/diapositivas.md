@@ -92,7 +92,9 @@ Se usa en
 - **Portal Docente**
 - **Séneca**
 - **Pasen**
-- ...
+- **Moodle Centros**
+- **GSuite**
+- **Office 365**
 
 
 
@@ -239,8 +241,8 @@ Cursos de ESO, Bachillerato y FP (incluida FCT).
 
 ### Office 365 (office.com)
 
-- Usuario:  *usuario_idea* **@m.educaand.es**
-- Contraseña: *contraseña_idea*
+- Usuario:  *usuario_IdDA* **@m.educaand.es**
+- Contraseña: *contraseña_IdEA*
 
 **Aplicaciones más interesantes**
 
