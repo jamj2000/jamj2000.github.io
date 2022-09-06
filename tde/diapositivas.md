@@ -10,14 +10,19 @@ element: class="fragment" data-fragment-index="1"
 
 ## Transformación Digital Educativa
 
+<p>José Antonio Muñoz Jiménez (coordinador TDE)</p>
+<p>Antonio José Negro Lozano (coordinador CompDigEdu)</p>
+
+---
+
 **www.iesluisvelez.org**
 
 **aula.iesluisvelez.org**
 
 ---
-<p>José Antonio Muñoz Jiménez (coordinador TDE)</p>
-<p>Antonio José Negro Lozano (coordinador CompDigEdu)</p>
+
 **tic@iesluisvelez.org**
+
 <p></p>
 <p><small> IES Luis Vélez de Guevara - Écija </small></p>
 
