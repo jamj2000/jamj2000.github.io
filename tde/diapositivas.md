@@ -212,6 +212,7 @@ Cursos de ESO, Bachillerato y FP (incluida FCT).
 - **Recursos**
   - Etiquetas
   - Archivos (es posible arrastrar y soltar)
+  - URLs
 - **Actividades**
   - Tareas
   - Cuestionarios (exámenes)
@@ -241,9 +242,9 @@ Cursos de ESO, Bachillerato y FP (incluida FCT).
 
 **Aplicaciones más interesantes**
 
-- Cuenta de correo
-- Suite ofimática online
+- GMail (cuenta de correo)
 - Drive (almacenamiento en la nube)
+- Suite ofimática online
 - Meet (videoconferencias)
 
 
@@ -255,9 +256,9 @@ Cursos de ESO, Bachillerato y FP (incluida FCT).
 
 **Aplicaciones más interesantes**
 
-- Cuenta de correo
-- Suite ofimática online
+- Outlook (cuenta de correo)
 - OneDrive (almacenamiento en la nube)
+- Suite ofimática online
 - Teams (videoconferencias)
 
 
