@@ -117,7 +117,7 @@ Se usa en
 
 ### Andared_Corporativo (II)
 
-- Guía de conexión disponible en Sala del Profesorado en Plataforma Moodle Centros.
+- Guía de conexión disponible en Plataforma Moodle Centros.
 
 ![Andared_Corporativo](assets/andared_corporativo.png)
 
