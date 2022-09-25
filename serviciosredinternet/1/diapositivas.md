@@ -209,6 +209,9 @@ element: class="fragment" data-fragment-index="1"
 - Cuando una aplicación (cliente) quiere **resolver** un nombre (que no aparece en el fichero local), pregunta a un servidor de DNS.
 - El servidor investiga por su cuenta y devuelve la IP pedida.
 
+
+### Tipos de resoluciones (III)
+
 ![resolución](assets/resolucion.png)
 
 
@@ -222,7 +225,11 @@ https://learn.microsoft.com/es-es/windows-server/identity/ad-ds/plan/reviewing-d
 
 ###  Tipos de consultas (II)
 
-En una búsqueda recursiva un servidor DNS se comunica con otros servidores DNS para buscar una dirección IP y devolverla al cliente. Esto se diferencia de una consulta de DNS iterativa, en la que el cliente se comunica directamente con cada servidor DNS implicado en la búsqueda.
+- En una búsqueda recursiva un servidor DNS se comunica con otros servidores DNS para buscar una dirección IP y devolverla al cliente. 
+- Esto se diferencia de una consulta de DNS iterativa, en la que el cliente se comunica directamente con cada servidor DNS implicado en la búsqueda.
+
+
+###  Tipos de consultas (III)
 
 ![resolución](assets/consulta-recursiva.png)
 
@@ -280,13 +287,7 @@ Non-authoritative answer:
 ```
 
 
-### nslookup (I)
-#### Ejemplo de uso
-
-![nslookup root domain](assets/nslookup-root.png)
-
-
-### nslookup (III)
+### nslookup (II)
 #### Ejemplo de uso
 ```sh
 # Consulta inversa de IPs 1.1.1.1 y 8.8.8.8
