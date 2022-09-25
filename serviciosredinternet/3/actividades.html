@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<title>Actividades - Servicios de Red e Internet - Diseño y realización de pruebas</title>
+<meta charset="utf-8">
+
+<!-- themes: 
+amelia
+bootstrap-responsive
+bootstrap
+cerulean
+cyborg
+journal
+readable
+simplex
+slate
+spacelab
+spruce
+superhero
+united
+-->
+
+
+<xmp theme="united" style="display:none;">
+ ![Servicios de Red e Internet](http://jamj2000.github.io/entornosdesarrollo/entornosdesarrollo.png)
+
+ [![cc-by-sa](http://jamj2000.github.io/entornosdesarrollo/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
+ IES Luis Vélez de Guevara - Écija - Spain
+
+<hr>
+
+<a name="indice"></a>
+# Índice
+
+#### [Apuntes](#apuntes)
+#### [Introducción](#introduccion)
+#### [Pruebas](#pruebas)
+#### [Integración](#integracion)
+#### [Calidad](#calidad)
+
+
+
+<pre>
+</pre>
+
+
+<pre>
+</pre>
+
+#<a name="apuntes"></a>[Apuntes](#indice)
+1. Elabora los apuntes de esta Unidad y guárdalos en GitHub en un repositorio llamado 'Apuntes_ED'. 
+<hr>
+
+<pre>
+
+
+</pre>
+
+#<a name="introduccion"></a>  [Introducción](#indice)
+
+1. Según tú, ¿a qué crees que nos referimos cuando hablamos de pruebas del software?
+<hr>
+
+1. Según tú, ¿qué finalidad crees que se persigue cuando se hacen pruebas de software?
+<hr>
+
+1. Según tú, ¿qué tipos de pruebas de software crees que existen?
+<hr>
+
+1. Busca una definición del término Framework. Expresa dicha definición con tus palabras.
+<hr>
+
+<pre>
+
+
+</pre>
+
+#<a name="pruebas"></a>  [Pruebas](#indice)
+
+1. ¿Qué diferencia existe entre las pruebas estáticas y dinámicas?
+
+  Puedes consultar: https://es.wikipedia.org/wiki/Pruebas_de_software
+<hr>
+
+1. ¿Qué diferencia existe entre las pruebas de caja negra y caja blanca?
+
+  Puedes consultar: https://es.wikipedia.org/wiki/Pruebas_de_software
+<hr>
+
+1. ¿Qué diferencia existe entre las pruebas funcionales y no funcionales?
+
+  Puedes consultar: https://es.wikipedia.org/wiki/Pruebas_de_software
+<hr>
+
+1. Nombra al menos 4 pruebas funcionales.
+<hr>
+
+1. Nombra al menos 4 pruebas no funcionales.
+<hr>
+
+1. ¿Qué són las pruebas unitarias o pruebas de unidad?
+<hr>
+
+1. ¿Qué són las pruebas de regresión?
+<hr>
+
+1. ¿Qué son las pruebas de integración?
+<hr>
+
+1. ¿Qué son las pruebas de humo?
+<hr>
+
+1. ¿Qué son las pruebas alpha?
+<hr>
+
+1. ¿Qué son las pruebas beta?
+<hr>
+
+1. ¿Qué son las pruebas de aceptación?
+<hr>
+
+1. Instala el plugin Gradle para Netbeans.
+<hr>
+
+1. Crea un proyecto nuevo de tipo _`Single Gradle Project`_ y nombre _`empleado`_, que contenga la clase principal _`Empleado`_. 
+<hr>
+
+1. En _`Sources Packages`_ edita el código de la clase _`Empleado`_ y en _`Test Packages`_ edita el código de la clase _`EmpleadoTest`_. 
+
+  Sigue los pasos indicados en el siguiente tutorial:
+  - https://www.discoduroderoer.es/como-hacer-una-aplicacion-de-prueba-con-junit/
+
+  NOTA: En JUnit, el método con anotación _`@BeforeClass`_ debe ser estático y, por tanto, las variables y objetos de los que haga uso también deben serlo.
+<hr>
+
+1. Pulsa __`Alt+F6`__ para construir y ejecutar las pruebas. 
+
+  NOTA: Existen muchas otras tareas que pueden realizarse en Gradle. Sin embargo, la tarea `run` fallará puesto que no existe método `main`.
+<hr>
+
+1. Clona el repositorio https://github.com/jamj2000/DAW1-ED-Pruebas-Ejemplo1 en tu equipo local.
+<hr>
+ 
+1. Comprueba que en el archivo `build.gradle`  aparece la línea:
+
+  ```gradle
+  apply plugin: "jacoco"
+  ```
+<hr>
+
+1. Comprueba que en el archivo `build.gradle`  aparecen también las líneas:
+
+  ```gradle
+  jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+  }
+  ```
+<hr>
+
+1. Ejecuta el comando `gradle tasks` para ver las tareas disponibles.
+<hr>
+
+1. Ejecuta el comando `gradle test` para construir y pasar los tests.
+<hr>
+
+1. Ejecuta el comando `gradle jacocoTestReport` para generar informe de cobertura de código.  
+  Para visualizar dicho informe ejecuta `firefox  build/jacocoHtml/index.html`.
+<hr>
+
+1. Modifica y añade los tests necesarios para que la cobertura de código sea completa.
+<hr>
+
+1. Modifica el código fuente de la clase `Utilidades.java` para solucionar los errores que aparecen y superar los tests.
+<hr>
+
+
+<pre>
+
+
+</pre>
+
+#<a name="integracion"></a> [Integración](#indice)
+
+
+1. ¿Indica al menos 3 servicios web de Integración Continua?
+<hr>
+
+1. En GitHub, haz un fork del repositorio https://github.com/jamj2000/DAW1-ED-Pruebas-Ejemplo1.
+<hr>
+
+1. Edita el archivo `.travis.yml` de tu repositorio bifurcado, en caso de ser necesario.
+<hr>
+
+1. Regístrate con tu cuenta de GitHub en TravisCI (https://travis-ci.org/)
+<hr>
+
+1. En TravisCI, añade tu repositorio remoto (bifurcado) para construir y realizar los tests en dicho sitio web. 
+<hr>
+
+1. En TravisCI, haz click en el ___badge___ o insignia que aparece en la parte superior derecha, y copia el código en formato Markdown.
+<hr>
+
+1. En GitHub, en tu repositorio bifurcado, copia el código Markdown anterior en el archivo README.md.
+<hr>
+
+1. [__Opcional. Vale por 1 pto en la nota de esta Unidad__]  
+  En una plataforma Linux (preferiblemente Ubuntu), realiza la instalación de un servicio de Integración Continua basado en Jenkins.   
+  Explica los pasos seguidos y elabora un documento PDF donde quede reflejado todo el proceso y las pruebas que has realizado.
+
+  Deberas seguir los pasos indicados en el enlace de instrucciones que aparece a continuación.  
+  INSTRUCCIONES: https://yeiei.net/es/como-construir-un-entorno-de-integracion-continua-con-jenkins-y-docker/
+<hr>
+
+
+
+<pre>
+
+
+</pre>
+
+
+#<a name="calidad"></a> [Calidad](#indice)
+
+
+1. ¿Qué significan las siglas QA y QC? ¿Qué diferencia existe entre ellas?
+<hr>
+
+1. Explica brevemente cada uno de los factores de calidad que aparecen en las diapositivas.
+<hr>
+
+
+<pre>
+
+
+</pre>
+
+
+
+
+</xmp>
+
+<script src="http://jamj2000.github.io/strapdown/strapdown.js"></script>
+</html>

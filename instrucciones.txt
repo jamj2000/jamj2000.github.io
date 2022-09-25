@@ -1,0 +1,4 @@
+sudo apt  install ruby-bundler
+sudo bundle install
+sudo gem update github-pages
+bundle exec jekyll serve  ( localhost:4000 )
