@@ -11,7 +11,7 @@ element: class="fragment" data-fragment-index="1"
 
 ## Servicios de Red e Internet
 ---
-![Servicios de Red e Internet](http://jamj2000.github.io/entornosdesarrollo/entornosdesarrollo.png)
+![Servicios de Red e Internet](http://jamj2000.github.io/serviciosredinternet/serviciosredinternet.png)
 <p><small> IES Luis Vélez de Guevara - Écija - Spain </small></p>
 
 
