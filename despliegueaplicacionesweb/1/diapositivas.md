@@ -163,41 +163,17 @@ https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_hipertexto
 [Lista de códigos de estado (en inglés)](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 
-### Cabeceras de la petición
+### Cabeceras
 
- Cabecera       |     Ejemplo                   |  Descripción 
-----------------|-------------------------------|--------------
-Accept	        | Accept: text/html	            | Tipos de contenido que se admiten como respuesta.
-Accept-Charset	| Accept-Charset: utf-8	        | Juegos de caracteres admitidos.
-Accept-Encoding	| Accept-Encoding: gzip, deflate| Lista de codificaciones (compresión) admitidas.
-
-
-### Cabeceras de la petición
-
- Cabecera       |     Ejemplo                   |  Descripción 
-----------------|-------------------------------|--------------
-Accept-Language	| Accept-Language: en-US	    | Lista de idiomas admitidos como respuesta.
-Host            | Host: en.wikipedia.org:8080   | Nombre de dominio del servidor (:puerto si es distinto de 80)
-User-Agent      |User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) | Agente del usuario.
-...             | ...                           | ...
-
-
-### Cabeceras de la respuesta
-
- Cabecera       |     Ejemplo                   |  Descripción 
-----------------|-------------------------------|--------------
-Content-Encoding| Content-Encoding: gzip        | Codificiación de los datos enviados.
-Content-Language| Content-Language: es          | Idioma en el que está el contenido.
-Content-Type    | Content-Type: text/html; charset=utf-8 | Tipo MIME del contenido.
-
-
-### Cabeceras de la respuesta
-
- Cabecera       |     Ejemplo                   |  Descripción 
-----------------|-------------------------------|--------------
-Server          | Server: Apache/2.4.1 (Unix)   | Servidor web.
-Status          | Status: 200 OK                | Código de estado.
-...             | ...                           | ...
+ de Petición                    |  de Respuesta
+--------------------------------|--------------
+ Host: en.wikipedia.org:8080    |
+ Accept: text/html	            |
+ Accept-Charset: utf-8	        | Content-Type: text/html; charset=utf-8
+ Accept-Encoding: gzip, deflate | Content-Encoding: gzip
+ Accept-Language: es-ES         | Content-Language: es 
+ User-Agent: Mozilla/5.0 ...    | Server: Apache/2.4.1 (Unix) 	
+ ...                            | ...
 
 
 ### Tipos MIME 
@@ -208,7 +184,7 @@ Tipo MIME             | Tipo de contenido
 text/plain            | Texto plano
 text/html             | Texto en formato HTML
 text/css              | Hoja de estilo en cascada
-application/javascript| Código javascript
+text/javascript       | Código javascript
 application/json      | Datos en formato JSON
 image/jpeg            | Imagen en formato JPEG
 image/png             | Imagen en formato PNG
