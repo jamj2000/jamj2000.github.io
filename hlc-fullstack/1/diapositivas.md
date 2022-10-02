@@ -211,7 +211,7 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 
 
 
-## Viajando al futuro (WebAssembly)
+## Viajando al futuro, que ya es presente
 
 ![Wasm](assets/wasm.png)
 
