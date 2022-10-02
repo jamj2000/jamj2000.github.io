@@ -208,3 +208,27 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 ### Bases de datos no relacionales (noSQL)
 
 ![BBDD relacionales](assets/noSQL.png)
+
+
+
+## Viajando al futuro (WebAssembly)
+
+![Wasm](assets/wasm.png)
+
+- [WebAssembly](https://es.wikipedia.org/wiki/WebAssembly)
+
+
+### WebAssembly (Wasm)
+
+- Formato binario pequeño y rápido que promete un rendimiento casi nativo para las aplicaciones web.
+- Los principales navegadores son compatibles con WebAssembly.
+- Los desarrolladores escriben en el lenguaje de su elección (C, C++, ...), que luego se compila en bytecode WebAssembly.
+- Para casos de uso intensivo de rendimiento, como juegos, transmisión de música, edición de vídeo y aplicaciones CAD.
+- [WebAssembly explicado](https://www.ciospain.es/liderazgo--gestion-ti/que-es-webassembly-la-plataforma-web-de-proxima-generacion-explicada)
+
+
+### Apps en Wasm
+
+![Autocad web](assets/autocad-webassembly.jpg)
+
+- [Algunas aplicaciones desarrolladas para WebAssembly](https://www.campusmvp.es/recursos/post/8-proyectos-espectaculares-que-utilizan-webassembly.aspx)
