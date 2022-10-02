@@ -24,8 +24,8 @@ element: class="fragment" data-fragment-index="1"
 - ### Introducción
 - ### Tecnologías para el backend
 - ### Tecnologías para el frontend
-- ### MVC: Modelo-Vista-Controlador
-- ### SPA: Single Page Application 
+- ### Tecnologías javascript Fullstack
+- ### MVC o SPA 
 - ### Persistencia de los datos
 
 <!--- Note: Nota a pie de página. -->
@@ -117,8 +117,6 @@ Note: Al final de línea se muestra la versión más relevante actualmente y el 
 
 
 ### Lenguajes del lado del cliente
-
-- **Javascript**: 
 
 ![Desarrollo Frontend](assets/javascript.png)
 
