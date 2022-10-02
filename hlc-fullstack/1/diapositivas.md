@@ -100,13 +100,11 @@ Note: Al final de línea se muestra la versión más relevante actualmente y el 
 ### Frameworks del lado servidor 
 
 - PHP: **Laravel**, **Symfony**.
-- JSP: **Spring**, **Struts**.
+- JSP, Java: **Spring**.
 - ASP: **ASP.NET**, **ASP.NET Core**.
 - Ruby: **Ruby on rails**.
 - Python: **Django**.
 - Node.js: **Express**. 
-
-https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador 
 
 
 ### Resumen
@@ -122,16 +120,18 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 
 - **Javascript**: 
 
-![Desarrollo Backend](assets/javascript.png)
+![Desarrollo Frontend](assets/javascript.png)
 
 
 ### Frameworks del lado cliente 
 
-- **React**
 - **Angular**
+- **React**
 - **Vue**
+- **Svelte** (compilador)
 
-![Desarrollo Backend](assets/react-angular-vue.png)
+
+![Desarrollo Frontend](assets/frontend-frameworks.png)
 
 
 ### Resumen
@@ -140,29 +140,45 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 
 
 
-## MVC
+## Tecnologías javascript Fullstack
 
-#### Modelo-Vista-Controlador
+
+### Frameworks para servidor y cliente 
+
+- **Universal**
+- **Next**
+- **Nuxt**
+- **SvelteKit**
+
+
+![Desarrollo Frontend](assets/fullstack-frameworks.png)
+
+
+
+## MVC o SPA
+
+
+### Modelo-Vista-Controlador
 
 ![Modelo Vista Controlador](assets/MVC.png)
 
 
-## MVC
-
-#### Modelo-Vista-Controlador
+### Modelo-Vista-Controlador
 
 - patrón de diseño arquitectónico
 - se ejecuta casi toda la lógica de aplicación en el backend. 
 - el servidor sirve múltiples vistas, cada vista es una página HTML. 
 - es una aplicación de múltiples páginas (MPA). 
 
+https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador 
 
-## Single Page Application
+
+### Single Page Application
 
 ![Aplicación de Página Única](assets/SPA.png)
 
 
-## Single Page Application
+### Single Page Application
 
 - se ejecuta gran parte de la lógica de la aplicación en el frontend. 
 - el servidor sirve datos mediante una API web. 
@@ -171,7 +187,7 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
   - **JSON** 
 
 
-## MVC vs SPA
+### MVC vs SPA
 
 ![MVC vs SPA](assets/mvc-spa.png)
 
@@ -188,25 +204,7 @@ https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
 
 ### Bases de datos relacionales
 
-- SQL Server 
-- Oracle
-- MySQL
-- MariaDB
-- PostgreSQL
-- SQLite
-
-
-### Bases de datos relacionales
-
 ![BBDD relacionales](assets/SQL.png)
-
-
-### Bases de datos no relacionales (noSQL)
-
-- Cassandra
-- MongoDB
-- Redis
-- CouchDB
 
 
 ### Bases de datos no relacionales (noSQL)
