@@ -184,7 +184,7 @@ Tipo MIME             | Tipo de contenido
 text/plain            | Texto plano
 text/html             | Texto en formato HTML
 text/css              | Hoja de estilo en cascada
-text/javascript       | Código javascript
+application/javascript| Código javascript
 application/json      | Datos en formato JSON
 image/jpeg            | Imagen en formato JPEG
 image/png             | Imagen en formato PNG
