@@ -150,7 +150,7 @@ local  0.000GB
 
 **use *nombre_bd***
 
-- Si la BD no existe, automáticamente se crea.
+- Si la BD no existe, automáticamente se crea de forma temporal, y finalmente será desechada si no se insertan datos en ella.
 
 ```bash
 > use prueba
