@@ -102,19 +102,27 @@ Básicamente, existen 2 formas:
 ![Protocolo DHCP](assets/dhcp-protocolo.png)
 
 
-### Mensajes DHCP
+### Mensajes DHCP (I)
 
 1. **DHCPDISCOVER**. El cliente lanza una petición mediante un mensaje de difusión en busca de un servidor DHCP. Este mensaje contiene la dirección MAC y el nombre del equipo cliente para que el servidor pueda responder al cliente.
 2. **DHCPOFFER**. El servidor DHCP responde a la solicitud con una oferta de dirección IP, está queda reservada para este cliente. El cliente se queda con la primera oferta recibida, dado que pueden existir varios servidores dhcp en una red, y el mensaje DHCPDISCOVER lo recibirán todos.
+
+
+### Mensajes DHCP (II)
+
 3. **DHCPREQUEST**. Una vez aceptada la oferta, se envía al servidor un mensaje aceptando la oferta.
 4. **DHCPACK**. El servidor envía un mensaje de acuse de recibo con la dirección IP asignada y información sobre la duración de la concesión. Desde este momento el cliente tiene totalmente configurado TCP/IP.
 
 
-### Terminología
+### Terminología (I)
 
 - **Ámbito**. Agrupamiento administrativo de equipos o clientes de una subred que utilizan el servicio DHCP.
 - **Superámbito**. Es una agrupación de ámbitos que se usan para admitir subredes IP lógicas que residen en una subred física. El Superámbito contiene ámbitos secundarios que deben configurarse manualmente.
 - **Grupo o rango de direcciones**. Direcciones IP disponibles para asignar dentro de un ámbito.
+
+
+### Terminología (II)
+
 - **Intervalo de exclusión**. Intervalo de direcciones IP de un ámbito que no están disponibles para conceder. Este intervalo de exclusión se reserva normalmente para asignar direcciones ip estáticas a los clientes o servidores en una red.
 - **Reserva**. Asignar permanentemente una dirección IP al mismo cliente, se usa para equipos que deban conservar siempre la misma IP.
 - **Concesión**. Es el periodo de tiempo en que un cliente puede usar una dirección IP, antes de que la concesión caduque el cliente envía una petición de renovación de la concesión.
@@ -124,10 +132,8 @@ Básicamente, existen 2 formas:
 
 Cuando iniciamos un cliente DHCP, pueden darse dos situaciones:
 
-- Que la concesión de alquiler de licencia haya caducado:
-    – El cliente solicitará una nueva IP al servidor DHCP (la asignación del servidor podría o no coincidir con la anterior).
-- Que la concesión de alquiler no haya caducado desde la última concesión:
-    – El cliente intentará renovar su IP en el servidor DHCP, es decir, que le sea asignada la misma IP.
+- Que la concesión de alquiler de licencia haya caducado. El cliente solicitará una nueva IP al servidor DHCP (la asignación del servidor podría o no coincidir con la anterior).
+- Que la concesión de alquiler no haya caducado desde la última concesión. El cliente intentará renovar su IP en el servidor DHCP, es decir, que le sea asignada la misma IP.
 
 
 
