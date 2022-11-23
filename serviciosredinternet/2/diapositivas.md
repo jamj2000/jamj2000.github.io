@@ -24,6 +24,7 @@ element: class="fragment" data-fragment-index="1"
 - ### Características
 - ### Funcionamiento
 - ### ISC-DHCP-Server
+- ### DNSMASQ
 
 <!--- Note: Nota a pie de página. -->
 
@@ -138,3 +139,206 @@ Cuando iniciamos un cliente DHCP, pueden darse dos situaciones:
 
 
 ## ISC-DHCP-SERVER
+
+
+### Instalación
+
+```bash
+sudo apt install isc-dhcp-server
+```
+
+
+### Archivos de configuración
+
+- /etc/default/isc-dhcp-server
+- /etc/dhcp/dhcpd.conf
+
+
+### Ejemplo 1
+
+**/etc/default/isc-dhcp-server**
+Interfaces donde estará activo el servicio DHCP
+
+```
+INTERFACESv4="enp0s3 enp0s8"
+```
+
+
+### Ejemplo 2
+
+**/etc/dhcp/dhcpd.conf**
+Parámetros de configuración del servicio DHCP
+
+```
+default-lease-time 600;                       # Tiempo en segundos del 'alquiler'
+max-lease-time 7200;                          # Máximo tiempo en segundos que durará la concesión
+
+option routers 172.31.0.1;                    # Puerta de enlace para los clientes
+option domain-name-servers 8.8.8.8, 8.8.4.4;  # DNS para los clientes
+option domain-name "red.lan";                 # Nombre de dominio para los clientes
+
+# Subred
+subnet 172.31.0.0 netmask 255.255.0.0 {
+  range 172.31.0.101 172.31.0.199;            # Rango de IPs que se asignarán dinámicamente
+}
+
+# Reserva
+host pc1 {
+  hardware ethernet 00:1d:98:54:f5:da;        # Dirección MAC en cuestión
+  fixed-address 172.31.1.1;                   # IP a asignar (siempre la misma)
+}
+```
+
+
+### Reinicio y Estado
+
+```bash
+sudo systemctl restart isc-dhcp-server
+     systemctl status  isc-dhcp-server
+```
+
+
+
+## DNSMASQ
+
+### Introducción
+
+- Servicio que proporciona DHCP y DNS
+- Muy adecuado para pequeñas redes e intranets
+- Sencillo de configurar
+
+
+### Instalación
+
+```bash
+sudo apt install dnsmasq
+```
+
+
+### Archivos de configuración
+
+- /etc/ethers
+- /etc/hosts
+- /etc/dnsmasq.conf
+
+
+### Ejemplo 1
+
+**/etc/ethers**
+Direcciones MAC -> Direcciones IP
+
+```
+08:00:27:66:F0:3B  172.31.0.101
+08:00:27:43:F5:A5  172.31.0.102
+```
+
+
+### Ejemplo 2
+
+**/etc/hosts**
+Direcciones IP --> Nombres
+
+```
+# IPs para bucle local IPv4 e IPv6
+# ...
+
+#-----------------------------------
+# Equipos de la LAN
+#-----------------------------------
+
+# IP fijas
+172.31.0.1     router
+172.31.0.4     server
+
+# DHCP dinámico (indicado en /etc/dnsmaq.conf)
+# 172.31.0.50 - 99
+
+# Reservas (MAC en /etc/ethers)
+172.31.0.101   pc1
+172.31.0.102   pc2
+```
+
+
+### Ejemplo 3 (I)
+
+**/etc/dnsmasq.conf**
+Parámetros de configuración del servicio DNSMASQ
+
+```
+####  GENERAL
+# dnsmasq usa /etc/hosts como registro de nombres e IPs
+# Añadimos dominio a nombres planos en /etc/hosts
+# Esto evita tener que escribir el FQDN
+# El dominio que se añade es el indicado con domain
+expand-hosts
+domain=red.lan
+
+# Registro de consultas
+log-queries
+```
+
+
+### Ejemplo 3 (II)
+
+**/etc/dnsmasq.conf**
+Parámetros de configuración del servicio DNSMASQ
+
+```
+####  DNS
+# Servidor en 172.31.0.4
+listen-address=::1,127.0.0.1,172.31.0.4
+cache-size=1000
+
+# --- Reenvio upstream (forwarders)
+# No hacer forward de nombres planos (sin punto y parte de dominio)
+domain-needed
+
+# No hacer forward de direcciones privadas
+bogus-priv
+
+# No hacer uso de /etc/resolv.conf
+# Usar sólo los upstream indicados en este archivo
+no-resolv
+
+# Servidores upstream a usar (google)
+server=8.8.8.8
+server=8.8.4.4
+```
+
+
+### Ejemplo 3 (III)
+
+**/etc/dnsmasq.conf**
+Parámetros de configuración del servicio DNSMASQ
+
+```
+####  DHCP
+
+dhcp-authoritative
+
+# Ignoramos nombres proporcionados por los clientes DHCP
+# dhcp-ignore-names
+
+# dnsmasq asume que el router es el mismo equipo donde está instalado
+# si no es así, debemos configurar option:router
+
+# Rango dinámico
+dhcp-range=172.31.0.50,172.31.0.99,12h
+dhcp-option=option:router,172.31.0.1
+dhcp-option=option:dns-server,172.31.0.4
+
+# Reservas - Leer el archivo ethers
+read-ethers
+
+# Al PC con dirección MAC aa:bb:cc:dd:ee:ff dar siempre
+# el nombre profesor y la IP 172.31.0.100 y concesión de 12 horas
+# dhcp-host=aa:bb:cc:dd:ee:ff,profesor,172.31.0.100,12h
+```
+
+
+### Reinicio y Estado
+
+```bash
+sudo systemctl restart dnsmasq
+     systemctl status  dnsmasq
+```
