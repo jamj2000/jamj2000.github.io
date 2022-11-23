@@ -157,7 +157,7 @@ sudo apt install isc-dhcp-server
 ### Ejemplo 1
 
 **/etc/default/isc-dhcp-server**
-Interfaces donde estará activo el servicio DHCP
+(Interfaces donde estará activo el servicio DHCP)
 
 ```
 INTERFACESv4="enp0s3 enp0s8"
@@ -167,7 +167,7 @@ INTERFACESv4="enp0s3 enp0s8"
 ### Ejemplo 2
 
 **/etc/dhcp/dhcpd.conf**
-Parámetros de configuración del servicio DHCP
+(Parámetros de configuración del servicio DHCP)
 
 ```
 default-lease-time 600;                       # Tiempo en segundos del 'alquiler'
@@ -201,6 +201,7 @@ sudo systemctl restart isc-dhcp-server
 
 ## DNSMASQ
 
+
 ### Introducción
 
 - Servicio que proporciona DHCP y DNS
@@ -225,7 +226,7 @@ sudo apt install dnsmasq
 ### Ejemplo 1
 
 **/etc/ethers**
-Direcciones MAC -> Direcciones IP
+(Direcciones MAC -> Direcciones IP)
 
 ```
 08:00:27:66:F0:3B  172.31.0.101
@@ -236,7 +237,7 @@ Direcciones MAC -> Direcciones IP
 ### Ejemplo 2
 
 **/etc/hosts**
-Direcciones IP --> Nombres
+(Direcciones IP --> Nombres)
 
 ```
 # IPs para bucle local IPv4 e IPv6
@@ -262,7 +263,7 @@ Direcciones IP --> Nombres
 ### Ejemplo 3 (I)
 
 **/etc/dnsmasq.conf**
-Parámetros de configuración del servicio DNSMASQ
+(Parámetros de configuración del servicio DNSMASQ)
 
 ```
 ####  GENERAL
@@ -281,7 +282,7 @@ log-queries
 ### Ejemplo 3 (II)
 
 **/etc/dnsmasq.conf**
-Parámetros de configuración del servicio DNSMASQ
+(Parámetros de configuración del servicio DNSMASQ)
 
 ```
 ####  DNS
@@ -309,7 +310,7 @@ server=8.8.4.4
 ### Ejemplo 3 (III)
 
 **/etc/dnsmasq.conf**
-Parámetros de configuración del servicio DNSMASQ
+(Parámetros de configuración del servicio DNSMASQ)
 
 ```
 ####  DHCP
