@@ -7,16 +7,15 @@ Ejemplos de inserción de videos
 slide: data-background="#ff0000" 
 element: class="fragment" data-fragment-index="1"
 -->
-
-## Despliegue de aplicaciones web
+## Servicios de Red e Internet
 ---
-![Despliegue de aplicaciones web](http://jamj2000.github.io/despliegueaplicacionesweb/despliegueaplicacionesweb.png)
+![Servicios de Red e Internet](http://jamj2000.github.io/serviciosredinternet/serviciosredinternet.png)
 <p><small> IES Luis Vélez de Guevara - Écija - Spain </small></p>
 
 
 ## Servidores web
 
-[![cc-by-sa](http://jamj2000.github.io/despliegueaplicacionesweb/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![cc-by-sa](http://jamj2000.github.io/serviciosredinternet/cc-by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 
 ## Índice

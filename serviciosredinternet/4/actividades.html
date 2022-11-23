@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Actividades - Despliegue de aplicaciones web - Servidores web</title>
+<title>Actividades - Despliegue de aplicaciones web - Servidores de transferencia de archivos</title>
 <meta charset="utf-8">
 
 <!-- themes: 
@@ -37,6 +37,7 @@ united
 #### [Prácticas](#practicas)
 
 
+
 <pre>
 </pre>
 
@@ -45,6 +46,7 @@ united
 </pre>
 
 #<a name="apuntes"></a>[Apuntes](#indice)
+
 1. Elabora los apuntes de esta Unidad y guárdalos en GitHub en un repositorio llamado 'Apuntes_DAW'. 
 <hr>
 
@@ -55,92 +57,120 @@ united
 
 #<a name="cuestiones"></a>[Cuestiones](#indice) 
 
-1. Nombra al menos 3 servidores web.
+1. ¿Qué significa FTP? ¿Qué puertos utiliza este servicio?
 <hr>
 
-1. ¿En qué directorio se guardan los archivos de configuración de Apache?
+2. ¿Cómo comprobarías qué puertos está utilizando el servicio FTP?
 <hr>
 
-1. ¿En qué directorio se guardan los archivos de configuración de los módulos disponibles?
+3. ¿Para qué sistemas operativos están disponibles los siguientes clientes FTP?
+
+  - gFTP
+  - FileZilla
+  - ftp (comando de terminal)
 <hr>
 
-1. ¿En qué directorio se guardan los archivos de configuración de los sitios virtuales disponibles?
+4. Accede con el navegador web al FTP de Rediris `ftp://ftp.rediris.es` como usuario anónimo. Haz al menos 3 capturas de pantalla de distintas carpetas.
 <hr>
 
-1. ¿Qué comando utilizamos para deshabilitar un módulo? ¿Y para habilitarlo?
+5. Haz un esquema de cómo se establece una conexión entre un cliente y un servidor funcionando en modo activo.
 <hr>
 
-1. ¿Qué comando utilizamos para deshabilitar un sitio virtual? ¿Y para habilitarlo?
+6. Haz un esquema de cómo se establece una conexión entre un cliente y un servidor funcionando en modo pasivo.
 <hr>
 
-1. Indica cual es el comando para crear contraseña cifradas para usar con la autenticación básica.
+7. ¿Qué diferencia existe entre SFTP y FTPS?
 <hr>
 
-1. ¿Qué directiva establece que vamos a usar autenticación básica?
+8. ¿Qué diferencia existe entre FTPS y FTPES?
 <hr>
 
-1. ¿Qué directiva indica los usuarios autorizados con autenticación básica?
+9. ¿Para qué sirven cada uno de los siguientes comandos FTP de terminal?
+
+  - get
+  - put 
+  - mget 
+  - mput 
+  - pwd
+  - cd
+  - ls
+  - mkdir
+  - rmdir
+  - delete
+  - rename
+  - ascii
+  - binary
+  - quit
+  - Si a los comandos anteriores anteponemos el carácter **!**, ¿qué significa?
 <hr>
 
-1. ¿Cómo generamos un certificado autofirmado con `make-ssl-cert`?
+10. Conecta como usuario anonymous a tu servidor FTP y sube un archivo a la carpeta upload. ¿Qué directivas de configuración necesitas configurar?
+Realiza la conexión mediante cada uno de los siguientes métodos:
+
+  - Cliente gráfico filezilla
+  - Comando ftp del terminal
 <hr>
 
-1. ¿Cómo generamos un certificado autofirmado con `openssl`? Explica los pasos.
+11. Busca 5 sitios FTP en internet donde se alojen repositorios de software o documentación accesible mediante usuario anónimo.
 <hr>
-
-1. ¿Cómo reiniciamos el servidor Apache?
-<hr>
-
-1. ¿Cómo podemos saber si el servidor Apache está ejecutándose?
-<hr>
-
-1. ¿En qué archivo de configuración indicamos los puertos en los que Apache está a la escucha?
-<hr>
-
 
 <pre>
 
 
 </pre>
- 
+
 #<a name="practicas"></a>[Prácticas](#indice)
+
+Las siguientes prácticas deben realizarse en pareja. 
+Escoge un compañero/a y en una práctica uno de los dos debe realizar la parte del servidor y el otro la parte del cliente. 
+En la siguiente práctica deberéis invertir los roles.
 
 ## Práctica 1
 
-Realiza el despliegue del **CMS Mediawiki en un host virtual**.
+Despliegue del **CMS Opencart**.
 
-  - Descarga el archivo .tar.gz del CMS.
-  - Descomprime el archivo en /var/www
-  - Sigue el asistente de instalación.
-  - Instala las extensiones PHP que se soliciten.
-  - Cambia los permisos que se soliciten.
-  - Edita el archivo /etc/hosts para tener resolución de nombres
+### Parte servidor
+
+- Configura un sitio virtual en el servidor web.
+- Crea un usuario virtual y configura el servidor FTP.
+- Crea una base de datos y un usuario/clave para el CMS.
+- Proporciona al cliente los siguientes datos:
+  - Nombre del sitio virtual
+  - Usuario/clave de FTP.
+  - Usuario/clave de MySQL.
+
+
+### Parte cliente
+
+- Descarga el **CMS Opencart**.
+- Edita el archivo `/etc/hosts` para la resolución del nombre de sitio.
+- Sube mediante FTP los archivos del CMS al host virtual del servidor. 
+- Procede a la instalación del sitio con la información proporcionada por el servidor.
 
 
 ## Práctica 2
 
-Realiza el despliegue del **CMS Moodle en un host virtual**.
+Despliege del **CMS Prestashop**.
 
-  - Descarga el archivo .tar.gz del CMS.
-  - Descomprime el archivo en /var/www
-  - Sigue el asistente de instalación. 
-  - Instala las extensiones PHP que se soliciten.
-  - Cambia los permisos que se soliciten.
-  - Edita el archivo /etc/hosts para tener resolución de nombres
+### Parte servidor
+
+- Configura un sitio virtual en el servidor web.
+- Crea un usuario virtual y configura el servidor FTP.
+- Crea una base de datos y un usuario/clave para para el CMS.
+- Proporciona al cliente los siguientes datos:
+  - Nombre del sitio virtual
+  - Usuario/clave de FTP.
+  - Usuario/clave de MySQL.
 
 
-## Práctica 3
+### Parte cliente
 
-Realiza el despliegue del **CMS Drupal como sitio seguro**.
+- Descarga el **CMS Prestashop**
+- Edita el archivo `/etc/hosts` para la resolución del nombre de sitio.
+- Sube mediante FTP los archivos del CMS al host virtual del servidor. 
+- Procede a la instalación del sitio con la información proporcionada por el servidor.
 
-  - Descarga el archivo .tar.gz del CMS.
-  - Descomprime el archivo en /var/www/html
-  - Sigue el asistente de instalación.
-  - Instala las extensiones PHP que se soliciten.
-  - Cambia los permisos que se soliciten.
-  - Crea un certificado autofirmado.
-  - Crea la base de datos.
-  - Crea el usuario y la contraseña para acceder a la base datos anterior.
+
 
 
 <pre>
