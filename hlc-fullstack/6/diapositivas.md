@@ -109,7 +109,7 @@ https://developers.google.com/web/progressive-web-apps/
 
 **tiendafronted**
 - [Demo de tiendafrontend en Vercel](https://tiendafrontend.now.sh/)
-- [Código fuente de Tiendaw en GitHub](https://github.com/jamj2000/tiendafrontend)
+- [Código fuente de tiendafrontend en GitHub](https://github.com/jamj2000/tiendafrontend)
 
 **tiendaw**
 - [Demo de Tiendaw en Heroku](https://tiendaw.herokuapp.com/)
