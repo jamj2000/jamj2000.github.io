@@ -211,6 +211,8 @@ git  branch    nuevo      // creación de rama
 git  checkout  nuevo      // cambiar a dicha rama
 
 git  checkout  -b nuevo   // equivalente a las 2 sentencias anteriores
+
+git  checkout  -M main    // poner main como nombre a la rama actual (renombrar)
 ```
 
 
