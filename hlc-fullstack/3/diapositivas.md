@@ -182,7 +182,7 @@ function (a, b) { return a + b; }
 
 ### Callbacks
 
-Un **callback** es una **función que es pasada como argumento a otra función**.
+Un **callback** es una **función que es pasada como argumento a otra función** y que será ejecutada cuando suceda determinado evento.
 
 
 **Ejemplo 1**
@@ -295,8 +295,6 @@ fetch(URL)
 ### async / await
 
 Disponible a partir de ES7 (2016). 
-Todavía se usa poco.
-
 
 **Ejemplo**
 
