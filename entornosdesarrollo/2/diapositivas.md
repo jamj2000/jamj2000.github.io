@@ -10,7 +10,7 @@ element: class="fragment" data-fragment-index="1"
 ## Entornos de desarrollo
 ---
 ![Entornos de desarrollo](http://jamj2000.github.io/entornosdesarrollo/entornosdesarrollo.png)
-<p><small> IES Luis Vélez de Guevara - Écija - Spain </small></p>
+<p><small> IES Luis Vélez de Guevara - Spain </small></p>
 
 
 ## Entornos integrados de desarrollo
