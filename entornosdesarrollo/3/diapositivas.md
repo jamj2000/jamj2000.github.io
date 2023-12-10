@@ -182,8 +182,6 @@ https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks
 - Por ejemplo:
   - `suma (2,3)  -->  5`
 
-http://www.jtech.ua.es/j2ee/publico/lja-2012-13/sesion04-apuntes.html
-
 
 ### JUnit4/5 - Anotaciones I
 
