@@ -199,20 +199,20 @@ JUnit 4          | JUnit 5
 @Ignore          | @Disabled
 
 
-### JUnit4 - Anotaciones II
+### JUnit5 - Anotaciones II
 
-- **@BeforeClass**: el método es invocado antes de iniciar todos los tests. Sólo puede haber un método con esta anotación.
-- **@AfterClass**: el método es invocado después de finalizar todos los tests. Sólo puede haber un método con esta anotación.
-- **@Before**: Se ejecuta antes de cada test.
-- **@After**: Se ejecuta después de cada test.
-- **@Ignore**: Los métodos marcados con esta anotación no serán ejecutados.
+- **@BeforeAll**: el método es invocado antes de iniciar todos los tests. Sólo puede haber un método con esta anotación.
+- **@AfterAll**: el método es invocado después de finalizar todos los tests. Sólo puede haber un método con esta anotación.
+- **@BeforeEach**: Se ejecuta antes de cada test.
+- **@AfterEach**: Se ejecuta después de cada test.
+- **@Disabled**: Los métodos marcados con esta anotación no serán ejecutados.
 - **@Test**: Representa un test que se debe ejecutar. 
 
 
-### JUnit - Aserciones
+### JUnit5 - Aserciones
 
 ```java
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*
 
 // ... 
 fail()                         // el test termina con fallo
@@ -229,14 +229,14 @@ assertSame(objeto_esperado,objeto_real)
 assertNotSame(objeto_esperado,objeto_real)
 ```
 
-http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
+[Aserciones en JUnit 5](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
 
 
 ### Ejemplo
 
 ```java
 // ...
-    @BeforeClass
+    @BeforeAll
     public static void setUpClass(){
         Aritmetica a = new Aritmetica();
     }
@@ -246,7 +246,7 @@ http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html
         assertEquals( 5,  Aritmetica.suma( 2, 3));
     }
 
-    @Ignore
+    @Disabled
     public void testResta() {
         assertEquals(-1,  Aritmetica.resta( 2, 3));
     }
