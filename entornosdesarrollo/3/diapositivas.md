@@ -251,6 +251,8 @@ assertNotSame(objeto_esperado,objeto_real)
 // ...
 ```
 
+[JUnit 5 by Examples](https://reflectoring.io/junit5)Ç
+
 
 ### TDD
 
