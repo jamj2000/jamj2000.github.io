@@ -20,10 +20,10 @@ article: yes
    
 # Actividades
 
-- [DAW - Arquitecturas web](http://jamj2000.github.io/despliegueaplicacionesweb/1/actividades). 
-- [DAW - Servidores web](http://jamj2000.github.io/despliegueaplicacionesweb/2/actividades). 
-- [DAW - Servidores de aplicaciones](http://jamj2000.github.io/despliegueaplicacionesweb/3/actividades). 
-- [DAW - Servidores de transferencia de archivos](http://jamj2000.github.io/despliegueaplicacionesweb/4/actividades). 
-- [DAW - Parámetros de red](http://jamj2000.github.io/despliegueaplicacionesweb/5/actividades). 
-- [DAW - Documentación y Control de versiones](http://jamj2000.github.io/despliegueaplicacionesweb/6/actividades). 
+- [DAW - Arquitecturas web](https://github.com/jamj2000/DAW2-DAW-Apuntes/blob/master/1.actividades.md). 
+- [DAW - Servidores web](https://github.com/jamj2000/DAW2-DAW-Apuntes/blob/master/2.actividades.md). 
+- [DAW - Servidores de aplicaciones](https://github.com/jamj2000/DAW2-DAW-Apuntes/blob/master/3.actividades.md). 
+- [DAW - Servidores de transferencia de archivos](https://github.com/jamj2000/DAW2-DAW-Apuntes/blob/master/4.actividades.md). 
+- [DAW - Parámetros de red](https://github.com/jamj2000/DAW2-DAW-Apuntes/blob/master/5.actividades.md). 
+- [DAW - Documentación y Control de versiones](https://github.com/jamj2000/DAW2-DAW-Apuntes/blob/master/6.actividades.md). 
 
