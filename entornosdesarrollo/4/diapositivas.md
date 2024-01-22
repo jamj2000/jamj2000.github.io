@@ -89,13 +89,12 @@ En esta Unidad aprenderemos a:
 [ ![scrutinizer](assets/scrutinizer.png)  ](https://scrutinizer-ci.com)
 
 - PHP, Python y Ruby soportados
-- 14 días de prueba gratis
 - Precio/Mes:
-  - Plan Basic: 49 €
-  - Plan Professional: 99 €
-  - Plan Unlimited: 199 €
+  - Plan Basic: 49€ /mes
+  - Plan Professional: 99€ / mes
+  - Plan Unlimited: 199€ /mes
 
-Note: A fecha Diciembre 2017
+Note: A fecha Enero 2024
 
 
 #### SonarQube
@@ -103,11 +102,13 @@ Note: A fecha Diciembre 2017
 [ ![sonarqube](assets/sonarqube.png)  ](https://www.sonarqube.org/)
 
 - Más de 20 lenguajes soportados
+- 14 días de prueba
 - Precio/Mes:
-  - Plan Open Source: 0 $
-  - Plan Private Projects: Desde 5 $ 
+  - Plan Developer: Desde 160$ / año
+  - Plan Enterprise: Desde 21000$ / año
+  - Plan Data Center: Desde 136000$ / año 
 
-Note: A fecha Diciembre 2017
+Note: A fecha Enero 2024
 
 
 ### Refactorización
